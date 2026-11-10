@@ -1,5 +1,5 @@
 // Sacred Timeline — offline cache. Cambiare VERSION a ogni aggiornamento dell'app.
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CORE = `core-${VERSION}`, RUN = 'run';
 const PRE = ['./', 'index.html', 'manifest.webmanifest', 'vendor/three.module.min.js', 'data/map.json', 'data/chrono.json', 'data/cards.json', 'sky/sky.json', 'icons/icon-192.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CORE).then(c => Promise.all(PRE.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting())); });

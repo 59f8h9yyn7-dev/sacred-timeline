@@ -8771,7 +8771,7 @@ const m3Rgb = hex => { let c = M3RGB.get(hex); if (!c){ const v = rgbOf(hex); c 
 // if the page was closed by the phone while the 3D was up, the next visits draw it lighter (and after three times, flat)
 const m3Mem = { get: k => { try { return +localStorage.getItem(k) || 0; } catch { return 0; } }, set: (k, v) => { try { if (v) localStorage.setItem(k, String(v)); else localStorage.removeItem(k); } catch {} } };
 if (m3Mem.get('stl-3d-run')){ m3Mem.set('stl-3d-crash', m3Mem.get('stl-3d-crash') + 1); m3Mem.set('stl-3d-run', 0); }
-M3.lite = Math.min(3, m3Mem.get('stl-3d-crash'));
+M3.lite = Math.min(2, m3Mem.get('stl-3d-crash'));
 addEventListener('pagehide', () => m3Mem.set('stl-3d-run', 0));
 // while the 3D is up on a phone, the flat map gives its pictures back (they are painted again on the way out)
 function m3FreeMap(){
