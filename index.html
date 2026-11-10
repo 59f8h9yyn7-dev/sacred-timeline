@@ -1,4 +1,51 @@
 <!doctype html><html lang="it"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05060a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Timeline"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#05060a;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<script>
+/* Scatola nera: annota i passi su questo telefono; se la pagina viene chiusa dal sistema, al riavvio mostra l'ultimo tratto. */
+(function(){
+  var K = 'stl-bb-v1', MAX = 60, sid = Date.now().toString(36), t0 = Date.now(), log = [];
+  try { log = JSON.parse(localStorage.getItem(K) || '[]'); } catch (e) { log = []; }
+  var prev = log.slice();
+  function save(){ try { localStorage.setItem(K, JSON.stringify(log.slice(-MAX))); } catch (e) {} }
+  function cv(){ var n = 0, a = 0; try { document.querySelectorAll('canvas').forEach(function(c){ n++; a += c.width * c.height; }); } catch (e) {} return n + ' tele, ' + Math.round(a * 4 / 1048576) + ' MB'; }
+  window.BB = function(step, extra){
+    try {
+      var e = { s: sid, t: Math.round((Date.now() - t0) / 100) / 10, k: step, c: cv() }; if (extra !== undefined) e.x = extra;
+      var l = log[log.length - 1];
+      if (l && l.s === sid && l.k === step && step === 'in-3d') log[log.length - 1] = e; else log.push(e);
+      if (log.length > MAX) log = log.slice(-MAX); save();
+    } catch (err) {}
+  };
+  var fr = 0; (function tick(){ fr++; requestAnimationFrame(tick); })();
+  setInterval(function(){ var st = document.getElementById('stage'); var f = fr; fr = 0; if (st && st.classList.contains('mv3') && document.visibilityState === 'visible') BB('in-3d', { fps: Math.round(f / 2), mem: (performance.memory ? Math.round(performance.memory.usedJSHeapSize / 1048576) + ' MB' : 'n/d') }); }, 2000);
+  addEventListener('pagehide', function(){ BB('chiusa'); });
+  document.addEventListener('visibilitychange', function(){ BB(document.visibilityState === 'hidden' ? 'sfondo' : 'torna'); });
+  addEventListener('error', function(e){ BB('errore-js', String(e.message || '').slice(0, 120)); });
+  addEventListener('unhandledrejection', function(e){ BB('errore-promessa', String(e.reason && e.reason.message || e.reason || '').slice(0, 120)); });
+  // how did the previous visit end?
+  var last = prev[prev.length - 1], crashed = last && last.k !== 'chiusa' && last.k !== 'sfondo';
+  var info = { ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
+  BB('pagina', info);
+  window.bbReport = function(){
+    var ls = prev.filter(function(e){ return last && e.s === last.s; });
+    return 'SACRED TIMELINE · rapporto\n' + JSON.stringify(info) + '\n' + ls.map(function(e){ return e.t + 's ' + e.k + ' [' + e.c + ']' + (e.x !== undefined ? ' ' + JSON.stringify(e.x) : ''); }).join('\n');
+  };
+  if (crashed || /[?&]rapporto/.test(location.search)){
+    var go; window.__bbHold = new Promise(function(r){ go = r; });
+    var show = function(){
+      var d = document.createElement('div'); d.id = 'bbPanel';
+      d.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#07080d;color:#e8e6df;font:12px/1.45 ui-monospace,Menlo,monospace;padding:calc(env(safe-area-inset-top,0px) + 14px) 14px 14px;overflow:auto;-webkit-user-select:text;user-select:text';
+      var h = document.createElement('div'); h.style.cssText = 'font:600 16px -apple-system,sans-serif;margin-bottom:6px;color:#ff8a2a'; h.textContent = crashed ? 'L’ultima volta la pagina si è chiusa da sola' : 'Rapporto';
+      var p = document.createElement('div'); p.style.cssText = 'font:14px -apple-system,sans-serif;margin-bottom:10px;color:#b9b6ad'; p.textContent = 'Fai uno screenshot di questa schermata (o tocca Copia) e mandalo a Claude. Poi tocca Continua.';
+      var pre = document.createElement('pre'); pre.style.cssText = 'white-space:pre-wrap;word-break:break-word;margin:0 0 14px;padding:10px;border:1px solid #2a2c36;border-radius:8px;background:#0d0f16'; pre.textContent = bbReport();
+      var mk = function(t, f, main){ var b = document.createElement('button'); b.textContent = t; b.style.cssText = 'font:600 15px -apple-system,sans-serif;padding:12px 18px;margin:0 10px 10px 0;border-radius:10px;border:1px solid ' + (main ? '#ff8a2a' : '#3a3d4a') + ';background:' + (main ? '#ff8a2a' : 'transparent') + ';color:' + (main ? '#111' : '#e8e6df'); b.onclick = f; return b; };
+      d.appendChild(h); d.appendChild(p); d.appendChild(mk('Continua', function(){ d.remove(); go(); }, true));
+      d.appendChild(mk('Copia', function(){ var t = bbReport(), b = this; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function(){ b.textContent = 'Copiato'; }, function(){ var r = document.createRange(); r.selectNodeContents(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }); }));
+      d.appendChild(pre); document.body.appendChild(d);
+    };
+    if (document.body) show(); else addEventListener('DOMContentLoaded', show);
+  }
+})();
+</script>
 <title>Marvel Sacred Timeline</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8497,7 +8544,7 @@ function mvDraw(u, now){
 /* ---- going in and out ---- */
 // if anything goes wrong while the multiverse is drawn, go back to the map cleanly (and keep the 3D off for this visit)
 function mvFail(e){
-  console.error(e);
+  BB('mv-errore', String(e && e.message || e).slice(0, 120)); console.error(e);
   const was3 = MV.d3;
   if (was3) M3.broken = true;
   try { mvInstantOff(); } catch { MV.on = false; MV.anim = null; stage.classList.remove('mv-on', 'mv-morph', 'mv3'); }
@@ -8562,7 +8609,7 @@ async function mvEnter(){
   skyLoad(); mvBuild();
   if (T3 && m3Ensure()){ m3Enter(); return; }
   // the morph starts from a picture of the map exactly as you see it, and remembers where you were
-  MV.snap = mapSnap(); MV.snapUse = !!MV.snap; MV.prevView = { z: view.z, tx: view.tx, ty: view.ty }; MV.prevSide = CHR.on ? 1 : 0;
+  BB('3d-entra'); MV.snap = mapSnap(); MV.snapUse = !!MV.snap; try { BB('foto-mappa', MV.snap && MV.snap.cv ? MV.snap.cv.width + 'x' + MV.snap.cv.height : 'no'); } catch (e) {} MV.prevView = { z: view.z, tx: view.tx, ty: view.ty }; MV.prevSide = CHR.on ? 1 : 0;
   closeCard(); try { clearPath(); } catch {} try { hideTip(); } catch {} hideHint();
   skyLoad(); mvBuild(); mvPrepMorph();
   MV.on = true; MV.sel = null; MV.hover = null; $('#mvP').hidden = true;
@@ -8702,7 +8749,7 @@ async function m3Load(){
   if (M3.T) return M3.T; if (M3.failed) return null;
   if (!M3.loading) M3.loading = (async () => {
     if (!m3GL()) throw new Error('webgl');
-    for (const u of (window.M3_SRC_TEST || M3_SRC)){ try { const T = await import(u); if (T && T.WebGLRenderer) return T; } catch (e) {} }
+    BB('motore-scarico'); for (const u of (window.M3_SRC_TEST || M3_SRC)){ try { const T = await import(u); if (T && T.WebGLRenderer) BB('motore-ok', u.indexOf('vendor/') >= 0 ? 'locale' : 'rete'); if (T && T.WebGLRenderer) return T; } catch (e) {} }
     throw new Error('three');
   })().then(T => (M3.T = T), () => { M3.failed = true; return null; });
   return M3.loading;
@@ -9107,12 +9154,12 @@ function m3Ensure(){
       const cv = document.createElement('canvas'); cv.id = 'mv3C'; cv.setAttribute('aria-label', 'Multiverso in 3D'); mvC.insertAdjacentElement('beforebegin', cv);
       const R = new T.WebGLRenderer({ canvas: cv, antialias: dprNow < 1.8, alpha: false, powerPreference: COARSE ? 'default' : 'high-performance' });
       R.setClearColor(0x030308, 1);
-      M3.R = R; M3.cv = cv; M3.scene = new T.Scene(); M3.cam = new T.PerspectiveCamera(55, 1, 1, 20000); M3.cam.rotation.order = 'YXZ'; M3.sz = null; M3.lost = false;
+      try { const g = R.getContext(), dbg = g.getExtension('WEBGL_debug_renderer_info'); BB('gl-creato', { tex: g.getParameter(g.MAX_TEXTURE_SIZE), gpu: dbg ? g.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : '?', gl2: R.capabilities.isWebGL2, aa: g.getContextAttributes().antialias }); } catch (e) { BB('gl-creato', '?'); } M3.R = R; M3.cv = cv; M3.scene = new T.Scene(); M3.cam = new T.PerspectiveCamera(55, 1, 1, 20000); M3.cam.rotation.order = 'YXZ'; M3.sz = null; M3.lost = false;
       // the graphics card took the drawing back (memory, another app): leave cleanly, it will be rebuilt next time
-      cv.addEventListener('webglcontextlost', e => { e.preventDefault(); M3.lost = true; if (MV.on && MV.d3) mvFail(new Error('webgl context lost')); });
+      cv.addEventListener('webglcontextlost', e => { BB('gl-perso'); e.preventDefault(); M3.lost = true; if (MV.on && MV.d3) mvFail(new Error('webgl context lost')); });
       m3Input(cv);
     }
-    m3Build(); m3Size();
+    BB('scena-inizio'); m3Build(); m3Size(); try { BB('scena-pronta', { px: M3.cv.width + 'x' + M3.cv.height, dpr: M3.sz && M3.sz[2], lite: M3.lite, ogg: M3.W.objs.length }); } catch (e) {}
     return true;
   } catch (e){ console.error(e); M3.broken = true; try { m3Release(); } catch {} return false; }
 }
@@ -9556,7 +9603,7 @@ function m3PathOf(A, B, lookB){
 }
 function m3Enter(){
   const W = M3.W;
-  MV.snap = mapSnap(); MV.snapUse = !!MV.snap; MV.prevView = { z: view.z, tx: view.tx, ty: view.ty }; MV.prevSide = CHR.on ? 1 : 0;
+  BB('3d-entra'); MV.snap = mapSnap(); MV.snapUse = !!MV.snap; try { BB('foto-mappa', MV.snap && MV.snap.cv ? MV.snap.cv.width + 'x' + MV.snap.cv.height : 'no'); } catch (e) {} MV.prevView = { z: view.z, tx: view.tx, ty: view.ty }; MV.prevSide = CHR.on ? 1 : 0;
   closeCard(); try { clearPath(); } catch {} try { hideTip(); } catch {} hideHint();
   const G = m3Ground(MV.snap, MV.prevView), home = m3Home();
   const path = m3PathOf(G.pose, home, [0, M3_H * 0.43, 0]);
@@ -9565,10 +9612,10 @@ function m3Enter(){
   MV.on = true; MV.d3 = true; MV.sel = null; MV.hover = null; $('#mvP').hidden = true; M3.ctl.orbit = null; M3.ctl.fly = null; M3.ctl.vel = [0, 0, 0]; M3.ctl.keys.clear();
   MV.u = 0; M3.lastF = 0; m3Mem.set('stl-3d-run', 1);
   stage.classList.add('mv-on', 'mv3', 'mv-morph'); mvC.classList.add('on'); mvC.classList.remove('out'); M3.cv.classList.remove('out'); M3.cv.classList.add('on');
-  m3Frame(performance.now());
+  m3Frame(performance.now()); BB('primo-fotogramma');
   chrUi(); mvUi();
   MV.anim = { from: 0, to: 1, t0: performance.now(), dur: reduced() ? 300 : 3600, done: () => {
-    stage.classList.remove('mv-morph'); M3.morph = null; MV.snapUse = false; m3DropGround(); m3FreeMap(); m3Apply(home); m3SyncAngles();
+    BB('volo-finito'); stage.classList.remove('mv-morph'); M3.morph = null; MV.snapUse = false; m3DropGround(); m3FreeMap(); m3Apply(home); m3SyncAngles(); BB('3d-libero');
     if (typeof P1HINTS !== 'undefined' && !P1HINTS.mv3b) P1HINTS.mv3b = COARSE ? 'Sei una <b>navicella</b>: trascina per virare, la <b>levetta</b> per i motori, ▲▼ per salire e scendere, pizzico per lo scatto. Tocca una <b>stella</b> o un <b>pianeta</b>.' : 'Sei una <b>navicella</b>: trascina per virare, <b>W A S D</b> per i motori, Q/E per scendere e salire, Maiusc per il turbo, rotella per lo scatto. Clicca una <b>stella</b> o un <b>pianeta</b>.';
     p1Hint('mv3b');
   } };
@@ -9602,7 +9649,7 @@ function m3Exit(target, snap, then){
 }
 function m3Off(){
   M3.morph = null; MV.d3 = false; M3.ctl.orbit = null; M3.ctl.fly = null; M3.ctl.keys.clear();
-  stage.classList.remove('mv3'); if (M3.cv) M3.cv.classList.remove('out', 'on'); m3Mem.set('stl-3d-run', 0);
+  BB('3d-esce'); stage.classList.remove('mv3'); if (M3.cv) M3.cv.classList.remove('out', 'on'); m3Mem.set('stl-3d-run', 0);
   m3DropGround(); if (COARSE || M3.lost) m3Release();
 }
 // the zoom buttons in the corner work in 3D too
@@ -10368,7 +10415,7 @@ async function boot(){
   hook('boot');
   setTimeout(loadCards, 1200);
 }
-boot();
+(window.__bbHold || Promise.resolve()).then(() => { BB('avvio'); boot(); });
 })();
 </script>
 
