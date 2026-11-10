@@ -45,7 +45,7 @@
   // how did the previous visit end?
   var last = prev[prev.length - 1], crashed = last && last.k !== 'chiusa' && last.k !== 'sfondo';
   try { if (/[?&]reset3d/.test(location.search)){ localStorage.removeItem('stl-3d-crash'); localStorage.removeItem('stl-3d-run'); } } catch (e) {}
-  var info = { versione: 'b7', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
+  var info = { versione: 'b8', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
   BB('pagina', info);
   window.bbReport = function(){
     var ls = prev.filter(function(e){ return last && e.s === last.s; });
@@ -8798,8 +8798,10 @@ const M3RGB = new Map();
 const m3Rgb = hex => { let c = M3RGB.get(hex); if (!c){ const v = rgbOf(hex); c = [v[0] / 255, v[1] / 255, v[2] / 255]; M3RGB.set(hex, c); } return c; };
 // if the page was closed by the phone while the 3D was up, the next visits draw it lighter (and after three times, flat)
 const m3Mem = { get: k => { try { return +localStorage.getItem(k) || 0; } catch { return 0; } }, set: (k, v) => { try { if (v) localStorage.setItem(k, String(v)); else localStorage.removeItem(k); } catch {} } };
+// the closures counted before the fix of the labels (v254) are forgotten once
+if (!m3Mem.get('stl-3d-fix1')){ m3Mem.set('stl-3d-crash', 0); m3Mem.set('stl-3d-run', 0); m3Mem.set('stl-3d-fix1', 1); }
 if (m3Mem.get('stl-3d-run')){ m3Mem.set('stl-3d-crash', m3Mem.get('stl-3d-crash') + 1); m3Mem.set('stl-3d-run', 0); }
-M3.lite = Math.min(2, m3Mem.get('stl-3d-crash'));
+M3.lite = Math.min(3, m3Mem.get('stl-3d-crash'));
 addEventListener('pagehide', () => m3Mem.set('stl-3d-run', 0));
 // while the 3D is up on a phone, the flat map gives its pictures back (they are painted again on the way out)
 function m3FreeMap(){
@@ -10036,6 +10038,7 @@ function renderDoors(sub){
     card.innerHTML = back('Prossime uscite') + (up.length + more.length ? `<p class="dr-p">Tocca un titolo per vedere dove si innesta sulla mappa.</p><div class="dr-list">${up.map(row).join('')}${more.map(mrow).join('')}</div>` : `<p class="dr-p">Al momento non ci sono uscite in calendario.</p>`);
   }
 }
+// asked for every label at every frame: the answer is kept (building it anew each time closed the page on iPhones)
 const UNC = new Map();
 function uniName(U){
   const ck = (U.us || '') + '\u0001' + (U.u || '') + '\u0001' + (U.uc || ''); let cv = UNC.get(ck); if (cv !== undefined) return cv;
