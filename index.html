@@ -17,30 +17,52 @@
   };
   var fr = 0; (function tick(){ fr++; requestAnimationFrame(tick); })();
   var tch = 0, beat = 0; addEventListener('pointerdown', function(e){ tch++; try { var t = e.target, st = document.getElementById('stage'); if (st && st.classList.contains('mv3')) BB('tocco', (t.id || t.className || t.tagName || '').toString().slice(0, 24)); } catch (err) {} }, true);
-  setInterval(function(){ var st = document.getElementById('stage'); var f = fr; fr = 0; if (st && st.classList.contains('mv3') && document.visibilityState === 'visible'){ beat++; var x = { n: beat, fps: f, tocchi: tch }; try { var p = window.__probe && window.__probe(); if (p){ x.gl = p.gl; x.pit = p.pit; x.img = p.img; } } catch (e) {} BB('in-3d', x); } else beat = 0; }, 1000);
+  setInterval(function(){ var st = document.getElementById('stage'); var f = fr; fr = 0; if (st && st.classList.contains('mv3') && document.visibilityState === 'visible'){ beat++; var x = { n: beat, fps: f, tocchi: tch }; if (window.__benchBeat) try { window.__benchBeat(beat); } catch (e) {} try { var p = window.__probe && window.__probe(); if (p){ x.gl = p.gl; x.pit = p.pit; x.img = p.img; } } catch (e) {} BB('in-3d', x); } else beat = 0; }, 1000);
   addEventListener('pagehide', function(){ BB('chiusa'); });
   document.addEventListener('visibilitychange', function(){ BB(document.visibilityState === 'hidden' ? 'sfondo' : 'torna'); });
   addEventListener('error', function(e){ BB('errore-js', String(e.message || '').slice(0, 120)); });
   addEventListener('unhandledrejection', function(e){ BB('errore-promessa', String(e.reason && e.reason.message || e.reason || '').slice(0, 120)); });
+  // test bench: ?banco runs the tests one after the other and keeps the score on this phone
+  var BK = 'stl-banco-v1', TESTS = ['E', 'C', 'A', 'B', 'D'], NAMES = { E: 'immagine ferma (nessun fotogramma)', C: 'senza disegno 3D (solo scritte)', A: 'senza scritte (solo 3D)', B: 'senza aggiornamenti dei dati 3D', D: 'mappa 2D spenta durante il 3D' }, SECS = +((/[?&]banco=(\d+)/.exec(location.search) || [])[1]) || 40, bench = null;
+  try { if (/[?&]banco/.test(location.search) && !localStorage.getItem(BK)) localStorage.setItem(BK, JSON.stringify({ i: 0, res: {}, cur: null })); bench = JSON.parse(localStorage.getItem(BK) || 'null'); } catch (e) { bench = null; }
+  if (/[?&]fine-banco/.test(location.search)){ try { localStorage.removeItem(BK); } catch (e) {} bench = null; }
+  var bsave = function(){ try { localStorage.setItem(BK, JSON.stringify(bench)); } catch (e) {} };
+  if (bench){
+    if (bench.cur){ // the test that was running when the page went away
+      var nb = 0; for (var q = prev.length - 1; q >= 0; q--){ if (prev[q].k === 'in-3d' && prev[q].x && prev[q].x.n){ nb = prev[q].x.n; break; } if (prev[q].k === 'pagina') break; }
+      bench.res[bench.cur] = 'SI CHIUDE dopo ' + nb + ' s'; bench.cur = null; bench.i++; bsave();
+    }
+    if (bench.i < TESTS.length){
+      var T0 = TESTS[bench.i]; window.__prova = T0; bench.cur = T0; bsave(); BB('banco', T0);
+      var tag = document.createElement('div'); tag.style.cssText = 'position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 6px);transform:translateX(-50%);z-index:99998;background:#ff8a2a;color:#111;font:600 13px -apple-system,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;white-space:nowrap';
+      tag.textContent = 'Prova ' + (bench.i + 1) + ' di ' + TESTS.length + ' · non toccare'; addEventListener('DOMContentLoaded', function(){ document.body.appendChild(tag); });
+      var tries = 0, iv = setInterval(function(){ tries++; var st = document.getElementById('stage'), b = document.querySelector('#chr [data-m="mv"]');
+        if (st && st.classList.contains('mv3')){ clearInterval(iv); return; }
+        if (b && !document.getElementById('loading') && tries > 4){ b.click(); } if (tries > 90) clearInterval(iv); }, 1000);
+      window.__benchBeat = function(n){ tag.textContent = 'Prova ' + (bench.i + 1) + ' di ' + TESTS.length + ' · ' + n + '/' + SECS + ' s · non toccare'; if (n >= SECS){ bench.res[T0] = 'regge ' + SECS + ' s'; bench.cur = null; bench.i++; bsave(); BB('chiusa'); location.reload(); } };
+    }
+  }
   // how did the previous visit end?
   var last = prev[prev.length - 1], crashed = last && last.k !== 'chiusa' && last.k !== 'sfondo';
   try { if (/[?&]reset3d/.test(location.search)){ localStorage.removeItem('stl-3d-crash'); localStorage.removeItem('stl-3d-run'); } } catch (e) {}
-  var info = { versione: 'b5', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
+  var info = { versione: 'b6', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
   BB('pagina', info);
   window.bbReport = function(){
     var ls = prev.filter(function(e){ return last && e.s === last.s; });
     return 'SACRED TIMELINE · rapporto\n' + JSON.stringify(info) + '\n' + ls.map(function(e){ return e.t + 's ' + e.k + ' [' + e.c + ']' + (e.x !== undefined ? ' ' + JSON.stringify(e.x) : ''); }).join('\n');
   };
-  if (crashed || /[?&]rapporto/.test(location.search)){
+  var benchDone = bench && bench.i >= TESTS.length, benchRun = bench && !benchDone;
+  if (benchDone) window.bbReport = function(){ return 'SACRED TIMELINE \u00b7 banco di prova (' + info.versione + ')\n' + TESTS.map(function(t){ return t + ' \u00b7 ' + NAMES[t] + ': ' + (bench.res[t] || '?'); }).join('\n'); };
+  if (!benchRun && (crashed || benchDone || /[?&]rapporto/.test(location.search))){
     var go; window.__bbHold = new Promise(function(r){ go = r; });
     var show = function(){
       var d = document.createElement('div'); d.id = 'bbPanel';
       d.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#07080d;color:#e8e6df;font:12px/1.45 ui-monospace,Menlo,monospace;padding:calc(env(safe-area-inset-top,0px) + 14px) 14px 14px;overflow:auto;-webkit-user-select:text;user-select:text';
-      var h = document.createElement('div'); h.style.cssText = 'font:600 16px -apple-system,sans-serif;margin-bottom:6px;color:#ff8a2a'; h.textContent = crashed ? 'L’ultima volta la pagina si è chiusa da sola' : 'Rapporto';
+      var h = document.createElement('div'); h.style.cssText = 'font:600 16px -apple-system,sans-serif;margin-bottom:6px;color:#ff8a2a'; h.textContent = benchDone ? 'Banco di prova finito' : crashed ? 'L’ultima volta la pagina si è chiusa da sola' : 'Rapporto';
       var p = document.createElement('div'); p.style.cssText = 'font:14px -apple-system,sans-serif;margin-bottom:10px;color:#b9b6ad'; p.textContent = 'Fai uno screenshot di questa schermata (o tocca Copia) e mandalo a Claude. Poi tocca Continua.';
       var pre = document.createElement('pre'); pre.style.cssText = 'white-space:pre-wrap;word-break:break-word;margin:0 0 14px;padding:10px;border:1px solid #2a2c36;border-radius:8px;background:#0d0f16'; pre.textContent = bbReport();
       var mk = function(t, f, main){ var b = document.createElement('button'); b.textContent = t; b.style.cssText = 'font:600 15px -apple-system,sans-serif;padding:12px 18px;margin:0 10px 10px 0;border-radius:10px;border:1px solid ' + (main ? '#ff8a2a' : '#3a3d4a') + ';background:' + (main ? '#ff8a2a' : 'transparent') + ';color:' + (main ? '#111' : '#e8e6df'); b.onclick = f; return b; };
-      d.appendChild(h); d.appendChild(p); d.appendChild(mk('Continua', function(){ d.remove(); go(); }, true));
+      d.appendChild(h); d.appendChild(p); d.appendChild(mk('Continua', function(){ if (benchDone){ try { localStorage.removeItem(BK); } catch (e) {} } d.remove(); go(); }, true));
       d.appendChild(mk('Copia', function(){ var t = bbReport(), b = this; (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function(){ b.textContent = 'Copiato'; }, function(){ var r = document.createRange(); r.selectNodeContents(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }); }));
       d.appendChild(pre); document.body.appendChild(d);
     };
@@ -7627,7 +7649,7 @@ function rendererRecover(){
   };
 }
 function p2Watch(){
-  if (document.hidden) return;
+  if (document.hidden) return; if ((window.__prova === 'E' || window.__prova === 'D') && MV.on && MV.d3) return;
   const now = performance.now();
   if (renderer && renderer.mode === 'worker' && renderer.ready && renderer.pendingSince != null && frameMiss > 0 && now - renderer.pendingSince > 9000) rendererRecover();
   // a morph left half way (an error, a lost frame): put the map back
@@ -8563,7 +8585,7 @@ function mvLoop2(now){
   if (!MV.on && !MV.anim) return;
   const A = MV.anim;
   if (A){ const k = Math.min(1, (now - A.t0) / A.dur); MV.u = A.from + (A.to - A.from) * k; if (k >= 1){ MV.anim = null; if (MV.d3) m3Frame(now); else mvDraw(MV.u, now); A.done && A.done(); } }
-  if ((MV.on || MV.anim) && MV.d3){ m3Frame(now); MV.raf = requestAnimationFrame(mvLoop); return; }
+  if ((MV.on || MV.anim) && MV.d3){ m3Frame(now); if (window.__prova === 'E' && !MV.anim) return; MV.raf = requestAnimationFrame(mvLoop); return; }
   if (MV.on || MV.anim){
     const f = MV.sel, fx = f ? f.x : 0, fy = f ? f.y : 0;
     mvStep(now);
@@ -9395,6 +9417,7 @@ function m3Frame(now){
     grow = clamp((u - 0.08) / 0.62, 0, 1); skyA = smooth(0.15, 0.7, u); brA = smooth(0.72, 0.97, u); plA = 1 - smooth(0.12, 0.5, u);
     const k = ease.ioS(u), pose = mo.path(k); m3Apply(pose);
   } else m3Controls(now, dt);
+  if (window.__prova === 'B' && !mo && W.cur){ W.sky.position.copy(M3.cam.position); W.starsF.position.copy(M3.cam.position); M3.R.render(M3.scene, M3.cam); m3Overlay(now, t, u, grow); return; }
   W.u.uGrow.value = grow; W.skyU.uSky.value = skyA * 0.6; W.bridges.material.uniforms.uBr.value = brA;
   W.plane.visible = plA > 0.003 && !!W.plU.uMap.value; W.plU.uA.value = plA;
   // systems, stars and glows
@@ -9463,7 +9486,7 @@ function m3Frame(now){
   if (Math.abs(M3.vo[0]) > 0.5 || Math.abs(M3.vo[1]) > 0.5) M3.cam.setViewOffset(stageRect.width, stageRect.height, M3.vo[0], M3.vo[1], stageRect.width, stageRect.height); else if (M3.cam.view && M3.cam.view.enabled) M3.cam.clearViewOffset();
   const cpos = M3.cam.position; W.sky.position.copy(cpos); W.starsF.position.copy(cpos);
   if (!W.skyU.uHas.value && SKY.im && SKY.d && !(COARSE && M3.lite)){ const tx = new T.Texture(SKY.im); tx.wrapS = T.RepeatWrapping; tx.generateMipmaps = false; tx.minFilter = T.LinearFilter; tx.needsUpdate = true; W.skyU.uMap.value = tx; W.skyU.uHas.value = 1; W.skyTex = tx; }
-  M3.R.render(M3.scene, M3.cam);
+  if (!(window.__prova === 'C' && !mo)) M3.R.render(M3.scene, M3.cam);
   // the name under the mouse follows what moves under it
   if (M3.mouse && !mo && now - (M3.hovT || 0) > 120){ M3.hovT = now; m3Hover(M3.mouse); }
   m3Overlay(now, t, u, grow);
@@ -9474,7 +9497,7 @@ function m3Overlay(now, t, u, grow){
   const W = M3.W, W0 = stageRect.width, H0 = stageRect.height, d = ovDpr(), cw = Math.max(1, Math.round(W0 * d)), ch = Math.max(1, Math.round(H0 * d));
   if (mvC.width !== cw || mvC.height !== ch){ mvC.width = cw; mvC.height = ch; mvC.style.width = W0 + 'px'; mvC.style.height = H0 + 'px'; }
   const c = mvx; c.setTransform(1, 0, 0, 1, 0, 0); c.globalCompositeOperation = 'source-over'; c.globalAlpha = 1; c.clearRect(0, 0, cw, ch);
-  const mo = M3.morph;
+  const mo = M3.morph; if (window.__prova === 'A' && !mo) return;
   // titles flying between the map and their planets
   if (mo && mo.items){
     for (const f of mo.items){
@@ -9621,7 +9644,7 @@ function m3Enter(){
   m3Frame(performance.now()); BB('primo-fotogramma');
   chrUi(); mvUi();
   MV.anim = { from: 0, to: 1, t0: performance.now(), dur: reduced() ? 300 : 3600, done: () => {
-    BB('volo-finito'); stage.classList.remove('mv-morph'); M3.morph = null; MV.snapUse = false; m3DropGround(); m3FreeMap(); m3Apply(home); m3SyncAngles(); BB('3d-libero');
+    BB('volo-finito'); if (window.__prova === 'D'){ try { renderer.worker && renderer.worker.terminate(); BB('pittore-spento'); } catch (e) {} } stage.classList.remove('mv-morph'); M3.morph = null; MV.snapUse = false; m3DropGround(); m3FreeMap(); m3Apply(home); m3SyncAngles(); BB('3d-libero');
     if (typeof P1HINTS !== 'undefined' && !P1HINTS.mv3b) P1HINTS.mv3b = COARSE ? 'Sei una <b>navicella</b>: trascina per virare, la <b>levetta</b> per i motori, ▲▼ per salire e scendere, pizzico per lo scatto. Tocca una <b>stella</b> o un <b>pianeta</b>.' : 'Sei una <b>navicella</b>: trascina per virare, <b>W A S D</b> per i motori, Q/E per scendere e salire, Maiusc per il turbo, rotella per lo scatto. Clicca una <b>stella</b> o un <b>pianeta</b>.';
     p1Hint('mv3b');
   } };
