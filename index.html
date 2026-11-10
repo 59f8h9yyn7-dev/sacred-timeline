@@ -2,7 +2,7 @@
 <script>
 /* Scatola nera: annota i passi su questo telefono; se la pagina viene chiusa dal sistema, al riavvio mostra l'ultimo tratto. */
 (function(){
-  var K = 'stl-bb-v1', MAX = 60, sid = Date.now().toString(36), t0 = Date.now(), log = [];
+  var K = 'stl-bb-v1', MAX = 80, sid = Date.now().toString(36), t0 = Date.now(), log = [];
   try { log = JSON.parse(localStorage.getItem(K) || '[]'); } catch (e) { log = []; }
   var prev = log.slice();
   function save(){ try { localStorage.setItem(K, JSON.stringify(log.slice(-MAX))); } catch (e) {} }
@@ -16,7 +16,8 @@
     } catch (err) {}
   };
   var fr = 0; (function tick(){ fr++; requestAnimationFrame(tick); })();
-  setInterval(function(){ var st = document.getElementById('stage'); var f = fr; fr = 0; if (st && st.classList.contains('mv3') && document.visibilityState === 'visible') BB('in-3d', { fps: Math.round(f / 2), mem: (performance.memory ? Math.round(performance.memory.usedJSHeapSize / 1048576) + ' MB' : 'n/d') }); }, 2000);
+  var tch = 0, beat = 0; addEventListener('pointerdown', function(e){ tch++; try { var t = e.target, st = document.getElementById('stage'); if (st && st.classList.contains('mv3')) BB('tocco', (t.id || t.className || t.tagName || '').toString().slice(0, 24)); } catch (err) {} }, true);
+  setInterval(function(){ var st = document.getElementById('stage'); var f = fr; fr = 0; if (st && st.classList.contains('mv3') && document.visibilityState === 'visible'){ beat++; var x = { n: beat, fps: f, tocchi: tch }; try { var p = window.__probe && window.__probe(); if (p){ x.gl = p.gl; x.pit = p.pit; x.img = p.img; } } catch (e) {} BB('in-3d', x); } else beat = 0; }, 1000);
   addEventListener('pagehide', function(){ BB('chiusa'); });
   document.addEventListener('visibilitychange', function(){ BB(document.visibilityState === 'hidden' ? 'sfondo' : 'torna'); });
   addEventListener('error', function(e){ BB('errore-js', String(e.message || '').slice(0, 120)); });
@@ -24,7 +25,7 @@
   // how did the previous visit end?
   var last = prev[prev.length - 1], crashed = last && last.k !== 'chiusa' && last.k !== 'sfondo';
   try { if (/[?&]reset3d/.test(location.search)){ localStorage.removeItem('stl-3d-crash'); localStorage.removeItem('stl-3d-run'); } } catch (e) {}
-  var info = { versione: 'b4', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
+  var info = { versione: 'b5', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
   BB('pagina', info);
   window.bbReport = function(){
     var ls = prev.filter(function(e){ return last && e.s === last.s; });
@@ -2546,6 +2547,7 @@ function makeRenderer(opts){
   };
   R.localEnv = localEnv;
   function startLocal(){
+    BB('pittore-locale');
     R.mode = 'local';
     R.local = STLCore(localEnv);
     R.local.init(opts).then(() => { R.ready = true; R.onReady && R.onReady(); }, () => { R.ready = true; R.onReady && R.onReady(); });
@@ -4419,7 +4421,8 @@ function openView(v, fresh, ctx){
   wrap.hidden = false;
   $('#card').focus({ preventScroll: true });
 }
-function openCard(ci, fresh, ctx){
+function openCard(){ BB('scheda'); return openCard0.apply(this, arguments); }
+function openCard0(ci, fresh, ctx){
   if (!CARDS || !CARDS.cards[ci]) return;
   openView({ t: 'card', ci }, fresh, ctx);
 }
@@ -7612,6 +7615,7 @@ async function fetchJson(url, opts, n = 3){
 }
 // the tile painter stopped answering: paint on this side instead, with everything it had been told
 function rendererRecover(){
+  BB('pittore-recupero');
   if (!renderer || !renderer.failover || !renderer.failover()) return;
   const prev = renderer.onReady;
   renderer.onReady = () => {
@@ -8706,7 +8710,8 @@ function mvHover(p){
   const label = h.P ? CARDS.prods[h.pi][1] : `${uniLabel(h.s.U.uc) || h.s.U.uc} · ${uniName(h.s.U)}`;
   MV.hover = { s: h.s, P: h.P || null, label, sx: p.x, sy: p.y };
 }
-function mvSelect(s, fly){
+function mvSelect(){ BB('scelta'); return mvSelect0.apply(this, arguments); }
+function mvSelect0(s, fly){
   MV.sel = s;
   if (fly){ if (MV.d3) m3Focus(s); else flyTo(fitBox({ x: s.x - s.R, y: s.y - s.R, r: s.x + s.R, b: s.y + s.R }, 0.12, 0.6), 700); }
   const U = s.U, fam = (PAL.find(p => p[0] === U.grp) || [0, ''])[1], ys = s.years.length ? (Math.min(...s.years) === Math.max(...s.years) ? String(Math.min(...s.years)) : `${Math.min(...s.years)}–${Math.max(...s.years)}`) : '';
@@ -10416,6 +10421,7 @@ async function boot(){
   hook('boot');
   setTimeout(loadCards, 1200);
 }
+window.__probe = () => { const o = {}; try { if (M3.R){ const i = M3.R.info; o.gl = [i.memory.geometries, i.memory.textures, i.programs ? i.programs.length : 0, i.render.calls, i.render.triangles]; } } catch (e) {} try { o.pit = [renderer.mode, renderer.pendingSince == null ? null : Math.round((performance.now() - renderer.pendingSince) / 1000), frameMiss, tiles.size]; } catch (e) {} try { o.img = S.src ? S.src.size : undefined; } catch (e) {} return o; };
 (window.__bbHold || Promise.resolve()).then(() => { BB('avvio'); boot(); });
 })();
 </script>
