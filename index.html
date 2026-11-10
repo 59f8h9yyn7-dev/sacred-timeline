@@ -23,7 +23,8 @@
   addEventListener('unhandledrejection', function(e){ BB('errore-promessa', String(e.reason && e.reason.message || e.reason || '').slice(0, 120)); });
   // how did the previous visit end?
   var last = prev[prev.length - 1], crashed = last && last.k !== 'chiusa' && last.k !== 'sfondo';
-  var info = { ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
+  try { if (/[?&]reset3d/.test(location.search)){ localStorage.removeItem('stl-3d-crash'); localStorage.removeItem('stl-3d-run'); } } catch (e) {}
+  var info = { versione: 'b4', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
   BB('pagina', info);
   window.bbReport = function(){
     var ls = prev.filter(function(e){ return last && e.s === last.s; });
