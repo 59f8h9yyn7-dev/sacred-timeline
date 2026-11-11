@@ -45,7 +45,7 @@
   // how did the previous visit end?
   var last = prev[prev.length - 1], crashed = last && last.k !== 'chiusa' && last.k !== 'sfondo';
   try { if (/[?&]reset3d/.test(location.search)){ localStorage.removeItem('stl-3d-crash'); localStorage.removeItem('stl-3d-run'); } } catch (e) {}
-  var info = { versione: 'b8', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
+  var info = { versione: 'b9', ua: navigator.userAgent.replace(/Mozilla\/5\.0 /, '').slice(0, 90), schermo: screen.width + 'x' + screen.height + ' @' + devicePixelRatio, app: (navigator.standalone || matchMedia('(display-mode: standalone)').matches) ? 'Home' : 'browser', blocchi3d: +localStorage.getItem('stl-3d-crash') || 0, in3d: +localStorage.getItem('stl-3d-run') || 0 };
   BB('pagina', info);
   window.bbReport = function(){
     var ls = prev.filter(function(e){ return last && e.s === last.s; });
@@ -68,6 +68,145 @@
     };
     if (document.body) show(); else addEventListener('DOMContentLoaded', show);
   }
+})();
+</script>
+<script>
+/* Sacred Timeline app: what the page gets from Claude inside the artifact (saving, downloads) is given here by GitHub.
+   Saves go to the branch "dati" of the repository, signed with a token kept only on this device. */
+(function(){
+  var O = '59f8h9yyn7-dev', R = 'sacred-timeline', DB = 'dati', MB = 'main', TK = 'stl-gh-token-v1';
+  var API = 'https://api.github.com/repos/' + O + '/' + R, F0 = window.fetch.bind(window);
+  var tok = null; try { tok = localStorage.getItem(TK); } catch (e) {}
+  var baseSha = null, BASE = location.pathname.replace(/[^/]*$/, '');
+  var note = function(k, x){ try { window.BB && window.BB(k, x); } catch (e) {} };
+  function E(code, msg){ var e = new Error(msg || code); e.code = code; return e; }
+  function gh(path, opt){
+    opt = opt || {};
+    var h = { 'Accept': opt.raw ? 'application/vnd.github.raw+json' : 'application/vnd.github+json', 'Authorization': 'Bearer ' + tok, 'X-GitHub-Api-Version': '2022-11-28' };
+    if (opt.body) h['Content-Type'] = 'application/json';
+    return F0(API + path, { method: opt.method || 'GET', headers: h, body: opt.body ? JSON.stringify(opt.body) : undefined, cache: 'no-store' });
+  }
+  async function j(path, opt){
+    var r = await gh(path, opt);
+    if (!r.ok){ var t = ''; try { t = (await r.text()).slice(0, 160); } catch (e) {} note('gh-errore', { p: path.slice(0, 40), s: r.status, t: t }); var e = new Error('GitHub ' + r.status); e.status = r.status; throw e; }
+    return r.json();
+  }
+  async function headOf(br){ var r = await gh('/git/ref/heads/' + br); if (r.status === 404) return null; if (!r.ok){ var e = new Error('GitHub ' + r.status); e.status = r.status; throw e; } return (await r.json()).object.sha; }
+  async function dataHead(make){
+    var s = await headOf(DB); if (s || !make) return s;
+    var m = await headOf(MB); await j('/git/refs', { method: 'POST', body: { ref: 'refs/heads/' + DB, sha: m } }); return m;
+  }
+  async function list(dir, ref){ var r = await gh('/contents/' + dir + '?ref=' + ref); if (r.status === 404) return []; if (!r.ok){ var e = new Error('GitHub ' + r.status); e.status = r.status; throw e; } var l = await r.json(); return Array.isArray(l) ? l : []; }
+  async function mapSha(ref){ var f = (await list('data', ref)).find(function(x){ return x.name === 'map.json'; }); return f ? f.sha : null; }
+  async function loadMap(){
+    var head = (await dataHead(false)) || (await headOf(MB)), sha = await mapSha(head);
+    var r = await gh('/git/blobs/' + sha, { raw: true }); if (!r.ok) throw new Error('GitHub ' + r.status);
+    var t = await r.text(); JSON.parse(t); baseSha = sha; note('mappa-da-github', sha.slice(0, 7));
+    return new Response(t, { status: 200, headers: { 'Content-Type': 'application/json' } });
+  }
+  async function readFile(rel){
+    var brs = [DB, MB];
+    for (var i = 0; i < brs.length; i++){ var r = await gh('/contents/' + encodeURI(rel) + '?ref=' + brs[i], { raw: true }); if (r.ok) return new Response(await r.blob(), { status: 200, headers: { 'Content-Type': 'application/json' } }); }
+    return null;
+  }
+  // the map and the saved versions are read from where the app saves them
+  window.fetch = function(input, init){
+    try {
+      if (tok && ok !== false){
+        var u = new URL(typeof input === 'string' ? input : input.url, location.href);
+        if (u.origin === location.origin && u.pathname.indexOf(BASE) === 0){
+          var rel = u.pathname.slice(BASE.length);
+          if (rel === 'data/map.json') return loadMap().catch(function(e){ note('mappa-da-pagina', String(e.message || e).slice(0, 60)); return F0(input, init); });
+          if (rel.indexOf('bk/') === 0) return readFile(rel).then(function(r){ return r || F0(input, init); }).catch(function(){ return F0(input, init); });
+        }
+      }
+    } catch (e) {}
+    return F0(input, init);
+  };
+  function b64(blob){ return new Promise(function(res, rej){ var fr = new FileReader(); fr.onload = function(){ var s = String(fr.result); res(s.slice(s.indexOf(',') + 1)); }; fr.onerror = function(){ rej(fr.error); }; fr.readAsDataURL(blob); }); }
+  var busy = Promise.resolve();
+  function publish(files){ var p = busy.then(function(){ return publish1(files); }); busy = p.catch(function(){}); return p; }
+  async function publish1(files){
+    try {
+      var head = await dataHead(true), cur = await mapSha(head);
+      if (baseSha && cur && cur !== baseSha){ note('salva-conflitto'); setTimeout(function(){ location.reload(); }, 1800); throw E('conflict'); }
+      var paths = Object.keys(files), tree = [], newMap = null, pics = [], gone = paths.filter(function(p){ return files[p] === null; }), have = null;
+      if (gone.length){ have = {}; var dirs = {}; gone.forEach(function(p){ dirs[p.replace(/\/[^/]*$/, '')] = 1; }); for (var d in dirs) (await list(d, head)).forEach(function(x){ have[x.path] = 1; }); }
+      for (var i = 0; i < paths.length; i++){
+        var p = paths[i], v = files[p];
+        if (v === null){ if (have[p]) tree.push({ path: p, mode: '100644', type: 'blob', sha: null }); continue; }
+        var blob = v instanceof Blob ? v : new Blob([v && v.content !== undefined ? v.content : v], { type: (v && v.contentType) || 'application/octet-stream' });
+        var bj = await j('/git/blobs', { method: 'POST', body: { content: await b64(blob), encoding: 'base64' } });
+        tree.push({ path: p, mode: '100644', type: 'blob', sha: bj.sha });
+        if (p === 'data/map.json') newMap = bj.sha; else if (p.indexOf('img/') === 0) pics.push([p, blob]);
+      }
+      var c = await j('/git/commits/' + head);
+      var t = await j('/git/trees', { method: 'POST', body: { base_tree: c.tree.sha, tree: tree } });
+      var nc = await j('/git/commits', { method: 'POST', body: { message: 'Salvataggio dalla app', tree: t.sha, parents: [head] } });
+      var r = await gh('/git/refs/heads/' + DB, { method: 'PATCH', body: { sha: nc.sha } });
+      if (!r.ok){ note('salva-ref', r.status); if (r.status === 422 || r.status === 409){ setTimeout(function(){ location.reload(); }, 1800); throw E('conflict'); } var e2 = new Error('GitHub ' + r.status); e2.status = r.status; throw e2; }
+      if (newMap) baseSha = newMap;
+      // new pictures stay at hand on this device until the next release of the app carries them
+      try { if (pics.length && window.caches){ var cs = await caches.open('run'); for (var k = 0; k < pics.length; k++) await cs.put(new Request(new URL(pics[k][0], location.href).href), new Response(pics[k][1], { headers: { 'Content-Type': pics[k][1].type || 'image/jpeg' } })); } } catch (e) {}
+      note('salvato', paths.length);
+    } catch (err){
+      if (err && err.code) throw err;
+      var s = err && err.status;
+      if (s === 401){ ok = false; throw E('capability_disabled', 'token'); }
+      if (s === 403 || s === 429) throw E('rate_limited');
+      throw err;
+    }
+  }
+  async function save(o){
+    var data = o.data, blob = data instanceof Blob ? data : new Blob([data], { type: /\.json$/.test(o.filename) ? 'application/json' : 'text/plain' });
+    try { var f = new File([blob], o.filename, { type: blob.type }); if (navigator.canShare && navigator.canShare({ files: [f] })){ await navigator.share({ files: [f] }); return; } } catch (e) { if (e && e.name === 'AbortError') return; }
+    var a = document.createElement('a'), u = URL.createObjectURL(blob); a.href = u; a.download = o.filename; document.body.appendChild(a); a.click(); setTimeout(function(){ a.remove(); URL.revokeObjectURL(u); }, 4000);
+  }
+  // is the token good? (asked once, the answer is what the page waits for)
+  var ok = null, ready = !tok ? Promise.resolve(false) : gh('').then(function(r){ if (r.status === 401 || r.status === 404){ ok = false; return false; } if (!r.ok) return false; return r.json().then(function(x){ ok = !!(x.permissions && x.permissions.push); return ok; }); }).catch(function(){ return false; });
+  window.claude = { use: function(name){
+    if (name === 'artifact') return ready.then(function(good){ return good ? { publish: publish } : null; });
+    if (name === 'downloads') return Promise.resolve({ save: save });
+    return Promise.resolve(null);
+  } };
+  // ---- the panel where the token is given ----
+  function panel(){
+    var d = document.createElement('div'); d.id = 'ghPanel';
+    d.style.cssText = 'position:fixed;inset:0;z-index:99990;background:rgba(5,6,10,.96);color:#e8e6df;font:15px/1.5 -apple-system,BlinkMacSystemFont,sans-serif;padding:calc(env(safe-area-inset-top,0px) + 18px) 18px 24px;overflow:auto';
+    var el = function(tag, css, txt){ var x = document.createElement(tag); if (css) x.style.cssText = css; if (txt) x.textContent = txt; return x; };
+    var btn = function(t, f, main){ var b = el('button', 'font:600 15px -apple-system,sans-serif;padding:12px 18px;margin:0 10px 10px 0;border-radius:10px;border:1px solid ' + (main ? '#ff8a2a' : '#3a3d4a') + ';background:' + (main ? '#ff8a2a' : 'transparent') + ';color:' + (main ? '#111' : '#e8e6df'), t); b.onclick = f; return b; };
+    d.appendChild(el('div', 'font:600 19px -apple-system,sans-serif;color:#ff8a2a;margin-bottom:8px', 'Salvataggio delle modifiche'));
+    var st = el('div', 'margin-bottom:14px;color:#b9b6ad', tok ? 'Controllo…' : 'Non collegato: le modifiche fatte qui non vengono salvate.'); d.appendChild(st);
+    if (tok) ready.then(function(g){ st.textContent = g ? 'Collegato: le modifiche si salvano da sole.' : (ok === false ? 'La chiave non è più valida: creane una nuova e incollala qui.' : 'Non riesco a contattare GitHub in questo momento.'); st.style.color = g ? '#7fd6a0' : '#ffb38a'; });
+    var ol = el('ol', 'padding-left:20px;margin:0 0 14px;color:#cfccc4');
+    [null, 'Token name: "Timeline". Expiration: "No expiration" o la più lunga.', 'Repository access: "Only select repositories" e scegli ' + R + '.', 'Permissions > Repository permissions > Contents: "Read and write".', 'Tocca "Generate token", copia la chiave (inizia con github_pat_) e incollala qui sotto.'].forEach(function(t){ var li = el('li', 'margin-bottom:6px', t); if (t === null){ li.appendChild(document.createTextNode('Apri ')); var ln = el('a', 'color:#ff8a2a', 'questa pagina di GitHub'); ln.href = 'https://github.com/settings/personal-access-tokens/new'; ln.target = '_blank'; ln.rel = 'noopener'; li.appendChild(ln); li.appendChild(document.createTextNode(' (accedi se serve).')); } ol.appendChild(li); });
+    d.appendChild(ol);
+    var inp = el('input', 'width:100%;box-sizing:border-box;font:14px ui-monospace,Menlo,monospace;padding:12px;border-radius:10px;border:1px solid #3a3d4a;background:#0d0f16;color:#e8e6df;margin-bottom:12px'); inp.placeholder = 'github_pat_…'; inp.autocapitalize = 'off'; inp.autocomplete = 'off'; inp.spellcheck = false; d.appendChild(inp);
+    var msg = el('div', 'min-height:22px;margin-bottom:10px;color:#ffb38a'); d.appendChild(msg);
+    d.appendChild(btn('Collega', async function(){
+      var v = inp.value.trim(); if (!v){ msg.textContent = 'Incolla prima la chiave.'; return; }
+      msg.textContent = 'Controllo…';
+      try {
+        var r = await F0(API, { headers: { 'Accept': 'application/vnd.github+json', 'Authorization': 'Bearer ' + v }, cache: 'no-store' });
+        if (r.status === 401){ msg.textContent = 'GitHub non riconosce questa chiave: controlla di averla copiata tutta.'; return; }
+        if (r.status === 404){ msg.textContent = 'La chiave non vede il repository ' + R + ': rifai il passo 3.'; return; }
+        if (!r.ok){ msg.textContent = 'GitHub ha risposto ' + r.status + ': riprova tra poco.'; return; }
+        var x = await r.json(); if (!(x.permissions && x.permissions.push)){ msg.textContent = 'La chiave può solo leggere: al passo 4 scegli "Read and write".'; return; }
+        localStorage.setItem(TK, v); msg.style.color = '#7fd6a0'; msg.textContent = 'Collegato. Riavvio…'; setTimeout(function(){ location.reload(); }, 900);
+      } catch (e){ msg.textContent = 'Non riesco a contattare GitHub: controlla la connessione.'; }
+    }, true));
+    if (tok) d.appendChild(btn('Scollega', function(){ try { localStorage.removeItem(TK); } catch (e) {} location.reload(); }));
+    d.appendChild(btn('Chiudi', function(){ d.remove(); }));
+    d.appendChild(el('div', 'margin-top:8px;font-size:13px;color:#8d8a82', 'La chiave resta solo su questo dispositivo e vale solo per il repository ' + R + '.'));
+    document.body.appendChild(d);
+  }
+  window.stlSavePanel = panel;
+  addEventListener('DOMContentLoaded', function(){
+    var m = document.getElementById('menu'); if (!m) return;
+    var b = document.createElement('button'); b.id = 'mGh'; b.innerHTML = '<svg class="i"><use href="#i-upload"/></svg>Salvataggio nell\u2019app\u2026'; b.addEventListener('click', function(){ m.hidden = true; panel(); });
+    var ex = document.getElementById('mExport'); m.insertBefore(b, ex || null);
+    if (tok) ready.then(function(g){ if (!g && ok === false) setTimeout(function(){ try { panel(); } catch (e) {} }, 2500); });
+  });
 })();
 </script>
 <title>Marvel Sacred Timeline</title>
@@ -4975,7 +5114,7 @@ document.addEventListener('visibilitychange', () => { if (document.visibilitySta
 let explained = false;
 function maybeExplainSaving(){
   if (explained) return; explained = true;
-  if (!canSave && !readOnly) toast('In questa vista le modifiche non si salvano: aprila da Claude per salvarle');
+  if (!canSave && !readOnly) toast('Le modifiche qui non si salvano ancora: collega il salvataggio dal menu ⋯');
 }
 async function initCaps(){
   const c = window.claude;
