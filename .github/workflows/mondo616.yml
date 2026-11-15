@@ -1,0 +1,40 @@
+name: Mondo 616 - dati OpenStreetMap
+on:
+  push:
+    branches: [dati]
+    paths: ['tools/world/**']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mondo616
+  cancel-in-progress: false
+jobs:
+  zone:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dati
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install shapely==2.0.6
+      - name: Scarica e semplifica le zone
+        run: python tools/world/build.py
+      - name: Salva nel repository (rami dati e main)
+        run: |
+          git config user.name "sacred-timeline-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/world
+          git commit -m "Mondo 616: dati OpenStreetMap" || { echo "niente di nuovo"; exit 0; }
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin dati && git push origin HEAD:dati && break
+            sleep 7
+          done
+          git push origin HEAD:main || echo "main non avanzato"
+      - name: Pulizia del ramo di prova
+        if: always()
+        run: git push origin --delete claude/prova-azione || true

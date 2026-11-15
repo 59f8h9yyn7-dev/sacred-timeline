@@ -1,0 +1,22 @@
+{
+  "_nota": "Zone del Mondo 616 scaricate da OpenStreetMap (Overpass). Rettangoli in [sud, ovest, nord, est]. Cambiare 'v' rigenera il file con un nome nuovo.",
+  "zones": [
+    {
+      "id": "nyc616",
+      "v": 1,
+      "name": "New York · dal Village a Midtown e al Queens di Peter",
+      "rects": [
+        [40.7215, -74.0125, 40.7625, -73.9580],
+        [40.7355, -73.9580, 40.7545, -73.9115]
+      ],
+      "marks": [
+        { "k": "avengers-tower", "mode": "replace", "ll": [40.75333, -73.97639], "addr": ["200", "Park Avenue"], "names": ["MetLife Building", "Pan Am Building"] },
+        { "k": "grand-central", "mode": "point", "ll": [40.75272, -73.97722], "names": ["Grand Central Terminal"] },
+        { "k": "sanctum", "mode": "replace", "ll": [40.72905, -74.00030], "addr": ["177", "Bleecker Street"], "face": "Bleecker Street" },
+        { "k": "parker-hc", "mode": "highlight", "ll": [40.74490, -73.92120], "addr": ["43-25", "43rd Street"] },
+        { "k": "parker-nwh", "mode": "highlight", "ll": [40.74455, -73.91815], "addr": ["43-15", "46th Street"] },
+        { "k": "delmar", "mode": "highlight", "ll": [40.74330, -73.91800], "addr": ["46-22", "Queens Boulevard"] }
+      ]
+    }
+  ]
+}
