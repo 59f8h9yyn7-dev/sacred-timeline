@@ -1494,6 +1494,69 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stro
   .m3ud button{width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(255,255,255,.22);background:rgba(19,16,17,.5);color:#dff;font-size:16px;touch-action:none}
   @media (max-width:640px){ #stage.mv3:not(.mv-morph) .m3stick{bottom:96px} #stage.mv3:not(.mv-morph) .m3ud{bottom:150px} }
 }
+/* ---------- Mondo 616: la città vera sotto il multiverso ---------- */
+#w6{position:absolute;inset:0;z-index:55;background:#07090f;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none}
+#w6[hidden]{display:none}
+#w6 .w6-c{position:absolute;left:0;top:0;width:100%;height:100%;display:block;touch-action:none;outline:none}
+#w6 .w6-ov{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.w6-pin{position:absolute;left:0;top:0;display:flex;align-items:center;gap:6px;transform-origin:0 0;pointer-events:auto;cursor:pointer;will-change:transform;border:0;background:none;padding:0;color:var(--ink)}
+.w6-pin .ic{width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;display:grid;place-items:center;font:800 15px/1 var(--font-display);color:#0b0d12;background:var(--c);box-shadow:0 0 0 2px rgba(7,9,15,.85),0 0 16px -2px var(--c)}
+.w6-pin .lb{margin-top:-15px;padding:4px 8px;border-radius:7px;background:rgba(9,11,17,.78);border:1px solid rgba(255,255,255,.14);font:700 12.5px/1.1 var(--font-ui);white-space:nowrap;letter-spacing:.01em}
+.w6-pin .lb small{display:block;font:500 10.5px/1.15 var(--font-ui);color:var(--ink-2);margin-top:1px}
+.w6-pin.far .lb{display:none}
+.w6-pin::after{content:"";position:absolute;left:-1px;top:13px;width:2px;height:var(--stem,0px);background:linear-gradient(var(--c),transparent);opacity:.8}
+.w6-lab{position:absolute;left:0;top:0;transform-origin:0 0;font:700 11px/1 var(--font-ui);letter-spacing:.16em;text-transform:uppercase;color:rgba(232,226,220,.78);text-shadow:0 1px 3px #000,0 0 8px rgba(0,0,0,.8);white-space:nowrap;will-change:transform,opacity}
+.w6-top{position:absolute;left:10px;top:max(10px,env(safe-area-inset-top));display:flex;align-items:center;gap:10px;z-index:3}
+.w6-back{display:flex;align-items:center;gap:4px;height:36px;padding:0 12px 0 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(9,11,17,.72);color:var(--ink);font:600 13px/1 var(--font-ui);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.w6-back svg{width:18px;height:18px}
+.w6-t{display:flex;flex-direction:column;text-shadow:0 1px 4px #000}
+.w6-t small{font:600 10px/1 var(--font-ui);letter-spacing:.22em;text-transform:uppercase;color:var(--flare)}
+.w6-t b{font:800 21px/1 var(--font-display);letter-spacing:.04em;text-transform:uppercase;margin-top:2px}
+.w6-sign{position:absolute;left:50%;top:max(58px,calc(env(safe-area-inset-top) + 50px));transform:translate(-50%,-14px) scale(.96);opacity:0;pointer-events:none;text-align:center;padding:9px 22px 10px;border-radius:14px;background:linear-gradient(180deg,rgba(30,22,40,.92),rgba(14,12,22,.92));border:1.5px solid rgba(255,200,140,.45);box-shadow:0 10px 30px -10px rgba(0,0,0,.8),0 0 0 4px rgba(237,115,46,.12);transition:opacity .45s ease,transform .45s cubic-bezier(.2,.9,.3,1.2);z-index:3;max-width:86%}
+.w6-sign.on{opacity:1;transform:translate(-50%,0) scale(1)}
+.w6-sign small{display:block;font:600 10.5px/1 var(--font-ui);letter-spacing:.2em;text-transform:uppercase;color:#ffcf9e}
+.w6-sign b{display:block;font:800 27px/1.05 var(--font-display);letter-spacing:.03em;text-transform:uppercase;margin-top:5px;color:#fff3e6}
+.w6-sign i{display:block;font:500 12px/1 var(--font-ui);font-style:normal;color:var(--ink-2);margin-top:4px}
+.w6-sign i:empty{display:none}
+.w6-mini{position:absolute;right:12px;top:max(10px,env(safe-area-inset-top));width:128px;height:128px;border-radius:50%;padding:0;border:2px solid rgba(255,214,170,.55);background:#0b0f18;overflow:hidden;box-shadow:0 6px 20px -6px rgba(0,0,0,.8);z-index:3}
+.w6-mini canvas{position:absolute;inset:0;width:100%;height:100%;border-radius:50%}
+.w6-mini .w6-me{position:absolute;left:50%;top:50%;width:0;height:0;margin:-9px 0 0 -6px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:15px solid var(--flare);filter:drop-shadow(0 0 3px rgba(0,0,0,.9))}
+.w6-mini .w6-n{position:absolute;left:50%;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:#e9e2da;color:#111;font:800 10px/16px var(--font-ui);text-align:center;will-change:transform}
+.w6-stick{position:absolute;left:18px;bottom:max(24px,calc(env(safe-area-inset-bottom) + 14px));width:104px;height:104px;border-radius:50%;background:rgba(9,11,17,.5);border:1.5px solid rgba(255,255,255,.22);touch-action:none;z-index:3}
+.w6-stick i{position:absolute;left:50%;top:50%;width:44px;height:44px;margin:-22px 0 0 -22px;border-radius:50%;background:rgba(255,170,100,.6);box-shadow:0 0 18px rgba(255,150,80,.5);pointer-events:none}
+.w6-ud{position:absolute;right:16px;bottom:max(40px,calc(env(safe-area-inset-bottom) + 30px));display:flex;flex-direction:column;gap:9px;z-index:3;touch-action:none}
+.w6-ud button{width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(255,255,255,.22);background:rgba(9,11,17,.55);color:#ffe3c6;font-size:16px;touch-action:none}
+.w6-ud button:active{background:rgba(237,115,46,.45)}
+@media (pointer:fine){ .w6-stick,.w6-ud{display:none} }
+.w6-chip{position:absolute;left:50%;bottom:max(150px,calc(env(safe-area-inset-bottom) + 140px));transform:translateX(-50%);max-width:calc(100% - 40px);text-align:center;white-space:normal !important;padding:7px 13px;border-radius:16px;background:rgba(9,11,17,.8);border:1px solid rgba(255,255,255,.16);font:600 12.5px/1.2 var(--font-ui);color:var(--ink);white-space:nowrap;pointer-events:none;z-index:3}
+.w6-chip[hidden]{display:none}
+.w6-osm{position:absolute;right:8px;bottom:max(4px,env(safe-area-inset-bottom));font:500 10px/1 var(--font-ui);color:rgba(230,224,218,.6);text-shadow:0 1px 2px #000;pointer-events:none;z-index:3}
+.w6-place{position:absolute;left:12px;bottom:max(12px,env(safe-area-inset-bottom));width:min(380px,calc(100% - 24px));max-height:min(62%,560px);overflow:auto;overscroll-behavior:contain;padding:14px 14px 12px;border-radius:16px;background:rgba(14,12,18,.94);border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 40px -12px rgba(0,0,0,.85);z-index:5;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.w6-place[hidden]{display:none}
+.w6-place header{display:flex;align-items:flex-start;gap:10px}
+.w6-place header .ic{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:800 17px/1 var(--font-display);color:#0b0d12;background:var(--c);box-shadow:0 0 14px -3px var(--c)}
+.w6-place header div{flex:1;min-width:0}
+.w6-place header b{display:block;font:800 21px/1.05 var(--font-display);letter-spacing:.03em;text-transform:uppercase}
+.w6-place header small{display:block;color:var(--ink-2);font-size:12px;margin-top:2px}
+.w6-place .x{flex:none;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.07);color:var(--ink);display:grid;place-items:center}
+.w6-place .x svg{width:16px;height:16px}
+.w6-place .dove{margin:9px 0 6px;font:600 12px/1.35 var(--font-mono);color:#ffcf9e}
+.w6-place p{margin:0 0 10px;font-size:13.5px;line-height:1.45;color:var(--ink)}
+.w6-place h4{margin:10px 0 6px;font:600 10.5px/1 var(--font-ui);letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3)}
+.w6-place .chips{display:flex;flex-wrap:wrap;gap:6px}
+.w6-place .chips button{height:28px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);font:600 12px/1 var(--font-ui);display:flex;align-items:center;gap:6px}
+.w6-place .chips button em{font-style:normal;font:600 10.5px/1 var(--font-mono);color:var(--flare)}
+.w6-place .chips button:active{background:rgba(237,115,46,.3)}
+.w6-place .go{margin-top:12px;width:100%;height:34px;border-radius:10px;border:1px solid rgba(237,115,46,.5);background:rgba(237,115,46,.14);color:var(--ink);font:700 13px/1 var(--font-ui)}
+.w6-load{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(ellipse at 50% 60%,#1a1424,#07090f 70%);z-index:6}
+#w6.loading .w6-load{display:flex}
+#w6.loading .w6-top{z-index:7}
+.w6-load b{font:800 30px/1 var(--font-display);letter-spacing:.06em;text-transform:uppercase}
+.w6-load .bar{width:200px;height:3px;border-radius:3px;background:rgba(255,255,255,.12);overflow:hidden}
+.w6-load .bar i{display:block;height:100%;width:0;background:var(--flare);transition:width .25s ease}
+.w6-load span{font-size:12.5px;color:var(--ink-2)}
+@media (max-width:640px){ .w6-mini{width:108px;height:108px} .w6-sign{top:max(132px,calc(env(safe-area-inset-top) + 124px))} .w6-sign b{font-size:23px} .w6-place{left:8px;right:8px;width:auto;bottom:max(8px,env(safe-area-inset-bottom))} }
+.mvp-a .btn.w6-go{flex-basis:100%;border-color:rgba(255,200,140,.5);background:linear-gradient(90deg,rgba(237,115,46,.22),rgba(111,195,255,.14))}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1529,6 +1592,7 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stro
   <symbol id="i-grid" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 9.3h16M4 14.6h16M9.3 4v16M14.6 4v16"/></symbol>
   <symbol id="i-map" viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><rect x="11.5" y="11" width="6" height="4.5" rx="1"/></symbol>
   <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.9 5.2 3.9 8.5s-1.3 6.1-3.9 8.5c-2.6-2.4-3.9-5.2-3.9-8.5s1.3-6.1 3.9-8.5z"/></symbol>
 </svg>
 
 <div id="app">
@@ -8721,6 +8785,7 @@ function mvLoop(now){
 }
 function mvLoop2(now){
   MV.raf = 0;
+  if (window.__w6on) return; // the Mondo 616 is open over it: the multiverse waits
   if (!MV.on && !MV.anim) return;
   const A = MV.anim;
   if (A){ const k = Math.min(1, (now - A.t0) / A.dur); MV.u = A.from + (A.to - A.from) * k; if (k >= 1){ MV.anim = null; if (MV.d3) m3Frame(now); else mvDraw(MV.u, now); A.done && A.done(); } }
@@ -8882,13 +8947,14 @@ function mvSelect0(s, fly){
     <div class="mvp-s"><span><b>${s.n}</b>${s.n === 1 ? 'titolo' : 'titoli'}</span><span><b>${s.planets.length}</b>${s.planets.length === 1 ? 'pianeta' : 'pianeti'}</span><span><b>${s.chars}</b>personaggi</span>${ys ? `<span><b>${ys}</b>anni</span>` : ''}</div>
     <div class="mvp-l">${rows.map(r => `<button class="mvp-r" data-p="${r.pi}"><em>${esc(r.y)}</em>${esc(r.t)}</button>`).join('')}</div>
     ${br.length ? `<div class="mvp-b"><small>Ponti verso</small>${br.map(o => `<button class="mvp-u" data-u="${esc(o.key)}" style="--c:${o.col}">${esc(uniLabel(o.U.uc) || o.U.uc)}</button>`).join('')}</div>` : ''}
-    <div class="mvp-a"><button class="btn" data-a="map"><svg class="i"><use href="#i-route"/></svg>Sul ramo della mappa</button><button class="btn" data-a="chr"><svg class="i"><use href="#i-history"/></svg>In cronologia</button></div>`;
+    <div class="mvp-a"><button class="btn" data-a="map"><svg class="i"><use href="#i-route"/></svg>Sul ramo della mappa</button><button class="btn" data-a="chr"><svg class="i"><use href="#i-history"/></svg>In cronologia</button>${s.isSL ? '<button class="btn w6-go" data-a="w616"><svg class="i"><use href="#i-globe"/></svg>Mondo 616 · New York</button>' : ''}</div>`;
   $('#mvP').hidden = false;
 }
 $('#mvP').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   const s = MV.sel;
   if (b.dataset.a === 'x'){ MV.sel = null; $('#mvP').hidden = true; return; }
+  if (b.dataset.a === 'w616'){ w6Open(); return; }
   if (b.dataset.p != null){ openTitle(+b.dataset.p, true); return; }
   if (b.dataset.u != null){ const o = MV.sys.byKey.get(b.dataset.u); if (o) mvSelect(o, true); return; }
   if (!s) return;
@@ -9837,6 +9903,704 @@ stage.insertAdjacentHTML('beforeend', '<div class="m3stick" id="m3stick" aria-la
   st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
   for (const b of $('#m3ud').children){ const k = b.dataset.k, off = () => ctl.keys.delete(k);
     b.addEventListener('pointerdown', e => { e.stopPropagation(); e.preventDefault(); ctl.keys.add(k); }); b.addEventListener('pointerup', off); b.addEventListener('pointercancel', off); b.addEventListener('pointerleave', off); }
+}
+
+/* ---- 92-w616.js ---- */
+/* ================= Mondo 616: la Terra-616 diventa una città vera. Base reale da OpenStreetMap (data/world/, scaricata da una
+   GitHub Action: tools/world), luoghi dei film sopra (data/luoghi616.json). Dall'alto è una mappa 2D; scendendo diventa 3D
+   serale senza stacchi. Volo libero, ci si posa ovunque, cartelli dei quartieri, minimappa rotonda. ================= */
+const W6 = { on: false, busy: false, T: null, zone: null, places: null, cpu: null, R: null, cv: null, scene: null, cam: null, objs: [], mats: [], u: null,
+  raf: 0, t0: performance.now(), lastF: 0, slow: 0, ft: 0.016, fn: 0, el: null, mini: null, place: null, intro: false, chipT: 0, signT: 0, sz: null, dirty: 3,
+  ctl: { x: 0, y: 5200, z: 0, yaw: 0, pu: -0.3, v: [0, 0, 0], stick: null, ud: 0, keys: new Set(), ptrs: new Map(), g: null, fly: null, top: null },
+  nb: { cur: null, cand: null, ct: 0, at: 0 }, pins: [], labs: [] };
+const W6_FOV = 55, W6_CS = 6, W6_CH = 420, W6_MAXY = 9000;
+const W6_RW = [16, 13, 11, 9.5, 8, 4.6, 6.5, 2.4], W6_RC = [3.2, 3.2, 3.0, 2.8, 2.6, 1.2, 1.4, 0];
+function w6Dec(a, from){ const n = (a.length - from) >> 1, o = new Float32Array(n * 2); let x = 0, z = 0; for (let i = 0; i < n; i++){ x += a[from + 2 * i]; z += a[from + 2 * i + 1]; o[2 * i] = x / 10; o[2 * i + 1] = z / 10; } return o; }
+const w6Hash = (x, z) => { const s = Math.sin(x * 12.9898 + z * 78.233) * 43758.5453; return s - Math.floor(s); };
+const w6Ang = (a, b) => { let d = (b - a) % (Math.PI * 2); if (d > Math.PI) d -= Math.PI * 2; if (d < -Math.PI) d += Math.PI * 2; return d; };
+const w6S3 = y => 1 - smooth(450, 2600, y);
+// a ring with its walls facing out: clockwise when x goes right and z goes up on paper
+function w6Ring(r){
+  const n = r.length / 2; let A = 0;
+  for (let i = 0; i < n; i++){ const j = (i + 1) % n; A += r[2 * i] * r[2 * j + 1] - r[2 * j] * r[2 * i + 1]; }
+  if (A <= 0) return r;
+  const o = new Float32Array(r.length); for (let i = 0; i < n; i++){ o[2 * i] = r[2 * (n - 1 - i)]; o[2 * i + 1] = r[2 * (n - 1 - i) + 1]; } return o;
+}
+function w6Roof(T, r){
+  const n = r.length / 2, v = []; for (let i = 0; i < n; i++) v.push(new T.Vector2(r[2 * i], r[2 * i + 1]));
+  let f; try { f = T.ShapeUtils.triangulateShape(v, []); } catch { f = []; }
+  const out = [];
+  for (const t of f){ let a = t[0], b = t[1], c = t[2]; const ar = (r[2 * b] - r[2 * a]) * (r[2 * c + 1] - r[2 * a + 1]) - (r[2 * c] - r[2 * a]) * (r[2 * b + 1] - r[2 * a + 1]); if (ar > 0){ const s = b; b = c; c = s; } out.push(a, b, c); }
+  return out;
+}
+const w6Acc = col => ({ p: [], k: col ? null : [], c: col ? [] : null, e: col ? [] : null, i: [], n: 0 });
+// a building: bottom ring, top ring, walls and a flat roof; aK = height (quarter metres) + a seed for its colours
+function w6Bld(T, A, r, y0, y1, k){
+  const n = r.length / 2, b = A.n;
+  for (let i = 0; i < n; i++){ A.p.push(r[2 * i], y0, r[2 * i + 1]); A.k.push(k); }
+  for (let i = 0; i < n; i++){ A.p.push(r[2 * i], y1, r[2 * i + 1]); A.k.push(k); }
+  for (let i = 0; i < n; i++){ const j = (i + 1) % n; A.i.push(b + i, b + j, b + n + j, b + i, b + n + j, b + n + i); }
+  const rf = w6Roof(T, r); for (let q = 0; q < rf.length; q++) A.i.push(b + n + rf[q]);
+  A.n += 2 * n;
+}
+// the same, in one colour (models, bridges, the elevated line)
+function w6Prism(T, A, r, y0, y1, col, e){
+  r = w6Ring(r); const n = r.length / 2, b = A.n;
+  for (let s = 0; s < 2; s++) for (let i = 0; i < n; i++){ A.p.push(r[2 * i], s ? y1 : y0, r[2 * i + 1]); A.c.push(col[0], col[1], col[2]); A.e.push(e); }
+  for (let i = 0; i < n; i++){ const j = (i + 1) % n; A.i.push(b + i, b + j, b + n + j, b + i, b + n + j, b + n + i); }
+  const rf = w6Roof(T, r); for (let q = 0; q < rf.length; q++) A.i.push(b + n + rf[q]);
+  A.n += 2 * n;
+}
+// a box from its centre and three half-axes (any orientation)
+function w6Box(A, c, ax, ay, az, col, e){
+  const b = A.n;
+  for (let k = 0; k < 8; k++){ const sx = k & 1 ? 1 : -1, sy = k & 2 ? 1 : -1, sz = k & 4 ? 1 : -1; A.p.push(c[0] + ax[0] * sx + ay[0] * sy + az[0] * sz, c[1] + ax[1] * sx + ay[1] * sy + az[1] * sz, c[2] + ax[2] * sx + ay[2] * sy + az[2] * sz); A.c.push(col[0], col[1], col[2]); A.e.push(e); }
+  const F = [[0, 1, 3, 2], [4, 6, 7, 5], [0, 4, 5, 1], [2, 3, 7, 6], [0, 2, 6, 4], [1, 5, 7, 3]];
+  for (const f of F) A.i.push(b + f[0], b + f[1], b + f[2], b + f[0], b + f[2], b + f[3]);
+  A.n += 8;
+}
+const w6Super = (cx, cz, a, b, ang, n = 28, p = 4) => { const o = new Float32Array(n * 2), ca = Math.cos(ang), sa = Math.sin(ang); for (let i = 0; i < n; i++){ const t = i / n * Math.PI * 2, c = Math.cos(t), s = Math.sin(t), x = a * Math.sign(c) * Math.pow(Math.abs(c), 2 / p), z = b * Math.sign(s) * Math.pow(Math.abs(s), 2 / p); o[2 * i] = cx + x * ca - z * sa; o[2 * i + 1] = cz + x * sa + z * ca; } return o; };
+// the offsets of a ribbon along a polyline (mitred corners)
+function w6Strip(pts, hw, cb){
+  const n = pts.length / 2;
+  for (let i = 0; i < n; i++){
+    const px = pts[2 * i], pz = pts[2 * i + 1]; let n1x = 0, n1z = 0, n2x = 0, n2z = 0, h1 = false, h2 = false, nx, nz, k = 1;
+    if (i > 0){ const dx = px - pts[2 * i - 2], dz = pz - pts[2 * i - 1], l = Math.hypot(dx, dz) || 1; n1x = -dz / l; n1z = dx / l; h1 = true; }
+    if (i < n - 1){ const dx = pts[2 * i + 2] - px, dz = pts[2 * i + 3] - pz, l = Math.hypot(dx, dz) || 1; n2x = -dz / l; n2z = dx / l; h2 = true; }
+    if (h1 && h2){ nx = n1x + n2x; nz = n1z + n2z; const l = Math.hypot(nx, nz); if (l < 1e-3){ nx = n2x; nz = n2z; } else { nx /= l; nz /= l; k = 1 / Math.max(0.4, nx * n2x + nz * n2z); } }
+    else if (h1){ nx = n1x; nz = n1z; } else { nx = n2x; nz = n2z; }
+    const o = hw * Math.min(k, 2.5); cb(i, px + nx * o, pz + nz * o, px - nx * o, pz - nz * o);
+  }
+}
+function w6PushStrip(A, pts, hw, cls, y){
+  const b = A.n, n = pts.length / 2;
+  w6Strip(pts, hw, (i, lx, lz, rx, rz) => { A.p.push(lx, y, lz, rx, y, rz); A.c.push(cls, cls); });
+  for (let i = 0; i < n - 1; i++){ const a = b + 2 * i; A.i.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); }
+  A.n += 2 * n;
+}
+// a raised deck (bridges, the elevated subway): top, two sides and the underside
+function w6Deck(A, pts, hw, y, th, top, side){
+  const L = [], Rr = [], n = pts.length / 2;
+  w6Strip(pts, hw, (i, lx, lz, rx, rz) => { L.push(lx, lz); Rr.push(rx, rz); });
+  const band = (P, Q, ya, yb, col) => { const b = A.n; for (let i = 0; i < n; i++){ A.p.push(P[2 * i], ya, P[2 * i + 1], Q[2 * i], yb, Q[2 * i + 1]); A.c.push(...col, ...col); A.e.push(0, 0); } for (let i = 0; i < n - 1; i++){ const a = b + 2 * i; A.i.push(a, a + 1, a + 2, a + 1, a + 3, a + 2); } A.n += 2 * n; };
+  band(L, Rr, y, y, top); band(L, L, y, y - th, side); band(Rr, Rr, y, y - th, side); band(L, Rr, y - th, y - th, side);
+  return { L, R: Rr };
+}
+function w6Flat(T, polys, A){
+  for (const P of polys){
+    const rings = P.map(e => w6Dec(e, 0)).filter(r => r.length >= 6); if (!rings.length) continue;
+    const v = rings.map(r => { const a = []; for (let i = 0; i < r.length; i += 2) a.push(new T.Vector2(r[i], r[i + 1])); return a; });
+    let f; try { f = T.ShapeUtils.triangulateShape(v[0], v.slice(1)); } catch { continue; }
+    const b = A.n; for (const ring of v) for (const q of ring){ A.p.push(q.x, 0, q.y); A.n++; }
+    for (const t of f) A.i.push(b + t[0], b + t[1], b + t[2]);
+  }
+  return A;
+}
+const w6Pip = (r, x, z) => { let ins = false; const n = r.length / 2; for (let p = 0, q = n - 1; p < n; q = p++){ const xp = r[2 * p], zp = r[2 * p + 1], xq = r[2 * q], zq = r[2 * q + 1]; if ((zp > z) !== (zq > z) && x < (xq - xp) * (z - zp) / (zq - zp) + xp) ins = !ins; } return ins; };
+
+/* ---- loading: the zone, the places, everything turned into buffers once (kept for the next visit) ---- */
+async function w6Data(){
+  if (W6.zone && W6.places) return;
+  const ix = await fetch('data/world/index.json', { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('nozone'); return r.json(); });
+  const zi = ix && ix.zones && ix.zones.nyc616; if (!zi) throw new Error('nozone');
+  const [z, p] = await Promise.all([fetch('data/world/' + zi.f).then(r => { if (!r.ok) throw new Error('nozone'); return r.json(); }), fetch('data/luoghi616.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : { luoghi: [] }).catch(() => ({ luoghi: [] }))]);
+  W6.zone = z; W6.places = p;
+}
+function w6Prog(f, msg){ const el = W6.el; if (!el) return; $('.w6-load .bar i', el).style.width = Math.round(clamp(f, 0, 1) * 100) + '%'; if (msg) $('.w6-load span', el).textContent = msg; }
+async function w6Cpu(){
+  const T = W6.T, Z = W6.zone; let tick = performance.now();
+  const breathe = async (f, msg) => { if (performance.now() - tick > 28){ w6Prog(f, msg); await new Promise(r => setTimeout(r, 0)); tick = performance.now(); } };
+  const rects = Z.rects, X0 = Math.min(...rects.map(r => r[0])), Z0 = Math.min(...rects.map(r => r[1])), X1 = Math.max(...rects.map(r => r[2])), Z1 = Math.max(...rects.map(r => r[3]));
+  const C = { rects, X0, Z0, X1, Z1, chunks: new Map(), hl: [], solid: w6Acc(true), disc: null, pins: [], marks: Object.assign({}, Z.m || {}),
+    nb: (Z.n || []).filter(n => n[0] && !/^(Manhattan|Queens|Brooklyn|The Bronx|Bronx|Staten Island|New York)$/.test(n[0])).map(n => n[3] ? n : [n[0], n[1], n[2], Z.id === 'nyc616' ? (n[1] > 450 ? 'Queens' : 'Manhattan') : '', n[4]]) };
+  const nx = Math.ceil((X1 - X0) / W6_CS) + 1, nz = Math.ceil((Z1 - Z0) / W6_CS) + 1, grid = new Uint16Array(nx * nz);
+  C.grid = { g: grid, nx, nz };
+  const raster = (r, h) => {
+    const n = r.length / 2; let a = Infinity, b = -Infinity, c = Infinity, d = -Infinity;
+    for (let i = 0; i < n; i++){ const x = r[2 * i], z = r[2 * i + 1]; if (x < a) a = x; if (x > b) b = x; if (z < c) c = z; if (z > d) d = z; }
+    const i0 = Math.max(0, Math.floor((a - X0) / W6_CS)), i1 = Math.min(nx - 1, Math.ceil((b - X0) / W6_CS)), j0 = Math.max(0, Math.floor((c - Z0) / W6_CS)), j1 = Math.min(nz - 1, Math.ceil((d - Z0) / W6_CS));
+    const hv = Math.min(65535, Math.round(h * 10));
+    for (let j = j0; j <= j1; j++) for (let i = i0; i <= i1; i++){ if (w6Pip(r, X0 + i * W6_CS, Z0 + j * W6_CS)){ const o = j * nx + i; if (grid[o] < hv) grid[o] = hv; } }
+    const o = Math.round(((c + d) / 2 - Z0) / W6_CS) * nx + Math.round(((a + b) / 2 - X0) / W6_CS); if (o >= 0 && o < grid.length && grid[o] < hv) grid[o] = hv;
+  };
+  // the places and the real buildings they light up
+  const P = (W6.places && W6.places.luoghi) || [], byB = new Map();
+  const near = []; // places on a real building that the download did not pin down: the nearest one within 20 m
+  for (const pl of P){ const m = C.marks[pl.k]; if (!m || pl.modello) continue; if (m.b != null) byB.set(m.b, pl); else if (pl.edificio) near.push({ pl, m, d: 20, bi: -1 }); }
+  // buildings, in square chunks so the ones off screen are skipped
+  const B = Z.b || [];
+  if (near.length) for (let bi = 0; bi < B.length; bi++){ const a = B[bi]; for (const q of near){ const d = Math.hypot(a[2] / 10 - q.m.x, a[3] / 10 - q.m.z); if (d < 70){ const r = w6Dec(a, 2); let cx = 0, cz = 0; for (let i = 0; i < r.length; i += 2){ cx += r[i]; cz += r[i + 1]; } cx /= r.length / 2; cz /= r.length / 2; const dd = w6Pip(r, q.m.x, q.m.z) ? 0 : Math.hypot(cx - q.m.x, cz - q.m.z); if (dd < q.d){ q.d = dd; q.bi = bi; q.x = cx; q.z = cz; q.h = a[0] / 10; } } } }
+  for (const q of near) if (q.bi >= 0){ byB.set(q.bi, q.pl); C.marks[q.pl.k] = Object.assign({}, q.m, { b: q.bi, x: q.x, z: q.z, h: q.h }); }
+  for (let bi = 0; bi < B.length; bi++){
+    const a = B[bi], h = a[0] / 10, mh = a[1] / 10; let r = w6Dec(a, 2); if (r.length < 6) continue;
+    r = w6Ring(r);
+    const k = Math.floor(h * 4) + Math.min(0.999, w6Hash(r[0], r[1])), pl = byB.get(bi);
+    let A;
+    if (pl){ A = w6Acc(false); C.hl.push({ pl, A, r, h }); }
+    else { const key = Math.floor((r[0] - X0) / W6_CH) + ',' + Math.floor((r[1] - Z0) / W6_CH); A = C.chunks.get(key); if (!A) C.chunks.set(key, A = w6Acc(false)); }
+    w6Bld(T, A, r, mh, h, k); raster(r, h);
+    if ((bi & 127) === 0) await breathe(0.3 + 0.4 * bi / B.length, 'Alzo i palazzi di New York…');
+  }
+  // the ground: land, water, green
+  w6Prog(0.72, 'Stendo strade, fiumi e parchi…'); await new Promise(r => setTimeout(r, 0));
+  const land = { p: [], i: [], n: 0 };
+  for (const r of rects){ const b = land.n; land.p.push(r[0], 0, r[1], r[2], 0, r[1], r[2], 0, r[3], r[0], 0, r[3]); land.i.push(b, b + 1, b + 2, b, b + 2, b + 3); land.n += 4; }
+  C.land = land; C.water = w6Flat(T, Z.w || [], { p: [], i: [], n: 0 }); await breathe(0.76); C.green = w6Flat(T, Z.g || [], { p: [], i: [], n: 0 }); await breathe(0.8);
+  // streets: footpaths first, avenues last (they are drawn on top); kerbs and pavements under them
+  const fill = { p: [], c: [], i: [], n: 0 }, kerb = { p: [], c: [], i: [], n: 0 }, S = C.solid;
+  const RD = (Z.r || []).slice().sort((a, b) => (b[0] & 15) - (a[0] & 15));
+  for (const a of RD){
+    const code = a[0], cls = Math.min(7, code & 15), br = code >> 4, pts = w6Dec(a, 1); if (pts.length < 4) continue;
+    if (br){ const y = br >= 9 ? 38 : 5 + 4 * br; w6Deck(S, pts, W6_RW[cls] / 2 + 1, y, br >= 9 ? 3.2 : 1.4, [0.23, 0.23, 0.28], [0.52, 0.5, 0.54]); continue; }
+    if (W6_RC[cls]) w6PushStrip(kerb, pts, (W6_RW[cls] + W6_RC[cls]) / 2, cls, 0);
+    w6PushStrip(fill, pts, W6_RW[cls] / 2, cls, 0);
+  }
+  C.road = fill; C.kerb = kerb; await breathe(0.84);
+  // the elevated subway (the 7 over Queens Boulevard): a steel deck on pillars
+  for (const a of Z.e || []){
+    const pts = w6Dec(a, 0); if (pts.length < 4) continue;
+    const D = w6Deck(S, pts, 4.4, 9.5, 1.7, [0.3, 0.28, 0.27], [0.24, 0.32, 0.3]);
+    let acc = 0;
+    for (let i = 1; i < pts.length / 2; i++){
+      const dx = pts[2 * i] - pts[2 * i - 2], dz = pts[2 * i + 1] - pts[2 * i - 1], L = Math.hypot(dx, dz);
+      for (let t = 24 - acc; t < L; t += 24){ const f = t / L; for (const Q of [D.L, D.R]){ const qx = Q[2 * i - 2] + (Q[2 * i] - Q[2 * i - 2]) * f, qz = Q[2 * i - 1] + (Q[2 * i + 1] - Q[2 * i - 1]) * f, cx = qx + (pts[2 * i - 2] + dx * f - qx) * 0.15, cz = qz + (pts[2 * i - 1] + dz * f - qz) * 0.15; w6Box(S, [cx, 3.9, cz], [0.45, 0, 0], [0, 3.9, 0], [0, 0, 0.45], [0.24, 0.32, 0.3], 0); } }
+      acc = (acc + L) % 24;
+    }
+  }
+  // the places: a model where the films put something new, the real building lit up where they used one that exists
+  for (const pl of P){
+    const m = C.marks[pl.k]; if (!m) continue;
+    let top = m.h || 25;
+    if (pl.modello === 'tower' && m.fp) top = w6Tower(T, C, m, raster);
+    else if (pl.modello === 'sanctum' && m.fp) top = w6Sanctum(T, C, m, raster);
+    C.pins.push({ pl, x: m.x, z: m.z, top, r: pl.modello === 'tower' ? 55 : pl.modello === 'sanctum' ? 14 : 18 });
+  }
+  w6Prog(0.9, 'Disegno la minimappa…'); await new Promise(r => setTimeout(r, 0));
+  w6Atlas(C);
+  const fin = A => { const o = { p: new Float32Array(A.p), i: A.n > 65535 ? new Uint32Array(A.i) : new Uint16Array(A.i), n: A.n }; if (A.k) o.k = new Float32Array(A.k); if (A.c) o.c = new Float32Array(A.c); if (A.e) o.e = new Float32Array(A.e); return o; };
+  C.chunks = [...C.chunks.values()].map(fin); C.hl = C.hl.map(o => ({ pl: o.pl, g: fin(o.A), r: o.r, h: o.h }));
+  for (const k of ['land', 'water', 'green', 'road', 'kerb', 'solid']) C[k] = fin(C[k]);
+  return C;
+}
+// Avengers Tower, where the films put it: on the MetLife Building's plot at 200 Park Avenue
+function w6Tower(T, C, m, raster){
+  const S = C.solid, fp = w6Ring(w6Dec(m.fp, 0)), n = fp.length / 2;
+  let cx = 0, cz = 0; for (let i = 0; i < n; i++){ cx += fp[2 * i]; cz += fp[2 * i + 1]; } cx /= n; cz /= n;
+  let best = 0, ang = 0;
+  for (let i = 0; i < n; i++){ const j = (i + 1) % n, dx = fp[2 * j] - fp[2 * i], dz = fp[2 * j + 1] - fp[2 * i + 1], L = Math.hypot(dx, dz); if (L > best){ best = L; ang = Math.atan2(dz, dx); } }
+  const ux = Math.cos(ang), uz = Math.sin(ang); let vx = -uz, vz = ux; if (vz < 0){ vx = -vx; vz = -vz; } // v looks south, towards Grand Central
+  let a0 = Infinity, a1 = -Infinity, b0 = Infinity, b1 = -Infinity;
+  for (let i = 0; i < n; i++){ const dx = fp[2 * i] - cx, dz = fp[2 * i + 1] - cz, a = dx * ux + dz * uz, b = dx * vx + dz * vz; a0 = Math.min(a0, a); a1 = Math.max(a1, a); b0 = Math.min(b0, b); b1 = Math.max(b1, b); }
+  const L = clamp(a1 - a0, 50, 110), W = clamp(b1 - b0, 30, 70), at = (a, b) => [cx + ux * a + vx * b, cz + uz * a + vz * b];
+  const steel = [0.2, 0.25, 0.32], glass = [0.27, 0.38, 0.52], light = [0.6, 0.88, 1.0];
+  w6Prism(T, S, fp, 0, 46, steel, 0);
+  let c = at(0, -W * 0.04); w6Prism(T, S, w6Super(c[0], c[1], L * 0.36, W * 0.4, ang), 46, 200, glass, 0.06);
+  c = at(0, -W * 0.12); w6Prism(T, S, w6Super(c[0], c[1], L * 0.29, W * 0.3, ang), 200, 240, glass, 0.1);
+  c = at(0, -W * 0.16); w6Prism(T, S, w6Super(c[0], c[1], L * 0.17, W * 0.19, ang), 240, 262, steel, 0.05);
+  w6Prism(T, S, w6Super(c[0], c[1], L * 0.18, W * 0.2, ang), 262, 263.2, light, 1);
+  // the landing pad, out over Park Avenue
+  const pc = at(-L * 0.08, W * 0.36 + 9); w6Prism(T, S, w6Super(pc[0], pc[1], 14, 14, 0, 24, 2), 233.5, 235.1, [0.32, 0.33, 0.36], 0); w6Prism(T, S, w6Super(pc[0], pc[1], 14.6, 14.6, 0, 24, 2), 235.1, 235.4, light, 1);
+  // light seams up the front, and the A in its ring near the top
+  for (const s of [-1, 1]){ const q = at(s * L * 0.3, W * 0.36); w6Box(S, [q[0], 123, q[1]], [0.7, 0, 0], [0, 77, 0], [0, 0, 0.7], light, 0.9); }
+  const f = at(0, W * 0.3 - W * 0.12 + 0.8), Y = 216, R = 10.5, nrm = [vx, 0, vz], uu = [ux, 0, uz];
+  const box = (p, d, l, w) => { const L2 = Math.hypot(d[0], d[1]) || 1, dir = [d[0] / L2, d[1] / L2]; const ax = [uu[0] * dir[0] * l, dir[1] * l, uu[2] * dir[0] * l], ay = [uu[0] * -dir[1] * w, dir[0] * w, uu[2] * -dir[1] * w]; w6Box(S, [f[0] + uu[0] * p[0] + nrm[0] * 0.6, Y + p[1], f[1] + uu[2] * p[0] + nrm[2] * 0.6], ax, ay, [nrm[0] * 0.6, 0, nrm[2] * 0.6], [0.85, 0.95, 1.0], 1); };
+  box([-3.6, -0.5], [3.3, 17], 9, 1.2); box([3.6, -0.5], [-3.3, 17], 9, 1.2); box([0.6, -2.5], [1, 0], 4.2, 0.9);
+  for (let i = 0; i < 26; i++){ const t = i / 26 * Math.PI * 2; box([Math.cos(t) * R, Math.sin(t) * R], [-Math.sin(t), Math.cos(t)], 1.45, 0.55); }
+  raster(fp, 263);
+  return 263;
+}
+// the Sanctum: a Village townhouse with its great round window, at 177A Bleecker Street
+function w6Sanctum(T, C, m, raster){
+  const S = C.solid, fp = w6Ring(w6Dec(m.fp, 0)), n = fp.length / 2;
+  let cx = 0, cz = 0; for (let i = 0; i < n; i++){ cx += fp[2 * i]; cz += fp[2 * i + 1]; } cx /= n; cz /= n;
+  const sc = (r, k) => { const o = new Float32Array(r.length); for (let i = 0; i < r.length; i += 2){ o[i] = cx + (r[i] - cx) * k; o[i + 1] = cz + (r[i + 1] - cz) * k; } return o; };
+  w6Prism(T, S, fp, 0, 13.4, [0.42, 0.27, 0.21], 0);
+  w6Prism(T, S, sc(fp, 1.045), 13.4, 14.2, [0.24, 0.17, 0.14], 0);
+  w6Prism(T, S, sc(fp, 0.9), 14.2, 15.4, [0.3, 0.22, 0.19], 0);
+  // the front: the wall that looks most towards Bleecker Street
+  const fc = m.face || [0, 1]; let bi = 0, bd = -2;
+  for (let i = 0; i < n; i++){ const j = (i + 1) % n, dx = fp[2 * j] - fp[2 * i], dz = fp[2 * j + 1] - fp[2 * i + 1], L = Math.hypot(dx, dz) || 1, ox = -dz / L, oz = dx / L, d = ox * fc[0] + oz * fc[1]; if (d * Math.min(1, L / 6) > bd){ bd = d * Math.min(1, L / 6); bi = i; } }
+  const j = (bi + 1) % n, ex = fp[2 * j] - fp[2 * bi], ez = fp[2 * j + 1] - fp[2 * bi + 1], EL = Math.hypot(ex, ez) || 1, tx = ex / EL, tz = ez / EL, ox = -tz, oz = tx;
+  const mx = (fp[2 * bi] + fp[2 * j]) / 2, mz = (fp[2 * bi + 1] + fp[2 * j + 1]) / 2;
+  const warm = [1.0, 0.74, 0.44];
+  for (let fl = 0; fl < 2; fl++) for (const s of [-1, 0, 1]){ if (fl === 0 && s === 0) continue; const off = s * Math.min(EL * 0.3, 4.2); w6Box(S, [mx + tx * off + ox * 0.15, 4.6 + fl * 3.6 - (fl ? 0 : 1.2), mz + tz * off + oz * 0.15], [tx * 0.65, 0, tz * 0.65], [0, 1.05, 0], [ox * 0.12, 0, oz * 0.12], warm, 0.75); }
+  w6Box(S, [mx + ox * 0.15, 1.4, mz + oz * 0.15], [tx * 0.85, 0, tz * 0.85], [0, 1.4, 0], [ox * 0.12, 0, oz * 0.12], [0.16, 0.1, 0.08], 0.05);
+  C.disc = { x: mx + ox * 0.22, y: 10.9, z: mz + oz * 0.22, ox, oz, r: Math.min(2.5, EL * 0.28) };
+  raster(fp, 15.4);
+  return 15.4;
+}
+// the minimap: the whole zone painted once, turned and moved every frame
+function w6Atlas(C){
+  const Z = W6.zone, W = C.X1 - C.X0, H = C.Z1 - C.Z0, ppm = Math.min(2048 / W, 2048 / H), cv = document.createElement('canvas');
+  cv.width = Math.ceil(W * ppm); cv.height = Math.ceil(H * ppm);
+  const c = cv.getContext('2d'), X = x => (x - C.X0) * ppm, Y = z => (z - C.Z0) * ppm;
+  c.fillStyle = '#0c1018'; c.fillRect(0, 0, cv.width, cv.height);
+  c.fillStyle = '#1b2230'; for (const r of C.rects) c.fillRect(X(r[0]), Y(r[1]), (r[2] - r[0]) * ppm, (r[3] - r[1]) * ppm);
+  const poly = (list, col) => { c.fillStyle = col; for (const P of list){ c.beginPath(); for (const e of P){ const r = w6Dec(e, 0); for (let i = 0; i < r.length; i += 2) i ? c.lineTo(X(r[i]), Y(r[i + 1])) : c.moveTo(X(r[i]), Y(r[i + 1])); c.closePath(); } c.fill('evenodd'); } };
+  poly(Z.w || [], '#123a52'); poly(Z.g || [], '#1c4430');
+  c.lineCap = 'round'; c.lineJoin = 'round';
+  for (const pass of [[4, '#4b566c'], [3, '#56617a'], [2, '#a8743f'], [1, '#c4874a'], [0, '#d69a58']]){
+    c.strokeStyle = pass[1]; c.beginPath();
+    for (const a of Z.r || []){ const cls = a[0] & 15; if (cls !== pass[0] && !(pass[0] === 4 && cls === 5)) continue; const r = w6Dec(a, 1); for (let i = 0; i < r.length; i += 2) i ? c.lineTo(X(r[i]), Y(r[i + 1])) : c.moveTo(X(r[i]), Y(r[i + 1])); }
+    c.lineWidth = Math.max(0.8, W6_RW[pass[0]] * ppm * 1.3); c.stroke();
+  }
+  c.fillStyle = 'rgba(150,165,190,.32)';
+  for (const a of Z.b || []){ const r = w6Dec(a, 2); c.beginPath(); for (let i = 0; i < r.length; i += 2) i ? c.lineTo(X(r[i]), Y(r[i + 1])) : c.moveTo(X(r[i]), Y(r[i + 1])); c.fill(); }
+  C.atlas = { cv, ppm };
+}
+
+/* ---- the scene on the graphics card (given back every time you leave) ---- */
+const W6_VS = `uniform float uH; uniform float uFogK; varying vec3 vW; varying float vFog;`;
+const W6_FS = `uniform float uMap; uniform float uT; uniform vec3 uFogC; uniform vec3 uSun; varying vec3 vW; varying float vFog;
+  float h21(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
+  vec3 w6L(vec3 n){ float d = max(dot(n, uSun), 0.0); return vec3(0.31, 0.34, 0.54) * (0.62 + 0.3 * n.y) + vec3(1.0, 0.6, 0.36) * d * 0.85; }`;
+const W6_V = `vec4 w = modelMatrix * vec4(position, 1.0); float y0 = w.y; w.y *= uH; vW = w.xyz; vec4 mv = viewMatrix * w; float fd = length(mv.xyz); vFog = 1.0 - exp(-uFogK * fd * fd); gl_Position = projectionMatrix * mv;`;
+function w6Gl(){
+  const T = W6.T, C = W6.cpu, el = W6.el;
+  const cv = document.createElement('canvas'); cv.className = 'w6-c'; cv.setAttribute('aria-label', 'Mondo 616'); el.insertBefore(cv, el.firstChild);
+  const R = new T.WebGLRenderer({ canvas: cv, antialias: true, alpha: false, powerPreference: COARSE ? 'default' : 'high-performance' });
+  R.setClearColor(0x07090f, 1);
+  W6.R = R; W6.cv = cv; W6.scene = new T.Scene(); W6.cam = new T.PerspectiveCamera(W6_FOV, 1, 1, 60000); W6.cam.rotation.order = 'YXZ'; W6.sz = null;
+  cv.addEventListener('webglcontextlost', e => { e.preventDefault(); BB('mondo616-gl-perso'); if (W6.on){ w6Close(); toast('Il Mondo 616 si è interrotto: ti riporto al multiverso'); } });
+  const u = W6.u = { uMap: { value: 1 }, uH: { value: 0.03 }, uT: { value: 0 }, uFogC: { value: new T.Color(0.66, 0.44, 0.46) }, uFogK: { value: 0 }, uSun: { value: new T.Vector3(-0.78, 0.32, 0.24).normalize() } };
+  const mat = o => { const m = new T.ShaderMaterial(Object.assign({ extensions: { derivatives: true } }, o)); W6.mats.push(m); return m; };
+  const geo = (g, attrs) => { const b = new T.BufferGeometry(); b.setAttribute('position', new T.BufferAttribute(g.p, 3)); for (const [k, a, n] of attrs || []) if (g[a]) b.setAttribute(k, new T.BufferAttribute(g[a], n)); b.setIndex(new T.BufferAttribute(g.i, 1)); b.computeBoundingSphere(); return b; };
+  const add = (g, m, order) => { const o = new T.Mesh(g, m); o.renderOrder = order; o.matrixAutoUpdate = false; W6.scene.add(o); W6.objs.push(o); return o; };
+  // the sky of a late evening (and the night blue of the map, seen from above)
+  const sky = add(new T.SphereGeometry(1, 32, 16), mat({ uniforms: u, side: T.BackSide, depthTest: false, depthWrite: false,
+    vertexShader: `varying vec3 vD; void main(){ vD = normalize(position); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+    fragmentShader: `uniform float uMap; uniform vec3 uSun; uniform vec3 uFogC; varying vec3 vD; void main(){ float y = vD.y; vec3 hz = vec3(0.86, 0.53, 0.43), mid = vec3(0.47, 0.3, 0.48), top = vec3(0.09, 0.1, 0.23);
+      vec3 c = y < 0.0 ? mix(hz, uFogC, clamp(-y * 8.0, 0.0, 1.0)) : y < 0.2 ? mix(hz, mid, y / 0.2) : mix(mid, top, clamp((y - 0.2) / 0.55, 0.0, 1.0));
+      float sd = max(dot(vD, normalize(vec3(uSun.x, 0.05, uSun.z))), 0.0); c += vec3(1.0, 0.58, 0.3) * pow(sd, 14.0) * 0.55 + vec3(1.0, 0.8, 0.55) * pow(sd, 420.0) * 0.9;
+      gl_FragColor = vec4(mix(c, vec3(0.043, 0.055, 0.086), uMap), 1.0); }` }), -10);
+  sky.matrixAutoUpdate = true; sky.frustumCulled = false; W6.sky = sky;
+  // the flat layers, painted in order with no depth: beyond the zone, land, water, green, pavements, streets
+  const flat = (g, ce, cm, extra, order, attrs, vsx) => add(geo(g, attrs), mat({ uniforms: Object.assign({ uCe: { value: new T.Color(ce) }, uCm: { value: new T.Color(cm) } }, u), depthTest: false, depthWrite: false, side: T.DoubleSide,
+    vertexShader: `${W6_VS} ${vsx ? 'attribute float aC; varying float vC;' : ''} void main(){ ${vsx ? 'vC = aC;' : ''} ${W6_V} }`,
+    fragmentShader: `${W6_FS} uniform vec3 uCe; uniform vec3 uCm; ${vsx ? 'varying float vC;' : ''} void main(){ vec3 c = uCe, m = uCm; ${extra || ''} c = mix(c, m, uMap); c = mix(c, uFogC, vFog); gl_FragColor = vec4(c, 1.0); }` }), order);
+  const big = { p: new Float32Array([-40000, 0, -40000, 40000, 0, -40000, 40000, 0, 40000, -40000, 0, 40000]), i: new Uint16Array([0, 1, 2, 0, 2, 3]) };
+  flat(big, '#17141f', '#0a0d14', `float g = max(step(0.992, fract(vW.x / 400.0)), step(0.992, fract(vW.z / 400.0))); m += g * 0.035; c *= 0.85 + 0.15 * h21(floor(vW.xz / 40.0));`, 0).frustumCulled = false;
+  flat(C.land, '#2f2d37', '#1b2230', `c *= 0.9 + 0.1 * h21(floor(vW.xz / 2.5));`, 1);
+  flat(C.water, '#0d2131', '#0f3045', `float s = sin(vW.x * 0.07 + uT * 0.8) * sin(vW.z * 0.09 - uT * 0.6) + 0.5 * sin((vW.x + vW.z) * 0.031 + uT * 0.45); c += vec3(0.12, 0.08, 0.12) * s * 0.3 + vec3(0.95, 0.58, 0.36) * pow(max(s, 0.0), 6.0) * 0.16; m += vec3(0.0, 0.015, 0.025) * s;`, 2);
+  flat(C.green, '#233f2d', '#1a3a2b', `float t = h21(floor(vW.xz / 3.5)); c *= 0.78 + 0.4 * t; m *= 0.96 + 0.07 * t;`, 3);
+  flat(C.kerb, '#6d6b75', '#0b0f17', `c *= 0.92 + 0.08 * h21(floor(vW.xz / 1.5));`, 4, [['aC', 'c', 1]], true);
+  flat(C.road, '#34353f', '#3d4759', `int k = int(vC + 0.5);
+    if (k <= 1){ c = vec3(0.235, 0.235, 0.29); m = vec3(0.8, 0.52, 0.28); } else if (k == 2){ c = vec3(0.22, 0.22, 0.275); m = vec3(0.64, 0.45, 0.3); }
+    else if (k == 3){ c = vec3(0.21, 0.21, 0.265); m = vec3(0.34, 0.39, 0.48); } else if (k == 4){ c = vec3(0.2, 0.2, 0.255); m = vec3(0.28, 0.32, 0.41); }
+    else if (k == 5){ c = vec3(0.22, 0.215, 0.25); m = vec3(0.23, 0.27, 0.35); } else if (k == 6){ c = vec3(0.38, 0.35, 0.38); m = vec3(0.25, 0.29, 0.37); } else { c = vec3(0.47, 0.41, 0.34); m = vec3(0.24, 0.29, 0.37); }
+    c *= 0.94 + 0.06 * h21(floor(vW.xz / 1.2));`, 5, [['aC', 'c', 1]], true);
+  // buildings: evening light from the west, windows lit at random, shop fronts at street level; flat blocks on the map
+  const bvs = `${W6_VS} attribute float aK; varying float vY; varying float vS; varying float vHt; void main(){ vS = fract(aK); vHt = floor(aK) * 0.25; ${W6_V} vY = y0; }`;
+  const bfs = `${W6_FS} uniform vec3 uGlow; uniform float uGlowK; varying float vY; varying float vS; varying float vHt;
+    void main(){ vec3 n = normalize(cross(dFdx(vW), dFdy(vW))); float s = vS; bool roof = n.y > 0.55;
+      vec3 base = s < 0.2 ? vec3(0.52, 0.38, 0.33) : s < 0.4 ? vec3(0.62, 0.58, 0.52) : s < 0.6 ? vec3(0.42, 0.46, 0.53) : s < 0.8 ? vec3(0.68, 0.58, 0.46) : vec3(0.34, 0.38, 0.45);
+      if (vHt > 70.0) base = mix(base, vec3(0.3, 0.4, 0.52), 0.65);
+      base = mix(base, uGlow, uGlowK * 0.45);
+      vec3 col;
+      if (roof){ col = base * 0.8 * w6L(n) + 0.03; col *= 0.92 + 0.08 * h21(floor(vW.xz / 2.0)); }
+      else {
+        col = base * w6L(n);
+        float fl = vHt > 40.0 ? 3.9 : 3.4; vec2 t = normalize(vec2(-n.z, n.x)); float u = dot(vW.xz, t);
+        vec2 q = vec2(u / 3.1, vY / fl), cell = floor(q), f = fract(q);
+        float win = step(0.2, f.x) * step(f.x, 0.8) * step(0.3, f.y) * step(f.y, 0.82) * step(1.2, vY) * step(vY, vHt - 1.0) * step(5.0, vHt);
+        float lit = step(0.6, h21(cell + s * 91.7)), ld = 0.7 + 0.3 * h21(cell * 1.7 + 3.1);
+        float far = smoothstep(0.3, 0.85, length(fwidth(q))); // far away the windows blur into their average glow (no flicker)
+        vec3 wc = mix(col, mix(vec3(0.1, 0.12, 0.19), vec3(1.0, 0.79, 0.47) * ld, lit), win), wa = mix(col, mix(vec3(0.1, 0.12, 0.19), vec3(1.0, 0.79, 0.47) * 0.85, 0.4), 0.3 * step(5.0, vHt));
+        col = mix(col, mix(wc, wa, far), 1.0 - uMap);
+        float shop = step(0.8, vY) * step(vY, 3.5) * step(0.45, h21(vec2(floor(u / 7.0), s * 13.0))) * step(5.0, vHt) * step(fract(u / 7.0), 0.82);
+        col = mix(col, vec3(1.0, 0.72, 0.42) * 0.95, shop * (1.0 - uMap) * 0.85);
+        col *= 1.0 - 0.45 * smoothstep(vHt - 0.8, vHt - 0.15, vY);
+        col += uGlow * uGlowK * (0.25 + 0.2 * sin(uT * 2.4)) * smoothstep(0.0, 18.0, vY);
+      }
+      vec3 m = roof ? vec3(0.2, 0.24, 0.32) + s * 0.04 : vec3(0.15, 0.18, 0.25);
+      m = mix(m, uGlow, uGlowK * 0.7);
+      col = mix(col, m, uMap); col = mix(col, uFogC, vFog);
+      gl_FragColor = vec4(col, 1.0); }`;
+  const bmat = mat({ uniforms: Object.assign({ uGlow: { value: new T.Color(0, 0, 0) }, uGlowK: { value: 0 } }, u), vertexShader: bvs, fragmentShader: bfs });
+  for (const g of C.chunks) add(geo(g, [['aK', 'k', 1]]), bmat, 10);
+  for (const h of C.hl){ add(geo(h.g, [['aK', 'k', 1]]), mat({ uniforms: Object.assign({ uGlow: { value: new T.Color(h.pl.col || '#ff5a5a') }, uGlowK: { value: 1 } }, u), vertexShader: bvs, fragmentShader: bfs }), 10); }
+  // models, bridges and the elevated line: one colour each, some of them lit
+  if (C.solid.n) add(geo(C.solid, [['aCol', 'c', 3], ['aE', 'e', 1]]), mat({ uniforms: u, side: T.DoubleSide,
+    vertexShader: `${W6_VS} attribute vec3 aCol; attribute float aE; varying vec3 vC; varying float vE; void main(){ vC = aCol; vE = aE; ${W6_V} }`,
+    fragmentShader: `${W6_FS} varying vec3 vC; varying float vE; void main(){ vec3 n = normalize(cross(dFdx(vW), dFdy(vW))); vec3 c = vC * w6L(n) * (1.0 - vE) + vC * vE * (1.25 + 0.15 * sin(uT * 2.0));
+      vec3 m = mix(vC * 0.55, vC, vE); c = mix(c, m, uMap); c = mix(c, uFogC, vFog * (1.0 - vE * 0.6)); gl_FragColor = vec4(c, 1.0); }` }), 10);
+  // the Window of the Sanctum
+  if (C.disc){ const D = C.disc, g = new T.CircleGeometry(D.r, 40); g.rotateY(Math.atan2(D.ox, D.oz)); g.translate(D.x, D.y, D.z);
+    add(g, mat({ uniforms: u, side: T.DoubleSide, vertexShader: `${W6_VS} varying vec2 vUv; void main(){ vUv = uv; ${W6_V} }`,
+      fragmentShader: `${W6_FS} varying vec2 vUv; void main(){ vec2 p = vUv * 2.0 - 1.0; float r = length(p), a = atan(p.y, p.x);
+        float line = max(smoothstep(0.07, 0.0, abs(r - 0.9)), smoothstep(0.05, 0.0, abs(r - 0.52))); line = max(line, smoothstep(0.09, 0.0, abs(sin(2.0 * a + r * 5.0)) * r) * step(r, 0.9));
+        vec3 c = vec3(1.0, 0.7, 0.34) * (0.32 + 0.12 * sin(uT * 1.6) + 1.15 * line); gl_FragColor = vec4(mix(c, vec3(1.0, 0.72, 0.4), uMap * 0.6), 1.0); }` }), 11); }
+  w6Size();
+}
+function w6Release(){
+  for (const o of W6.objs){ W6.scene && W6.scene.remove(o); o.geometry && o.geometry.dispose(); }
+  for (const m of W6.mats) m.dispose();
+  W6.objs = []; W6.mats = [];
+  if (W6.R){ try { W6.R.dispose(); W6.R.forceContextLoss(); } catch {} }
+  if (W6.cv) W6.cv.remove();
+  W6.R = null; W6.cv = null; W6.scene = null; W6.cam = null; W6.sky = null; W6.sz = null; W6.lastF = 0;
+}
+function w6Size(){
+  const el = W6.el, w = el.clientWidth, h = el.clientHeight, d = Math.min(dprNow, COARSE ? 1.6 : 2) * (W6.slow > 1 ? 0.62 : W6.slow ? 0.8 : 1);
+  if (W6.sz && W6.sz[0] === w && W6.sz[1] === h && W6.sz[2] === d) return;
+  W6.sz = [w, h, d]; W6.R.setPixelRatio(d); W6.R.setSize(w, h, false); W6.cam.aspect = w / Math.max(1, h); W6.cam.updateProjectionMatrix(); W6.dirty = 3;
+  if (W6.mini){ const s = Math.round(W6.mini.el.clientWidth * Math.min(dprNow, 2)); if (W6.mini.cv.width !== s){ W6.mini.cv.width = W6.mini.cv.height = s; } }
+}
+
+/* ---- the camera: high up it looks straight down at a map; coming down it tilts, the city rises and the evening comes ---- */
+function w6Surf(x, z){ const C = W6.cpu; if (!C) return 0; const G = C.grid, i = Math.round((x - C.X0) / W6_CS), j = Math.round((z - C.Z0) / W6_CS); if (i < 0 || j < 0 || i >= G.nx || j >= G.nz) return 0; return G.g[j * G.nx + i] / 10; }
+function w6Apply(){
+  const ctl = W6.ctl, cam = W6.cam, s3 = w6S3(ctl.y), pitch = -Math.PI / 2 + 0.002 + (ctl.pu + Math.PI / 2 - 0.002) * s3;
+  W6.u.uH.value = 0.03 + 0.97 * s3;
+  cam.position.set(ctl.x, ctl.y, ctl.z); cam.rotation.set(pitch, ctl.yaw, 0, 'YXZ');
+  const agl = Math.max(0.5, ctl.y - w6Surf(ctl.x, ctl.z) * W6.u.uH.value);
+  cam.near = clamp(agl * 0.3, 0.4, 2400); cam.far = clamp(ctl.y * 9 + 14000, 16000, 90000); cam.updateProjectionMatrix(); cam.updateMatrixWorld();
+}
+function w6Ray(p){ const T = W6.T, el = W6.el, v = new T.Vector3(p.x / el.clientWidth * 2 - 1, -(p.y / el.clientHeight) * 2 + 1, 0.5).unproject(W6.cam).sub(W6.cam.position).normalize(); return v; }
+function w6Ground(p){ const d = w6Ray(p), o = W6.cam.position; if (d.y > -0.01) return null; const t = o.y / -d.y; if (t > 60000) return null; return { x: o.x + d.x * t, y: 0, z: o.z + d.z * t }; }
+// the first thing the finger would touch: rooftops first, then the street
+function w6Hit(p){
+  const d = w6Ray(p), o = W6.cam.position, uH = W6.u.uH.value, top = 470 * uH;
+  let t = d.y < 0 && o.y > top ? (o.y - top) / -d.y : 0;
+  for (let i = 0; i < 14000 && t < 40000; i++){
+    const x = o.x + d.x * t, y = o.y + d.y * t, z = o.z + d.z * t, s = w6Surf(x, z) * uH;
+    if (y <= s){ return { x, z, s: w6Surf(x, z), roof: s > 2 }; }
+    if (y > top && d.y >= 0) return null;
+    t += Math.max(1.5, Math.min(4, (y - s) * 0.5));
+  }
+  return null;
+}
+function w6ZoomAt(p, f){
+  const ctl = W6.ctl;
+  if (w6S3(ctl.y) < 0.55){
+    const G = w6Ground(p);
+    ctl.y = clamp(ctl.y * f, w6Surf(ctl.x, ctl.z) + 2, W6_MAXY); w6Apply();
+    if (!G) return;
+    const d = w6Ray(p); if (d.y > -0.02) return;
+    const t = ctl.y / -d.y; ctl.x = G.x - d.x * t; ctl.z = G.z - d.z * t;
+  } else {
+    const H = w6Hit(p), o = W6.cam.position;
+    const tx = H ? H.x : null, d = w6Ray(p);
+    const D = H ? Math.hypot(H.x - o.x, H.s * W6.u.uH.value - o.y, H.z - o.z) : 600;
+    let step = D * (1 - f); if (step > 0) step = Math.min(step, Math.max(0, D - 12));
+    ctl.x += d.x * step; ctl.y = clamp(ctl.y + d.y * step, 0, W6_MAXY); ctl.z += d.z * step;
+    if (f > 1 && !H) ctl.y = clamp(ctl.y * f, 0, W6_MAXY);
+    ctl.y = Math.max(ctl.y, w6Surf(ctl.x, ctl.z) + 1.7); void tx;
+  }
+}
+function w6Pan(q, p){
+  const A = w6Ground(q), B = w6Ground(p); if (!A || !B) return;
+  const ctl = W6.ctl, lim = Math.max(40, (ctl.y - w6Surf(ctl.x, ctl.z)) * 3);
+  let dx = A.x - B.x, dz = A.z - B.z; const L = Math.hypot(dx, dz); if (L > lim){ dx *= lim / L; dz *= lim / L; }
+  ctl.x += dx; ctl.z += dz;
+}
+function w6Rot(p, a){
+  const ctl = W6.ctl, G = w6S3(ctl.y) < 0.55 ? w6Ground(p) : null, c = Math.cos(a), s = Math.sin(a);
+  if (G){ const dx = ctl.x - G.x, dz = ctl.z - G.z; ctl.x = G.x + dx * c + dz * s; ctl.z = G.z - dx * s + dz * c; }
+  ctl.yaw += a;
+}
+function w6FlyTo(b, ms, then){
+  const ctl = W6.ctl, a = { x: ctl.x, y: ctl.y, z: ctl.z, yaw: ctl.yaw, pu: ctl.pu };
+  const D = Math.hypot(b.x - a.x, b.z - a.z);
+  ctl.fly = { a, b, t0: performance.now(), ms: ms || clamp(800 + D * 0.35, 900, 3600), arc: clamp(D * 0.18, 0, 900) * (b.y < 900 && a.y < 1600 ? 1 : 0.3), then };
+  ctl.v = [0, 0, 0];
+}
+function w6View(pin){
+  // a good place to look at a place from: south-west of it, a little above
+  const ctl = W6.ctl, top = pin.top, D = clamp(top * 1.5 + 150, 210, 820), dir = Math.atan2(pin.x - ctl.x, pin.z - ctl.z), a = isFinite(dir) ? dir : 0.6;
+  const x = pin.x - Math.sin(a) * D, z = pin.z - Math.cos(a) * D, y = Math.max(top * 0.75 + D * 0.32, w6Surf(x, z) + 30);
+  return { x, y, z, yaw: Math.atan2(-(pin.x - x), -(pin.z - z)), pu: -Math.atan2(y - top * 0.55, D) };
+}
+function w6Controls(now, dt){
+  const ctl = W6.ctl;
+  if (ctl.fly){
+    const F = ctl.fly, k = clamp((now - F.t0) / F.ms, 0, 1), e = ease.io3(k);
+    ctl.x = F.a.x + (F.b.x - F.a.x) * e; ctl.z = F.a.z + (F.b.z - F.a.z) * e; ctl.y = F.a.y + (F.b.y - F.a.y) * e + Math.sin(Math.PI * e) * F.arc;
+    ctl.pu = F.a.pu + (F.b.pu - F.a.pu) * e; ctl.yaw = F.a.yaw + w6Ang(F.a.yaw, F.b.yaw) * e;
+    if (k >= 1){ ctl.fly = null; F.then && F.then(); }
+    return true;
+  }
+  const uH = W6.u.uH.value, surf = w6Surf(ctl.x, ctl.z) * uH, agl = Math.max(0, ctl.y - surf);
+  const sp = clamp(agl * 1.1 + 14, 14, 2300) * (ctl.keys.has('shift') ? 3 : 1);
+  let mx = 0, mz = 0, my = ctl.ud;
+  if (ctl.keys.has('w')) mz += 1; if (ctl.keys.has('s')) mz -= 1; if (ctl.keys.has('a')) mx -= 1; if (ctl.keys.has('d')) mx += 1; if (ctl.keys.has('e')) my += 1; if (ctl.keys.has('q')) my -= 1;
+  if (ctl.stick){ mx += ctl.stick[0]; mz += ctl.stick[1]; }
+  const fx = -Math.sin(ctl.yaw), fz = -Math.cos(ctl.yaw), rx = Math.cos(ctl.yaw), rz = -Math.sin(ctl.yaw);
+  const ax = (rx * mx + fx * mz) * sp, az = (rz * mx + fz * mz) * sp, ay = my * clamp(agl * 0.9 + 9, 9, 1900);
+  const v = ctl.v, k = 1 - Math.exp(-dt * 4.5);
+  v[0] += (ax - v[0]) * k; v[1] += (ay - v[1]) * k; v[2] += (az - v[2]) * k;
+  if (!(mx || mz)){ const dm = Math.exp(-dt * 5); v[0] *= dm; v[2] *= dm; }
+  if (!my){ v[1] *= Math.exp(-dt * 6); }
+  if (Math.abs(v[0]) + Math.abs(v[1]) + Math.abs(v[2]) < 0.02) return false;
+  const C = W6.cpu; let nx = clamp(ctl.x + v[0] * dt, C.X0 - 3000, C.X1 + 3000), nz = clamp(ctl.z + v[2] * dt, C.Z0 - 3000, C.Z1 + 3000), ny = ctl.y + v[1] * dt;
+  // walls stop you; you slide along them
+  if (w6Surf(nx, ctl.z) * uH > ctl.y - 0.6){ nx = ctl.x; v[0] = 0; }
+  if (w6Surf(nx, nz) * uH > ctl.y - 0.6){ nz = ctl.z; v[2] = 0; }
+  const floor = w6Surf(nx, nz) * uH + 1.7;
+  ny = clamp(ny, floor, W6_MAXY); if (ny <= floor + 0.01 && v[1] < 0) v[1] = 0;
+  ctl.x = nx; ctl.y = ny; ctl.z = nz;
+  return true;
+}
+function w6Land(p){
+  const H = w6Hit(p); if (!H) return;
+  const ctl = W6.ctl, y = H.s + 1.7;
+  w6FlyTo({ x: H.x, y, z: H.z, yaw: ctl.yaw, pu: -0.1 }, null, () => w6Chip(H.roof ? `Posato su un tetto a ${Math.round(H.s)} m · ▲ per ripartire` : 'Sei in strada · ▲ per alzarti in volo'));
+}
+function w6Tap(p){
+  const C = W6.cpu, H = w6Hit(p); if (!H) { w6PlaceClose(); return; }
+  let best = null, bd = Infinity;
+  for (const pin of C.pins){ const d = Math.hypot(pin.x - H.x, pin.z - H.z); if (d < pin.r * 1.4 && d < bd){ bd = d; best = pin; } }
+  for (const h of C.hl){ if (w6Pip(h.r, H.x, H.z)){ best = C.pins.find(q => q.pl === h.pl) || best; } }
+  if (best) w6Place(best); else w6PlaceClose();
+}
+function w6Chip(t, ms){ const el = $('.w6-chip', W6.el); el.textContent = t; el.hidden = false; clearTimeout(W6.chipT); W6.chipT = setTimeout(() => { el.hidden = true; }, ms || 3400); }
+
+/* ---- one frame ---- */
+function w6Loop(now){
+  W6.raf = 0; if (!W6.on) return;
+  try { w6Frame(now); } catch (e){ console.error(e); BB('mondo616-errore', String(e && e.message || e).slice(0, 120)); w6Close(); toast('Il Mondo 616 si è interrotto: ti riporto al multiverso'); return; }
+  W6.raf = requestAnimationFrame(w6Loop);
+}
+function w6Frame(now){
+  const ctl = W6.ctl, u = W6.u;
+  w6Size();
+  const dt = W6.lastF ? clamp((now - W6.lastF) / 1000, 0, 0.1) : 0.016; W6.lastF = now;
+  const moved = w6Controls(now, dt);
+  W6.fn++;
+  if (!moved && !W6.dirty && W6.fn % 3) return; // standing still: the water and the lights still move, a little slower
+  if (W6.dirty) W6.dirty--;
+  if (!reduced()){ W6.ft = W6.ft * 0.95 + dt * 0.05; if (W6.ft > 0.048 && W6.slow < 2 && now - (W6.slowT || 0) > 3000){ W6.slow++; W6.slowT = now; } }
+  w6Apply();
+  const y = ctl.y, uMap = smooth(1000, 2600, y);
+  u.uMap.value = uMap; u.uT.value = reduced() ? 0 : (now - W6.t0) / 1000; u.uFogK.value = (1 - uMap) / (4000 * 4000);
+  W6.sky.position.copy(W6.cam.position); W6.sky.scale.setScalar(W6.cam.far * 0.7); W6.sky.updateMatrixWorld();
+  W6.R.render(W6.scene, W6.cam);
+  w6Over(now, uMap);
+  w6Mini();
+  if (now - W6.nb.at > 260){ W6.nb.at = now; w6Hood(now); }
+}
+// pins on the places, names of the neighbourhoods on the map
+function w6Over(now, uMap){
+  const T = W6.T, el = W6.el, w = el.clientWidth, h = el.clientHeight, cam = W6.cam, v = new T.Vector3(), uH = W6.u.uH.value, s3 = w6S3(W6.ctl.y), taken = [];
+  for (const P of W6.pins){
+    v.set(P.pin.x, P.pin.top * uH, P.pin.z).project(cam);
+    if (v.z > 1 || v.z < -1 || Math.abs(v.x) > 1.3 || Math.abs(v.y) > 1.3){ P.el.style.display = 'none'; continue; }
+    const x = (v.x + 1) / 2 * w, yy = (1 - v.y) / 2 * h - 22;
+    P.el.style.display = ''; P.el.style.transform = `translate3d(${x.toFixed(1)}px,${yy.toFixed(1)}px,0)`;
+    const D = Math.hypot(P.pin.x - W6.ctl.x, P.pin.z - W6.ctl.z, P.pin.top - W6.ctl.y);
+    let far = s3 > 0.6 && D > 2600;
+    if (!far && taken.some(q => Math.abs(q[0] - x) < 150 && Math.abs(q[1] - yy) < 34)) far = true;
+    taken.push(far ? [x - 15, yy, 30] : [x - 15, yy, 170]);
+    P.el.classList.toggle('far', far);
+  }
+  const show = uMap > 0.12;
+  for (const L of W6.labs){
+    if (!show){ if (L.vis){ L.el.style.display = 'none'; L.vis = false; } continue; }
+    v.set(L.x, 0, L.z).project(cam);
+    if (v.z > 1 || Math.abs(v.x) > 1.2 || Math.abs(v.y) > 1.2){ if (L.vis){ L.el.style.display = 'none'; L.vis = false; } continue; }
+    const lx = (v.x + 1) / 2 * w - L.w / 2, ly = (1 - v.y) / 2 * h - 6;
+    if (taken.some(q => lx < q[0] + q[2] + 8 && lx + L.w + 8 > q[0] && Math.abs(ly - q[1]) < 18)){ if (L.vis){ L.el.style.display = 'none'; L.vis = false; } continue; }
+    taken.push([lx, ly, L.w]);
+    L.vis = true; L.el.style.display = ''; L.el.style.opacity = (uMap * 0.9).toFixed(2);
+    L.el.style.transform = `translate3d(${lx.toFixed(1)}px,${ly.toFixed(1)}px,0)`;
+  }
+}
+function w6Mini(){
+  const M = W6.mini, C = W6.cpu; if (!M || !C.atlas) return;
+  const c = M.ctx, S = M.cv.width, ctl = W6.ctl, A = C.atlas;
+  const R = clamp(ctl.y * 0.85, 280, 3600), k = (S / 2) / R, cs = Math.cos(ctl.yaw), sn = Math.sin(ctl.yaw);
+  c.setTransform(1, 0, 0, 1, 0, 0); c.fillStyle = '#0a0d14'; c.fillRect(0, 0, S, S);
+  c.save(); c.translate(S / 2, S / 2); c.rotate(ctl.yaw); c.scale(k / A.ppm, k / A.ppm); c.drawImage(A.cv, -(ctl.x - C.X0) * A.ppm, -(ctl.z - C.Z0) * A.ppm); c.restore();
+  for (const pin of C.pins){
+    const dx = pin.x - ctl.x, dz = pin.z - ctl.z, sx = (dx * cs - dz * sn) * k, sy = (dx * sn + dz * cs) * k, L = Math.hypot(sx, sy), lim = S / 2 - 7 * S / 128;
+    const f = L > lim ? lim / L : 1; c.beginPath(); c.arc(S / 2 + sx * f, S / 2 + sy * f, (L > lim ? 3.2 : 4.6) * S / 128, 0, Math.PI * 2); c.fillStyle = pin.pl.col || '#fff'; c.globalAlpha = L > lim ? 0.65 : 1; c.fill(); c.globalAlpha = 1;
+  }
+  // the view: a soft cone ahead
+  const g = c.createRadialGradient(S / 2, S / 2, 0, S / 2, S / 2, S * 0.42); g.addColorStop(0, 'rgba(255,190,120,.28)'); g.addColorStop(1, 'rgba(255,190,120,0)');
+  c.fillStyle = g; c.beginPath(); c.moveTo(S / 2, S / 2); c.arc(S / 2, S / 2, S * 0.42, -Math.PI / 2 - 0.5, -Math.PI / 2 + 0.5); c.closePath(); c.fill();
+  const nr = M.el.clientWidth / 2 - 10; M.n.style.transform = `translate(${(Math.sin(ctl.yaw) * nr).toFixed(1)}px,${(-Math.cos(ctl.yaw) * nr).toFixed(1)}px)`;
+}
+// "Stai entrando a…": the nearest neighbourhood under you, once you are down among the buildings
+function w6Hood(now){
+  const ctl = W6.ctl, nb = W6.nb; if (w6S3(ctl.y) < 0.8 || ctl.fly) return;
+  let best = null, bd = 2600;
+  for (const n of W6.cpu.nb){ const d = Math.hypot(n[1] - ctl.x, n[2] - ctl.z); if (d < bd){ bd = d; best = n; } }
+  if (!best || best === nb.cur){ nb.cand = null; return; }
+  if (nb.cand !== best){ nb.cand = best; nb.ct = now; return; }
+  if (now - nb.ct < 650) return;
+  nb.cur = best; nb.cand = null;
+  const el = $('.w6-sign', W6.el); $('b', el).textContent = best[0]; $('i', el).textContent = best[3] || '';
+  el.classList.add('on'); clearTimeout(W6.signT); W6.signT = setTimeout(() => el.classList.remove('on'), 3300);
+}
+
+/* ---- the panel of a place ---- */
+function w6Prod(t){ if (!CARDS) return null; const i = CARDS.prods.findIndex(p => p[1] === t); return i >= 0 ? i : null; }
+function w6Card(id){ if (!CARDS) return null; if (!W6.cmap){ W6.cmap = new Map(); CARDS.cards.forEach((c, i) => c && c.id && W6.cmap.set(c.id, i)); } const i = W6.cmap.get(id); return i == null ? null : i; }
+function w6Place(pin){
+  const pl = pin.pl, el = $('.w6-place', W6.el);
+  const pis = (pl.titoli || []).map(w6Prod).filter(x => x != null), cis = (pl.pers || []).map(w6Card).filter(x => x != null);
+  el.innerHTML = `<header style="--c:${esc(pl.col || '#ed732e')}"><span class="ic">${esc(pl.ico || '•')}</span><div><b>${esc(pl.nome)}</b><small>${esc(pl.alias || '')}</small></div><button class="x" type="button" data-a="x" aria-label="Chiudi"><svg class="i"><use href="#i-close"/></svg></button></header>
+    <div class="dove">${esc(pl.dove || '')}</div><p>${esc(pl.testo || '')}</p>
+    ${pis.length ? `<h4>Nei titoli</h4><div class="chips">${pis.map(pi => `<button type="button" data-p="${pi}"><em>${esc(CARDS.prods[pi][2].slice(0, 4))}</em>${esc(CARDS.prods[pi][1])}</button>`).join('')}</div>` : ''}
+    ${cis.length ? `<h4>Personaggi</h4><div class="chips">${cis.map(ci => `<button type="button" data-c="${ci}">${esc(CARDS.cards[ci].n)}</button>`).join('')}</div>` : ''}
+    <button class="go" type="button" data-a="go">Vola qui</button>`;
+  el.hidden = false; el.scrollTop = 0; W6.place = pin; BB('mondo616-luogo', pl.k);
+}
+function w6PlaceClose(){ const el = W6.el && $('.w6-place', W6.el); if (el) el.hidden = true; W6.place = null; }
+
+/* ---- touching the city ---- */
+function w6Input(cv){
+  const ctl = W6.ctl, el = W6.el;
+  const pt = e => { const r = el.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  let down = null, lastTap = { t: 0, x: 0, y: 0 }, tapT = 0;
+  cv.addEventListener('pointerdown', e => {
+    if (!W6.on) return;
+    try { cv.setPointerCapture(e.pointerId); } catch {}
+    ctl.fly = null; W6.dirty = 2;
+    const p = pt(e); ctl.ptrs.set(e.pointerId, p);
+    if (ctl.ptrs.size === 1) down = { x: p.x, y: p.y, t: performance.now(), moved: false, btn: e.button, shift: e.shiftKey };
+    if (ctl.ptrs.size === 2){ const [a, b] = [...ctl.ptrs.values()]; ctl.g = { d: Math.hypot(a.x - b.x, a.y - b.y), a: Math.atan2(b.y - a.y, b.x - a.x), m: { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } }; if (down) down.moved = true; }
+    e.preventDefault();
+  });
+  cv.addEventListener('pointermove', e => {
+    if (!W6.on || !ctl.ptrs.has(e.pointerId)) return;
+    const p = pt(e), q = ctl.ptrs.get(e.pointerId); ctl.ptrs.set(e.pointerId, p); W6.dirty = 2;
+    w6Apply();
+    if (ctl.ptrs.size >= 2 && ctl.g){
+      const [a, b] = [...ctl.ptrs.values()], d = Math.hypot(a.x - b.x, a.y - b.y), an = Math.atan2(b.y - a.y, b.x - a.x), m = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+      if (d > 10 && ctl.g.d > 10) w6ZoomAt(m, clamp(ctl.g.d / d, 0.7, 1.4));
+      w6Apply(); w6Rot(m, w6Ang(ctl.g.a, an));
+      w6Apply(); if (w6S3(ctl.y) < 0.55) w6Pan(ctl.g.m, m);
+      ctl.g = { d, a: an, m }; return;
+    }
+    if (!down) return;
+    if (!down.moved && Math.hypot(p.x - down.x, p.y - down.y) > 7) down.moved = true;
+    if (!down.moved) return;
+    if (w6S3(ctl.y) < 0.42 || down.btn === 2 || down.shift) w6Pan(q, p);
+    else { ctl.yaw -= (p.x - q.x) * 0.0045; ctl.pu = clamp(ctl.pu - (p.y - q.y) * 0.0038, -1.45, 0.45); }
+  });
+  const up = e => {
+    if (!ctl.ptrs.has(e.pointerId)) return;
+    ctl.ptrs.delete(e.pointerId); if (ctl.ptrs.size < 2) ctl.g = null;
+    if (ctl.ptrs.size) return;
+    const d = down; down = null;
+    if (!d || d.moved || performance.now() - d.t > 450) return;
+    const p = pt(e), now = performance.now();
+    if (now - lastTap.t < 320 && Math.hypot(p.x - lastTap.x, p.y - lastTap.y) < 40){ clearTimeout(tapT); lastTap = { t: 0, x: 0, y: 0 }; w6Land(p); return; }
+    lastTap = { t: now, x: p.x, y: p.y }; clearTimeout(tapT); tapT = setTimeout(() => w6Tap(p), 300);
+  };
+  cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
+  cv.addEventListener('contextmenu', e => e.preventDefault());
+  cv.addEventListener('wheel', e => {
+    if (!W6.on) return; e.preventDefault(); e.stopPropagation(); ctl.fly = null; W6.dirty = 2;
+    const dy = clamp(e.deltaMode === 1 ? e.deltaY * 33 : e.deltaY, -240, 240); w6Apply(); w6ZoomAt(pt(e), Math.exp(dy * 0.0016));
+  }, { passive: false });
+}
+function w6Dom(){
+  if (W6.el) return W6.el;
+  const el = document.createElement('div'); el.id = 'w6'; el.hidden = true;
+  el.innerHTML = `<div class="w6-ov"></div>
+    <header class="w6-top"><button class="w6-back" type="button"><svg class="i"><use href="#i-back"/></svg><span>Multiverso</span></button><div class="w6-t"><small>Terra-616</small><b>New York</b></div></header>
+    <div class="w6-sign" aria-live="polite"><small>Stai entrando a</small><b></b><i></i></div>
+    <button class="w6-mini" type="button" aria-label="Sali sulla mappa e torna giù"><canvas></canvas><span class="w6-n">N</span><i class="w6-me"></i></button>
+    <div class="w6-stick" aria-label="Vola"><i></i></div>
+    <div class="w6-ud"><button type="button" data-ud="1" aria-label="Sali">▲</button><button type="button" data-ud="-1" aria-label="Scendi">▼</button></div>
+    <div class="w6-chip" hidden></div><aside class="w6-place" hidden></aside>
+    <div class="w6-load"><b>Terra-616</b><div class="bar"><i></i></div><span>Preparo New York…</span></div>
+    <div class="w6-osm">© OpenStreetMap contributors</div>`;
+  $('#app').insertBefore(el, $('#cardWrap'));
+  W6.el = el;
+  const ctl = W6.ctl;
+  for (const ev of ['pointerdown', 'pointermove', 'pointerup', 'click', 'dblclick']) el.addEventListener(ev, e => e.stopPropagation());
+  el.addEventListener('wheel', e => { e.preventDefault(); e.stopPropagation(); }, { passive: false });
+  $('.w6-back', el).addEventListener('click', () => w6Close());
+  const mini = $('.w6-mini', el); W6.mini = { el: mini, cv: $('canvas', mini), n: $('.w6-n', mini) }; W6.mini.ctx = W6.mini.cv.getContext('2d');
+  mini.addEventListener('click', () => {
+    if (!W6.on) return; const c = W6.ctl;
+    if (w6S3(c.y) > 0.3){ c.top = { x: c.x, y: c.y, z: c.z, yaw: c.yaw, pu: c.pu }; w6FlyTo({ x: c.x - Math.sin(c.yaw) * 300, y: 4600, z: c.z - Math.cos(c.yaw) * 300, yaw: c.yaw, pu: c.pu }, 1700); }
+    else if (c.top){ const b = c.top; c.top = null; w6FlyTo(b, 1800); }
+    else w6FlyTo({ x: c.x, y: 380, z: c.z, yaw: c.yaw, pu: -0.32 }, 1800);
+  });
+  { const st = $('.w6-stick', el), nub = st.firstChild; let id = null;
+    const set = e => { const r = st.getBoundingClientRect(), R = r.width / 2; let x = (e.clientX - r.left - R) / R, y = (e.clientY - r.top - R) / R; const l = Math.hypot(x, y); if (l > 1){ x /= l; y /= l; } ctl.stick = [x, -y]; nub.style.transform = `translate(${x * R * 0.55}px,${y * R * 0.55}px)`; };
+    const end = e => { if (e.pointerId !== id) return; id = null; ctl.stick = null; nub.style.transform = ''; };
+    st.addEventListener('pointerdown', e => { e.preventDefault(); ctl.fly = null; id = e.pointerId; try { st.setPointerCapture(id); } catch {} set(e); });
+    st.addEventListener('pointermove', e => { if (e.pointerId === id) set(e); });
+    st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end); }
+  for (const b of $('.w6-ud', el).children){ const k = +b.dataset.ud, off = () => { if (ctl.ud === k) ctl.ud = 0; };
+    b.addEventListener('pointerdown', e => { e.preventDefault(); ctl.fly = null; ctl.ud = k; }); b.addEventListener('pointerup', off); b.addEventListener('pointercancel', off); b.addEventListener('pointerleave', off); }
+  $('.w6-place', el).addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.a === 'x'){ w6PlaceClose(); return; }
+    if (b.dataset.a === 'go' && W6.place){ const pin = W6.place; w6PlaceClose(); w6FlyTo(w6View(pin)); return; }
+    if (b.dataset.p != null){ openTitle(+b.dataset.p, true); return; }
+    if (b.dataset.c != null){ openCard(+b.dataset.c, true); }
+  });
+  return el;
+}
+function w6Pins(){
+  const ov = $('.w6-ov', W6.el); ov.textContent = ''; W6.pins = []; W6.labs = [];
+  for (const L of W6.cpu.nb){ const e = document.createElement('div'); e.className = 'w6-lab'; e.textContent = L[0]; e.style.display = 'none'; ov.appendChild(e); W6.labs.push({ el: e, x: L[1], z: L[2], w: 0, vis: false }); }
+  for (const pin of W6.cpu.pins){
+    const pl = pin.pl, e = document.createElement('button'); e.type = 'button'; e.className = 'w6-pin'; e.style.setProperty('--c', pl.col || '#ed732e');
+    e.innerHTML = `<span class="ic">${esc(pl.ico || '•')}</span><span class="lb">${esc(pl.nome)}<small>${esc(pl.alias || '')}</small></span>`;
+    e.addEventListener('click', ev => { ev.stopPropagation(); w6Place(pin); });
+    ov.appendChild(e); W6.pins.push({ el: e, pin });
+  }
+  requestAnimationFrame(() => { for (const L of W6.labs){ L.el.style.display = ''; L.w = L.el.offsetWidth; L.el.style.display = 'none'; } });
+}
+
+/* ---- in and out ---- */
+async function w6Open(){
+  if (W6.on || W6.busy) return;
+  W6.busy = true; BB('mondo616-apri');
+  const el = w6Dom(); el.hidden = false; el.classList.add('loading'); w6Prog(0.03, 'Accendo il motore 3D…');
+  window.__w6on = true; $('#mvP').hidden = true;
+  try {
+    const T = await m3Load(); if (!T) throw new Error('webgl');
+    W6.T = T;
+    if (!W6.zone){ w6Prog(0.1, 'Scarico New York…'); await w6Data(); }
+    if (!W6.cpu){ w6Prog(0.28, 'Alzo i palazzi di New York…'); W6.cpu = await w6Cpu(); }
+    w6Prog(0.97, 'Quasi pronto…');
+    w6Gl(); w6Input(W6.cv); w6Pins();
+    W6.on = true; el.classList.remove('loading'); W6.lastF = 0; W6.dirty = 3; W6.nb.cur = null;
+    const ctl = W6.ctl, C = W6.cpu;
+    if (!W6.intro){
+      // the first time: the whole zone as a map, then down towards the Avengers Tower
+      W6.intro = true;
+      Object.assign(ctl, { x: (C.X0 + C.X1) / 2, z: (C.Z0 + C.Z1) / 2, y: 7600, yaw: 0, pu: -0.3, v: [0, 0, 0], fly: null });
+      const tw = C.pins.find(p => p.pl.k === 'avengers-tower') || C.pins[0];
+      const tip = () => w6Chip(COARSE ? 'Joystick per volare · trascina per guardarti intorno · doppio tocco per posarti' : 'WASD per volare · Q/E giù e su · trascina per guardarti intorno · doppio clic per posarti', 6500);
+      if (tw && !reduced()) setTimeout(() => { if (W6.on && !ctl.ptrs.size && !ctl.fly) w6FlyTo(w6View(tw), 4200, tip); else tip(); }, 900); else tip();
+    }
+    W6.raf = requestAnimationFrame(w6Loop);
+  } catch (e){
+    console.error(e); BB('mondo616-errore', String(e && e.message || e).slice(0, 100));
+    w6Close();
+    toast(e && e.message === 'nozone' ? 'Il Mondo 616 non è ancora pronto: i dati di New York stanno arrivando' : e && e.message === 'webgl' ? 'Per il Mondo 616 serve la grafica 3D, che qui non è disponibile' : 'Non riesco ad aprire il Mondo 616 adesso');
+  } finally { W6.busy = false; }
+}
+function w6Close(){
+  W6.on = false; if (W6.raf) cancelAnimationFrame(W6.raf); W6.raf = 0;
+  const c = W6.ctl; c.ptrs.clear(); c.g = null; c.stick = null; c.ud = 0; c.keys.clear(); c.fly = null;
+  if (W6.el){ W6.el.hidden = true; W6.el.classList.remove('loading'); w6PlaceClose(); $('.w6-sign', W6.el).classList.remove('on'); }
+  try { w6Release(); } catch {}
+  window.__w6on = false;
+  if (MV.on){ if (MV.sel) $('#mvP').hidden = false; mvKick(); }
+  schedule();
+}
+window.__w6 = W6; window.__w6open = w6Open; // for the tests in the sandbox
+// keys: fly with WASD / arrows, Q E down and up, Esc to leave (before any other key handler of the page)
+{ const keyOf = e => ({ w: 'w', arrowup: 'w', s: 's', arrowdown: 's', a: 'a', arrowleft: 'a', d: 'd', arrowright: 'd', q: 'q', e: 'e', pagedown: 'q', pageup: 'e', shift: 'shift' })[(e.key || '').toLowerCase()];
+  window.addEventListener('keydown', e => {
+    if (!W6.on || !$('#cardWrap').hidden) return;
+    const t = e.target; if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable) || e.metaKey || e.ctrlKey) return;
+    if (e.key === 'Escape'){ e.preventDefault(); e.stopImmediatePropagation(); if (W6.place) w6PlaceClose(); else w6Close(); return; }
+    const k = keyOf(e); if (k){ W6.ctl.keys.add(k); W6.ctl.fly = null; e.preventDefault(); }
+    e.stopImmediatePropagation();
+  }, true);
+  window.addEventListener('keyup', e => { if (!W6.on) return; const k = keyOf(e); if (k) W6.ctl.keys.delete(k); if (e.key === 'Shift') W6.ctl.keys.delete('shift'); }, true);
+  window.addEventListener('blur', () => W6.ctl.keys.clear());
 }
 
 /* ---- 90-p1.js ---- */

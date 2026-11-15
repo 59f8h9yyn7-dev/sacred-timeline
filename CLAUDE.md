@@ -20,8 +20,9 @@ App personale (PWA installata sull'iPhone dell'utente) che mostra la sua mappa M
 - Etichette universo (`U-616`, chip verticali) attaccate al loro ramo; parentesi dei rami chiuse sul bordo del proprio elenco; gradini della linea 616 centrati tra i loghi.
 
 ## Provare in locale
-- `python3 -m http.server` nella cartella del repo + Playwright (preinstallato). Prima del caricamento impostare in localStorage `stl-intro-v1`, `stl-hint-v1`, `stl-seen-v1` = `'1'`, `stl-today-v1` = data di oggi, `stl-view-v1` = `{z, tx, ty}` per inquadrare un punto; nascondere `header.bar,#corner,#chr,#rulerC` per screenshot puliti. I font Google qui non si caricano (i testi risultano un po' più larghi che sull'iPhone).
-- Nel sandbox la shell non ha internet (niente pip/npm/curl); git verso GitHub funziona. Download di dati esterni: con una GitHub Action che li scrive nel repo.
+- `python3 -m http.server` nella cartella del repo + Playwright (preinstallato). Prima del caricamento impostare in localStorage `stl-intro-v1`, `stl-seen-v1` = `'1'`, `stl-hint-v1` = un oggetto JSON (es. `'{"mv":1,"mv3":1,"mv3b":1,"uni":1}'`, con `'1'` il multiverso si interrompe), `stl-today-v1` = data di oggi, `stl-view-v1` = `{z, tx, ty}` per inquadrare un punto; nascondere `header.bar,#corner,#chr,#rulerC` per screenshot puliti. I font Google qui non si caricano (i testi risultano un po' più larghi che sull'iPhone).
+- Nel sandbox la shell non ha internet (niente pip/npm); git verso GitHub funziona, e `curl https://api.github.com/repos/59f8h9yyn7-dev/sacred-timeline/actions/runs` mostra lo stato delle Action. Download di dati esterni: con una GitHub Action che li scrive nel repo.
+- Playwright con WebGL: lanciare Chromium con `--use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader`; `window.__w6open()` apre il Mondo 616, `window.__w6` è il suo stato.
 
 ## Progetto in corso: il Mondo 616 (3D)
 Obiettivo finale: l'intero mondo del 616 ricostruito con elementi reali + elementi dei film; **tutte** le zone viste nei film e nelle serie vanno riportate.
@@ -37,7 +38,13 @@ Struttura decisa:
 - Vincoli: deve girare bene sull'iPhone (geometrie unite, zone piccole, livelli di dettaglio), offline, niente interni né fotorealismo.
 
 Fasi:
-1. **Prototipo Manhattan 616** (prossimo passo): Midtown con la Avengers Tower, Greenwich Village con il Sanctum, il Queens di Peter Parker; volo libero, passaggio 2D → 3D, cartelli dei quartieri, luoghi Marvel toccabili.
-2. Catalogo di tutti i luoghi del 616 titolo per titolo (bozza di Claude, l'utente la corregge).
+1. **Prototipo Manhattan 616** (fatto, novembre 2026): Midtown con la Avengers Tower, Greenwich Village con il Sanctum, il Queens di Peter Parker; volo libero, passaggio 2D → 3D, cartelli dei quartieri, luoghi Marvel toccabili.
+2. Catalogo di tutti i luoghi del 616 titolo per titolo (bozza di Claude, l'utente la corregge) — **prossimo passo**.
 3. Tutte le zone del catalogo + il globo.
 4. Altri universi.
+
+### Com'è fatto il Mondo 616 (fase 1)
+- Dati: `tools/world/zones.json` (zone in lat/lon + punti dei luoghi Marvel, `mode` replace/highlight/point) → `tools/world/build.py` gira nella Action `.github/workflows/mondo616.yml` (parte quando cambia `tools/world/**` sul ramo `dati`, scrive su `dati` e `main`) → `data/world/<zona>-v<N>.json` + `data/world/index.json` + `data/world/log.txt`. Alzare `v` della zona per un file nuovo: il service worker tiene per sempre i file `-vN` (offline).
+- Formato zona: coordinate locali in decimetri a delta (x verso est, z verso sud); `b` edifici `[h, minh, ring…]`, `r` strade `[classe + 16·ponte, linea…]`, `e` binari sopraelevati, `w` acqua e `g` verde come poligoni con buchi, `n` quartieri `[nome, x, z, distretto, tipo]`, `m` luoghi risolti sugli edifici veri (`fp` impronta, `b` indice edificio, `face`).
+- Luoghi Marvel: `data/luoghi616.json` (testi, titoli come in `cards.json`, `pers` = id dei fascicoli, `modello` tower/sanctum per i modelli fatti a mano). Un luogo nuovo = punto in `zones.json` + voce in `luoghi616.json`.
+- Codice: sezione `92-w616.js` di `index.html` (W6). Si entra dal pannello del sistema 616 del multiverso (pulsante "Mondo 616 · New York"). Mappa sopra i ~2600 m, 3D sotto i ~450 m, in mezzo il passaggio (altezze e colori sfumano). Il multiverso resta in pausa sotto (`window.__w6on`).
