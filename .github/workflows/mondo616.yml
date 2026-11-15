@@ -7,7 +7,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: mondo616
+  group: mondo616-v2
   cancel-in-progress: false
 jobs:
   zone:

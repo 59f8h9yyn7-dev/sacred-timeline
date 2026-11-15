@@ -21,28 +21,29 @@ EPS = ['https://overpass-api.de/api/interpreter',
        'https://overpass.private.coffee/api/interpreter']
 
 
-def overpass(q, label):
+def overpass(q, label, start=0):
     data = urllib.parse.urlencode({'data': q}).encode()
     last = None
-    for attempt in range(4):
-        for ep in EPS:
+    for attempt in range(3):
+        for j in range(len(EPS)):
+            ep = EPS[(start + j + attempt) % len(EPS)]
             host = ep.split('/')[2]
             try:
                 t0 = time.time()
                 req = urllib.request.Request(ep, data=data, headers={'User-Agent': 'sacred-timeline-world/1 (app personale, una tantum)'})
-                with urllib.request.urlopen(req, timeout=500) as r:
+                with urllib.request.urlopen(req, timeout=330) as r:
                     raw = r.read()
-                j = json.loads(raw)
-                rem = j.get('remark') or ''
+                j_ = json.loads(raw)
+                rem = j_.get('remark') or ''
                 if 'error' in rem.lower():
                     raise RuntimeError(rem[:200])
-                els = j.get('elements', [])
+                els = j_.get('elements', [])
                 log(f'  {label}: {len(els)} elementi da {host} in {time.time() - t0:.0f}s ({len(raw) // 1024} KB)')
                 return els
             except Exception as e:
                 last = e
-                log(f'  {label}: {host} non risponde bene ({str(e)[:160]})')
-        time.sleep(25 * (attempt + 1))
+                log(f'  {label}: {host} non risponde bene dopo {time.time() - t0:.0f}s ({str(e)[:140]})')
+        time.sleep(15 * (attempt + 1))
     raise RuntimeError(f'{label}: nessun server Overpass ha risposto ({last})')
 
 
@@ -205,32 +206,41 @@ def main():
         bb = lambda r: f'{r[0]},{r[1]},{r[2]},{r[3]}'
         big = [S - 0.01, W - 0.01, N + 0.01, E + 0.01]
 
-        # ---- scarico ----
-        bels = {}
+        # ---- scarico (in parallelo: ogni richiesta su un server diverso) ----
+        from concurrent.futures import ThreadPoolExecutor
+        Q = {}
         for i, r in enumerate(rects):
-            for el in overpass(f'[out:json][timeout:400];(way["building"]({bb(r)});relation["building"]["type"="multipolygon"]({bb(r)}););out tags geom;', f'edifici {i + 1}'):
-                bels[(el['type'], el['id'])] = el
-        rels_ = {}
-        for i, r in enumerate(rects):
-            for el in overpass(f'[out:json][timeout:300];(way["highway"]({bb(r)});way["railway"~"^(subway|rail|light_rail|monorail)$"]({bb(r)}););out tags geom;', f'strade {i + 1}'):
-                rels_[(el['type'], el['id'])] = el
-        gels = {}
-        for i, r in enumerate(rects):
-            for el in overpass(f'[out:json][timeout:300];(nwr["leisure"~"^(park|garden|playground|pitch|dog_park|common|recreation_ground|nature_reserve)$"]({bb(r)});nwr["landuse"~"^(grass|recreation_ground|cemetery|village_green|meadow|forest)$"]({bb(r)});nwr["natural"~"^(wood|scrub|grassland|heath)$"]({bb(r)}););out tags geom;', f'verde {i + 1}'):
-                if el['type'] != 'node':
-                    gels[(el['type'], el['id'])] = el
-        wels = overpass(f'[out:json][timeout:300];(way["natural"="water"]({bb(big)});relation["natural"="water"]({bb(big)});way["waterway"="riverbank"]({bb(big)});relation["waterway"="riverbank"]({bb(big)}););out tags geom;', 'acqua')
-        cels = overpass(f'[out:json][timeout:300];way["natural"="coastline"]({bb(big)});out geom;', 'costa')
-        nels = overpass(f'[out:json][timeout:120];node["place"~"^(neighbourhood|suburb|quarter|borough)$"]["name"]({bb([S, W, N, E])});out;', 'quartieri')
-        try:
-            bor = overpass(f'[out:json][timeout:300];relation["boundary"="administrative"]["admin_level"~"^(5|6)$"]({bb([S, W, N, E])});out tags geom;', 'distretti')
-        except Exception as e:
-            log('  distretti: niente (' + str(e)[:100] + ')'); bor = []
+            Q[f'edifici {i + 1}'] = f'[out:json][timeout:300];(way["building"]({bb(r)});relation["building"]["type"="multipolygon"]({bb(r)}););out tags geom;'
+            Q[f'strade {i + 1}'] = f'[out:json][timeout:240];(way["highway"]({bb(r)});way["railway"~"^(subway|rail|light_rail|monorail)$"]({bb(r)}););out tags geom;'
+            Q[f'verde {i + 1}'] = f'[out:json][timeout:240];(way["leisure"~"^(park|garden|playground|pitch|dog_park|common|recreation_ground|nature_reserve)$"]({bb(r)});relation["leisure"~"^(park|garden|playground|pitch|common|recreation_ground|nature_reserve)$"]({bb(r)});way["landuse"~"^(grass|recreation_ground|cemetery|village_green|meadow|forest)$"]({bb(r)});relation["landuse"~"^(grass|recreation_ground|cemetery|village_green|meadow|forest)$"]({bb(r)});way["natural"~"^(wood|scrub|grassland|heath)$"]({bb(r)}););out tags geom;'
+        Q['acqua'] = f'[out:json][timeout:240];(way["natural"="water"]({bb(big)});relation["natural"="water"]({bb(big)});way["waterway"="riverbank"]({bb(big)});relation["waterway"="riverbank"]({bb(big)}););out tags geom;'
+        Q['costa'] = f'[out:json][timeout:180];way["natural"="coastline"]({bb(big)});out geom;'
+        Q['quartieri'] = f'[out:json][timeout:120];node["place"~"^(neighbourhood|suburb|quarter|borough)$"]["name"]({bb([S, W, N, E])});out;'
+        Q['distretti'] = f'[out:json][timeout:240];relation["boundary"="administrative"]["admin_level"~"^(5|6)$"]({bb([S, W, N, E])});out tags geom;'
         aq = ''.join(f'nwr["addr:housenumber"="{m["addr"][0]}"]["addr:street"="{m["addr"][1]}"]({bb(big)});' for m in Z.get('marks', []) if m.get('addr'))
-        try:
-            aels = overpass(f'[out:json][timeout:120];({aq});out tags center;', 'indirizzi') if aq else []
-        except Exception as e:
-            log('  indirizzi: niente (' + str(e)[:100] + ')'); aels = []
+        if aq:
+            Q['indirizzi'] = f'[out:json][timeout:120];({aq});out tags center;'
+        optional = {'distretti', 'indirizzi'}
+        res = {}
+        with ThreadPoolExecutor(max_workers=4) as ex:
+            futs = {k: ex.submit(overpass, q, k, n) for n, (k, q) in enumerate(Q.items())}
+            for k, f in futs.items():
+                try:
+                    res[k] = f.result()
+                except Exception as e:
+                    if k in optional:
+                        log(f'  {k}: niente ({str(e)[:100]})'); res[k] = []
+                    else:
+                        raise
+        bels, rels_, gels = {}, {}, {}
+        for i in range(len(rects)):
+            for el in res[f'edifici {i + 1}']:
+                bels[(el['type'], el['id'])] = el
+            for el in res[f'strade {i + 1}']:
+                rels_[(el['type'], el['id'])] = el
+            for el in res[f'verde {i + 1}']:
+                gels[(el['type'], el['id'])] = el
+        wels, cels, nels, bor, aels = res['acqua'], res['costa'], res['quartieri'], res['distretti'], res.get('indirizzi', [])
 
         # ---- edifici ----
         B = []
