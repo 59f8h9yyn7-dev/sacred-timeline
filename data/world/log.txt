@@ -815,3 +815,15 @@
   quartieri: 0 → 
   luogo lipsia: {'x': 0.1, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-lipsia-v1.json: 24 KB
+== zona z-londra-museo-nat (v1) · Natural History Museum · Londra ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: 4964 elementi da maps.mail.ru in 25s (3667 KB)
+  edifici tenuti: 2794 (scartati 97)
+  strade: 1204 tratti, binari sopraelevati: 0
+  specchi d'acqua: 2
+  verde: 82 aree
+  distretti: []
+  quartieri: 3 → South Kensington, Knightsbridge, Brompton
+  luogo londra-museo-nat: {'x': -14.6, 'z': 2.8, 'how': 'punto', 'h': 10, 'osm': 'w24436446'}
+  scritto z-londra-museo-nat-v1.json: 207 KB
