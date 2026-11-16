@@ -436,3 +436,16 @@
   quartieri: 0 → 
   luogo caesars: {'x': -16.4, 'z': -13.9, 'how': 'punto', 'h': 133.0, 'osm': 'w134944648'}
   scritto z-caesars-v1.json: 45 KB
+== zona z-cairo (v1) · Il Cairo · Egitto ==
+  tutto: overpass.kumi.systems non risponde bene dopo 240s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: 1362 elementi da overpass.private.coffee in 74s (961 KB)
+  edifici tenuti: 632 (scartati 40)
+  strade: 610 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 15 aree
+  distretti: []
+  quartieri: 2 → Il Cairo, Bab al Luq
+  luogo cairo: {'x': 0.1, 'z': 0.2, 'how': 'solo coordinate'}
+  scritto z-cairo-v1.json: 58 KB
