@@ -699,3 +699,16 @@
   quartieri: 7 → Hong Kong, Central, Admiralty, Mid-Levels, SoHo, Central District, Government Hill
   luogo hk-sanctum: {'x': -0.2, 'z': -0.3, 'how': 'solo coordinate'}
   scritto z-hk-sanctum-v1.json: 168 KB
+== zona z-johannesburg (v1) · Johannesburg · Sudafrica ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 112s (HTTP Error 504: Gateway Timeout)
+  tutto: maps.mail.ru non risponde bene dopo 57s (HTTP Error 504: Gateway Timeout)
+  tutto: 875 elementi da overpass.private.coffee in 79s (489 KB)
+  edifici tenuti: 453 (scartati 8)
+  strade: 335 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 3 aree
+  distretti: []
+  quartieri: 1 → Johannesburg
+  luogo johannesburg: {'x': 0.2, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-johannesburg-v1.json: 34 KB
