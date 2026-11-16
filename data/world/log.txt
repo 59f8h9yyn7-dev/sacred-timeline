@@ -613,3 +613,13 @@
   quartieri: 2 → Kingston, Denham Town
   luogo giamaica: {'x': -0.3, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-giamaica-v1.json: 168 KB
+== zona z-ginevra-onu (v1) · ONU di Ginevra · Svizzera ==
+  tutto: 3081 elementi da overpass-api.de in 38s (2050 KB)
+  edifici tenuti: 530 (scartati 75)
+  strade: 1587 tratti, binari sopraelevati: 3
+  specchi d'acqua: 21
+  verde: 167 aree
+  distretti: []
+  quartieri: 2 → Sécheron, Quartier des Nations
+  luogo ginevra-onu: {'x': -1.8, 'z': -29.0, 'how': 'punto', 'h': 10, 'osm': 'w1204850778'}
+  scritto z-ginevra-onu-v1.json: 104 KB
