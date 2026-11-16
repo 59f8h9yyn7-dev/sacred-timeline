@@ -3,25 +3,23 @@
 == Agents of S.H.I.E.L.D. – stagione 7
 zephyr | Lo Zephyr salta da un'epoca all'altra inseguendo i Chronicom.
 +ny-1931 | New York, 1931 | Manhattan del proibizionismo | nyc-mid | r | 40.75,-73.99 | c | Il primo salto nel tempo.
-+area-51 | Area 51, 1955 | Nevada | usa | r | 37.2350,-115.8111 | e | ?Gli inizi dello S.H.I.E.L.D. e l'HYDRA infiltrata.
-lighthouse | ?1976: il Faro e il progetto Insight.
++area-51 | Area 51, 1955 | Nevada | usa | r | 37.2350,-115.8111 | e | Gli inizi dello S.H.I.E.L.D. e l'HYDRA infiltrata.
+lighthouse | 1976: il Faro e il progetto Insight.
 
 == Helstrom
-+portland | Portland | Oregon | usa | r | 45.5152,-122.6784 | c | ?Daimon insegna e caccia demoni.
-+st-teresa | Ospedale psichiatrico St. Teresa | luogo da verificare | usa | m | - | - | ?Dove è ricoverata la madre, Victoria.
 
 # ---------- 2021 ----------
 
 == WandaVision
 +westview | Westview | cittadina del New Jersey (inventata) | nj | i | 40.45,-74.65 | r | Wanda trasforma la città in una sitcom: l'Esagono.
 +sword-base | Base S.W.O.R.D. fuori dall'Esagono | New Jersey | nj | m | 40.46,-74.66 | r | Monica, Jimmy Woo e Darcy studiano l'anomalia.
-+sword-hq | Sede della S.W.O.R.D. | luogo non detto | usa | m | - | - | ?Hayward smonta il corpo di Visione.
++sword-hq | Sede della S.W.O.R.D. | luogo non detto | usa | m | - | - | Hayward smonta il corpo di Visione.
 +agatha-casa | Casa di Agatha | Westview | nj | i | 40.45,-74.65 | r | La cantina di Agatha.
 novi-grad | Flashback: l'infanzia di Wanda e la bomba Stark.
 strucker-base | Flashback: Wanda tocca la Gemma della Mente.
 avengers-compound | Flashback: Wanda e Visione davanti alla TV.
 +salem | Salem, 1693 | Massachusetts | usa | r | 42.5195,-70.8967 | c | La congrega processa Agatha.
-+wanda-baita | Baita di Wanda | montagne (luogo non detto) | europa | m | - | - | ?Wanda studia il Darkhold (scena dopo i titoli).
++wanda-baita | Baita di Wanda | montagne (luogo non detto) | europa | m | - | - | Wanda studia il Darkhold (scena dopo i titoli).
 
 == The Falcon and the Winter Soldier
 +tunisia | Confine tra Tunisia e Libia | Nordafrica | africa | r | 33.5,11.0 | r | Sam salva un ufficiale rapito da Batroc.
@@ -30,42 +28,42 @@ smithsonian | Sam consegna lo scudo al museo; nel finale la mostra su Isaiah.
 +baltimora | Casa di Isaiah Bradley | Baltimora | usa | r | 39.2904,-76.6122 | c | Isaiah racconta il super-soldato dimenticato.
 +berlino-prigione | Prigione di Zemo | Berlino | europa | m | 52.52,13.40 | c | Bucky libera Zemo.
 +madripoor | Madripoor | isola del Sud-est asiatico (inventata) | asia | i | 1.2,104.3 | r | Sam, Bucky e Zemo tra i criminali; Sharon è la Power Broker.
-+riga | Riga | Lettonia | europa | r | 56.9496,24.1052 | c | ?Il memoriale; John Walker uccide un Flag Smasher in piazza.
++riga | Riga | Lettonia | europa | r | 56.9496,24.1052 | c | Il memoriale; John Walker uccide un Flag Smasher in piazza.
 novi-grad | Zemo rende omaggio al memoriale della Sokovia.
-+grc-ny | Sede del GRC | Manhattan | nyc-down | m | 40.71,-74.01 | c | ?Battaglia finale: Sam, nuovo Captain America, salva i delegati.
++grc-ny | Sede del GRC | Manhattan | nyc-down | m | 40.71,-74.01 | c | Battaglia finale: Sam, nuovo Captain America, salva i delegati.
 raft | Zemo viene rinchiuso al Raft.
 
 == Black Widow
 +ohio-1995 | Casa dei Belova | sobborgo dell'Ohio, 1995 | usa | m | 40.0,-83.0 | r | La finta famiglia americana di Natasha e Yelena.
-+cuba | Cuba, 1995 | la fuga | americhe | r | 22.0,-79.5 | r | ?La famiglia raggiunge Dreykov a Cuba.
++cuba | Cuba, 1995 | la fuga | americhe | r | 22.0,-79.5 | r | La famiglia raggiunge Dreykov a Cuba.
 +norvegia-roulotte | Rifugio in Norvegia | Norvegia | europa | r | 61.5,9.5 | r | Natasha in fuga dopo Civil War.
 +marocco | Marocco | missione di Yelena | africa | r | 31.79,-7.09 | r | Yelena liberata dall'antidoto alla Stanza Rossa.
 +budapest | Budapest | Ungheria | europa | r | 47.4979,19.0402 | c | La vecchia casa sicura; l'inseguimento con Taskmaster.
 +seven-ice | Prigione Seven Ice | Siberia | russia | m | 66.0,100.0 | r | Alexei liberato tra la neve.
-+melina-fattoria | Fattoria di Melina | Russia | russia | m | 59.9,30.3 | r | ?La cena di famiglia; Melina e i maiali.
++melina-fattoria | Fattoria di Melina | Russia | russia | m | 59.9,30.3 | r | La cena di famiglia; Melina e i maiali.
 +red-room | Stanza Rossa | la base volante di Dreykov | mezzi | x | - | - | Natasha e Yelena la distruggono.
 +tomba-natasha | Tomba di Natasha | campagna (luogo non detto) | usa | m | - | - | Valentina parla a Yelena di Clint (scena dopo i titoli).
 
 == Shang-Chi e la leggenda dei Dieci Anelli
 +sf-bus | Autobus su California Street | San Francisco | sf | r | 37.79,-122.41 | q | Shaun e Katy attaccati dai Dieci Anelli.
 +macao | Golden Daggers Club | Macao | asia | m | 22.1987,113.5439 | c | Il fight club di Xialing; Shang-Chi contro Razor Fist.
-+dieci-anelli | Complesso dei Dieci Anelli | montagne della Cina | asia | m | 28.0,103.0 | r | ?La casa di Wenwu e il suo piano.
++dieci-anelli | Complesso dei Dieci Anelli | montagne della Cina | asia | m | 28.0,103.0 | r | La casa di Wenwu e il suo piano.
 +ta-lo | Ta Lo | villaggio in un'altra dimensione, accesso da una foresta cinese | dimensioni | d | - | - | La battaglia contro l'Abitante dell'Oscurità.
 kamar-taj | Wong li convoca (scena dopo i titoli).
 
 == Eternals
 +mesopotamia | Mesopotamia, 5000 a.C. | l'arrivo degli Eterni | africa | r | 32.5,44.4 | r | Gli Eterni salvano un villaggio dai Devianti.
-+babilonia | Babilonia, 575 a.C. | Iraq | africa | r | 32.5364,44.4208 | c | ?La vita degli Eterni tra gli umani.
++babilonia | Babilonia, 575 a.C. | Iraq | africa | r | 32.5364,44.4208 | c | La vita degli Eterni tra gli umani.
 +tenochtitlan | Tenochtitlan, 1521 | oggi Città del Messico | americhe | r | 19.4342,-99.1312 | c | La conquista spagnola; il gruppo si divide.
 +hiroshima | Hiroshima, 1945 | Giappone | asia | r | 34.3853,132.4553 | c | Phastos piange davanti alla distruzione.
 +londra-museo-nat | Natural History Museum | Londra | uk | r | 51.4967,-0.1764 | e | Sersi ci lavora.
-+camden | Camden Town | Londra | uk | r | 51.5390,-0.1426 | q | ?Il primo attacco dei Devianti oggi.
++camden | Camden Town | Londra | uk | r | 51.5390,-0.1426 | q | Il primo attacco dei Devianti oggi.
 +ajak-ranch | Ranch di Ajak | Dakota del Sud | usa | m | 43.9,-102.0 | r | La morte di Ajak.
 +mumbai | Mumbai | gli studi di Bollywood di Kingo | asia | r | 19.0760,72.8777 | c | Kingo, star del cinema.
-+outback | Outback australiano | la casa di Gilgamesh e Thena | asia | r | -25.0,133.0 | r | ?Gilgamesh si prende cura di Thena; muore.
++outback | Outback australiano | la casa di Gilgamesh e Thena | asia | r | -25.0,133.0 | r | Gilgamesh si prende cura di Thena; muore.
 +amazzonia | Amazzonia | la comunità di Druig | americhe | r | -3.4653,-62.2159 | r | Druig vive con il popolo che controlla.
 +chicago-phastos | Casa di Phastos | Chicago | chi | m | 41.88,-87.63 | c | Phastos con il marito e il figlio.
-+domo | Il Domo | astronave sepolta in Iraq | africa | m | 33.0,43.0 | r | ?La nave degli Eterni.
++domo | Il Domo | astronave sepolta in Iraq | africa | m | 33.0,43.0 | r | La nave degli Eterni.
 +tiamut | Tiamut · l'Isola Celestiale | Oceano Indiano | oceani | i | -10.0,80.0 | r | Il Celestiale fermato mentre emerge.
 +olimpia | Olimpia | il pianeta degli Eterni | spazio | s | - | - | Arishem.
 
@@ -73,8 +71,8 @@ kamar-taj | Wong li convoca (scena dopo i titoli).
 +bishop-attico | Attico dei Bishop | Manhattan | nyc-up | m | 40.77,-73.97 | c | 2012: Kate, bambina, vede Hawkeye durante la battaglia.
 +broadway | Teatro di Broadway | Theater District, Manhattan | nyc-mid | r | 40.759,-73.987 | q | Clint e i figli guardano "Rogers: The Musical".
 +ronin-asta | Asta clandestina | Manhattan | nyc-mid | m | - | - | Kate indossa la tuta di Ronin.
-+tracksuit-covo | Covo della Tracksuit Mafia | luogo da verificare | nyc-bk | m | - | - | ?Clint e Kate catturati.
-+kate-zia | Appartamento della zia di Kate | Manhattan | nyc-mid | m | - | - | ?Il rifugio di Clint e Kate, con Lucky.
++tracksuit-covo | Covo della Tracksuit Mafia | luogo da verificare | nyc-bk | m | - | - | Clint e Kate catturati.
++kate-zia | Appartamento della zia di Kate | Manhattan | nyc-mid | m | - | - | Il rifugio di Clint e Kate, con Lucky.
 +rockefeller | Rockefeller Center | l'albero di Natale e la pista | nyc-mid | r | 40.7587,-73.9787 | e | La battaglia finale della vigilia di Natale.
 barton-fattoria | Clint torna dalla famiglia per Natale.
 
@@ -84,35 +82,35 @@ daily-bugle | Jameson aizza la città contro Peter.
 mit | Peter, MJ e Ned respinti; Peter insegue la vicepreside.
 sanctum | L'incantesimo va storto.
 +alexander-hamilton | Alexander Hamilton Bridge | tra Manhattan e il Bronx | nyc-up | r | 40.8457,-73.9277 | e | Doc Ock attacca; Peter gli toglie i nanorobot.
-+feast | F.E.A.S.T. | il centro di accoglienza di May | nyc-mid | m | - | - | ?May aiuta Norman Osborn.
-+happy-condo | Appartamento di Happy | Manhattan | nyc-mid | m | - | - | ?Goblin attacca; muore May.
++feast | F.E.A.S.T. | il centro di accoglienza di May | nyc-mid | m | - | - | May aiuta Norman Osborn.
++happy-condo | Appartamento di Happy | Manhattan | nyc-mid | m | - | - | Goblin attacca; muore May.
 dimensione-specchio | Strange insegue Peter tra i palazzi riflessi.
 midtown-school | Il laboratorio dove si preparano le cure.
 +statua-liberta | Statua della Libertà | Liberty Island | nyc-isole | r | 40.6892,-74.0445 | e | Tre Spider-Man contro cinque cattivi.
-+cimitero-may | Tomba di May | cimitero del Queens | nyc-qns | m | 40.73,-73.90 | q | ?Peter e Happy sulla tomba.
-delmar | ?Peter ci passa nel finale.
++cimitero-may | Tomba di May | cimitero del Queens | nyc-qns | m | 40.73,-73.90 | q | Peter e Happy sulla tomba.
+delmar | Peter ci passa nel finale.
 +peter-monolocale | Nuovo monolocale di Peter | Manhattan (luogo non detto) | nyc-mid | m | - | - | Peter ricomincia da solo, dimenticato da tutti.
 
 # ---------- 2022 ----------
 
 == Moon Knight
 +steven-casa | Appartamento di Steven Grant | Londra | uk | m | 51.51,-0.12 | c | Steven si incatena al letto per non sonnambulare.
-+museo-mk | National Art Gallery | il museo di Londra dove lavora Steven | uk | m | 51.5089,-0.1283 | q | ?Il negozio di souvenir; lo sciacallo tra le sale.
-+alpi-harrow | Villaggio delle Alpi | Austria (la setta di Harrow) | europa | m | 47.3,11.4 | r | ?Steven si risveglia tra i seguaci di Harrow.
++museo-mk | National Art Gallery | il museo di Londra dove lavora Steven | uk | m | 51.5089,-0.1283 | q | Il negozio di souvenir; lo sciacallo tra le sale.
++alpi-harrow | Villaggio delle Alpi | Austria (la setta di Harrow) | europa | m | 47.3,11.4 | r | Steven si risveglia tra i seguaci di Harrow.
 +cairo | Il Cairo | Egitto | africa | r | 30.0444,31.2357 | c | Layla e Marc tra i contrabbandieri.
 +giza | Piramidi di Giza | la sala dell'Enneade dentro la Grande Piramide | africa | r | 29.9792,31.1342 | e | Il giudizio degli dèi.
-+tomba-alessandro | Tomba di Alessandro Magno | deserto egiziano | africa | m | 26.0,29.0 | r | ?Marc e Layla trovano la statuetta di Ammit.
++tomba-alessandro | Tomba di Alessandro Magno | deserto egiziano | africa | m | 26.0,29.0 | r | Marc e Layla trovano la statuetta di Ammit.
 +duat | Duat | l'aldilà egizio | dimensioni | d | - | - | Marc e Steven sulla barca di Taweret.
-+clinica-mk | Clinica psichiatrica | nella mente di Marc | dimensioni | d | - | - | ?Il dottor Harrow in un ospedale che forse non esiste.
-+chicago-marc | Casa d'infanzia di Marc | Chicago | chi | m | 41.85,-87.65 | c | ?La morte del fratello Randall.
++clinica-mk | Clinica psichiatrica | nella mente di Marc | dimensioni | d | - | - | Il dottor Harrow in un ospedale che forse non esiste.
++chicago-marc | Casa d'infanzia di Marc | Chicago | chi | m | 41.85,-87.65 | c | La morte del fratello Randall.
 
 == Doctor Strange nel Multiverso della Follia
 ! Gli universi 838 e gli altri attraversati nel film non sono il 616: qui solo i luoghi del 616.
-+chiesa-matrimonio | Matrimonio di Christine | chiesa di Manhattan | nyc-mid | m | - | - | ?Strange al matrimonio; poi Gargantos.
++chiesa-matrimonio | Matrimonio di Christine | chiesa di Manhattan | nyc-mid | m | - | - | Strange al matrimonio; poi Gargantos.
 +midtown-gargantos | Strade di Midtown | Manhattan | nyc-mid | r | 40.757,-73.980 | q | Strange e Wong contro Gargantos; arriva America Chavez.
-+wanda-frutteto | Frutteto di Wanda | il rifugio (con l'illusione di Westview) | nj | m | - | - | ?Strange chiede aiuto a Wanda.
++wanda-frutteto | Frutteto di Wanda | il rifugio (con l'illusione di Westview) | nj | m | - | - | Strange chiede aiuto a Wanda.
 kamar-taj | Wanda attacca Kamar-Taj.
-+wundagore | Monte Wundagore | Transia (inventata) | europa | i | 45.8,19.5 | r | ?Il trono di Chthon; Wanda distrugge il Darkhold.
++wundagore | Monte Wundagore | Transia (inventata) | europa | i | 45.8,19.5 | r | Il trono di Chthon; Wanda distrugge il Darkhold.
 sanctum | Strange torna a casa; il terzo occhio.
 
 == Ms. Marvel
@@ -121,12 +119,11 @@ sanctum | Strange torna a casa; il terzo occhio.
 camp-lehigh | L'AvengerCon nella vecchia base.
 +karachi | Karachi | Pakistan | asia | r | 24.8607,67.0011 | c | Kamala con la nonna; i Clandestini.
 +partizione | Treno della Partizione, 1947 | Punjab, tra India e Pakistan | asia | r | 31.6,74.6 | r | Kamala salva la bisnonna Aisha bambina.
-+noor | Dimensione Noor | il mondo dei Djinn | dimensioni | d | - | - | ?Il Velo che i Clandestini vogliono attraversare.
 
 == Thor: Love and Thunder
 +gorr-pianeta | Pianeta di Gorr | il deserto dove muore la figlia | spazio | s | - | - | Gorr ottiene la Necrospada.
-+indigarr | Indigarr | pianeta | spazio | s | - | - | ?Thor con i Guardiani della Galassia.
-+jane-ospedale | Ospedale di Jane | luogo non detto | usa | m | - | - | ?Jane scopre di essere malata.
++indigarr | Indigarr | pianeta | spazio | s | - | - | Thor con i Guardiani della Galassia.
++jane-ospedale | Ospedale di Jane | luogo non detto | usa | m | - | - | Jane scopre di essere malata.
 nuova-asgard | Gorr attacca e rapisce i bambini.
 +omnipotence | Omnipotence City | la città degli dèi | spazio | s | - | - | Zeus rifiuta di aiutarli.
 +regno-ombre | Regno delle Ombre | luna senza colori | dimensioni | d | - | - | La battaglia in bianco e nero.
@@ -139,11 +136,11 @@ milano | Baby Groot e le sue piccole avventure a bordo e nei dintorni.
 == She-Hulk: Attorney at Law
 +messico-bruce | Laboratorio di Bruce in Messico | spiaggia del Messico | americhe | m | 20.5,-105.3 | r | Jen impara a controllare la trasformazione.
 +glkh | GLK&H | studio legale, Los Angeles | la | m | 34.05,-118.25 | c | Jen guida la divisione per i super-umani.
-+jen-casa | Appartamento di Jen | Los Angeles | la | m | 34.05,-118.27 | c | ?
-+tribunale-la | Tribunale di Los Angeles | Downtown Los Angeles | la | r | 34.0544,-118.2440 | q | ?L'udienza per la libertà vigilata di Blonsky.
-+blonsky-rifugio | Rifugio di Emil Blonsky | centro di meditazione, California | la | m | 34.45,-119.25 | r | ?Blonsky e il suo ritiro spirituale.
++jen-casa | Appartamento di Jen | Los Angeles | la | m | 34.05,-118.27 | c | 
++tribunale-la | Tribunale di Los Angeles | Downtown Los Angeles | la | r | 34.0544,-118.2440 | q | L'udienza per la libertà vigilata di Blonsky.
++blonsky-rifugio | Rifugio di Emil Blonsky | centro di meditazione, California | la | m | 34.45,-119.25 | r | Blonsky e il suo ritiro spirituale.
 +kevin | K.E.V.I.N. · Studi di Disney+ | Burbank | la | m | 34.1560,-118.3250 | e | Jen sfonda la quarta parete e incontra K.E.V.I.N.
-sakaar | ?Bruce torna con il figlio Skaar.
+sakaar | Bruce torna con il figlio Skaar.
 
 == Werewolf by Night
 +bloodstone | Villa Bloodstone | il castello dei Bloodstone (luogo non detto) | usa | i | - | - | La caccia al mostro per la Pietra di Sangue.
@@ -155,7 +152,7 @@ mit | Shuri e Okoye trovano Riri Williams.
 birnin-zana | Il funerale di T'Challa; Namor attacca la città.
 +talokan | Talokan | la città sottomarina di Namor | oceani | i | 21.0,-86.0 | r | Il regno di Namor sotto il mare.
 +yucatan | Yucatán, 1571 | Messico | americhe | r | 20.7,-88.9 | r | Le origini di Namor.
-+sea-leopard | Sea Leopard | nave wakandiana | mezzi | x | - | - | ?La battaglia in mare contro i Talokan.
++sea-leopard | Sea Leopard | nave wakandiana | mezzi | x | - | - | La battaglia in mare contro i Talokan.
 piano-ancestrale | Shuri incontra Killmonger.
 +haiti | Haiti | Port-au-Prince | americhe | r | 18.5944,-72.3074 | c | Nakia e il figlio di T'Challa (scena dopo i titoli).
 
@@ -167,69 +164,68 @@ knowhere | I Guardiani preparano il Natale per Peter.
 # ---------- 2023 ----------
 
 == Ant-Man and the Wasp: Quantumania
-+sf-libreria | Libreria della presentazione | San Francisco | sf | m | 37.78,-122.41 | c | ?Scott, ormai famoso, presenta il suo libro.
++sf-libreria | Libreria della presentazione | San Francisco | sf | m | 37.78,-122.41 | c | Scott, ormai famoso, presenta il suo libro.
 pym-casa | Cassie mostra la mappa del Regno Quantico.
 regno-quantico | Kang il Conquistatore e la rivolta di Jentorra.
 
 == Guardiani della Galassia Vol. 3
 knowhere | Adam Warlock attacca la nuova base dei Guardiani.
-+orgocorp | Orgocorp | la sede biotecnologica | spazio | s | - | - | ?I Guardiani rubano il file di Rocket.
++orgocorp | Orgocorp | la sede biotecnologica | spazio | s | - | - | I Guardiani rubano il file di Rocket.
 +controterra | Controterra | la Terra copiata dall'Alto Evoluzionario | spazio | s | - | - | La città degli animali antropomorfi.
 +arete | Arête | la nave dell'Alto Evoluzionario | mezzi | x | - | - | Rocket libera i bambini e gli animali.
 missouri | Peter torna sulla Terra dal nonno.
 
 == Secret Invasion
-+mosca | Mosca | Russia | russia | r | 55.7558,37.6173 | c | ?Il primo attentato degli Skrull ribelli.
-+nuova-skrullos | Nuova Skrullos | la base degli Skrull in Russia | russia | m | 55.5,38.5 | r | ?Gravik e il Consiglio degli Skrull.
-+londra | Londra | Regno Unito | uk | r | 51.5074,-0.1278 | c | ?Fury e Sonya Falsworth.
++mosca | Mosca | Russia | russia | r | 55.7558,37.6173 | c | Il primo attentato degli Skrull ribelli.
++nuova-skrullos | Nuova Skrullos | la base degli Skrull in Russia | russia | m | 55.5,38.5 | r | Gravik e il Consiglio degli Skrull.
++londra | Londra | Regno Unito | uk | r | 51.5074,-0.1278 | c | Fury e Sonya Falsworth.
 +saber | S.A.B.E.R. | la stazione spaziale di Fury | spazio | s | - | - | Fury torna sulla Terra dalla stazione.
 
 == Io sono Groot – stagione 2
-milano | ?Groot esplora pianeti e creature dello spazio.
+milano | Groot esplora pianeti e creature dello spazio.
 
 == The Marvels
 saber | Monica e Fury; lo scambio di posto con Carol e Kamala.
 jersey-city | Kamala si scambia con Carol in casa sua.
 hala | Dar-Benn e il sole morente di Hala.
-+tarnax | Tarnax IV | pianeta degli Skrull | spazio | s | - | - | ?Dar-Benn ne prosciuga l'atmosfera.
++tarnax | Tarnax IV | pianeta degli Skrull | spazio | s | - | - | Dar-Benn ne prosciuga l'atmosfera.
 +aladna | Aladna | il pianeta dove si parla cantando | spazio | s | - | - | Il principe Yan e Carol.
 
 # ---------- 2024 ----------
 
 == Echo
-+ny-fisk-maya | Flashback a New York | Fisk e Maya | nyc-mid | m | - | - | ?Maya cresce sotto la protezione di Fisk; Daredevil.
++ny-fisk-maya | Flashback a New York | Fisk e Maya | nyc-mid | m | - | - | Maya cresce sotto la protezione di Fisk; Daredevil.
 +tamaha | Tamaha | Oklahoma, Nazione Choctaw | usa | r | 35.39,-95.07 | c | Maya torna a casa e affronta Fisk.
-+antenati-choctaw | Visioni delle antenate | Choctaw, epoche diverse | usa | i | - | - | Chafa, Lowak, Tuklo, Bonnie: le donne della famiglia di Maya.
 
 == Agatha All Along
 westview | Agatha si libera dall'incantesimo di Wanda.
 agatha-casa | Agatha si risveglia; la congrega parte da qui.
 +strada-streghe | Strada delle Streghe | sentiero magico | dimensioni | d | - | - | Le prove della congrega.
-+eastview | Casa dei Kaplan | Eastview, New Jersey | nj | i | 40.5,-74.7 | r | ?Billy Kaplan e la sua famiglia.
-salem | ?Il passato di Agatha.
++eastview | Casa dei Kaplan | Eastview, New Jersey | nj | i | 40.5,-74.7 | r | Billy Kaplan e la sua famiglia.
+salem | Il passato di Agatha.
 
 # ---------- 2025 ----------
 
 == Captain America: Brave New World
-+messico-bnw | Missione in Messico | Messico | americhe | r | 20.0,-100.0 | r | ?Sam e Joaquin contro Sidewinder.
++messico-bnw | Missione in Messico | Messico | americhe | r | 20.0,-100.0 | r | Sam e Joaquin contro Sidewinder.
 +casa-bianca | Casa Bianca | Washington | dc | r | 38.8977,-77.0365 | e | Il presidente Ross; l'attentato durante il vertice.
 tiamut | La battaglia navale per l'adamantio dell'Isola Celestiale.
-baltimora | ?Isaiah Bradley.
+baltimora | Isaiah Bradley.
 +tidal-basin | Tidal Basin | Festival dei ciliegi, Washington | dc | r | 38.8841,-77.0365 | e | Red Hulk contro Sam tra i ciliegi in fiore.
 raft | Samuel Sterns in cella avverte Sam (scena dopo i titoli).
 
 == Daredevil: Born Again – stagione 1
 josies | Bullseye uccide Foggy.
-+murdock-studio | Nuovo studio legale di Matt | Hell's Kitchen | nyc-mid | m | - | - | ?Matt lavora da solo dopo la morte di Foggy.
++murdock-studio | Nuovo studio legale di Matt | Hell's Kitchen | nyc-mid | m | - | - | Matt lavora da solo dopo la morte di Foggy.
 +gracie | Gracie Mansion | residenza del sindaco, Upper East Side | nyc-up | r | 40.7760,-73.9431 | e | Fisk, sindaco di New York, ci vive con Vanessa.
 +city-hall | City Hall | municipio di New York | nyc-down | r | 40.7128,-74.0060 | e | Fisk governa la città.
-+muse-covo | Studio di Muse | luogo da verificare | nyc-mid | m | - | - | ?Il serial killer che dipinge con il sangue.
++muse-covo | Studio di Muse | luogo da verificare | nyc-mid | m | - | - | Il serial killer che dipinge con il sangue.
 +red-hook | Porto di Red Hook | Brooklyn | nyc-bk | r | 40.6830,-74.0130 | q | Il porto franco di Fisk; Frank Castle fugge dalla prigione della task force.
 
 == Thunderbolts*
 +kuala-lumpur | Kuala Lumpur | il grattacielo Merdeka 118, Malesia | asia | r | 3.1415,101.7004 | e | Yelena salta dal grattacielo durante una missione.
 +oxe-caveau | Caveau della O.X.E. | struttura sotterranea nel deserto | usa | m | - | - | La trappola di Valentina: gli antieroi si incontrano.
-+campidoglio | Campidoglio | Washington | dc | r | 38.8899,-77.0091 | e | ?Bucky deputato; l'udienza su Valentina.
++campidoglio | Campidoglio | Washington | dc | r | 38.8899,-77.0091 | e | Bucky deputato; l'udienza su Valentina.
 avengers-tower | Valentina la ribattezza Watchtower.
 +vuoto | Il Vuoto | la mente di Bob | dimensioni | d | - | - | Yelena entra nei ricordi di Bob.
 +midtown-ombre | Manhattan nell'ombra | Midtown | nyc-mid | r | 40.754,-73.984 | q | Il Vuoto trasforma le persone in ombre.
@@ -237,14 +233,11 @@ avengers-tower | Valentina la ribattezza Watchtower.
 == Ironheart
 mit | Riri viene espulsa dal MIT.
 +chicago-riri | South Side di Chicago | la casa di Riri | chi | r | 41.78,-87.62 | q | Riri torna a casa e costruisce l'armatura.
-+hood-covo | Covo della banda di Parker Robbins | Chicago | chi | m | - | - | ?Riri lavora per The Hood.
++hood-covo | Covo della banda di Parker Robbins | Chicago | chi | m | - | - | Riri lavora per The Hood.
 
 == Eyes of Wakanda
 birnin-zana | Gli Hatut Zeraze partono dal Wakanda e ci tornano.
-+creta | Creta, Età del Bronzo | Grecia | europa | r | 35.2401,24.8093 | r | ?Noni si infiltra nella banda del Leone.
-+troia | Troia | Anatolia | asia | r | 39.9575,26.2389 | e | ?La guerra di Troia e Memnone.
-+iron-fist-ew | La ricerca dell'Iron Fist | Asia, XV secolo | asia | r | - | - | ?Il vibranio sulle tracce dell'ultimo Iron Fist.
-+adwa | Adua, 1896 | Etiopia | africa | r | 14.1647,38.8956 | c | ?La battaglia di Adua.
++iron-fist-ew | La ricerca dell'Iron Fist | Asia, XV secolo | asia | r | - | - | Il vibranio sulle tracce dell'ultimo Iron Fist.
 
 # ---------- 2026 ----------
 
@@ -252,26 +245,26 @@ birnin-zana | Gli Hatut Zeraze partono dal Wakanda e ci tornano.
 +hollywood-walk | Hollywood Walk of Fame | Hollywood | la | r | 34.1016,-118.3267 | q | Simon trova la stella di Von Kovak.
 +simon-casa | Appartamento di Simon | Los Angeles | la | m | 34.08,-118.30 | c | Simon, attore squattrinato, nasconde i poteri.
 +pacoima | Pacoima | casa della famiglia Williams, Los Angeles | la | r | 34.2622,-118.4270 | q | La famiglia di Simon e l'incendio dell'infanzia.
-+wilcox | The Wilcox | locale di Los Angeles | la | m | 34.10,-118.33 | c | ?Il club dove lavorava DeMarr "Doorman" Davis.
-+dimensione-porte | Dimensione delle porte | dove finisce Doorman | dimensioni | d | - | - | ?Il caso che porta alla Clausola Doorman.
++wilcox | The Wilcox | locale di Los Angeles | la | m | 34.10,-118.33 | c | Il club dove lavorava DeMarr "Doorman" Davis.
++dimensione-porte | Dimensione delle porte | dove finisce Doorman | dimensioni | d | - | - | Il caso che porta alla Clausola Doorman.
 +kovak-villa | Villa di Von Kovak | Benedict Canyon, Los Angeles | la | m | 34.1180,-118.4280 | q | Le audizioni e le riprese finali.
 +set-wonder-man | Set di "Wonder Man" | studio di Hollywood (la vecchia New York ricostruita) | la | m | 34.0840,-118.3200 | q | Simon perde il controllo e distrugge il teatro di posa.
 +dodc-prigione | Prigione del Controllo Danni | luogo non detto | usa | m | - | - | Simon libera Trevor e vola via con lui.
-+yucca-valley | Yucca Valley | deserto della California | la | r | 34.1142,-116.4322 | c | ?L'episodio finale.
++yucca-valley | Yucca Valley | deserto della California | la | r | 34.1142,-116.4322 | c | L'episodio finale.
 
 == Daredevil: Born Again – stagione 2
 +northern-star | Northern Star | la nave affondata nel porto di New York | nyc-isole | m | 40.67,-74.03 | q | Daredevil sale a bordo; Fisk la fa affondare e incolpa lui.
 red-hook | Matt entra nel porto e libera i prigionieri della task force.
 gracie | Fisk, Vanessa e Mr. Charles.
-tribunale | ?Il processo a Karen; Bullseye spara davanti al tribunale.
-+prigione-matt | Prigione | luogo non detto | usa | m | - | - | ?Matt finisce in carcere nel finale.
+tribunale | Il processo a Karen; Bullseye spara davanti al tribunale.
++prigione-matt | Prigione | luogo non detto | usa | m | - | - | Matt finisce in carcere nel finale.
 
 == The Punisher: One Last Kill
-+gnucci | Territorio dei Gnucci | New York (quartiere da verificare) | nyc-bk | m | - | - | ?Frank difende un negozio dalla famiglia di Ma Gnucci.
++gnucci | Territorio dei Gnucci | New York (quartiere da verificare) | nyc-bk | m | - | - | Frank difende un negozio dalla famiglia di Ma Gnucci.
 
 == Spider-Man: Brand New Day
 +peter-soffitta | Soffitta di Peter | Brooklyn (luogo da verificare) | nyc-bk | m | - | - | Peter ripara il costume e studia le sue mutazioni.
-+carro-armato | Inseguimento del carro armato | strade di Manhattan | nyc-mid | r | - | - | ?Spider-Man insegue un carro armato rubato.
++carro-armato | Inseguimento del carro armato | strade di Manhattan | nyc-mid | r | - | - | Spider-Man insegue un carro armato rubato.
 +esu | Empire State University | Manhattan | nyc-mid | m | - | - | Peter chiede aiuto a Bruce Banner per le mutazioni.
 +dodc-sede | Sede del Controllo Danni | Manhattan | nyc-mid | m | - | - | Peter interroga Metzger; Hulk, controllato da Jean, si scatena.
 +dodc-carcere | Centro di detenzione del Controllo Danni | Roosevelt Island | nyc-isole | m | 40.7615,-73.9505 | q | Jean è prigioniera; Peter viene ferito liberandola.
@@ -291,8 +284,8 @@ peggy-casa | Scena nuova: il ballo di Steve e Peggy viene interrotto.
 edimburgo | Visione vive nascosto come "Sherwood Ellis"; il cecchino uccide Fiona nel suo bar.
 +palazzo-mente | Palazzo della mente di Visione | dentro Visione (Ultron, F.R.I.D.A.Y., Jocasta…) | dimensioni | d | - | - | Visione discute con Ultron e le altre IA.
 madripoor | Episodio 6: Visione e Tommy a Madripoor.
-+horton-1939 | Laboratorio di Phineas Horton, 1939 | luogo da verificare | usa | m | - | - | ?Nasce Jim Hammond, la Torcia Umana.
-+horton-villa | Casa di Virgil Horton | luogo da verificare | uk | m | - | - | ?La cena con Visione e Jocasta prigionieri.
++horton-1939 | Laboratorio di Phineas Horton, 1939 | luogo da verificare | usa | m | - | - | Nasce Jim Hammond, la Torcia Umana.
++horton-villa | Casa di Virgil Horton | luogo da verificare | uk | m | - | - | La cena con Visione e Jocasta prigionieri.
 londra | Ultron attacca Londra con la tempesta di nanobot.
 +dreamscape | Dreamscape | il piano dei sogni | dimensioni | d | - | - | Billy e Tommy si ritrovano e riportano indietro Visione.
 

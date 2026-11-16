@@ -1,0 +1,394 @@
+# Geolocalizzazione dei luoghi sulla Terra (fase 3). Letto da geocode.py (Action "Catalogo 616 - posizioni") e da build.py.
+# Regola: conta dove il film o la serie mette il luogo. Indirizzo visto sullo schermo > edificio/luogo reale > quartiere o città dichiarati.
+# Il luogo delle riprese si usa solo quando coincide con quello della storia (es. Puente Antiguo costruita a Galisteo).
+#
+# chiave | q | ricerca OpenStreetMap (Nominatim) [|| alternativa…] | fonte
+# chiave | x | Via A & Via B | sud,ovest,nord,est | fonte          (incrocio di due strade, da Overpass)
+# chiave | ll | lat,lon | precisione | fonte                         (a mano)
+# chiave | rel | altra chiave | dlat,dlon | fonte                    (vicino a un altro luogo)
+# chiave | - | motivo                                               (il film non dice dove: nessun punto)
+
+# ---------- New York · Manhattan ----------
+avengers-tower | ll | 40.75333,-73.97639 | e | 200 Park Avenue, al posto del MetLife Building (come nel Mondo 616)
+grand-central | ll | 40.75272,-73.97722 | e | Park Avenue Viaduct davanti a Grand Central (come nel Mondo 616)
+shawarma | rel | avengers-tower | -0.0012,0.0006 | vicino alla torre; il locale non ha indirizzo
+times-sq | q | Times Square, Manhattan
+sanctum | ll | 40.72905,-74.0003 | e | 177A Bleecker Street (come nel Mondo 616)
+washington-sq | q | Washington Square Park, Manhattan
+sterns-lab | q | Manhattan, New York City | in città, edificio non detto
+harlem-125 | q | Apollo Theater, New York
+pops | x | Malcolm X Boulevard & West 119th Street | 40.79,-73.96,40.83,-73.93 | Lenox Avenue (Malcolm X Blvd) angolo 119ª, come nella serie
+harlem-paradise | q | Harlem, Manhattan | locale inventato di Harlem
+nelson-murdock | q | Hell's Kitchen, Manhattan | studio a Hell's Kitchen, indirizzo non detto
+murdock-studio | x | West 51st Street & 10th Avenue | 40.75,-74.01,40.78,-73.97 | cartello stradale nella serie: 10th Avenue e W 51st Street
+matt-casa | q | Hell's Kitchen, Manhattan | a Hell's Kitchen, indirizzo non detto
+josies | q | Hell's Kitchen, Manhattan | bar di Hell's Kitchen, indirizzo non detto
+fogwells | q | Hell's Kitchen, Manhattan | palestra di Hell's Kitchen, indirizzo non detto
+chiesa-lantom | q | Hell's Kitchen, Manhattan | chiesa di Hell's Kitchen, indirizzo non detto
+russi-covo | q | Hell's Kitchen, Manhattan | a Hell's Kitchen
+tetto-punitore | q | Hell's Kitchen, Manhattan | tetti di Hell's Kitchen
+mano-scavo | q | Hell's Kitchen, Manhattan | cantiere a Hell's Kitchen
+midland-circle | q | Hell's Kitchen, Manhattan | a Hell's Kitchen, indirizzo non detto
+st-agnes | q | Hell's Kitchen, Manhattan | orfanotrofio di Hell's Kitchen
+luke-bar | q | Hell's Kitchen, Manhattan | bar di Hell's Kitchen
+alias | q | 485 West 46th Street, New York || West 46th Street, Manhattan | 485 W 46th St, dal biglietto da visita di Jessica (S1E13)
+royal-dragon | q | 495 West 47th Street, New York || West 47th Street, Manhattan | 495 W 47th St, dall'insegna del ristorante
+metro-general | q | 479 West 58th Street, New York || West 58th Street, Manhattan | 479 W 58th St, indirizzo dato nel film
+fisk-attico | q | Manhattan, New York City | Manhattan, edificio non detto
+galleria-vanessa | q | Manhattan, New York City | Manhattan, indirizzo non detto
+ssr-ny | q | Manhattan, New York City | dietro una finta compagnia telefonica, indirizzo non detto
+griffith | q | Manhattan, New York City | indirizzo non detto
+stark-ny | q | Manhattan, New York City | indirizzo non detto
+automat | q | Manhattan, New York City | indirizzo non detto
+trish-casa | q | Manhattan, New York City | indirizzo non detto
+strange-casa | q | Manhattan, New York City | indirizzo non detto
+rand-tower | q | Manhattan, New York City | indirizzo non detto
+shady-acres | q | Manhattan, New York City | indirizzo non detto
+presidential-hotel | q | Manhattan, New York City | hotel inventato
+bulletin | q | Manhattan, New York City | redazione, indirizzo non detto
+ospedale-billy | q | Manhattan, New York City | ospedale non detto
+gruppo-sostegno | q | Manhattan, New York City | indirizzo non detto
+ny-1931 | q | Manhattan, New York City | Manhattan, 1931
+bishop-attico | q | Manhattan, New York City | indirizzo non detto
+ronin-asta | q | Manhattan, New York City | indirizzo non detto
+kate-zia | q | Manhattan, New York City | indirizzo non detto
+feast | q | Manhattan, New York City | indirizzo non detto
+happy-condo | q | Manhattan, New York City | indirizzo non detto
+peter-monolocale | q | Manhattan, New York City | indirizzo non detto
+chiesa-matrimonio | q | Manhattan, New York City | chiesa non detta
+ny-fisk-maya | q | Manhattan, New York City | New York, luoghi non detti
+grc-ny | q | Manhattan, New York City | sede non detta
+carro-armato | q | Manhattan, New York City | strade di Manhattan
+esu | q | Manhattan, New York City | università inventata, indirizzo non detto
+dodc-sede | q | Manhattan, New York City | indirizzo non detto
+broadway | q | Theater District, Manhattan || Broadway Theatre, New York | teatro non detto, nel Theater District
+midtown-gargantos | q | Midtown Manhattan || Midtown, Manhattan
+midtown-ombre | q | Midtown Manhattan || Midtown, Manhattan
+rockefeller | q | Rockefeller Center, New York
+central-park | q | Central Park, New York
+giostra | q | Friedsam Memorial Carousel || Central Park Carousel, New York
+gracie | q | Gracie Mansion, New York
+city-hall | q | New York City Hall
+tribunale | q | New York County Supreme Court || 60 Centre Street, New York
+fbi-ny | q | 26 Federal Plaza, New York || Jacob K. Javits Federal Building
+chinatown | q | Chinatown, Manhattan
+chikara | q | Chinatown, Manhattan | dojo a Chinatown, indirizzo non detto
+ned-mj | q | Lower Manhattan || Financial District, Manhattan | Lower Manhattan, indirizzo non detto
+alexander-hamilton | q | Alexander Hamilton Bridge, New York
+molo-jj | q | Hudson River Park, Manhattan | lungofiume, punto non detto
+
+# ---------- New York · isole, Queens, Brooklyn ----------
+statua-liberta | q | Statue of Liberty, New York
+rykers | q | Rikers Island, New York
+dodc-carcere | q | Roosevelt Island, New York
+staten-ferry | ll | 40.6720,-74.0420 | q | a metà strada nella baia, tra Manhattan e Staten Island
+northern-star | ll | 40.6650,-74.0350 | q | nel porto di New York, punto non detto
+stark-expo | q | Unisphere, Queens
+parker-hc | ll | 40.7449,-73.9212 | e | 43-25 43rd Street, Sunnyside (come nel Mondo 616)
+parker-nwh | ll | 40.74455,-73.91815 | e | 43-15 46th Street, Sunnyside (come nel Mondo 616)
+delmar | ll | 40.7433,-73.918 | e | 46-22 Queens Boulevard (come nel Mondo 616)
+midtown-school | q | Queens, New York City | nel Queens, indirizzo non detto
+lieberman-casa | q | Queens, New York City | nel Queens, indirizzo non detto
+cimitero-may | q | Queens, New York City | cimitero del Queens non detto
+silvercup | q | Silvercup Studios, Long Island City
+brooklyn-40 | q | Brooklyn, New York City
+lab-erskine | q | Brooklyn, New York City | a Brooklyn, indirizzo non detto
+coney-island | q | Coney Island Beach || Coney Island, Brooklyn
+yelena-banya | q | Coney Island, Brooklyn | a Coney Island, indirizzo non detto
+red-hook | q | Red Hook Container Terminal || Red Hook, Brooklyn
+peter-soffitta | q | Brooklyn, New York City | a Brooklyn, indirizzo non detto
+golden-girl | q | Brooklyn, New York City | cantiere di Brooklyn non detto
+micro-covo | - | magazzino senza indirizzo
+avvoltoio-covo | - | magazzino senza indirizzo
+liz-casa | - | casa in un sobborgo non detto
+tracksuit-covo | - | covo senza indirizzo
+gnucci | - | quartiere non detto
+muse-covo | - | covo senza indirizzo
+daily-bugle | - | studio senza indirizzo
+whih | - | redazione senza indirizzo
+
+# ---------- Stato di New York e New Jersey ----------
+avengers-compound | q | Esopus, New York | sull'Hudson: lo sfondo del film corrisponde a Esopus (MCU Location Scout)
+tony-lago | q | New York State | nello Stato di New York, punto non detto
+panchina-lago | - | lago non detto
+incidente-strange | ll | 41.0,-73.9 | r | strada lungo l'Hudson, punto non detto
+westview | q | Lawrenceville, New Jersey | secondo gli autori di WandaVision: vicino a Trenton, Princeton e Lawrenceville
+agatha-casa | rel | westview | 0.0020,-0.0030 | a Westview
+sword-base | rel | westview | 0.0120,0.0250 | ai margini dell'Esagono
+eastview | rel | westview | 0.0000,0.0800 | cittadina vicina a Westview
+wanda-frutteto | - | rifugio senza luogo
+camp-lehigh | q | New Jersey | a Wheaton, cittadina inventata del New Jersey
+jersey-city | q | Jersey City, New Jersey
+coles | q | Jersey City, New Jersey | scuola inventata di Jersey City
+
+# ---------- Washington ----------
+senato | q | United States Capitol
+campidoglio | q | United States Capitol
+casa-bianca | q | White House, Washington
+reflecting-pool | q | Lincoln Memorial Reflecting Pool
+washington-monument | q | Washington Monument
+smithsonian | q | National Air and Space Museum, Washington
+tidal-basin | q | Tidal Basin, Washington
+triskelion | q | Theodore Roosevelt Island, Washington | sull'isola Theodore Roosevelt, nel Potomac
+steve-dc | q | Washington, District of Columbia | indirizzo non detto
+va-dc | q | Washington, District of Columbia | indirizzo non detto
+pierce-casa | q | Washington, District of Columbia | indirizzo non detto
+sam-casa | q | Washington, District of Columbia | indirizzo non detto
+dc-superstrada | q | Washington, District of Columbia | strada non detta
+tomba-fury | q | Washington, District of Columbia | cimitero non detto
+peggy-rsa | - | casa di riposo non detta
+baltimora | q | Baltimore, Maryland | indirizzo non detto
+
+# ---------- California ----------
+stark-villa | q | Point Dume, Malibu || Malibu, California | 10880 Malibu Point, indirizzo inventato a Point Dume
+stark-ind | q | Los Angeles, California | sede a Los Angeles, punto non detto
+disney-hall | q | Walt Disney Concert Hall, Los Angeles
+edwards | q | Edwards Air Force Base
+chinese-theatre | q | TCL Chinese Theatre, Hollywood
+randys | q | Randy's Donuts, Inglewood || 805 West Manchester Boulevard, Inglewood
+la-pilota | q | Los Angeles, California
+ssr-la | q | Los Angeles, California | indirizzo non detto
+arena-club | q | Los Angeles, California | club inventato
+isodyne | q | Los Angeles, California | indirizzo non detto
+stark-la | q | Beverly Hills, California | a Beverly Hills, indirizzo non detto
+boyle-heights | q | Boyle Heights, Los Angeles
+momentum | q | Los Angeles, California | indirizzo non detto
+darryl-la | q | Los Angeles, California | indirizzo non detto
+pride-ville | q | Brentwood, Los Angeles
+atlas-academy | q | Los Angeles, California | scuola inventata
+pride-scavo | q | Los Angeles, California | sotto la città
+hostel | q | Los Angeles, California | albergo abbandonato non detto
+blockbuster | q | Los Angeles, California | videonoleggio non detto
+la-metro | q | Los Angeles Union Station || Los Angeles, California | tratta non detta
+pancho | ll | 34.85,-117.50 | r | nel deserto del Mojave, punto non detto
+glkh | q | Downtown Los Angeles | a Downtown, indirizzo non detto
+jen-casa | q | Los Angeles, California | indirizzo non detto
+tribunale-la | q | Downtown Los Angeles | tribunale non detto, a Downtown
+kevin | q | Walt Disney Studios, Burbank
+hollywood | q | Hollywood, Los Angeles
+hollywood-walk | q | Hollywood Walk of Fame
+bacon-casa | q | Beverly Hills, California | a Beverly Hills, indirizzo non detto
+simon-casa | q | Los Angeles, California | indirizzo non detto
+pacoima | q | Pacoima, Los Angeles
+wilcox | q | Hollywood, Los Angeles | locale inventato
+kovak-villa | q | Benedict Canyon, Los Angeles
+set-wonder-man | q | Hollywood, Los Angeles | studio non detto
+yucca-valley | q | Yucca Valley, California
+blonsky-rifugio | - | centro di meditazione non detto
+san-quentin | q | San Quentin State Prison
+oakland | q | Oakland, California
+berkeley | q | University of California, Berkeley
+muir-woods | q | Muir Woods National Monument
+lombard | ll | 37.8021,-122.4187 | e | il tratto a curve di Lombard Street
+fishermans-wharf | q | Fisherman's Wharf, San Francisco
+sf-bus | q | Nob Hill, San Francisco | California Street sale su Nob Hill
+baskin | q | San Francisco, California | negozio non detto
+pym-casa | q | San Francisco, California | indirizzo non detto
+pym-tech | q | San Francisco, California | sede inventata
+cassie-casa | q | San Francisco, California | indirizzo non detto
+scott-casa | q | San Francisco, California | indirizzo non detto
+x-con | q | San Francisco, California | indirizzo non detto
+lab-pym | q | San Francisco, California | si sposta per la città
+deposito-luis | q | San Francisco, California | deposito non detto
+sf-libreria | q | San Francisco, California | libreria non detta
+
+# ---------- resto degli Stati Uniti ----------
+caesars | q | Caesars Palace, Las Vegas
+culver | q | Virginia, United States | università inventata della Virginia
+puente | q | Galisteo, New Mexico | costruita a Galisteo: altitudine e paesaggio coincidono
+mjolnir-cratere | rel | puente | -0.0150,-0.0250 | nel deserto appena fuori Puente Antiguo
+stazione-nm | rel | puente | -0.2000,-0.4000 | sulla strada da Albuquerque verso Puente Antiguo
+rose-hill | q | Tennessee, United States | cittadina inventata del Tennessee
+miami-mandarino | q | Miami, Florida | villa non detta
+norco | q | PortMiami
+seagate | ll | 31.40,-81.20 | r | isola al largo della Georgia, punto non detto
+missouri | q | Missouri, United States | casa e ospedale non detti
+mit | q | Massachusetts Institute of Technology
+cleveland | q | Cleveland, Ohio
+ohio-1995 | q | Ohio, United States | sobborgo non detto
+salem | q | Salem, Massachusetts
+delacroix | q | Delacroix, Louisiana
+new-orleans | q | New Orleans, Louisiana
+rambeau-casa | q | Louisiana, United States | casa non detta
+oahu | q | Oahu, Hawaii
+area-51 | q | Area 51, Nevada || Groom Lake, Nevada
+ajak-ranch | q | South Dakota, United States | ranch non detto
+chicago-phastos | q | Chicago, Illinois | indirizzo non detto
+chicago-marc | q | Chicago, Illinois | indirizzo non detto
+chicago-riri | q | South Side, Chicago || Chicago, Illinois
+hood-covo | q | Chicago, Illinois | covo non detto
+chicago-1893 | q | Jackson Park, Chicago | dove sorgeva l'Esposizione del 1893
+tamaha | q | Tamaha, Oklahoma
+broxton-1982 | q | Oklahoma, United States | cittadina inventata
+oshkosh-1985 | q | Oshkosh, Wisconsin
+haven-hills | q | Alabama, United States | cittadina inventata
+db-cooper | ll | 45.9,-122.7 | r | sul volo tra Portland e Seattle
+hammer-ind | - | stabilimento non detto
+pegasus | - | base nel deserto, luogo non detto
+tavola-calda | - | luogo non detto
+hub | - | luogo segreto
+guest-house | - | luogo segreto
+fridge | - | luogo segreto
+playground | - | luogo segreto
+lighthouse | - | luogo segreto
+zodiac | - | luogo non detto
+roxxon-raffineria | - | luogo non detto
+monolite | - | luogo segreto
+malick-casa | - | luogo non detto
+jessica-infanzia | - | luogo non detto
+igh | - | luogo non detto
+barton-fattoria | - | luogo tenuto segreto
+strada-1991 | - | luogo non detto
+fury-strada | - | città non detta
+peggy-casa | - | luogo non detto
+sword-hq | - | luogo non detto
+tomba-natasha | - | luogo non detto
+jane-ospedale | - | luogo non detto
+bloodstone | - | luogo non detto
+oxe-caveau | - | luogo segreto nel deserto
+dodc-prigione | - | luogo non detto
+prigione-matt | - | luogo non detto
+midwest-bar | - | luogo non detto
+horton-1939 | - | luogo non detto
+horton-villa | - | luogo non detto
+
+# ---------- Americhe ----------
+rocinha | q | Rocinha, Rio de Janeiro
+centroamerica | q | Guatemala | viaggio senza tappe precise
+bella-coola | q | Bella Coola, British Columbia
+providence | - | rifugio segreto in Canada
+peru | q | Peru | rovine non dette
+san-juan | q | San Juan, Puerto Rico
+giamaica | q | Kingston, Jamaica
+citta-messico | q | Mexico City
+ixtenco | q | Ixtenco, Tlaxcala
+tenochtitlan | q | Templo Mayor, Mexico City | dove sorgeva il centro di Tenochtitlan
+amazzonia | ll | -3.4653,-62.2159 | r | in Amazzonia, punto non detto
+yucatan | q | Yucatán, Mexico
+haiti | q | Port-au-Prince, Haiti
+cuba | q | Cuba | punto non detto
+messico-bruce | - | spiaggia non detta
+messico-bnw | - | luogo non detto
+slingshot | - | luogo non detto
+
+# ---------- Regno Unito ----------
+londra | q | London, United Kingdom
+londra-ssr | q | London, United Kingdom | indirizzo non detto
+londra-fabbrica | q | London, United Kingdom | fabbrica non detta
+jane-londra | q | London, United Kingdom | indirizzo non detto
+londra-funerale | q | London, United Kingdom | chiesa non detta
+londra-sanctum | q | London, United Kingdom | indirizzo non detto
+londra-museo | q | London, United Kingdom | museo inventato
+londra-pub | q | London, United Kingdom | pub non detto
+steven-casa | q | London, United Kingdom | indirizzo non detto
+museo-mk | q | London, United Kingdom | museo inventato
+greenwich | q | Old Royal Naval College, Greenwich
+stonehenge | q | Stonehenge
+tower-bridge | q | Tower Bridge, London
+londra-museo-nat | q | Natural History Museum, London
+camden | q | Camden Town, London
+edimburgo | q | Edinburgh Waverley || Edinburgh, Scotland
+grotta-norne | - | luogo non detto
+
+# ---------- Europa ----------
+tonsberg | q | Tønsberg, Norway
+nuova-asgard | q | Tønsberg, Norway | Nuova Asgard sorge a Tønsberg
+norvegia-well | ll | 61.0,8.5 | r | Norvegia, punto non detto
+norvegia-odino | ll | 59.0,5.6 | r | scogliera sulla costa norvegese, punto non detto
+norvegia-roulotte | ll | 61.5,9.5 | r | Norvegia, punto non detto
+monaco | q | Circuit de Monaco || Monaco
+stoccarda | q | Schlossplatz, Stuttgart || Stuttgart, Germany
+berna | q | Bern, Switzerland
+malta | q | Malta
+azzano | q | Azzano San Paolo || Azzano, Italy | il film dice solo "Azzano, Italia"
+treno-alpi | ll | 46.5,10.5 | r | sulle Alpi, punto non detto
+hydra-base | ll | 46.6,9.9 | r | sulle Alpi, punto non detto
+austria-1945 | q | Austria | castello non detto
+alpi-harrow | ll | 47.3,11.4 | r | Alpi austriache, punto non detto
+finow | q | Finow, Eberswalde || Eberswalde, Germany
+vienna-onu | q | Vienna International Centre
+bucarest | q | Bucharest, Romania
+berlino-ctc | q | Paul-Löbe-Haus, Berlin | il centro antiterrorismo del film è il Paul-Löbe-Haus
+berlino | q | Berlin, Germany
+berlino-prigione | q | Berlin, Germany | prigione non detta
+lipsia | q | Leipzig/Halle Airport
+venezia | q | Venice, Italy
+praga | q | Prague, Czech Republic
+olanda-tulipani | q | Broek op Langedijk
+riga | q | Riga, Latvia
+budapest | q | Budapest, Hungary
+ginevra-onu | q | Palais des Nations, Geneva
+lione-1858 | q | Lyon, France
+pompei | q | Pompeii || Scavi di Pompei
+novi-grad | ll | 48.95,17.65 | r | Sokovia: in Age of Ultron sta tra Repubblica Ceca e Slovacchia (in Civil War una mappa la mette sul Mar Nero)
+strucker-base | rel | novi-grad | 0.1500,0.4000 | sui monti della Sokovia, punto non detto
+wundagore | rel | novi-grad | 0.3000,1.0000 | Transia, paese inventato vicino alla Sokovia
+wanda-baita | - | montagne non dette
+
+# ---------- Russia ----------
+vanko-mosca | q | Moscow, Russia | indirizzo non detto
+mosca | q | Moscow, Russia
+natasha-russia | - | luogo non detto
+leviathan-russia | - | luogo non detto
+nuova-skrullos | - | luogo non detto
+melina-fattoria | - | luogo non detto
+siberia | ll | 60.0,95.0 | r | Siberia, punto non detto
+seven-ice | ll | 66.0,100.0 | r | Siberia, punto non detto
+
+# ---------- Wakanda ----------
+birnin-zana | ll | 4.90,35.35 | r | Wakanda: all'estremità nord del lago Turkana, dove si toccano Kenya, Etiopia, Uganda e Sud Sudan (mappa di Civil War)
+cascate | rel | birnin-zana | -0.0800,0.0900 | in Wakanda
+monte-bashenga | rel | birnin-zana | 0.0700,0.0600 | in Wakanda
+jabari | rel | birnin-zana | 0.3000,-0.2500 | montagne del Wakanda
+confine | rel | birnin-zana | -0.2500,0.2000 | pianure al confine del Wakanda
+wakanda-pianura | rel | birnin-zana | -0.1500,0.2800 | fuori dalla barriera
+
+# ---------- Africa e Medio Oriente ----------
+klaue-nave | - | costa africana non detta
+johannesburg | q | Johannesburg, South Africa
+lagos | q | Lagos, Nigeria
+sambisa | q | Sambisa Forest || Borno, Nigeria
+tunisia | ll | 33.15,11.55 | r | confine tra Tunisia e Libia, punto non detto
+marocco | q | Morocco | punto non detto
+cairo | q | Cairo, Egypt
+giza | q | Great Pyramid of Giza
+tomba-alessandro | ll | 26.0,29.0 | r | nel deserto egiziano, punto non detto
+mesopotamia | ll | 32.5,44.4 | r | Mesopotamia, punto non detto
+babilonia | q | Babylon, Iraq || Babil, Iraq
+domo | ll | 33.0,43.0 | r | sepolto in Iraq, punto non detto
+
+# ---------- Asia e Oceania ----------
+kunar-grotta | q | Kunar, Afghanistan | provincia di Kunar, grotta non detta
+gulmira | q | Kunar, Afghanistan | villaggio inventato vicino a Kunar
+kandahar | q | Kandahar, Afghanistan
+calcutta | q | Kolkata, India
+seoul | q | Seoul, South Korea
+busan | q | Busan, South Korea
+tokyo | q | Tokyo, Japan
+hiroshima | q | Hiroshima, Japan
+kamar-taj | q | Kathmandu, Nepal | a Kathmandu, edificio nascosto
+everest | q | Mount Everest
+himalaya-aereo | ll | 30.0,82.0 | r | sull'Himalaya, punto non detto
+hk-sanctum | q | Hong Kong | strada non detta
+macao | q | Macau | locale inventato
+anzhou | q | Anzhou, Mianyang || Anzhou, China
+dieci-anelli | ll | 28.0,103.0 | r | montagne della Cina, punto non detto
+mumbai | q | Mumbai, India
+karachi | q | Karachi, Pakistan
+partizione | ll | 31.6,74.6 | r | tra Amritsar e Lahore, punto non detto
+kuala-lumpur | q | Merdeka 118, Kuala Lumpur
+madripoor | ll | 1.20,104.30 | r | isola inventata vicino a Singapore
+outback | ll | -25.0,133.0 | r | nell'Outback, punto non detto
+gobi | q | Gobi Desert
+darryl-casa | - | città australiana non detta
+afterlife | - | luogo nascosto
+iron-fist-ew | - | luogo non detto
+
+# ---------- oceani ----------
+artico | ll | 72.0,-40.0 | r | nell'Artico, punto non detto
+roxxon-piattaforma | ll | 29.0,-89.5 | r | Golfo del Messico, punto non detto
+tiamut | ll | -10.0,80.0 | r | Oceano Indiano, punto non detto
+atlantico-vibranio | ll | 25.0,-40.0 | r | Oceano Atlantico, punto non detto
+talokan | ll | 21.0,-86.0 | r | sotto il mare al largo dello Yucatán, punto non detto
+raft | - | in mezzo all'oceano, punto non detto
+anvil | - | sede non detta

@@ -1,5 +1,5 @@
 # Catalogo dei luoghi del Mondo 616 — sorgente (bozza di Claude, novembre 2026).
-# build.py legge tutti i .txt di questa cartella in ordine e scrive data/catalogo616.json.
+# build.py legge in ordine i .txt di questa cartella che cominciano con due cifre e scrive data/catalogo616.json.
 #
 # Z chiave | nome della zona | area
 # == Titolo                         (esatto come in data/cards.json)
