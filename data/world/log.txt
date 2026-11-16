@@ -195,3 +195,14 @@
   luogo agatha-casa: {'x': -127.4, 'z': -110.8, 'how': 'solo coordinate'}
   luogo westview: {'x': 127.7, 'z': 111.3, 'how': 'solo coordinate'}
   scritto z-agatha-casa-v1.json: 54 KB
+== zona z-bacon-casa (v1) · Los Angeles · Beverly Hills ==
+  tutto: 3364 elementi da maps.mail.ru in 20s (2697 KB)
+  edifici tenuti: 1961 (scartati 42)
+  strade: 469 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 31 aree
+  distretti: []
+  quartieri: 1 → Beverly Hills
+  luogo bacon-casa: {'x': -0.1, 'z': -0.0, 'how': 'solo coordinate'}
+  luogo stark-la: {'x': -0.1, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-bacon-casa-v1.json: 146 KB
