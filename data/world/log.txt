@@ -725,3 +725,14 @@
   quartieri: 4 → Katmandu, Baghbazar, Kamalpokhari, Kalikasthan
   luogo kamar-taj: {'x': 0.2, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-kamar-taj-v1.json: 251 KB
+== zona z-kandahar (v1) · Kandahar · Afghanistan ==
+  tutto: maps.mail.ru non risponde bene dopo 51s (HTTP Error 504: Gateway Timeout)
+  tutto: 2144 elementi da overpass-api.de in 36s (1124 KB)
+  edifici tenuti: 1865 (scartati 5)
+  strade: 216 tratti, binari sopraelevati: 0
+  specchi d'acqua: 1
+  verde: 16 aree
+  distretti: []
+  quartieri: 2 → Kandahar, 4th District
+  luogo kandahar: {'x': 0.2, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-kandahar-v1.json: 98 KB
