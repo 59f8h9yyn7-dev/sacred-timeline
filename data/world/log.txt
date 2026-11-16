@@ -1174,3 +1174,21 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 1 → San Quentin
   luogo san-quentin: {'x': 0.2, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-san-quentin-v1.json: 31 KB
+== zona z-seoul (v1) · Seul · U-GIN Research di Helen Cho, Corea del Sud ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 3183 elementi da overpass-api.de in 37s (2138 KB)
+  edifici tenuti: 1670 (scartati 115)
+  strade: 679 tratti, binari sopraelevati: 0
+  specchi d'acqua: 5
+  verde: 182 aree
+  distretti: []
+  quartieri: 30 → Naesu-dong, Dangju-dong, Sinmunno 1-ga, Seorin-dong, Cheongjin-dong, Jongno 1-ga, Gongpyeong-dong, Euljiro 2-ga, Myeong-dong 2-ga, Gwancheol-dong, Samgak-dong, Namdaemunno 1-ga, Myeong-dong 1-ga, Mugyo-dong, Da-dong, Euljiro 1-ga, Sogong-dong, Namdaemunno 2-ga, Bukchang-dong, Namdaemunno 3-ga, Chungmuro 1-ga, Sunhwa-dong, Namdaemunno 4-ga, Seosomun-dong, Taepyeongno 1-ga, Taepyeong-ro 2-ga, Jeong-dong, Seul, Suha-dong, Downtown Seoul
+  luogo seoul: {'x': 0.1, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-seoul-v1.json: 120 KB
