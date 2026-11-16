@@ -1,0 +1,38 @@
+# Catalogo dei luoghi del Mondo 616 — sorgente (bozza di Claude, novembre 2026).
+# build.py legge tutti i .txt di questa cartella in ordine e scrive data/catalogo616.json.
+#
+# Z chiave | nome della zona | area
+# == Titolo                         (esatto come in data/cards.json)
+# ! nota sul titolo
+# +chiave | nome | dove | zona | tipo | lat,lon | precisione | nota per questo titolo   (luogo nuovo)
+# chiave | nota per questo titolo                                                       (luogo già definito)
+#
+# tipo: r reale · m reale con elementi Marvel (edificio/indirizzo dei film in una città vera) · i inventato sulla Terra
+#       s fuori dalla Terra · d altra dimensione o regno · x base mobile o astronave
+# precisione delle coordinate: e edificio/indirizzo · q quartiere · c città · r regione/paese · - nessuna
+# Una nota che comincia con "?" è da verificare.
+
+Z nyc-mid | New York · Midtown e Hell's Kitchen | New York
+Z nyc-down | New York · Downtown, Village e Chinatown | New York
+Z nyc-up | New York · Central Park, Upper Manhattan e Harlem | New York
+Z nyc-qns | New York · Queens | New York
+Z nyc-bk | New York · Brooklyn | New York
+Z nyc-isole | New York · isole, porto e ponti | New York
+Z ny-stato | Stato di New York, fuori città | Stati Uniti
+Z nj | New Jersey | Stati Uniti
+Z dc | Washington e dintorni | Stati Uniti
+Z la | Los Angeles e California del Sud | Stati Uniti
+Z sf | San Francisco e la Baia | Stati Uniti
+Z chi | Chicago | Stati Uniti
+Z usa | Resto degli Stati Uniti | Stati Uniti
+Z americhe | Americhe fuori dagli Stati Uniti | Americhe
+Z uk | Regno Unito | Europa
+Z europa | Europa continentale | Europa
+Z russia | Russia e Siberia | Europa e Asia
+Z wakanda | Wakanda | Africa
+Z africa | Africa e Medio Oriente | Africa
+Z asia | Asia e Oceania | Asia
+Z oceani | Oceani, mari e poli | Terra
+Z spazio | Fuori dalla Terra | Spazio
+Z dimensioni | Altre dimensioni e regni | —
+Z mezzi | Basi mobili e astronavi | —

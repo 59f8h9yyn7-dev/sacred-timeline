@@ -1,0 +1,17 @@
+# Loki sta sul ramo TVA della mappa, ma molti luoghi visitati sono della Sacra Linea: qui solo quelli.
+
+== Loki – stagione 1
+! Sul ramo TVA della mappa: qui solo i luoghi della Sacra Linea (la TVA e il Vuoto restano fuori dal 616).
+avengers-tower | 2012: Loki scappa con il Tesseract.
++gobi | Deserto del Gobi | Mongolia | asia | r | 43.0,105.0 | r | Loki atterra con il Tesseract e la TVA lo arresta.
++db-cooper | Volo di D.B. Cooper, 1971 | cielo tra Oregon e Washington | usa | r | 45.9,-122.7 | r | Loki confessa di essere stato D.B. Cooper.
++lione-1858 | Lione, 1858 | Francia | europa | r | 45.7640,4.8357 | c | ?La Variante tende un'imboscata alla TVA.
++oshkosh-1985 | Fiera rinascimentale, 1985 | Oshkosh, Wisconsin | usa | r | 44.0247,-88.5426 | c | ?La Variante colpisce ancora la TVA.
++pompei | Pompei, 79 d.C. | Campania | europa | r | 40.7489,14.4848 | e | Loki e Mobius poco prima dell'eruzione del Vesuvio.
++haven-hills | Haven Hills, 2050 | Alabama (il Roxxcart) | usa | i | 33.0,-86.8 | r | La Variante si nasconde in un supermercato prima della tempesta.
++lamentis | Lamentis-1, 2077 | luna che sta per essere distrutta | spazio | s | - | - | Loki e Sylvie aspettano la fine dell'Arca.
+
+== Loki – stagione 2
+! Sul ramo TVA della mappa: qui solo i luoghi sulla Terra, alcuni forse su rami diramati.
++chicago-1893 | Esposizione Universale, 1893 | Chicago | chi | r | 41.79,-87.58 | q | ?Loki e Sylvie inseguono Renslayer e Miss Minutes alla Fiera.
++broxton-1982 | McDonald's di Broxton, 1982 | Broxton, Oklahoma (inventata) | usa | i | 35.5,-97.5 | r | ?Sylvie si rifugia lavorando al fast food.

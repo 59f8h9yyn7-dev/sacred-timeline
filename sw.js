@@ -1,7 +1,7 @@
 // Sacred Timeline — offline cache. Cambiare VERSION a ogni aggiornamento dell'app.
-const VERSION = 'v10';
+const VERSION = 'v11';
 const CORE = `core-${VERSION}`, RUN = 'run';
-const PRE = ['./', 'index.html', 'manifest.webmanifest', 'vendor/three.module.min.js', 'data/map.json', 'data/chrono.json', 'data/cards.json', 'sky/sky.json', 'icons/icon-192.png', 'data/world/index.json', 'data/luoghi616.json'];
+const PRE = ['./', 'index.html', 'manifest.webmanifest', 'vendor/three.module.min.js', 'data/map.json', 'data/chrono.json', 'data/cards.json', 'sky/sky.json', 'icons/icon-192.png', 'data/world/index.json', 'data/luoghi616.json', 'data/catalogo616.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CORE).then(c => Promise.all(PRE.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('core-') && k !== CORE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 const fresh = (req, ms) => new Promise((ok, no) => { const t = setTimeout(() => no('timeout'), ms); fetch(req).then(r => { clearTimeout(t); ok(r); }, e => { clearTimeout(t); no(e); }); });

@@ -1557,6 +1557,112 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stro
 .w6-load span{font-size:12.5px;color:var(--ink-2)}
 @media (max-width:640px){ .w6-mini{width:108px;height:108px} .w6-sign{top:max(132px,calc(env(safe-area-inset-top) + 124px))} .w6-sign b{font-size:23px} .w6-place{left:8px;right:8px;width:auto;bottom:max(8px,env(safe-area-inset-bottom))} }
 .mvp-a .btn.w6-go{flex-basis:100%;border-color:rgba(255,200,140,.5);background:linear-gradient(90deg,rgba(237,115,46,.22),rgba(111,195,255,.14))}
+.mvp-a .btn.c6-go{flex-basis:100%}
+/* catalogo dei luoghi del 616 (fase 2) */
+.w6-cat{position:absolute;left:10px;top:calc(max(10px,env(safe-area-inset-top)) + 46px);display:flex;align-items:center;gap:5px;height:32px;padding:0 12px 0 9px;border-radius:999px;border:1px solid rgba(255,200,140,.42);background:rgba(9,11,17,.72);color:#ffe3c6;font:600 12.5px/1 var(--font-ui);z-index:3;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.w6-cat svg{width:16px;height:16px}
+#c6{position:absolute;inset:0;z-index:58;display:flex;flex-direction:column;background:radial-gradient(130% 55% at 50% 0%,#1d1526 0%,#0a0b12 62%);color:var(--ink);font-family:var(--font-ui);-webkit-user-select:none;user-select:none}
+#c6[hidden]{display:none}
+#c6 input,#c6 textarea,#c6 select{-webkit-user-select:text;user-select:text}
+.c6-top{display:flex;align-items:center;gap:12px;padding:max(10px,env(safe-area-inset-top)) 12px 4px}
+.c6-back{display:flex;align-items:center;gap:4px;height:36px;padding:0 12px 0 8px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:var(--ink);font:600 13px/1 var(--font-ui)}
+.c6-back svg{width:18px;height:18px}
+.c6-tt{display:flex;flex-direction:column;min-width:0}
+.c6-tt small{font:600 10px/1 var(--font-ui);letter-spacing:.2em;text-transform:uppercase;color:var(--flare)}
+.c6-tt b{font:800 21px/1 var(--font-display);letter-spacing:.04em;text-transform:uppercase;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.c6-prog{padding:6px 14px 8px}
+.c6-pt{font:500 12px/1.35 var(--font-ui);color:var(--ink-2)}
+.c6-pt b{color:var(--ink);font-weight:700}
+.c6-prog .bar{height:3px;margin-top:6px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden}
+.c6-prog .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#7fd1a8,#ed732e);transition:width .3s ease}
+.c6-tools{display:flex;flex-direction:column;gap:8px;padding:0 12px 10px;border-bottom:1px solid rgba(255,255,255,.08)}
+.c6-seg{display:flex;padding:3px;border-radius:11px;background:rgba(255,255,255,.06)}
+.c6-seg button{flex:1;height:30px;border:0;border-radius:8px;background:none;color:var(--ink-2);font:700 13px/1 var(--font-ui)}
+.c6-seg button.on{background:rgba(237,115,46,.3);color:var(--ink)}
+.c6-q{display:flex;align-items:center;gap:8px;height:40px;padding:0 12px;border-radius:11px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
+.c6-q svg{width:17px;height:17px;color:var(--ink-3);flex:none}
+.c6-q input{flex:1;min-width:0;height:100%;border:0;background:none;color:var(--ink);font:500 16px/1 var(--font-ui);outline:none;-webkit-appearance:none;appearance:none}
+.c6-chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -12px;padding:0 12px}
+.c6-chips::-webkit-scrollbar{display:none}
+.c6-chip{flex:none;display:flex;align-items:center;gap:6px;height:30px;padding:0 11px 0 5px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);color:var(--ink-2);font:600 12px/1 var(--font-ui);white-space:nowrap}
+.c6-chip i{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;font:800 10.5px/1 var(--font-ui);font-style:normal;color:#0b0d12;background:var(--c);opacity:.75}
+.c6-chip.on{border-color:var(--c);color:var(--ink);background:rgba(255,255,255,.1)}
+.c6-chip.on i{opacity:1}
+.c6-sel{flex:none;height:30px;padding:0 26px 0 11px;border-radius:999px;border:1px solid rgba(255,200,140,.4);background:rgba(237,115,46,.12) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23ffcf9e' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 10px center;color:var(--ink);font:600 12px/1 var(--font-ui);-webkit-appearance:none;appearance:none}
+.c6-list{flex:1;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;padding:10px 10px calc(28px + env(safe-area-inset-bottom))}
+.c6-t{margin:0 0 6px;border-radius:13px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);overflow:hidden}
+.c6-t.open{background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.12)}
+.c6-th{display:flex;align-items:center;gap:10px;width:100%;min-height:46px;padding:9px 12px;border:0;background:none;color:var(--ink);text-align:left}
+.c6-th em{flex:none;width:34px;font:600 11px/1 var(--font-mono);font-style:normal;color:var(--flare)}
+.c6-th b{flex:1;min-width:0;font:700 14.5px/1.22 var(--font-ui)}
+.c6-th .n{flex:none;font:600 11.5px/1 var(--font-mono);color:var(--ink-3)}
+.c6-th .pg{flex:none;width:30px;height:4px;border-radius:2px;background:rgba(255,255,255,.1);overflow:hidden}
+.c6-th .pg i{display:block;height:100%;background:#7fd1a8}
+.c6-z .c6-th b{font:800 15px/1.2 var(--font-display);letter-spacing:.03em;text-transform:uppercase}
+.c6-tn{margin:0 12px 8px;font-size:12.5px;line-height:1.4;color:#ffcf9e}
+.c6-r{display:flex;align-items:flex-start;gap:10px;width:100%;padding:10px 12px;border:0;border-top:1px solid rgba(255,255,255,.06);background:none;color:var(--ink);text-align:left}
+.c6-r:active{background:rgba(237,115,46,.12)}
+.c6-ic{flex:none;width:24px;height:24px;margin-top:1px;border-radius:50%;display:grid;place-items:center;font:800 11px/1 var(--font-ui);color:#0b0d12;background:var(--c)}
+.c6-rt{flex:1;min-width:0}
+.c6-rt b{display:block;font:700 14px/1.25 var(--font-ui)}
+.c6-rt b em{display:inline-block;margin-left:6px;padding:2px 5px;border-radius:5px;font:700 9.5px/1 var(--font-ui);font-style:normal;letter-spacing:.08em;vertical-align:2px}
+.c6-rt b em.c6-3d{background:rgba(111,195,255,.2);color:#9fd6ff}
+.c6-rt b em.c6-me{background:rgba(237,115,46,.22);color:#ffcf9e}
+.c6-rt small{display:block;margin-top:2px;font:500 11.5px/1.3 var(--font-mono);color:#ffcf9e}
+.c6-rt span{display:block;margin-top:3px;font-size:13px;line-height:1.4;color:var(--ink-2)}
+.c6-rt span.c6-zt{font-size:11.5px;color:var(--ink-3)}
+.c6-st{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font:800 13px/1 var(--font-ui)}
+.c6-r.ok .c6-st{background:rgba(127,209,168,.18);color:#7fd1a8}
+.c6-r.no{opacity:.5}
+.c6-r.no .c6-rt b{text-decoration:line-through}
+.c6-r.no .c6-st{color:#ff8a8a}
+.c6-r.dv .c6-st{color:#ffd166;border:1px dashed rgba(255,209,102,.55)}
+.c6-add{display:flex;align-items:center;gap:6px;margin:6px 12px 12px;height:32px;padding:0 12px;border-radius:9px;border:1px dashed rgba(255,255,255,.25);background:none;color:var(--ink-2);font:600 13px/1 var(--font-ui)}
+.c6-add svg{width:15px;height:15px}
+.c6-empty{margin:30px 20px;text-align:center;color:var(--ink-3);font-size:14px}
+.c6-ed{position:absolute;left:0;right:0;bottom:0;z-index:2;max-height:88%;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:14px 14px calc(18px + env(safe-area-inset-bottom));border-radius:18px 18px 0 0;background:#16131c;border-top:1px solid rgba(255,255,255,.16);box-shadow:0 -24px 60px rgba(0,0,0,.65)}
+.c6-ed[hidden]{display:none}
+.c6-ed header{display:flex;align-items:flex-start;gap:10px}
+.c6-ed header .c6-ic{width:32px;height:32px;font-size:13px}
+.c6-ed header div{flex:1;min-width:0}
+.c6-ed header small{display:block;font:600 11px/1.3 var(--font-ui);color:var(--ink-3)}
+.c6-ed header b{display:block;margin-top:2px;font:800 20px/1.08 var(--font-display);letter-spacing:.03em;text-transform:uppercase}
+.c6-ed .x{flex:none;width:32px;height:32px;border-radius:50%;border:0;background:rgba(255,255,255,.08);color:var(--ink);display:grid;place-items:center}
+.c6-ed .x svg{width:16px;height:16px}
+.c6-badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+.c6-badges .b{padding:4px 8px;border-radius:7px;font:700 11px/1 var(--font-ui);background:rgba(255,255,255,.07);color:var(--ink-2)}
+.c6-badges .dv{background:rgba(255,209,102,.14);color:#ffd166}
+.c6-badges .ok{background:rgba(127,209,168,.16);color:#7fd1a8}
+.c6-badges .no{background:rgba(255,120,120,.14);color:#ff9a9a}
+.c6-badges .me{background:rgba(237,115,46,.18);color:#ffcf9e}
+.c6-badges .w3{background:rgba(111,195,255,.16);color:#9fd6ff}
+.c6-act{display:flex;gap:8px;margin-top:12px}
+.c6-act button{flex:1;height:42px;border-radius:11px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);font:700 14px/1 var(--font-ui)}
+.c6-act .ok.on{background:rgba(127,209,168,.25);border-color:#7fd1a8}
+.c6-act .no.on{background:rgba(255,120,120,.2);border-color:#ff8a8a}
+.c6-ed label{display:block;margin-top:12px;font:600 10.5px/1 var(--font-ui);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.c6-ed input,.c6-ed textarea,.c6-ed select{display:block;width:100%;margin-top:6px;padding:9px 11px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.05);color:var(--ink);font:500 16px/1.35 var(--font-ui);letter-spacing:0;text-transform:none;outline:none;resize:vertical}
+.c6-ed select{height:42px;-webkit-appearance:none;appearance:none}
+.c6-ed input:focus,.c6-ed textarea:focus,.c6-ed select:focus{border-color:rgba(237,115,46,.7)}
+.c6-2{display:flex;gap:8px}
+.c6-2 label{flex:1;min-width:0}
+.c6-hint{margin:10px 0 0;font-size:12px;line-height:1.4;color:var(--ink-3)}
+.c6-reset{margin-top:10px;padding:0;border:0;background:none;color:var(--flare);font:600 13px/1.6 var(--font-ui);text-align:left}
+.c6-ed h4{margin:14px 0 6px;font:600 10.5px/1 var(--font-ui);letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.c6-wh{display:flex;flex-wrap:wrap;gap:6px}
+.c6-wh button{display:flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:999px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);color:var(--ink);font:600 12px/1 var(--font-ui)}
+.c6-wh button em{font:600 10.5px/1 var(--font-mono);font-style:normal;color:var(--flare)}
+.c6-wh button.cur{border-color:var(--flare);background:rgba(237,115,46,.16)}
+.c6-wh button.ok{box-shadow:inset 0 -2px 0 #7fd1a8}
+.c6-wh button.no{opacity:.5;text-decoration:line-through}
+.c6-big{display:block;width:100%;margin-top:14px;height:42px;border-radius:11px;border:1px solid rgba(237,115,46,.55);background:rgba(237,115,46,.16);color:var(--ink);font:700 14px/1 var(--font-ui)}
+.c6-sug{display:flex;flex-direction:column}
+.c6-sug button{display:flex;align-items:flex-start;gap:9px;padding:8px 2px;border:0;border-bottom:1px solid rgba(255,255,255,.07);background:none;color:var(--ink);text-align:left}
+.c6-sug button b{display:block;font:700 13.5px/1.25 var(--font-ui)}
+.c6-sug button small{display:block;font:500 11px/1.3 var(--font-mono);color:#ffcf9e}
+.c6-or{display:flex;align-items:center;gap:10px;margin:16px 0 2px;font:600 11px/1 var(--font-ui);color:var(--ink-3)}
+.c6-or::before,.c6-or::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.1)}
+@media (min-width:760px){ .c6-prog,.c6-tools,.c6-list{width:100%;max-width:780px;margin-left:auto;margin-right:auto} .c6-ed{left:auto;right:18px;bottom:18px;width:410px;max-height:calc(100% - 120px);border-radius:16px;border:1px solid rgba(255,255,255,.16)} }
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -8947,7 +9053,7 @@ function mvSelect0(s, fly){
     <div class="mvp-s"><span><b>${s.n}</b>${s.n === 1 ? 'titolo' : 'titoli'}</span><span><b>${s.planets.length}</b>${s.planets.length === 1 ? 'pianeta' : 'pianeti'}</span><span><b>${s.chars}</b>personaggi</span>${ys ? `<span><b>${ys}</b>anni</span>` : ''}</div>
     <div class="mvp-l">${rows.map(r => `<button class="mvp-r" data-p="${r.pi}"><em>${esc(r.y)}</em>${esc(r.t)}</button>`).join('')}</div>
     ${br.length ? `<div class="mvp-b"><small>Ponti verso</small>${br.map(o => `<button class="mvp-u" data-u="${esc(o.key)}" style="--c:${o.col}">${esc(uniLabel(o.U.uc) || o.U.uc)}</button>`).join('')}</div>` : ''}
-    <div class="mvp-a"><button class="btn" data-a="map"><svg class="i"><use href="#i-route"/></svg>Sul ramo della mappa</button><button class="btn" data-a="chr"><svg class="i"><use href="#i-history"/></svg>In cronologia</button>${s.isSL ? '<button class="btn w6-go" data-a="w616"><svg class="i"><use href="#i-globe"/></svg>Mondo 616 · New York</button>' : ''}</div>`;
+    <div class="mvp-a"><button class="btn" data-a="map"><svg class="i"><use href="#i-route"/></svg>Sul ramo della mappa</button><button class="btn" data-a="chr"><svg class="i"><use href="#i-history"/></svg>In cronologia</button>${s.isSL ? '<button class="btn w6-go" data-a="w616"><svg class="i"><use href="#i-globe"/></svg>Mondo 616 · New York</button><button class="btn c6-go" data-a="c616"><svg class="i"><use href="#i-list"/></svg>Catalogo dei luoghi del 616</button>' : ''}</div>`;
   $('#mvP').hidden = false;
 }
 $('#mvP').addEventListener('click', e => {
@@ -8955,6 +9061,7 @@ $('#mvP').addEventListener('click', e => {
   const s = MV.sel;
   if (b.dataset.a === 'x'){ MV.sel = null; $('#mvP').hidden = true; return; }
   if (b.dataset.a === 'w616'){ w6Open(); return; }
+  if (b.dataset.a === 'c616'){ c6Open(); return; }
   if (b.dataset.p != null){ openTitle(+b.dataset.p, true); return; }
   if (b.dataset.u != null){ const o = MV.sys.byKey.get(b.dataset.u); if (o) mvSelect(o, true); return; }
   if (!s) return;
@@ -10501,6 +10608,7 @@ function w6Dom(){
   const el = document.createElement('div'); el.id = 'w6'; el.hidden = true;
   el.innerHTML = `<div class="w6-ov"></div>
     <header class="w6-top"><button class="w6-back" type="button"><svg class="i"><use href="#i-back"/></svg><span>Multiverso</span></button><div class="w6-t"><small>Terra-616</small><b>New York</b></div></header>
+    <button class="w6-cat" type="button"><svg class="i"><use href="#i-list"/></svg><span>Catalogo luoghi</span></button>
     <div class="w6-sign" aria-live="polite"><small>Stai entrando a</small><b></b><i></i></div>
     <button class="w6-mini" type="button" aria-label="Sali sulla mappa e torna giù"><canvas></canvas><span class="w6-n">N</span><i class="w6-me"></i></button>
     <div class="w6-stick" aria-label="Vola"><i></i></div>
@@ -10514,6 +10622,7 @@ function w6Dom(){
   for (const ev of ['pointerdown', 'pointermove', 'pointerup', 'click', 'dblclick']) el.addEventListener(ev, e => e.stopPropagation());
   el.addEventListener('wheel', e => { e.preventDefault(); e.stopPropagation(); }, { passive: false });
   $('.w6-back', el).addEventListener('click', () => w6Close());
+  $('.w6-cat', el).addEventListener('click', () => c6Open());
   const mini = $('.w6-mini', el); W6.mini = { el: mini, cv: $('canvas', mini), n: $('.w6-n', mini) }; W6.mini.ctx = W6.mini.cv.getContext('2d');
   mini.addEventListener('click', () => {
     if (!W6.on) return; const c = W6.ctl;
@@ -10593,7 +10702,7 @@ window.__w6 = W6; window.__w6open = w6Open; // for the tests in the sandbox
 // keys: fly with WASD / arrows, Q E down and up, Esc to leave (before any other key handler of the page)
 { const keyOf = e => ({ w: 'w', arrowup: 'w', s: 's', arrowdown: 's', a: 'a', arrowleft: 'a', d: 'd', arrowright: 'd', q: 'q', e: 'e', pagedown: 'q', pageup: 'e', shift: 'shift' })[(e.key || '').toLowerCase()];
   window.addEventListener('keydown', e => {
-    if (!W6.on || !$('#cardWrap').hidden) return;
+    if (!W6.on || !$('#cardWrap').hidden || C6.on) return;
     const t = e.target; if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable) || e.metaKey || e.ctrlKey) return;
     if (e.key === 'Escape'){ e.preventDefault(); e.stopImmediatePropagation(); if (W6.place) w6PlaceClose(); else w6Close(); return; }
     const k = keyOf(e); if (k){ W6.ctl.keys.add(k); W6.ctl.fly = null; e.preventDefault(); }
@@ -10602,6 +10711,289 @@ window.__w6 = W6; window.__w6open = w6Open; // for the tests in the sandbox
   window.addEventListener('keyup', e => { if (!W6.on) return; const k = keyOf(e); if (k) W6.ctl.keys.delete(k); if (e.key === 'Shift') W6.ctl.keys.delete('shift'); }, true);
   window.addEventListener('blur', () => W6.ctl.keys.clear());
 }
+
+/* ---- 93-c616.js ---- */
+/* ================= Catalogo dei luoghi del 616 (Mondo 616, fase 2). La bozza è data/catalogo616.json, scritta da Claude
+   (sorgente in tools/catalogo): ogni titolo del ramo 616 con i suoi luoghi, ogni luogo con zona, tipo e posizione.
+   Qui l'utente la corregge. Le correzioni restano in doc.cat616 e si salvano con la mappa:
+   s voce confermata (1) o tolta (-1) · n nota riscritta · p luogo corretto (nome, dove, tipo, zona) ·
+   nuovi luoghi aggiunti a mano · add voci aggiunte ai titoli. Una voce è "titolo|luogo". ================= */
+const C6 = { on: false, busy: false, data: null, w6k: new Set(), el: null, view: 't', q: '', tipi: new Set(), st: '', open: new Set(), shut: new Set(), zopen: new Set(), ed: null };
+const C6_COL = { r: '#7fd1a8', m: '#ed732e', i: '#c79bff', s: '#6fc3ff', d: '#ff86b0', x: '#e9d27a' };
+const C6_IC = { r: 'R', m: 'M', i: 'I', s: 'S', d: 'D', x: 'X' };
+const C6_PREC = { e: 'edificio', q: 'quartiere', c: 'città', r: 'regione' };
+const C6_K = ['s', 'n', 'p', 'nuovi', 'add'];
+const c6Norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const c6O = k => (doc && doc.cat616 && doc.cat616[k]) || {};
+const c6G = (k, id) => c6O(k)[id];
+function c6E(){ const e = doc.cat616 || (doc.cat616 = { v: 1 }); for (const k of C6_K) e[k] = e[k] || {}; return e; }
+function c6Tidy(){ const e = doc.cat616; if (!e) return; for (const k of C6_K) if (e[k] && !Object.keys(e[k]).length) delete e[k]; if (!C6_K.some(k => e[k])) delete doc.cat616; }
+function c6Changed(){ const e = c6E(); e.ts = new Date().toISOString(); c6Tidy(); markDirty(); maybeExplainSaving(); c6Prog(); c6List(); }
+const c6Base = k => (C6.data && C6.data.luoghi[k]) || c6G('nuovi', k) || null;
+function c6Place(k){
+  const b = c6Base(k); if (!b) return null;
+  const o = c6G('p', k) || {};
+  return { k, nome: o.nome != null ? o.nome : b[0], dove: o.dove != null ? o.dove : b[1], zona: o.zona || b[2], tipo: o.tipo || b[3], lat: b[4], lon: b[5], prec: b[6] || '', mine: !C6.data.luoghi[k], fixed: !!c6G('p', k) };
+}
+const c6Title = t => C6.data.titoli.find(x => x[0] === t);
+function c6Row(t, k, nota0, added){
+  const id = t + '|' + k, n = c6G('n', id), s = c6G('s', id) || 0, raw = n != null ? n : nota0;
+  return { t, k, id, p: c6Place(k), nota: raw.replace(/^\?\s*/, ''), nota0: nota0.replace(/^\?\s*/, ''), s, dv: !s && raw.startsWith('?'), added, edited: n != null };
+}
+function c6Rows(t){
+  const T = c6Title(t), out = [];
+  for (const [k, nota] of (T ? T[2] : [])) out.push(c6Row(t, k, nota, false));
+  for (const k of (c6G('add', t) || [])) out.push(c6Row(t, k, '', true));
+  return out.filter(r => r.p);
+}
+function c6Where(k){ const out = []; for (const T of C6.data.titoli){ const r = c6Rows(T[0]).find(x => x.k === k); if (r) out.push(r); } return out; }
+function c6Year(t){ const pi = w6Prod(t); return pi != null ? CARDS.prods[pi][2].slice(0, 4) : ''; }
+async function c6Load(){
+  if (C6.data) return;
+  const [d, l] = await Promise.all([
+    fetch('data/catalogo616.json', { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('nocat'); return r.json(); }),
+    fetch('data/luoghi616.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : { luoghi: [] }).catch(() => ({ luoghi: [] }))]);
+  C6.data = d; C6.w6k = new Set((l.luoghi || []).map(p => p.k));
+}
+async function c6Open(){
+  if (C6.on || C6.busy) return;
+  C6.busy = true; BB('catalogo616-apri');
+  try { await c6Load(); }
+  catch (e){ C6.busy = false; toast('Non riesco a caricare il catalogo dei luoghi adesso'); return; }
+  C6.busy = false;
+  const el = c6Dom(); el.hidden = false; C6.on = true;
+  c6Chips(); c6Prog(); c6List();
+}
+function c6Close(){ if (C6.ed) c6EdClose(); C6.on = false; if (C6.el) C6.el.hidden = true; if (W6.on) W6.dirty = 2; }
+window.__c6 = C6; window.__c6open = c6Open; window.__c6edits = () => doc && doc.cat616; // per le prove nel sandbox
+function c6Dom(){
+  if (C6.el) return C6.el;
+  const el = document.createElement('div'); el.id = 'c6'; el.hidden = true;
+  el.innerHTML = `<header class="c6-top"><button class="c6-back" type="button" data-a="x"><svg class="i"><use href="#i-back"/></svg><span>Indietro</span></button><div class="c6-tt"><small>Terra-616 · bozza da correggere</small><b>Catalogo dei luoghi</b></div></header>
+    <div class="c6-prog"><div class="c6-pt"></div><div class="bar"><i></i></div></div>
+    <div class="c6-tools"><div class="c6-seg"><button type="button" data-v="t" class="on">Per titolo</button><button type="button" data-v="z">Per zona</button></div>
+      <label class="c6-q"><svg class="i"><use href="#i-search"/></svg><input type="search" placeholder="Cerca un luogo, una città, un titolo…" enterkeyhint="search" autocomplete="off" aria-label="Cerca nel catalogo"></label>
+      <div class="c6-chips"></div></div>
+    <div class="c6-list"></div>
+    <aside class="c6-ed" hidden></aside>`;
+  $('#app').insertBefore(el, $('#cardWrap'));
+  C6.el = el;
+  for (const ev of ['pointerdown', 'pointermove', 'pointerup', 'click', 'dblclick', 'wheel', 'touchstart', 'touchmove', 'touchend']) el.addEventListener(ev, e => e.stopPropagation(), { passive: true });
+  const inp = $('.c6-q input', el); let qt = 0;
+  inp.addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(() => { C6.q = inp.value.trim(); C6.shut.clear(); c6List(); $('.c6-list', el).scrollTop = 0; }, 180); });
+  el.addEventListener('click', c6Click);
+  el.addEventListener('change', e => {
+    if (e.target.matches('.c6-sel')){ C6.st = e.target.value; C6.shut.clear(); c6List(); $('.c6-list', el).scrollTop = 0; return; }
+    const f = e.target.closest('[data-f]'); if (f && f.dataset.f !== 'cerca' && C6.ed && !C6.ed.add) c6Commit();
+  });
+  el.addEventListener('input', e => { if (e.target.matches('[data-f="cerca"]')) c6Sug(e.target.value); });
+  return el;
+}
+function c6Chips(){
+  const T = C6.data.tipi;
+  $('.c6-chips', C6.el).innerHTML = `<select class="c6-sel" aria-label="Quali voci"><option value="">Tutte le voci</option><option value="todo">Da controllare</option><option value="dv">Da verificare (?)</option><option value="ok">Confermate</option><option value="no">Tolte</option><option value="me">Corrette o aggiunte</option></select>` +
+    Object.keys(T).map(k => `<button type="button" class="c6-chip${C6.tipi.has(k) ? ' on' : ''}" data-tipo="${k}" style="--c:${C6_COL[k]}"><i>${C6_IC[k]}</i>${esc(T[k])}</button>`).join('');
+  $('.c6-sel', C6.el).value = C6.st;
+}
+function c6Prog(){
+  if (!C6.el) return;
+  let n = 0, done = 0, dv = 0, me = 0; const ks = new Set();
+  for (const T of C6.data.titoli) for (const r of c6Rows(T[0])){ n++; ks.add(r.k); if (r.s) done++; else if (r.dv) dv++; if (r.added || r.edited) me++; }
+  $('.c6-pt', C6.el).innerHTML = `<b>${done}</b> di ${n} voci controllate · ${dv} da verificare · ${C6.data.titoli.length} titoli · ${ks.size} luoghi${me ? ` · ${me} tue correzioni` : ''}`;
+  $('.c6-prog .bar i', C6.el).style.width = (n ? done / n * 100 : 0).toFixed(1) + '%';
+}
+function c6Pass(r){
+  if (C6.tipi.size && !C6.tipi.has(r.p.tipo)) return false;
+  switch (C6.st){
+    case 'todo': return !r.s;
+    case 'dv': return r.dv;
+    case 'ok': return r.s === 1;
+    case 'no': return r.s === -1;
+    case 'me': return r.added || r.edited || r.p.fixed;
+  }
+  return true;
+}
+const c6ZoneName = z => (C6.data.zone.find(x => x[0] === z) || [z, z])[1];
+const c6Match = (r, q) => !q || c6Norm([r.p.nome, r.p.dove, r.nota, r.t, c6ZoneName(r.p.zona)].join(' ')).includes(q);
+const c6Mark = (s, dv) => s === 1 ? '✓' : s === -1 ? '✕' : dv ? '?' : '';
+const c6Cls = (s, dv) => s === 1 ? ' ok' : s === -1 ? ' no' : dv ? ' dv' : '';
+function c6RowHtml(r){
+  const p = r.p;
+  return `<button type="button" class="c6-r${c6Cls(r.s, r.dv)}" data-t="${esc(r.t)}" data-k="${esc(r.k)}"><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><span class="c6-rt"><b>${esc(p.nome)}${C6.w6k.has(r.k) ? '<em class="c6-3d">3D</em>' : ''}${r.added ? '<em class="c6-me">AGGIUNTO</em>' : ''}</b><small>${esc(p.dove)}</small>${r.nota ? `<span>${esc(r.nota)}</span>` : ''}</span><span class="c6-st">${c6Mark(r.s, r.dv)}</span></button>`;
+}
+function c6PlaceHtml(e){
+  const p = e.p, rs = e.rows, ok = rs.every(r => r.s === 1), no = rs.every(r => r.s === -1), dv = rs.some(r => r.dv), ts = rs.map(r => r.t);
+  const s = ok ? 1 : no ? -1 : 0;
+  return `<button type="button" class="c6-r${c6Cls(s, dv)}" data-k="${esc(p.k)}"><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><span class="c6-rt"><b>${esc(p.nome)}${C6.w6k.has(p.k) ? '<em class="c6-3d">3D</em>' : ''}${p.mine ? '<em class="c6-me">AGGIUNTO</em>' : ''}</b><small>${esc(p.dove)}</small><span class="c6-zt">${ts.length === 1 ? 'In 1 titolo' : `In ${ts.length} titoli`}: ${esc(ts.slice(0, 4).join(' · '))}${ts.length > 4 ? ' …' : ''}</span></span><span class="c6-st">${c6Mark(s, dv)}</span></button>`;
+}
+function c6List(){
+  if (!C6.el || !C6.data) return;
+  const box = $('.c6-list', C6.el), q = c6Norm(C6.q), filt = !!(q || C6.tipi.size || C6.st);
+  let h = '';
+  if (C6.view === 't'){
+    for (const T of C6.data.titoli){
+      const t = T[0], all = c6Rows(t), rows = all.filter(r => c6Pass(r) && c6Match(r, q)), tq = !!q && c6Norm(t).includes(q) && !C6.tipi.size && !C6.st;
+      if (filt && !rows.length && !tq) continue;
+      const open = filt ? !C6.shut.has(t) : C6.open.has(t), done = all.filter(r => r.s).length;
+      h += `<section class="c6-t${open ? ' open' : ''}"><button type="button" class="c6-th" data-a="tog" data-t="${esc(t)}"><em>${esc(c6Year(t))}</em><b>${esc(t)}</b><span class="n">${all.length}</span><span class="pg"><i style="width:${all.length ? Math.round(done / all.length * 100) : 0}%"></i></span></button>`;
+      if (open) h += `<div class="c6-tb">${T[1] ? `<p class="c6-tn">${esc(T[1])}</p>` : ''}${(filt && rows.length ? rows : all).map(c6RowHtml).join('')}<button type="button" class="c6-add" data-a="add" data-t="${esc(t)}"><svg class="i"><use href="#i-plus"/></svg>Aggiungi un luogo</button></div>`;
+      h += '</section>';
+    }
+  } else {
+    const byK = new Map();
+    for (const T of C6.data.titoli) for (const r of c6Rows(T[0])){ let e = byK.get(r.k); if (!e) byK.set(r.k, e = { p: r.p, rows: [] }); e.rows.push(r); }
+    for (const [zk, zn] of C6.data.zone){
+      const zq = !!q && c6Norm(zn).includes(q);
+      const items = [...byK.values()].filter(e => e.p.zona === zk && e.rows.some(c6Pass) && (!q || zq || e.rows.some(r => c6Match(r, q)))).sort((a, b) => a.p.nome.localeCompare(b.p.nome, 'it'));
+      if (!items.length) continue;
+      const open = filt ? !C6.shut.has('z:' + zk) : C6.zopen.has(zk);
+      h += `<section class="c6-t c6-z${open ? ' open' : ''}"><button type="button" class="c6-th" data-a="ztog" data-z="${esc(zk)}"><b>${esc(zn)}</b><span class="n">${items.length}</span></button>`;
+      if (open) h += `<div class="c6-tb">${items.map(c6PlaceHtml).join('')}</div>`;
+      h += '</section>';
+    }
+  }
+  box.innerHTML = h || '<p class="c6-empty">Nessun luogo trovato.</p>';
+}
+function c6Click(e){
+  const b = e.target.closest('button'); if (!b || !C6.el.contains(b)) return;
+  if (b.closest('.c6-ed')){ c6EdClick(b); return; }
+  const filt = !!(C6.q || C6.tipi.size || C6.st);
+  if (b.dataset.a === 'x'){ c6Close(); return; }
+  if (b.dataset.v){ C6.view = b.dataset.v; for (const x of C6.el.querySelectorAll('.c6-seg button')) x.classList.toggle('on', x === b); c6List(); $('.c6-list', C6.el).scrollTop = 0; return; }
+  if (b.dataset.tipo){ const k = b.dataset.tipo; if (C6.tipi.has(k)) C6.tipi.delete(k); else C6.tipi.add(k); b.classList.toggle('on', C6.tipi.has(k)); C6.shut.clear(); c6List(); return; }
+  if (b.dataset.a === 'tog' || b.dataset.a === 'ztog'){
+    const id = b.dataset.a === 'tog' ? b.dataset.t : b.dataset.z, set = b.dataset.a === 'tog' ? C6.open : C6.zopen;
+    if (filt){ const s = b.dataset.a === 'tog' ? id : 'z:' + id; if (C6.shut.has(s)) C6.shut.delete(s); else C6.shut.add(s); }
+    else if (set.has(id)) set.delete(id); else set.add(id);
+    c6List(); return;
+  }
+  if (b.dataset.a === 'add'){ c6Edit({ t: b.dataset.t, add: true }); return; }
+  if (b.classList.contains('c6-r')) c6Edit(b.dataset.t ? { t: b.dataset.t, k: b.dataset.k } : { k: b.dataset.k });
+}
+/* ---- the sheet where a place or a line is corrected ---- */
+const c6Opts = (sel, list) => list.map(([v, l]) => `<option value="${esc(v)}"${v === sel ? ' selected' : ''}>${esc(l)}</option>`).join('');
+function c6Edit(ctx){ if (C6.ed) c6Commit(); C6.ed = ctx; c6EdRender(); }
+function c6EdClose(){ c6Commit(); C6.ed = null; const box = C6.el && $('.c6-ed', C6.el); if (box) box.hidden = true; }
+function c6EdRender(){
+  const ctx = C6.ed, box = $('.c6-ed', C6.el); if (!ctx){ box.hidden = true; return; }
+  const D = C6.data, tipi = Object.entries(D.tipi), zone = D.zone.map(z => [z[0], z[1]]), X = '<button class="x" type="button" data-e="close" aria-label="Chiudi"><svg class="i"><use href="#i-close"/></svg></button>';
+  let h;
+  if (ctx.add){
+    h = `<header><div><small>${esc(c6Year(ctx.t))} · ${esc(ctx.t)}</small><b>Aggiungi un luogo</b></div>${X}</header>
+      <label>È già nel catalogo?<input data-f="cerca" type="search" placeholder="Cerca per nome o città" autocomplete="off"></label><div class="c6-sug"></div>
+      <div class="c6-or">oppure un luogo nuovo</div>
+      <label>Nome<input data-f="nome" placeholder="es. Baxter Building" autocomplete="off"></label>
+      <label>Dove<input data-f="dove" placeholder="indirizzo, quartiere, città" autocomplete="off"></label>
+      <div class="c6-2"><label>Tipo<select data-f="tipo">${c6Opts('m', tipi)}</select></label><label>Zona<select data-f="zona">${c6Opts('nyc-mid', zone)}</select></label></div>
+      <label>Cosa succede qui<textarea data-f="nota" rows="3"></textarea></label>
+      <button class="c6-big" type="button" data-e="create">Aggiungi a questo titolo</button>`;
+  } else {
+    const p = c6Place(ctx.k), r = p && ctx.t ? c6Rows(ctx.t).find(x => x.k === ctx.k) : null;
+    if (!p || (ctx.t && !r)){ C6.ed = null; box.hidden = true; return; }
+    const where = c6Where(ctx.k), in3 = C6.w6k.has(p.k);
+    const badges = [r && r.dv ? '<span class="b dv">? da verificare</span>' : '', r && r.s === 1 ? '<span class="b ok">✓ confermato</span>' : '', r && r.s === -1 ? '<span class="b no">✕ tolto da questo titolo</span>' : '',
+      p.fixed ? '<span class="b me">luogo corretto da te</span>' : '', p.mine ? '<span class="b me">luogo aggiunto da te</span>' : '', in3 ? '<span class="b w3">già nel Mondo 616</span>' : ''].join('');
+    const geo = p.lat != null ? `${p.lat.toFixed(4)}, ${p.lon.toFixed(4)}${p.prec ? ' (' + (C6_PREC[p.prec] || p.prec) + ')' : ''}` : 'da trovare';
+    h = `<header><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><div><small>${esc(ctx.t ? c6Year(ctx.t) + ' · ' + ctx.t : 'Luogo · ' + c6ZoneName(p.zona))}</small><b>${esc(p.nome)}</b></div>${X}</header>
+      ${badges ? `<div class="c6-badges">${badges}</div>` : ''}
+      ${r ? `<div class="c6-act"><button type="button" data-e="ok" class="ok${r.s === 1 ? ' on' : ''}">✓ Giusto</button><button type="button" data-e="no" class="no${r.s === -1 ? ' on' : ''}">✕ Non c'è: togli</button></div>
+      <label>Cosa succede qui in questo titolo<textarea data-f="nota" rows="3">${esc(r.nota)}</textarea></label>` : ''}
+      <label>Nome<input data-f="nome" value="${esc(p.nome)}" autocomplete="off"></label>
+      <label>Dove<input data-f="dove" value="${esc(p.dove)}" autocomplete="off"></label>
+      <div class="c6-2"><label>Tipo<select data-f="tipo">${c6Opts(p.tipo, tipi)}</select></label><label>Zona<select data-f="zona">${c6Opts(p.zona, zone)}</select></label></div>
+      <p class="c6-hint">Nome, dove, tipo e zona valgono in tutti i titoli in cui compare. Posizione per la mappa: ${esc(geo)}.</p>
+      ${r && !r.added && (r.edited || r.s) ? '<button type="button" class="c6-reset" data-e="reset">↺ Questa voce come nella bozza</button><br>' : ''}
+      ${p.fixed ? '<button type="button" class="c6-reset" data-e="resetp">↺ Nome e dove come nella bozza</button>' : ''}
+      ${where.length ? `<h4>Compare in ${where.length === 1 ? '1 titolo' : where.length + ' titoli'}</h4><div class="c6-wh">${where.map(w => `<button type="button" data-e="go" data-t="${esc(w.t)}" class="${w.t === ctx.t ? 'cur' : ''}${w.s === 1 ? ' ok' : w.s === -1 ? ' no' : ''}"><em>${esc(c6Year(w.t))}</em>${esc(w.t)}</button>`).join('')}</div>` : ''}
+      ${in3 ? '<button type="button" class="c6-big" data-e="fly">Vola qui nel Mondo 616</button>' : ''}`;
+  }
+  box.innerHTML = h; box.hidden = false; box.scrollTop = 0;
+}
+// what is written in the sheet goes into doc.cat616 (only what differs from the draft)
+function c6Commit(){
+  const ctx = C6.ed, box = C6.el && $('.c6-ed', C6.el); if (!ctx || ctx.add || !box || box.hidden) return false;
+  const val = f => { const x = box.querySelector(`[data-f="${f}"]`); return x ? x.value.trim() : null; };
+  if (!c6Base(ctx.k)) return false;
+  const e = c6E(); let ch = false;
+  const nome = val('nome'), dove = val('dove'), tipo = val('tipo'), zona = val('zona');
+  if (C6.data.luoghi[ctx.k]){
+    const b = C6.data.luoghi[ctx.k], o = e.p[ctx.k] || {};
+    const set = (f, v, bv) => { if (v == null || (f === 'nome' && !v)) return; const cur = o[f] != null ? o[f] : bv; if (v === cur) return; ch = true; if (v === bv) delete o[f]; else o[f] = v; };
+    set('nome', nome, b[0]); set('dove', dove, b[1]); set('zona', zona, b[2]); set('tipo', tipo, b[3]);
+    if (Object.keys(o).length) e.p[ctx.k] = o; else delete e.p[ctx.k];
+  } else {
+    const a = e.nuovi[ctx.k];
+    if (a){ const nv = [nome || a[0], dove != null ? dove : a[1], zona || a[2], tipo || a[3]]; if (nv.some((v, i) => v !== a[i])){ for (let i = 0; i < 4; i++) a[i] = nv[i]; ch = true; } }
+  }
+  if (ctx.t){
+    const r = c6Rows(ctx.t).find(x => x.k === ctx.k), nota = val('nota');
+    if (r && nota != null && nota !== r.nota){ if (nota === r.nota0 && !r.added) delete e.n[r.id]; else e.n[r.id] = nota; ch = true; }
+  }
+  if (ch){ c6Changed(); const hb = box.querySelector('header b'); if (hb && nome) hb.textContent = nome; } else c6Tidy();
+  return ch;
+}
+function c6Unlink(t, k){
+  const e = c6E(), a = e.add[t] || [], i = a.indexOf(k);
+  if (i >= 0) a.splice(i, 1); if (!a.length) delete e.add[t];
+  delete e.s[t + '|' + k]; delete e.n[t + '|' + k];
+  if (e.nuovi[k] && !Object.values(e.add).some(l => l.includes(k))){ delete e.nuovi[k]; delete e.p[k]; }
+}
+function c6AddLink(t, k, nota){
+  const e = c6E();
+  if (!c6Rows(t).some(r => r.k === k)) (e.add[t] = e.add[t] || []).push(k);
+  const id = t + '|' + k; e.s[id] = 1; if (nota) e.n[id] = nota;
+  C6.open.add(t); C6.shut.delete(t); C6.ed = { t, k };
+  c6Changed(); c6EdRender();
+}
+function c6Sug(q){
+  const box = C6.el.querySelector('.c6-ed .c6-sug'); if (!box) return;
+  q = c6Norm(q.trim()); if (q.length < 2){ box.innerHTML = ''; return; }
+  const ps = [...Object.keys(C6.data.luoghi), ...Object.keys(c6O('nuovi'))].map(c6Place).filter(p => p && c6Norm(p.nome + ' ' + p.dove).includes(q)).slice(0, 8);
+  box.innerHTML = ps.map(p => `<button type="button" data-e="pick" data-k="${esc(p.k)}"><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><span><b>${esc(p.nome)}</b><small>${esc(p.dove)}</small></span></button>`).join('') || '<p class="c6-hint">Nessun luogo con questo nome: aggiungilo qui sotto come nuovo.</p>';
+}
+function c6EdClick(b){
+  const ctx = C6.ed, a = b.dataset.e, box = $('.c6-ed', C6.el); if (!ctx || !a) return;
+  if (a === 'close'){ c6EdClose(); return; }
+  if (a === 'pick'){ c6AddLink(ctx.t, b.dataset.k, box.querySelector('[data-f="nota"]').value.trim()); return; }
+  if (a === 'create'){
+    const v = f => box.querySelector(`[data-f="${f}"]`).value.trim(), nome = v('nome');
+    if (!nome){ toast('Scrivi almeno il nome del luogo'); box.querySelector('[data-f="nome"]').focus(); return; }
+    const k = 'u-' + Date.now().toString(36); c6E().nuovi[k] = [nome, v('dove'), v('zona'), v('tipo'), null, null, ''];
+    c6AddLink(ctx.t, k, v('nota')); return;
+  }
+  c6Commit();
+  const e = c6E(), r = ctx.t ? c6Rows(ctx.t).find(x => x.k === ctx.k) : null;
+  if (a === 'ok' || a === 'no'){
+    if (!r){ c6Tidy(); return; }
+    if (a === 'no' && r.added){ c6Unlink(ctx.t, ctx.k); C6.ed = null; c6Changed(); c6EdRender(); toast('Luogo tolto da questo titolo'); return; }
+    const v = a === 'ok' ? 1 : -1, set = e.s[r.id] !== v;
+    if (set) e.s[r.id] = v; else delete e.s[r.id];
+    c6Changed();
+    // controllata una voce, si passa alla prossima ancora da controllare dello stesso titolo
+    if (set){
+      const rows = c6Rows(ctx.t), i = rows.findIndex(x => x.k === ctx.k), nx = rows.slice(i + 1).find(x => !x.s) || rows.slice(0, i).find(x => !x.s);
+      if (nx) C6.ed = { t: ctx.t, k: nx.k }; else { C6.ed = null; toast(`${ctx.t}: tutte le voci controllate`); }
+    }
+    c6EdRender(); return;
+  }
+  if (a === 'reset'){ if (r){ delete e.s[r.id]; delete e.n[r.id]; } c6Changed(); c6EdRender(); return; }
+  if (a === 'resetp'){ delete e.p[ctx.k]; c6Changed(); c6EdRender(); return; }
+  c6Tidy();
+  if (a === 'go'){ C6.ed = { t: b.dataset.t, k: ctx.k }; c6EdRender(); return; }
+  if (a === 'fly') c6Fly(ctx.k);
+}
+async function c6Fly(k){
+  c6Close();
+  if (!W6.on){ W6.intro = true; await w6Open(); }
+  const pin = W6.on && W6.cpu && W6.cpu.pins.find(p => p.pl.k === k);
+  if (pin) w6FlyTo(w6View(pin), 2600, () => w6Place(pin));
+}
+// keys: Esc closes the sheet, then the catalogue; nothing reaches the map below while it is open
+window.addEventListener('keydown', e => {
+  if (!C6.on) return;
+  if (e.key === 'Escape'){ e.preventDefault(); if (C6.ed) c6EdClose(); else c6Close(); }
+  e.stopImmediatePropagation();
+}, true);
 
 /* ---- 90-p1.js ---- */
 /* ================= P1: the opening (six stones, the big bang, the Timeline and its branches),

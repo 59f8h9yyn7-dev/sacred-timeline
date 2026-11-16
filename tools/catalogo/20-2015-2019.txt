@@ -1,0 +1,329 @@
+# ---------- 2015 ----------
+
+== Avengers: Age of Ultron
+strucker-base | Gli Avengers recuperano lo scettro; Wanda e Pietro entrano in scena.
+avengers-tower | Nasce Ultron; la festa con il martello; il primo attacco.
++klaue-nave | Cantiere di Ulysses Klaue | nave arenata sulla costa africana | africa | m | -15.0,12.0 | r | ?Ultron compra il vibranio; Wanda manipola gli Avengers.
++johannesburg | Johannesburg | Sudafrica | africa | r | -26.2041,28.0473 | c | Hulk impazzito contro Tony nella Hulkbuster.
++barton-fattoria | Fattoria di Clint Barton | Midwest (luogo non detto) | usa | m | - | - | La famiglia segreta di Clint; gli Avengers si nascondono.
++grotta-norne | Grotta delle Norne | luogo non detto | uk | m | - | - | ?Thor, con Selvig, ha la visione delle Gemme.
++seoul | Seul | U-GIN Research di Helen Cho, Corea del Sud | asia | r | 37.5665,126.9780 | c | La culla della rigenerazione; l'inseguimento del camion.
++novi-grad | Novi Grad | capitale della Sokovia (inventata) | europa | i | 44.6,21.0 | r | La città sollevata in cielo: battaglia finale, muore Pietro.
+helicarrier | Fury arriva con l'Helicarrier per evacuare Novi Grad.
++avengers-compound | Complesso degli Avengers | nord dello Stato di New York | ny-stato | i | 41.75,-74.10 | r | La nuova base degli Avengers.
+
+== Agent Carter – stagione 2
++ssr-la | Ufficio SSR di Los Angeles | Los Angeles, 1947 | la | m | 34.05,-118.25 | c | Peggy raggiunge Sousa a Los Angeles.
++arena-club | Arena Club | club esclusivo, Los Angeles | la | m | 34.06,-118.30 | c | ?Il Consiglio dei Nove e Whitney Frost.
++isodyne | Isodyne Energy | laboratorio, Los Angeles | la | m | 34.10,-118.30 | c | ?L'esperimento sulla Materia Zero.
++stark-la | Villa di Howard a Los Angeles | Beverly Hills | la | m | 34.08,-118.40 | q | ?Peggy alloggia da Howard; Jarvis e Ana.
++materia-zero | Dimensione della Materia Zero | il varco aperto dalla Isodyne | dimensioni | d | - | - | ?Wilkes e Whitney Frost; forse la Dimensione Oscura.
+
+== Daredevil – stagione 2
++tetto-punitore | Tetto dello scontro con il Punitore | Hell's Kitchen | nyc-mid | m | - | - | Frank incatena Matt sul tetto.
++giostra | Giostra di Central Park | Central Park, Manhattan | nyc-up | r | 40.7700,-73.9750 | e | Dove fu sterminata la famiglia di Frank Castle.
++tribunale | Tribunale di New York | Foley Square, Manhattan | nyc-down | r | 40.7142,-74.0018 | e | ?Il processo al Punitore difeso da Nelson & Murdock.
++rykers | Ryker's Island | prigione di New York | nyc-isole | m | 40.7932,-73.8860 | e | Frank incontra Fisk in prigione.
++mano-scavo | Lo scavo della Mano | cantiere della Mano, Manhattan | nyc-mid | m | - | - | ?Il buco misterioso; muore Elektra.
+
+== Ant-Man
+triskelion | 1989: Hank Pym lascia lo S.H.I.E.L.D. davanti a Peggy, Howard e Carson.
++san-quentin | San Quentin State Prison | Baia di San Francisco | sf | r | 37.9378,-122.4887 | e | Scott esce di prigione.
++baskin | Baskin-Robbins | San Francisco | sf | m | 37.78,-122.41 | c | ?Scott licenziato perché ex detenuto.
++pym-casa | Casa di Hank Pym | San Francisco | sf | m | 37.79,-122.44 | c | Il laboratorio sotterraneo: l'addestramento con le formiche.
++pym-tech | Pym Technologies | sede, San Francisco (inventata) | sf | m | 37.79,-122.39 | c | Il furto del Calabrone Giallo; l'edificio esplode.
+avengers-compound | Scott si infiltra e combatte Falcon.
++cassie-casa | Casa di Cassie | San Francisco | sf | m | 37.75,-122.45 | c | Il duello finale sul trenino giocattolo nella cameretta.
++regno-quantico | Regno Quantico | dimensione subatomica | dimensioni | d | - | - | Scott si rimpicciolisce oltre il limite e riesce a tornare.
+
+== Guardiani della Galassia (corti animati)
+milano | ?Brevi avventure animate dei Guardiani nello spazio.
+
+== WHIH Newsfront
++whih | Studio di WHIH World News | redazione (luogo non detto) | nyc-mid | m | - | - | Il telegiornale dell'MCU racconta Ant-Man e gli Accordi.
+
+== Agents of S.H.I.E.L.D. – stagione 3
+playground | La base dove arrivano i nuovi Inumani.
++zephyr | Zephyr One | aereo-base dello S.H.I.E.L.D. | mezzi | x | - | - | La nuova base volante della squadra.
++monolite | Il monolite kree | caveau custodito dall'HYDRA | usa | m | - | - | ?Il portale verso Maveth.
++maveth | Maveth | pianeta del monolite | spazio | s | - | - | Simmons intrappolata; Coulson uccide Ward, che diventa Hive.
++malick-casa | Villa di Gideon Malick | luogo non detto | usa | m | - | - | ?Il capo dell'HYDRA e il culto di Hive.
+
+== Jessica Jones – stagione 1
++alias | Alias Investigations | appartamento-ufficio di Jessica, Hell's Kitchen | nyc-mid | m | 40.760,-73.995 | q | Jessica lavora come investigatrice, tormentata da Kilgrave.
++luke-bar | Bar di Luke Cage | Hell's Kitchen | nyc-mid | m | 40.761,-73.994 | q | Jessica incontra Luke; il bar salta in aria.
++trish-casa | Appartamento di Trish Walker | Manhattan | nyc-mid | m | 40.77,-73.98 | c | ?Il rifugio blindato di Trish.
++jessica-infanzia | Casa d'infanzia di Jessica | fuori città (luogo non detto) | usa | m | - | - | ?Kilgrave la ricompra per riportarci Jessica.
++molo-jj | Molo del finale | lungofiume di Manhattan | nyc-isole | m | 40.70,-74.02 | q | ?Jessica spezza il collo a Kilgrave.
+
+# ---------- 2016 ----------
+
+== Captain America: Civil War
++lagos | Lagos | Nigeria | africa | r | 6.5244,3.3792 | c | Crossbones si fa esplodere; Wanda devia lo scoppio su un palazzo.
++mit | MIT | Cambridge, Massachusetts | usa | r | 42.3601,-71.0942 | e | Tony presenta il B.A.R.F. agli studenti.
+avengers-compound | Wanda e Visione; Clint la porta via.
++londra-funerale | Funerale di Peggy | Londra | uk | m | 51.50,-0.14 | c | L'ultimo saluto a Peggy Carter.
++vienna-onu | Vienna International Centre | sede ONU di Vienna | europa | r | 48.2348,16.4167 | e | La firma degli Accordi di Sokovia; l'attentato, muore T'Chaka.
++bucarest | Bucarest | appartamento di Bucky, Romania | europa | r | 44.4268,26.1025 | c | Bucky braccato da Black Panther e dalla polizia.
++berlino-ctc | Centro antiterrorismo | Berlino | europa | m | 52.52,13.40 | c | Zemo risveglia il Soldato d'Inverno.
++parker-hc | Casa di Peter e May | 43-25 43rd Street, Sunnyside (Queens) · 7° piano | nyc-qns | m | 40.7449,-73.9212 | e | ?Tony va a reclutare Peter.
++lipsia | Aeroporto di Lipsia-Halle | Germania | europa | r | 51.4239,12.2364 | e | La grande battaglia tra le due squadre.
++cleveland | Cleveland | Ohio | usa | r | 41.4993,-81.6944 | c | ?Zemo trova e uccide Vasily Karpov.
++siberia | Base HYDRA in Siberia | Siberia | russia | m | 60.0,95.0 | r | Lo scontro finale: Tony scopre chi uccise i suoi genitori.
++strada-1991 | Strada del 16 dicembre 1991 | luogo non detto | usa | r | - | - | Bucky uccide Howard e Maria Stark.
++raft | The Raft | prigione di massima sicurezza in mezzo all'oceano | oceani | i | - | - | La squadra di Cap rinchiusa; Steve la libera.
++birnin-zana | Birnin Zana · Città d'Oro | capitale del Wakanda | wakanda | i | 2.5,35.0 | r | Bucky si fa ibernare in Wakanda (scena dopo i titoli).
+
+== Team Thor (corto)
++darryl-casa | Appartamento di Darryl | Australia | asia | m | -33.87,151.21 | c | ?Thor vive con il coinquilino Darryl.
+
+== Agents of S.H.I.E.L.D. – stagione 4
++boyle-heights | Boyle Heights | Los Angeles est | la | r | 34.0339,-118.2054 | q | ?Robbie Reyes, il Ghost Rider, e suo fratello Gabe.
++momentum | Momentum Energy Labs | Los Angeles | la | m | 34.05,-118.20 | c | ?Dove tutto comincia con il Darkhold.
+zephyr | La squadra a bordo dello Zephyr.
++framework | Il Framework | la realtà virtuale di Aida | dimensioni | d | - | - | Il mondo in cui l'HYDRA ha vinto.
+
+== Luke Cage – stagione 1
++harlem-paradise | Harlem's Paradise | locale di Cottonmouth, Harlem | nyc-up | m | 40.810,-73.945 | q | Il club di Cornell "Cottonmouth" Stokes.
++pops | Barbiere di Pop | Harlem | nyc-up | m | 40.812,-73.947 | q | Il "porto franco" di Harlem dove lavora Luke.
+harlem-125 | Le strade di Harlem che Luke protegge.
+seagate | Flashback: l'esperimento che rende Luke indistruttibile.
+
+== Doctor Strange
++strange-casa | Attico di Stephen Strange | Manhattan | nyc-mid | m | 40.77,-73.98 | c | ?La vita del chirurgo prima dell'incidente.
+metro-general | Strange è il primario di neurochirurgia; Christine.
++incidente-strange | Strada dell'incidente | strada lungo l'Hudson, Stato di New York | ny-stato | r | 41.0,-73.9 | r | ?L'incidente d'auto che gli distrugge le mani.
++kamar-taj | Kamar-Taj | Kathmandu, Nepal | asia | m | 27.7172,85.3240 | c | Strange impara le arti mistiche dall'Antico.
++everest | Monte Everest | Himalaya | asia | r | 27.9881,86.9250 | e | L'Antico lo lascia sulla vetta per insegnargli a tornare.
++londra-sanctum | Sanctum di Londra | Londra | uk | m | 51.51,-0.12 | c | Kaecilius lo distrugge.
++sanctum | Sanctum Sanctorum | 177A Bleecker Street, Greenwich Village | nyc-down | m | 40.72905,-74.0003 | e | Kaecilius attacca; Strange ne diventa il custode.
++dimensione-specchio | Dimensione Specchio | il riflesso del mondo reale | dimensioni | d | - | - | L'inseguimento tra i palazzi che si piegano.
++piano-astrale | Piano astrale | dimensione dello spirito | dimensioni | d | - | - | La lotta in forma astrale in ospedale; muore l'Antico.
++hk-sanctum | Sanctum di Hong Kong | Hong Kong | asia | m | 22.2830,114.1580 | c | Strange inverte il tempo nella strada distrutta.
++dimensione-oscura | Dimensione Oscura | regno di Dormammu | dimensioni | d | - | - | "Dormammu, sono venuto a patti."
+
+== Agents of S.H.I.E.L.D.: Slingshot
++slingshot | Missione di Yo-Yo | luogo da verificare | americhe | r | - | - | ?Elena Rodriguez parte da sola per vendicare il cugino.
+
+# ---------- 2017 ----------
+
+== Team Thor: Part 2 (corto)
+darryl-casa | ?Thor cerca un lavoro e scrive alla sua amica di penna.
+
+== Iron Fist – stagione 1
++rand-tower | Rand Enterprises | sede, Manhattan | nyc-mid | m | 40.755,-73.98 | c | Danny torna dopo 15 anni e reclama l'azienda di famiglia.
++chikara | Chikara Dojo | dojo di Colleen Wing, Chinatown | nyc-down | m | 40.716,-73.997 | q | ?Colleen insegna; Danny ci vive.
++himalaya-aereo | Incidente aereo sull'Himalaya | Himalaya | asia | r | 30.0,82.0 | r | ?I genitori di Danny muoiono; i monaci lo trovano.
++kun-lun | K'un-Lun | città mistica che appare sull'Himalaya | dimensioni | d | 30.0,82.0 | r | Danny cresce e diventa l'Iron Fist.
++anzhou | Anzhou | Cina | asia | r | - | - | ?Danny e Colleen in Cina contro l'eroina della Mano.
+
+== Guardiani della Galassia Vol. 2
+missouri | 1980: Ego e Meredith in decappottabile; Ego pianta il seme.
++sovereign | Sovereign | il pianeta dorato di Ayesha | spazio | s | - | - | I Guardiani battono l'Abilisk e rubano le batterie.
++berhert | Berhert | pianeta boscoso | spazio | s | - | - | Atterraggio di fortuna; Yondu catturato.
++contraxia | Contraxia | pianeta ghiacciato dei Ravagers | spazio | s | - | - | Yondu escluso dai Ravagers di Stakar.
+eclector | L'ammutinamento contro Yondu.
++ego | Pianeta di Ego | Ego, il pianeta vivente | spazio | s | - | - | Peter scopre suo padre; battaglia finale; muore Yondu.
+milano | ?La Milano viene distrutta.
+
+== Spider-Man: Homecoming
+grand-central | 2012: la ditta di Toomes sgombera le macerie.
++midtown-school | Midtown School of Science and Technology | il liceo di Peter, Queens | nyc-qns | m | 40.746,-73.920 | q | ?Il liceo di Peter, Ned, MJ e Liz.
+parker-hc | La casa di Peter e May.
++delmar | Delmar's Deli-Grocery | 46-22 Queens Boulevard, Sunnyside | nyc-qns | m | 40.7433,-73.918 | e | Il negozio di panini, distrutto dai criminali.
++washington-monument | Washington Monument | National Mall | dc | r | 38.8895,-77.0353 | e | Peter salva i compagni nell'ascensore.
++staten-ferry | Traghetto di Staten Island | Baia di New York | nyc-isole | r | 40.67,-74.04 | q | Il traghetto tagliato in due; Tony lo ricompone.
++avvoltoio-covo | Covo dell'Avvoltoio | magazzino (luogo da verificare) | nyc-qns | m | - | - | ?Toomes costruisce le armi con la tecnologia chitauri.
++liz-casa | Casa di Liz | sobborgo (luogo non detto) | nyc-qns | m | - | - | ?Peter scopre che il padre di Liz è l'Avvoltoio.
+avengers-tower | Happy trasloca la vecchia torre; l'aereo parte da qui.
++coney-island | Coney Island | Brooklyn | nyc-bk | r | 40.5755,-73.9707 | q | L'aereo di Stark precipita sulla spiaggia; Peter salva Toomes.
+avengers-compound | Tony offre a Peter un posto negli Avengers.
+
+== The Defenders
++midland-circle | Midland Circle Financial | grattacielo della Mano, Manhattan | nyc-mid | m | - | - | La sede della Mano sopra il buco senza fondo; il palazzo crolla.
+alias | Jessica indaga su un architetto scomparso.
+harlem-125 | Luke torna a Harlem dopo il carcere.
+rand-tower | ?Danny e Colleen.
++royal-dragon | Royal Dragon | ristorante cinese, Chinatown | nyc-down | m | 40.715,-73.998 | q | ?I quattro si riuniscono per la prima volta.
+
+== Inhumans
++attilan | Attilan | la città degli Inumani sulla Luna | spazio | s | - | - | Maximus prende il potere; la famiglia reale fugge.
++oahu | Oahu | Hawaii | usa | r | 21.4389,-158.0001 | r | La famiglia reale, divisa, si nasconde tra le isole.
+
+== Thor: Ragnarok
++muspelheim | Muspelheim | regno di Surtur | spazio | s | - | - | Thor sconfigge Surtur e gli prende la corona.
++shady-acres | Shady Acres (casa di riposo demolita) | New York | nyc-down | m | - | - | ?Thor e Loki cercano Odino dove Loki lo aveva lasciato.
+sanctum | Strange aiuta Thor a trovare Odino.
++norvegia-odino | Scogliera di Odino | costa della Norvegia | europa | r | 59.0,5.6 | r | ?Odino muore e si libera Hela.
++sakaar | Sakaar | pianeta-discarica del Gran Maestro | spazio | s | - | - | Thor gladiatore contro Hulk.
+asgard | Hela conquista Asgard; il Ragnarok.
++statesman | Statesman | astronave dei profughi asgardiani | mezzi | x | - | - | Gli Asgardiani partono verso la Terra.
+
+== The Punisher – stagione 1
++kandahar | Kandahar | Afghanistan | asia | r | 31.6289,65.7372 | c | Flashback: l'unità di Frank e l'operazione Cerberus.
++micro-covo | Covo di Micro | magazzino abbandonato (luogo da verificare) | nyc-bk | m | - | - | ?Il rifugio di David Lieberman e Frank.
++lieberman-casa | Casa di Sarah Lieberman | Queens | nyc-qns | m | - | - | ?Frank veglia sulla famiglia di Micro.
++anvil | Anvil | società militare di Billy Russo | nyc-mid | m | - | - | ?La compagnia privata di Russo.
+giostra | Frank sfregia Billy Russo dove morì la sua famiglia.
+
+== Runaways – stagione 1
++pride-ville | Ville della Pride | Brentwood e colline di Los Angeles | la | m | 34.05,-118.48 | q | Sei famiglie ricche e la loro setta segreta.
++atlas-academy | Atlas Academy | scuola privata, Los Angeles | la | m | 34.05,-118.45 | c | ?La scuola dei ragazzi.
++pride-scavo | Lo scavo della Pride | sotto Los Angeles | la | m | - | - | ?Lo scavo segreto per Jonah.
+
+== Agents of S.H.I.E.L.D. – stagione 5
++terra-2091 | Terra spezzata, 2091 | frammento di Terra nello spazio, futuro | spazio | s | - | - | I Kree governano gli ultimi umani nel Faro.
++lighthouse | Il Faro (Lighthouse) | bunker anti-apocalisse (luogo da verificare) | usa | m | - | - | ?Nel presente diventa la base dello S.H.I.E.L.D.
+zephyr | ?Il ritorno nel presente.
+
+# ---------- 2018 ----------
+
+== Black Panther
++oakland | Oakland | California, 1992 e oggi | sf | r | 37.8044,-122.2712 | c | N'Jobu tradisce il Wakanda; T'Challa apre il primo centro di accoglienza.
++sambisa | Foresta di Sambisa | Nigeria | africa | r | 11.0,13.5 | r | T'Challa libera Nakia e le ragazze rapite.
+birnin-zana | Il ritorno di T'Challa e il laboratorio di Shuri.
++cascate | Cascate dei Guerrieri | Wakanda | wakanda | i | 2.45,35.1 | r | Il duello rituale: T'Challa contro M'Baku, poi contro Killmonger.
++londra-museo | Museum of Great Britain | Londra (inventato) | uk | m | 51.5194,-0.1270 | e | Killmonger e Klaue rubano l'ascia di vibranio.
++busan | Busan | casinò e inseguimento, Corea del Sud | asia | r | 35.1796,129.0756 | c | T'Challa, Nakia e Okoye contro Klaue.
++piano-ancestrale | Piano ancestrale | l'aldilà dei re wakandiani | dimensioni | d | - | - | T'Challa incontra il padre.
++jabari | Terre dei Jabari | montagne del Wakanda | wakanda | i | 2.8,34.8 | r | M'Baku accoglie T'Challa in fin di vita.
++monte-bashenga | Monte Bashenga | la miniera di vibranio | wakanda | i | 2.55,35.05 | r | Lo scontro finale sui binari della miniera.
++confine | Terre della Tribù di Confine | pianure del Wakanda | wakanda | i | 2.3,35.2 | r | ?W'Kabi e i rinoceronti in battaglia.
+vienna-onu | T'Challa annuncia che il Wakanda si apre al mondo (scena dopo i titoli).
+
+== Jessica Jones – stagione 2
+alias | Jessica indaga su IGH e sul proprio passato.
++igh | IGH | la clinica di Karl Malus | usa | m | - | - | ?Dove salvarono Jessica e sua madre.
+
+== Avengers: Infinity War
+statesman | Thanos massacra gli Asgardiani; muoiono Heimdall e Loki.
+sanctum | Bruce precipita nel Sanctum; Ebony Maw rapisce Strange.
++central-park | Central Park | Manhattan | nyc-up | r | 40.7812,-73.9665 | q | Tony racconta a Pepper il sogno; arriva Strange.
++washington-sq | Washington Square Park | Greenwich Village | nyc-down | r | 40.7308,-73.9973 | e | La battaglia contro Ebony Maw e Cull Obsidian.
++q-ship | Nave di Ebony Maw | astronave ad anello | mezzi | x | - | - | Tony e Peter salvano Strange.
++edimburgo | Edimburgo | Scozia (stazione di Waverley) | uk | r | 55.9533,-3.1883 | c | Wanda e Visione attaccati da Proxima e Corvus.
+knowhere | Thanos prende la Gemma della Realtà dal Collezionista.
++vormir | Vormir | il pianeta della Gemma dell'Anima | spazio | s | - | - | Thanos sacrifica Gamora.
++nidavellir | Nidavellir | la fucina dei Nani | spazio | s | - | - | Eitri forgia Stormbreaker.
++titano | Titano | il pianeta natale di Thanos | spazio | s | - | - | Tony, Strange, Peter e i Guardiani contro Thanos.
+avengers-compound | Steve, Natasha, Sam e Rhodey tornano alla base.
+birnin-zana | Shuri prova a estrarre la Gemma dalla fronte di Visione.
++wakanda-pianura | Pianura fuori dalla barriera | Wakanda | wakanda | i | 2.4,35.3 | r | La grande battaglia e lo schiocco.
++mondo-anima | Mondo dell'Anima | dentro la Gemma dell'Anima | dimensioni | d | - | - | Thanos incontra Gamora bambina.
++sanctuary-ii | Sanctuary II | la nave di Thanos | mezzi | x | - | - | La nave madre dell'Ordine Nero.
++giardino | Il Giardino | il pianeta dove Thanos si ritira | spazio | s | - | - | L'alba dopo lo schiocco.
++fury-strada | Strada di Fury e Hill | città (luogo non detto) | usa | m | - | - | ?Fury chiama Captain Marvel prima di svanire (scena dopo i titoli).
+
+== Cloak & Dagger – stagione 1
++new-orleans | New Orleans | Louisiana | usa | r | 29.9511,-90.0715 | c | Tandy e Tyrone, legati dall'incidente della piattaforma.
++roxxon-piattaforma | Piattaforma Roxxon | Golfo del Messico | oceani | m | 29.0,-89.5 | r | L'esplosione che dà i poteri ai due ragazzi.
+
+== Luke Cage – stagione 2
+harlem-paradise | Mariah Dillard e Bushmaster si contendono il club.
+pops | Luke difende Harlem.
++giamaica | Giamaica | Kingston | americhe | r | 18.0179,-76.8099 | c | ?Le origini di Bushmaster.
+
+== Ant-Man and the Wasp
++scott-casa | Casa di Scott | San Francisco (arresti domiciliari) | sf | m | 37.76,-122.43 | c | Scott ai domiciliari dopo Civil War.
++x-con | X-Con Security | la ditta di Luis, San Francisco | sf | m | - | - | ?L'azienda di sicurezza di Luis e Scott.
++lab-pym | Laboratorio portatile di Pym | San Francisco | sf | m | - | - | Il laboratorio che si rimpicciolisce come una valigia.
++berkeley | UC Berkeley | Berkeley, California | sf | r | 37.8719,-122.2585 | e | ?Bill Foster insegna qui.
++muir-woods | Muir Woods | California | sf | r | 37.8970,-122.5811 | e | ?Il nascondiglio nel bosco.
++lombard | Lombard Street | San Francisco | sf | r | 37.8021,-122.4187 | e | L'inseguimento con le auto che cambiano taglia.
++fishermans-wharf | Fisherman's Wharf | San Francisco | sf | r | 37.8080,-122.4177 | q | Ant-Man gigante recupera il laboratorio dalla baia.
+regno-quantico | Janet salvata dopo 30 anni; Scott resta bloccato (schiocco).
+
+== Team Darryl (corto)
++darryl-la | Appartamento di Darryl a Los Angeles | Los Angeles | la | m | 34.05,-118.30 | c | ?Darryl ha un nuovo coinquilino: il Gran Maestro.
+
+== Iron Fist – stagione 2
+chikara | Danny e Colleen proteggono Chinatown.
++chinatown | Chinatown | Manhattan | nyc-down | r | 40.7158,-73.9970 | q | Guerra tra le Triadi; Davos ruba il pugno.
+
+== Daredevil – stagione 3
++st-agnes | Orfanotrofio di St. Agnes | Hell's Kitchen | nyc-mid | m | 40.763,-73.990 | q | Matt si risveglia ferito; Suor Maggie, sua madre.
+rykers | Fisk patteggia con l'FBI per uscire di prigione.
++presidential-hotel | Presidential Hotel | Manhattan | nyc-mid | m | 40.76,-73.975 | c | Fisk ci sconta i domiciliari; le nozze con Vanessa.
++fbi-ny | FBI di New York | 26 Federal Plaza, Manhattan | nyc-down | r | 40.7150,-74.0040 | e | ?Dex e Ray Nadeem; l'assalto all'ufficio.
++bulletin | New York Bulletin | redazione, Manhattan | nyc-mid | m | - | - | ?Karen lavora per il giornale.
+chiesa-lantom | Dex attacca la chiesa; muore Padre Lantom.
+
+== Runaways – stagione 2
++hostel | The Hostel | albergo abbandonato, Los Angeles | la | m | 34.12,-118.30 | q | ?Il rifugio dei ragazzi in fuga.
+pride-scavo | ?La Pride cerca la nave di Jonah sotto la città.
+
+# ---------- 2019 ----------
+
+== The Punisher – stagione 2
++midwest-bar | Bar nel Midwest | Michigan (luogo da verificare) | usa | r | - | - | ?Frank salva la giovane Amy.
++ospedale-billy | Ospedale di Billy Russo | New York | nyc-mid | m | - | - | ?Billy, sfregiato, fugge.
+
+== Captain Marvel
++hala | Hala | capitale dell'Impero Kree | spazio | s | - | - | Vers vive tra i Kree e la Starforce.
++torfa | Torfa | pianeta della missione | spazio | s | - | - | ?Vers catturata dagli Skrull.
++blockbuster | Blockbuster Video | Los Angeles, 1995 | la | m | 34.07,-118.12 | c | Carol precipita sul tetto del videonoleggio.
++la-metro | Metropolitana di Los Angeles | 1995 | la | r | 34.05,-118.25 | c | L'inseguimento allo Skrull sul treno.
+pegasus | 1995: Carol e Fury nella base del progetto; arriva Goose.
++pancho | Pancho's Bar | deserto del Mojave | la | m | 34.85,-117.50 | r | ?I ricordi di Carol e Maria con i piloti.
++rambeau-casa | Casa di Maria Rambeau | Louisiana | usa | m | 30.2,-92.0 | r | ?Carol ritrova Maria e la piccola Monica.
++lab-marvell | Laboratorio di Mar-Vell | nave nascosta in orbita | spazio | s | - | - | Il Tesseract nascosto e gli Skrull rifugiati.
+avengers-compound | Carol arriva dagli Avengers (scena dopo i titoli).
+
+== Cloak & Dagger – stagione 2
+new-orleans | Tandy e Tyrone contro un giro di ragazze scomparse.
+
+== Avengers: Endgame
+barton-fattoria | Clint perde la famiglia nello schiocco; la ritrova alla fine.
+giardino | Gli Avengers uccidono Thanos.
+avengers-compound | La base dopo lo schiocco; distrutta nella battaglia finale.
++tony-lago | Casa sul lago di Tony | nel bosco, Stato di New York | ny-stato | m | 41.8,-74.2 | r | ?Tony, Pepper e Morgan; il funerale di Tony.
++deposito-luis | Deposito del furgone di Luis | San Francisco | sf | m | 37.76,-122.40 | c | Scott esce dal Regno Quantico.
++gruppo-sostegno | Gruppo di sostegno di Steve | New York | nyc-mid | m | - | - | ?Steve aiuta chi ha perso qualcuno.
++tokyo | Tokyo | Giappone | asia | r | 35.6762,139.6503 | c | Ronin stermina la Yakuza.
++citta-messico | Città del Messico | Messico | americhe | r | 19.4326,-99.1332 | c | ?Ronin contro i narcotrafficanti.
++nuova-asgard | Nuova Asgard | Tønsberg, Norvegia | europa | m | 59.2675,10.4076 | c | Thor depresso; Valchiria diventa regina.
+regno-quantico | Il furgone diventa una macchina del tempo.
+avengers-tower | 2012: Tony e Scott provano a prendere il Tesseract.
+grand-central | 2012: gli Avengers del 2023 tra le macerie della battaglia.
+sanctum | 2012: Bruce chiede la Gemma del Tempo all'Antico.
+asgard | 2013: Thor e Rocket prendono l'Aether; Thor vede Frigga.
+morag | 2014: Rhodey e Nebula prendono la Gemma del Potere.
+vormir | 2014: Natasha si sacrifica.
+sanctuary-ii | 2014: Thanos scopre il piano e viaggia nel tempo.
+camp-lehigh | 1970: Tony e Steve recuperano Tesseract e particelle Pym; Tony incontra Howard.
+midtown-school | Peter ritrova Ned a scuola.
++peggy-casa | Casa di Steve e Peggy | anni '40-'50 (luogo non detto) | usa | m | - | - | Il ballo finale di Steve e Peggy.
++panchina-lago | Panchina sul lago | luogo non detto | ny-stato | m | - | - | ?Steve anziano consegna lo scudo a Sam.
+
+== Agents of S.H.I.E.L.D. – stagione 6
+lighthouse | ?La base dello S.H.I.E.L.D.
++kitson | Kitson | pianeta-casinò | spazio | s | - | - | ?Daisy e Simmons cercano Fitz nello spazio.
+zephyr | ?La squadra divisa tra Terra e spazio.
+
+== Jessica Jones – stagione 3
+alias | Jessica contro il serial killer Gregory Sallinger.
+trish-casa | Trish diventa una vigilante.
+raft | ?Trish finisce rinchiusa al Raft.
+
+== Spider-Man: Far From Home
++ixtenco | Ixtenco | Messico | americhe | r | 19.2478,-97.8939 | c | Fury e Hill indagano sul primo "Elementale".
++parker-nwh | Casa di Peter e May (dopo il Blip) | 43-15 46th Street, Sunnyside (Queens) | nyc-qns | m | 40.74455,-73.91815 | e | ?Peter prepara la valigia per l'Europa.
++venezia | Venezia | Italia | europa | r | 45.4408,12.3155 | c | L'Elementale d'Acqua; arriva Mysterio.
++praga | Praga | Repubblica Ceca | europa | r | 50.0755,14.4378 | c | L'Elementale di Fuoco durante il carnevale.
++berlino | Berlino | Germania | europa | r | 52.5200,13.4050 | c | ?Peter cade nelle illusioni di Mysterio.
++olanda-tulipani | Broek op Langedijk | Paesi Bassi (campi di tulipani) | europa | r | 52.6700,4.8000 | c | Happy recupera Peter.
++londra-pub | Pub del team di Beck | Londra | uk | m | - | - | ?Beck brinda con la sua squadra all'inganno.
++tower-bridge | Tower Bridge | Londra | uk | r | 51.5055,-0.0754 | e | La battaglia finale contro i droni.
++daily-bugle | TheDailyBugle.net | lo studio di J. Jonah Jameson | nyc-mid | m | - | - | Jameson rivela chi è Spider-Man (scena dopo i titoli).
++skrull-nave | Nave degli Skrull | nello spazio | spazio | s | - | - | Fury "in vacanza" sulla nave skrull (scena dopo i titoli).
+
+== Peter's To-Do List
+delmar | Peter sbriga le commissioni prima del viaggio.
+parker-nwh | ?La lista attaccata in casa.
+
+== The Daily Bugle
+daily-bugle | Jameson attacca Spider-Man e difende Mysterio nei suoi video.
+
+== Runaways – stagione 3
+hostel | ?I ragazzi nel loro rifugio.
+dimensione-oscura | ?Morgan le Fay intrappola alcuni di loro nella Dimensione Oscura.

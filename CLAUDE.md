@@ -3,7 +3,7 @@
 App personale (PWA installata sull'iPhone dell'utente) che mostra la sua mappa Marvel: timeline, multiverso 2D/3D, fascicoli dei personaggi. Rispondere in italiano, brevi e diretti; le modifiche vanno consegnate direttamente nell'app (push su GitHub), non come consigli.
 
 ## Com'è fatta
-- `index.html`: tutta l'app in un file (~10.600 righe). three.js 0.160 in `vendor/three.module.min.js`, caricato solo per il 3D.
+- `index.html`: tutta l'app in un file (~11.700 righe). three.js 0.160 in `vendor/three.module.min.js`, caricato solo per il 3D.
 - `data/map.json`: la mappa (items `img`/`line`/`text` con id `e###`, gruppi `g###`), più `cardData` (modifiche fatte dall'utente ai fascicoli), `cardPhotos`, `backups`, `rev`, `saved`.
 - `data/cards.json`: archivio fascicoli. `cards[]` (non riordinare: gli indici sono riferimenti, i nuovi vanno in coda), `idx[textId] = [[riga, indiceCard], ...]`, `prods` (titoli), `pm`. Apparizioni `ap = [prodIdx, textId, riga, tipo, nota]`, tipi f/n/c/i/m/a/r.
 - `data/chrono.json`: posizioni in modalità Cronologia (`pos[id]`).
@@ -39,8 +39,8 @@ Struttura decisa:
 
 Fasi:
 1. **Prototipo Manhattan 616** (fatto, novembre 2026): Midtown con la Avengers Tower, Greenwich Village con il Sanctum, il Queens di Peter Parker; volo libero, passaggio 2D → 3D, cartelli dei quartieri, luoghi Marvel toccabili.
-2. Catalogo di tutti i luoghi del 616 titolo per titolo (bozza di Claude, l'utente la corregge) — **prossimo passo**.
-3. Tutte le zone del catalogo + il globo.
+2. Catalogo di tutti i luoghi del 616 titolo per titolo (bozza di Claude fatta a novembre 2026; **l'utente la sta correggendo nell'app**).
+3. Tutte le zone del catalogo + il globo — **prossimo passo**: prima riportare in `tools/catalogo/*.txt` le correzioni salvate in `doc.cat616` (map.json sul ramo `dati`) e rigenerare il catalogo.
 4. Altri universi.
 
 ### Com'è fatto il Mondo 616 (fase 1)
@@ -48,3 +48,9 @@ Fasi:
 - Formato zona: coordinate locali in decimetri a delta (x verso est, z verso sud); `b` edifici `[h, minh, ring…]`, `r` strade `[classe + 16·ponte, linea…]`, `e` binari sopraelevati, `w` acqua e `g` verde come poligoni con buchi, `n` quartieri `[nome, x, z, distretto, tipo]`, `m` luoghi risolti sugli edifici veri (`fp` impronta, `b` indice edificio, `face`).
 - Luoghi Marvel: `data/luoghi616.json` (testi, titoli come in `cards.json`, `pers` = id dei fascicoli, `modello` tower/sanctum per i modelli fatti a mano). Un luogo nuovo = punto in `zones.json` + voce in `luoghi616.json`.
 - Codice: sezione `92-w616.js` di `index.html` (W6). Si entra dal pannello del sistema 616 del multiverso (pulsante "Mondo 616 · New York"). Mappa sopra i ~2600 m, 3D sotto i ~450 m, in mezzo il passaggio (altezze e colori sfumano). Il multiverso resta in pausa sotto (`window.__w6on`).
+
+### Catalogo dei luoghi (fase 2)
+- Sorgente: `tools/catalogo/*.txt` (formato spiegato in `01-zone.txt`: zone, poi `== Titolo` e le voci; `+chiave | nome | dove | zona | tipo | lat,lon | precisione | nota` definisce un luogo, `chiave | nota` lo riusa; nota che comincia con `?` = da verificare). `python3 tools/catalogo/build.py` controlla titoli e chiavi e scrive `data/catalogo616.json` (`zone`, `luoghi[k] = [nome, dove, zona, tipo, lat, lon, prec]`, `titoli = [[titolo, nota, [[k, nota]…]]…]` in ordine di uscita). Tipi: r reale, m reale con elementi Marvel, i inventato sulla Terra, s fuori dalla Terra, d altra dimensione, x base mobile.
+- Le chiavi dei luoghi già costruiti nel 3D coincidono con `luoghi616.json` (avengers-tower, grand-central, sanctum, parker-hc, parker-nwh, delmar): nel catalogo hanno il bollino "3D" e il pulsante "Vola qui".
+- Nell'app: sezione `93-c616.js` (C6). Si apre dal pulsante "Catalogo luoghi" nel Mondo 616 e da "Catalogo dei luoghi del 616" nel pannello del sistema 616 del multiverso. Vista per titolo e per zona, ricerca, filtri per tipo e stato; ogni voce si conferma, si toglie, si corregge; si possono aggiungere luoghi.
+- Correzioni dell'utente in `doc.cat616` (salvate con map.json): `s["titolo|k"]` 1 confermata / -1 tolta, `n["titolo|k"]` nota riscritta, `p[k]` campi del luogo corretti (nome, dove, tipo, zona), `nuovi[k]` luoghi aggiunti (chiavi `u-…`, stesso formato di `luoghi`), `add[titolo]` chiavi aggiunte al titolo, `ts` ultima modifica. Riportate le correzioni nella sorgente, togliere da `cat616` ciò che è stato integrato.

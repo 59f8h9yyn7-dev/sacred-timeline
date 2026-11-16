@@ -1,0 +1,167 @@
+# ---------- Fase 1 ----------
+
+== Iron Man
++kunar-grotta | Grotta dei Dieci Anelli | provincia di Kunar, Afghanistan | asia | m | 34.85,71.10 | r | Tony, rapito dopo la dimostrazione del Jericho, costruisce la Mark I con Yinsen.
++gulmira | Gulmira | villaggio afghano (inventato) | asia | i | 34.90,70.60 | r | Il villaggio di Yinsen: Tony ci torna con la Mark III contro i Dieci Anelli.
++stark-villa | Villa di Tony a Malibu | 10880 Malibu Point, Point Dume, Malibu | la | m | 34.0006,-118.8064 | e | Il laboratorio dove nascono la Mark II e la Mark III; la visita di Fury dopo i titoli.
++stark-ind | Stark Industries | sede e reattore Arc, Los Angeles (punto non preciso) | la | m | 33.92,-118.40 | c | Duello finale con Iron Monger sul tetto del grande reattore; "Io sono Iron Man".
++disney-hall | Walt Disney Concert Hall | 111 S Grand Ave, Downtown Los Angeles | la | r | 34.0553,-118.2498 | e | ?Il gala benefico dei vigili del fuoco: Tony scopre le armi Stark vendute ai terroristi.
++edwards | Base aerea di Edwards | deserto del Mojave, California | la | r | 34.9054,-117.8839 | c | La base di Rhodey: due F-22 inseguono la Mark III.
++caesars | Caesars Palace | Las Vegas Strip, Nevada | usa | r | 36.1162,-115.1745 | e | La serata del premio Apogee che Tony passa al tavolo dei dadi.
+
+== L'incredibile Hulk
++rocinha | Rocinha | favela di Rio de Janeiro, Brasile | americhe | r | -22.9878,-43.2486 | q | Bruce vive nascosto e lavora in una fabbrica di bibite; inseguimento sui tetti.
++centroamerica | Guatemala e Messico | viaggio verso nord | americhe | r | 15.78,-90.23 | r | ?Bruce attraversa l'America Centrale per tornare negli Stati Uniti.
++culver | Culver University | università della Virginia (inventata) | usa | i | 38.03,-78.51 | r | L'incidente dei raggi gamma; battaglia nel campus contro l'esercito e Blonsky.
++sterns-lab | Laboratorio di Samuel Sterns | Manhattan (punto non preciso) | nyc-up | m | 40.807,-73.962 | q | ?Mr. Blue prova a curare Bruce; il sangue che trasforma Sterns.
++harlem-125 | Harlem · 125ª strada | davanti all'Apollo Theater, Harlem | nyc-up | r | 40.8100,-73.9500 | q | Hulk contro Abominio sulla 125ª strada.
++bella-coola | Bella Coola | Columbia Britannica, Canada | americhe | r | 52.3721,-126.7538 | c | Nel finale Bruce, nascosto, impara a controllare la trasformazione.
+
+== Iron Man 2
++stark-expo | Flushing Meadows · Expo | Flushing Meadows–Corona Park e l'Unisfera, Queens | nyc-qns | m | 40.7461,-73.8452 | q | Tony apre la Stark Expo e combatte i droni di Hammer tra i padiglioni.
++monaco | Circuito di Monaco | Principato di Monaco | europa | r | 43.7347,7.4206 | c | Vanko attacca Tony con le fruste durante il Gran Premio.
++senato | Senato degli Stati Uniti | Campidoglio, Washington | dc | r | 38.8899,-77.0091 | e | L'udienza in cui Tony rifiuta di consegnare l'armatura.
++randys | Randy's Donuts | 805 W Manchester Blvd, Inglewood | la | r | 33.9617,-118.3704 | e | Tony dentro la ciambella gigante; arriva Fury.
++vanko-mosca | Casa di Vanko | Mosca, Russia | russia | r | 55.7558,37.6173 | c | Ivan costruisce il suo reattore alla morte del padre.
++hammer-ind | Hammer Industries | stabilimento di Justin Hammer (luogo non detto) | usa | m | - | - | ?Dove Vanko costruisce i droni.
+stark-villa | La festa di compleanno: Rhodey si prende la Mark II.
+edwards | Rhodey porta la Mark II ai militari, che la trasformano in War Machine.
+
+== Thor
++tonsberg | Tønsberg | Norvegia | europa | r | 59.2675,10.4076 | c | 965 d.C.: Odino ferma i Giganti di Ghiaccio sulla Terra.
++asgard | Asgard | regno di Odino | spazio | s | - | - | L'incoronazione mancata; Thor viene esiliato.
++jotunheim | Jotunheim | regno dei Giganti di Ghiaccio | spazio | s | - | - | Thor e i suoi amici sfidano Laufey.
++bifrost | Bifrost e osservatorio di Heimdall | il ponte arcobaleno | spazio | s | - | - | Thor distrugge il ponte per fermare Loki.
++puente | Puente Antiguo | cittadina del Nuovo Messico (inventata) | usa | i | 35.10,-106.10 | r | Thor cade sulla Terra; il Distruttore devasta la via principale.
++mjolnir-cratere | Cratere di Mjolnir | deserto del Nuovo Messico | usa | m | 35.05,-106.20 | r | Lo S.H.I.E.L.D. recinta il martello; Thor non riesce a sollevarlo.
++pegasus | Base del progetto P.E.G.A.S.U.S. | struttura dello S.H.I.E.L.D. (luogo non detto) | usa | m | - | - | ?Fury mostra il Tesseract a Selvig (scena dopo i titoli).
+
+== Captain America: Il primo Vendicatore
++brooklyn-40 | Brooklyn anni '40 | Brooklyn, New York | nyc-bk | r | 40.6782,-73.9442 | q | Steve, gracile, prova ad arruolarsi e si fa picchiare nei vicoli.
+stark-expo | 1943: l'Esposizione Mondiale del Domani; Howard presenta l'auto volante, Erskine sceglie Steve.
++camp-lehigh | Camp Lehigh | base dell'esercito nel New Jersey (inventata) | nj | i | 40.06,-74.40 | r | L'addestramento con Peggy e Phillips; la granata finta.
++lab-erskine | Laboratorio segreto di Erskine | dietro un negozio di antiquariato, Brooklyn | nyc-bk | m | 40.68,-73.99 | q | Steve diventa un super-soldato; Erskine viene ucciso.
+tonsberg | 1942: Schmidt ruba il Tesseract dalla chiesa.
++azzano | Azzano | fabbrica dell'HYDRA, Italia | europa | m | 45.66,9.67 | r | ?Steve libera i prigionieri, tra cui Bucky e la 107ª.
++londra-ssr | Comando SSR di Londra | Londra, in guerra | uk | m | 51.5007,-0.1246 | c | Nascono gli Howling Commandos.
++treno-alpi | Treno dell'HYDRA sulle Alpi | Alpi | europa | m | 46.5,10.5 | r | La cattura di Zola: Bucky cade dal treno.
++hydra-base | Base principale dell'HYDRA | Alpi (luogo non detto) | europa | m | 46.6,9.9 | r | L'assalto finale prima del decollo della Valkyrie.
++valkyrie | Valkyrie | il bombardiere di Teschio Rosso | mezzi | x | - | - | Lo scontro con Teschio Rosso e il Tesseract.
++artico | Ghiacci dell'Artico | dove precipita la Valkyrie | oceani | r | 72.0,-40.0 | r | Steve fa schiantare l'aereo; lo ritrovano decenni dopo.
++times-sq | Times Square | Manhattan | nyc-mid | r | 40.7580,-73.9855 | e | Steve, appena risvegliato, scappa in mezzo a Times Square.
+
+== The Consultant (corto)
++tavola-calda | Tavola calda di Coulson e Sitwell | luogo non detto | usa | r | - | - | ?Coulson e Sitwell sabotano la richiesta del Consiglio su Blonsky.
+
+== A Funny Thing Happened on the Way to Thor's Hammer (corto)
++stazione-nm | Stazione di servizio | strada per Puente Antiguo, Nuovo Messico | usa | r | 35.0,-106.3 | r | Coulson sventa una rapina mentre va verso il martello.
+
+== The Avengers
+pegasus | Loki arriva con il Tesseract e la base crolla.
++stoccarda | Stoccarda | Germania | europa | r | 48.7758,9.1829 | c | Loki costringe la folla a inginocchiarsi; arrivano Cap e Iron Man.
++calcutta | Calcutta | India | asia | r | 22.5726,88.3639 | c | Natasha va a reclutare Bruce, medico nei quartieri poveri.
++natasha-russia | Magazzino in Russia | Russia (luogo non detto) | russia | r | 55.75,37.62 | r | ?Natasha "interrogata" finché Coulson non la richiama.
++helicarrier | Helicarrier | base volante dello S.H.I.E.L.D. | mezzi | x | - | - | La squadra si forma a bordo; Loki lo fa attaccare.
++avengers-tower | Avengers Tower | 200 Park Avenue, Midtown · al posto del MetLife Building | nyc-mid | m | 40.75333,-73.97639 | e | Tony accende la torre; Loki apre il portale sul tetto.
++grand-central | Battaglia di New York | Park Avenue Viaduct e Grand Central Terminal, 42ª strada | nyc-mid | m | 40.75272,-73.97722 | e | Gli Avengers combattono insieme per la prima volta contro i Chitauri.
++chitauri | Flotta dei Chitauri | oltre il portale | spazio | s | - | - | Tony porta il missile nucleare dall'altra parte.
++shawarma | Shawarma | vicino alla torre, Midtown | nyc-mid | m | 40.752,-73.977 | q | La cena in silenzio dopo la battaglia (scena dopo i titoli).
++sanctuary | Sanctuary | dimora di Thanos | spazio | s | - | - | L'Altro riferisce a Thanos (scena dopo i titoli).
+
+== Item 47 (corto)
++item47 | Rapine di Benny e Claire | banche e motel (luogo non detto) | usa | r | - | - | ?La coppia usa un'arma chitauri; lo S.H.I.E.L.D. li recluta.
+
+# ---------- Fase 2 ----------
+
+== Iron Man 3
++berna | Berna, Capodanno 1999 | Svizzera | europa | r | 46.9480,7.4474 | c | Tony liquida Aldrich Killian e passa la notte con Maya Hansen.
++chinese-theatre | TCL Chinese Theatre | Hollywood Boulevard, Los Angeles | la | r | 34.1022,-118.3409 | e | L'esplosione che ferisce Happy.
+stark-villa | Gli elicotteri del Mandarino distruggono la villa.
++rose-hill | Rose Hill | cittadina del Tennessee (inventata) | usa | i | 35.95,-84.0 | r | Tony si rifugia con il piccolo Harley e indaga sull'Extremis.
++miami-mandarino | Villa del Mandarino | Miami, Florida | usa | m | 25.79,-80.13 | c | Tony scopre che il Mandarino è l'attore Trevor Slattery.
++air-force-one | Air Force One | in volo su Miami | mezzi | x | - | - | Tony salva i passeggeri caduti dall'aereo.
++norco | Petroliera Norco | porto di Miami | usa | m | 25.77,-80.17 | q | La battaglia finale delle armature contro Killian.
+
+== Agents of S.H.I.E.L.D. – stagione 1
++la-pilota | Los Angeles (episodio pilota) | Los Angeles | la | r | 34.05,-118.24 | c | Mike Peterson salva una donna da un palazzo in fiamme; Skye vive nel suo furgone.
++bus | Il Bus | aereo-base della squadra di Coulson | mezzi | x | - | - | La casa della squadra per tutta la stagione.
++hub | The Hub | base dello S.H.I.E.L.D. (luogo non detto) | usa | m | - | - | ?La sede di Victoria Hand e delle missioni ad alto livello.
++peru | Rovine in Perù | Perù | americhe | r | -13.16,-72.55 | r | ?Episodio 2: lo 0-8-4, un'arma alimentata dal Tesseract.
++malta | Villa di Ian Quinn | Malta | europa | r | 35.9375,14.3754 | c | ?Quinn rapisce Franklin Hall per il gravitonio.
++norvegia-well | Foresta in Norvegia | Norvegia | europa | r | 61.0,8.5 | r | ?Episodio "The Well": il bastone asgardiano diviso in tre.
++guest-house | T.A.H.I.T.I. · la Guest House | base segreta dello S.H.I.E.L.D. | usa | m | - | - | ?Dove riportarono in vita Coulson; ci portano Skye ferita.
++fridge | The Fridge | prigione e deposito dello S.H.I.E.L.D. | usa | m | - | - | ?L'HYDRA lo svuota quando lo S.H.I.E.L.D. cade.
++providence | Providence | rifugio di Eric Koenig, Canada | americhe | m | 47.0,-71.5 | r | ?La squadra si nasconde qui dopo la caduta dello S.H.I.E.L.D.
+
+== Agent Carter (corto)
++ssr-ny | Ufficio SSR di New York | dietro la New York Bell Company, Manhattan | nyc-mid | m | 40.75,-73.99 | c | 1946: Peggy, sottovalutata dai colleghi, va avanti da sola.
++zodiac | Deposito dello Zodiac | magazzino (luogo non detto) | usa | m | - | - | ?Peggy affronta da sola le guardie e recupera il siero.
+
+== Thor: The Dark World
++vanaheim | Vanaheim | uno dei Nove Regni | spazio | s | - | - | Thor e i Tre Guerrieri sedano una rivolta.
++londra-fabbrica | Fabbrica abbandonata | Londra | uk | m | 51.50,-0.10 | c | ?Jane attraversa un varco e assorbe l'Aether.
++jane-londra | Appartamento di Jane | Londra | uk | m | 51.51,-0.13 | c | ?Jane, Darcy e Ian; Thor torna da lei.
+asgard | Gli Elfi Oscuri attaccano il palazzo; muore Frigga.
++svartalfheim | Svartalfheim | mondo degli Elfi Oscuri | spazio | s | - | - | Thor affronta Malekith; Loki finge di morire.
++stonehenge | Stonehenge | Wiltshire, Inghilterra | uk | r | 51.1789,-1.8262 | e | Selvig, scosso, gira nudo tra le pietre.
++greenwich | Old Royal Naval College | Greenwich, Londra | uk | r | 51.4828,-0.0060 | e | La Convergenza: battaglia finale contro Malekith.
++knowhere | Knowhere | la testa mozzata di un Celestiale | spazio | s | - | - | Sif e Volstagg consegnano l'Aether al Collezionista (scena dopo i titoli).
+
+== All Hail the King (corto)
++seagate | Seagate Prison | prigione di massima sicurezza al largo della Georgia | usa | i | 31.40,-81.20 | r | Trevor Slattery, in cella, scopre che esiste un vero Mandarino.
+
+== Captain America: The Winter Soldier
++lemurian-star | Lemurian Star | nave dello S.H.I.E.L.D. nell'Oceano Indiano | oceani | x | -5.0,70.0 | r | Steve e la squadra STRIKE liberano gli ostaggi; Natasha copia i dati.
++reflecting-pool | Reflecting Pool e Lincoln Memorial | National Mall, Washington | dc | r | 38.8893,-77.0502 | e | Steve supera Sam correndo: "a sinistra".
++triskelion | Triskelion | sede dello S.H.I.E.L.D. sul Potomac, Theodore Roosevelt Island | dc | m | 38.8968,-77.0636 | e | La lotta in ascensore, la verità sull'HYDRA e il crollo.
++smithsonian | National Air and Space Museum | National Mall, Washington | dc | r | 38.8882,-77.0199 | e | La mostra su Captain America; Steve si riprende la vecchia divisa.
++steve-dc | Appartamento di Steve | Washington | dc | m | 38.91,-77.03 | c | ?Fury viene colpito dal Soldato d'Inverno.
++va-dc | Centro dei veterani | Washington | dc | m | 38.92,-77.02 | c | ?Sam guida il gruppo di sostegno dei reduci.
++peggy-rsa | Casa di riposo di Peggy | luogo non detto | dc | m | - | - | ?Steve va a trovare Peggy anziana.
+camp-lehigh | Il vecchio bunker con il computer di Arnim Zola.
++pierce-casa | Casa di Alexander Pierce | Washington | dc | m | 38.93,-77.06 | c | ?Pierce e il Soldato d'Inverno.
++sam-casa | Casa di Sam | dintorni di Washington | dc | m | 38.86,-76.95 | c | ?Steve e Natasha si rifugiano da Sam.
++dc-superstrada | Superstrada di Washington | Washington | dc | r | 38.88,-77.02 | c | ?Il Soldato d'Inverno attacca; Steve scopre che è Bucky.
+helicarrier | Progetto Insight: i tre Helicarrier precipitano nel Potomac.
++tomba-fury | Tomba di Nick Fury | cimitero di Washington | dc | m | 38.8783,-77.0687 | q | ?La tomba finta: Fury parte per l'Europa.
++strucker-base | Base di Strucker | foresta della Sokovia | europa | i | 44.8,20.7 | r | Wanda e Pietro nella base dell'HYDRA con lo scettro di Loki (scena dopo i titoli).
+
+== Guardiani della Galassia
++missouri | Missouri | casa e ospedale di Meredith Quill | usa | r | 38.7881,-90.4974 | r | 1988: muore la madre e Peter viene portato via dai Ravagers.
++morag | Morag | pianeta abbandonato | spazio | s | - | - | Peter ruba la sfera con la Gemma del Potere.
++xandar | Xandar | capitale del Nova Corps | spazio | s | - | - | Il primo incontro e la battaglia finale contro Ronan.
++kyln | Kyln | prigione del Nova Corps | spazio | s | - | - | I Guardiani si conoscono in cella ed evadono.
+knowhere | Il museo del Collezionista; Drax chiama Ronan.
+sanctuary | Ronan si presenta davanti a Thanos.
++dark-aster | Dark Aster | la nave di Ronan | mezzi | x | - | - | Lo scontro finale; la nave precipita su Xandar.
++milano | Milano | l'astronave di Peter Quill | mezzi | x | - | - | La casa dei Guardiani.
++eclector | Eclector | l'astronave di Yondu e dei Ravagers | mezzi | x | - | - | Dove Peter è cresciuto.
+
+== Agents of S.H.I.E.L.D. – stagione 2
++playground | The Playground | base segreta di Coulson (ex SSR) | usa | m | - | - | ?La casa dello S.H.I.E.L.D. che rinasce.
++austria-1945 | Castello dell'HYDRA | Austria, 1945 | europa | m | 47.3,13.3 | r | ?Flashback: Peggy e gli Howling Commandos catturano Whitehall.
++san-juan | San Juan | Porto Rico (la città kree sotterranea) | americhe | r | 18.4655,-66.1057 | c | La Terrigenesi: Skye diventa Daisy.
++afterlife | Afterlife | rifugio degli Inumani (luogo nascosto) | asia | i | - | - | ?Jiaying e gli Inumani; ci si arriva solo con Gordon.
++iliad | Iliad | portaerei del "vero S.H.I.E.L.D." | mezzi | x | - | - | Gonzales e il consiglio rivale di Coulson.
+strucker-base | ?Il raid alla base di Strucker che porta ad Age of Ultron.
+
+== Agent Carter – stagione 1
+ssr-ny | Peggy lavora all'SSR e intanto aiuta di nascosto Howard Stark.
++griffith | Griffith Hotel | residenza femminile, Manhattan | nyc-mid | m | 40.76,-73.98 | c | ?Peggy vive accanto ad Angie e alla misteriosa Dottie.
++stark-ny | Villa di Howard Stark | Manhattan | nyc-up | m | 40.77,-73.96 | c | ?Jarvis ospita Peggy; il caveau delle invenzioni.
++automat | L&L Automat | tavola calda, Manhattan | nyc-mid | m | 40.75,-73.99 | c | ?Il ritrovo di Peggy e Angie.
++roxxon-raffineria | Raffineria Roxxon | luogo non detto | usa | m | - | - | ?Peggy ferma l'implosione di nitramene.
++finow | Finow, 1945 | Germania | europa | r | 52.83,13.72 | c | ?Flashback: il massacro di Finow e Leviathan.
++leviathan-russia | Base di Leviathan | Russia | russia | m | - | - | ?Peggy, Dooley e Thompson sul fronte russo.
+times-sq | ?Il finale: Howard, ipnotizzato, sta per spargere il gas su Times Square.
+
+== Daredevil – stagione 1
++nelson-murdock | Nelson & Murdock | studio legale, Hell's Kitchen | nyc-mid | m | 40.762,-73.993 | q | Matt e Foggy aprono lo studio; Karen è la prima cliente.
++matt-casa | Appartamento di Matt | Hell's Kitchen (il cartellone luminoso fuori dalla finestra) | nyc-mid | m | 40.764,-73.991 | q | Il rifugio di Matt.
++josies | Josie's | bar di Hell's Kitchen | nyc-mid | m | 40.763,-73.995 | q | Il bar di Matt, Foggy e Karen.
++fogwells | Fogwell's Gym | palestra di boxe, Hell's Kitchen | nyc-mid | m | 40.761,-73.996 | q | La palestra di Jack Murdock, dove Matt si allena.
++chiesa-lantom | Chiesa di Padre Lantom | Hell's Kitchen | nyc-mid | m | 40.762,-73.990 | q | Le confessioni di Matt.
++russi-covo | Covo dei Russi | Hell's Kitchen | nyc-mid | m | 40.765,-73.997 | q | ?La lotta nel corridoio per salvare il bambino.
++fisk-attico | Attico di Wilson Fisk | Manhattan | nyc-mid | m | 40.76,-73.98 | c | ?Fisk guarda la città dalla grande finestra.
++galleria-vanessa | Galleria di Vanessa | Manhattan | nyc-mid | m | - | - | ?Fisk vede Vanessa e il quadro bianco.
++metro-general | Metro-General Hospital | 479 W 58th St, Manhattan | nyc-mid | m | 40.7695,-73.9885 | q | Claire Temple ci lavora come infermiera.
