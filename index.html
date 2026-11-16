@@ -10762,6 +10762,11 @@ function w6Dom(){
   $('.w6-cat', el).addEventListener('click', () => c6Open());
   $('.g6-comp', el).addEventListener('click', () => g6North());
   $('.g6-np', el).addEventListener('click', () => c6Open('np'));
+  $('.g6-ov', el).addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b || W6.mode !== 'globe') return; e.stopPropagation();
+    if (b._z){ g6Enter(b._z); return; }
+    if (b._c) g6Pick(b._c);
+  });
   const mini = $('.w6-mini', el); W6.mini = { el: mini, cv: $('canvas', mini), n: $('.w6-n', mini) }; W6.mini.ctx = W6.mini.cv.getContext('2d');
   mini.addEventListener('click', () => {
     if (!W6.on) return; const c = W6.ctl;
@@ -10939,9 +10944,9 @@ function g6Turn(a, b){
   const A = g6Axes(G6.lat, G6.lon); G6.head = Math.atan2(F.x * A.E[0] + F.y * A.E[1] + F.z * A.E[2], F.x * A.N[0] + F.y * A.N[1] + F.z * A.N[2]);
   return q;
 }
-function g6Grab(p0, p1){
+function g6Grab(p0, p1, lockN){
   const A = g6Hit(p0); g6Apply(); const B = g6Hit(p1);
-  if (A && B){ const q = g6Turn(B, A); g6Apply(); return q; }
+  if (A && B){ const q = g6Turn(B, A); if (lockN) G6.head = 0; g6Apply(); return q; }
   // finger off the globe: turn by the pixels
   const k = Math.min(0.24, G6.alt / G6_RK * 0.075), dx = p1.x - p0.x, dy = p1.y - p0.y, c = Math.cos(G6.head), s = Math.sin(G6.head);
   G6.lat = clamp(G6.lat + (dy * c + dx * s) * k, -89.5, 89.5); G6.lon -= (dx * c - dy * s) * k / Math.max(0.2, Math.cos(G6.lat * G6_D2R)); g6Apply();
@@ -10976,7 +10981,7 @@ function g6Controls(now, dt){
     const R = G6.rot, a = R.w * dt; R.w *= Math.exp(-dt * 3.4);
     if (R.w < 0.004 || G6.ptrs.size){ G6.rot = null; return false; }
     const T = W6.T, q = new T.Quaternion().setFromAxisAngle(R.ax, a), U = new T.Vector3(...g6V(G6.lat, G6.lon)).applyQuaternion(q);
-    g6Turn(g6V(G6.lat, G6.lon), [U.x, U.y, U.z]); return true;
+    g6Turn(g6V(G6.lat, G6.lon), [U.x, U.y, U.z]); if (R.lockN) G6.head = 0; return true;
   }
   return false;
 }
@@ -11219,7 +11224,7 @@ function g6Input(cv){
     try { cv.setPointerCapture(e.pointerId); } catch {}
     G6.fly = null; G6.rot = null; G6.dirty = 3; vel = null;
     const p = pt(e); P.set(e.pointerId, p);
-    if (P.size === 1) down = { x: p.x, y: p.y, t: performance.now(), moved: false };
+    if (P.size === 1) down = { x: p.x, y: p.y, t: performance.now(), moved: false, lockN: Math.abs(G6.head) < 0.03 };
     if (P.size === 2){ const [a, b] = [...P.values()]; G6.g = { d: Math.hypot(a.x - b.x, a.y - b.y), a: Math.atan2(b.y - a.y, b.x - a.x), m: { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } }; if (down) down.moved = true; }
     e.preventDefault();
   });
@@ -11237,7 +11242,7 @@ function g6Input(cv){
     if (!down) return;
     if (!down.moved && Math.hypot(p.x - down.x, p.y - down.y) > 6) down.moved = true;
     if (!down.moved) return;
-    const now = performance.now(), A = g6Hit(q), qq = g6Grab(q, p);
+    const now = performance.now(), A = g6Hit(q), qq = g6Grab(q, p, down.lockN);
     if (qq && A){ const T = W6.T, ax = new T.Vector3(qq.x, qq.y, qq.z), s = ax.length(); if (s > 1e-7){ const ang = 2 * Math.asin(Math.min(1, s)), dtt = Math.max(8, now - (vel ? vel.t : now - 16)) / 1000; ax.divideScalar(s); const w = ang / dtt; vel = vel ? { ax: vel.ax.lerp(ax, 0.5).normalize(), w: vel.w * 0.5 + w * 0.5, t: now } : { ax, w, t: now }; } }
   });
   const up = e => {
@@ -11245,7 +11250,7 @@ function g6Input(cv){
     P.delete(e.pointerId); if (P.size < 2) G6.g = null;
     if (P.size) return;
     const d = down; down = null;
-    if (vel && performance.now() - vel.t < 90 && vel.w > 0.05 && !reduced()) G6.rot = { ax: vel.ax, w: Math.min(vel.w, 6) }; vel = null;
+    if (vel && performance.now() - vel.t < 90 && vel.w > 0.05 && !reduced()) G6.rot = { ax: vel.ax, w: Math.min(vel.w, 6), lockN: !!(d && d.lockN) }; vel = null;
     if (!d || d.moved){ g6CheckEnter(); return; }
     if (performance.now() - d.t > 450) return;
     const p = pt(e), now = performance.now();
@@ -11258,11 +11263,6 @@ function g6Input(cv){
     const dy = clamp(e.deltaMode === 1 ? e.deltaY * 33 : e.deltaY, -240, 240); g6Apply(); g6Zoom(pt(e), Math.exp(dy * 0.0018));
     clearTimeout(G6.wheelT); G6.wheelT = setTimeout(g6CheckEnter, 260);
   }, { passive: false });
-  $('.g6-ov', el).addEventListener('click', e => {
-    const b = e.target.closest('button'); if (!b || W6.mode !== 'globe') return; e.stopPropagation();
-    if (b._z){ g6Enter(b._z); return; }
-    if (b._c) g6Pick(b._c);
-  });
 }
 function g6Key(e){
   const k = (e.key || '').toLowerCase(), st = Math.min(8, G6.alt / G6_RK * 6) + 0.02; G6.fly = null; G6.rot = null; G6.dirty = 3;
