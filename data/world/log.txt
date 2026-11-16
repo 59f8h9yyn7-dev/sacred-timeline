@@ -1063,3 +1063,13 @@
   quartieri: 1 → Galisteo
   luogo puente: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-puente-v1.json: 6 KB
+== zona z-randys (v1) · Randy's Donuts · 805 W Manchester Blvd, Inglewood ==
+  tutto: 2625 elementi da overpass-api.de in 34s (2230 KB)
+  edifici tenuti: 1779 (scartati 16)
+  strade: 522 tratti, binari sopraelevati: 13
+  specchi d'acqua: 0
+  verde: 8 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo randys: {'x': 0.0, 'z': -0.2, 'how': 'punto', 'h': 13.8, 'osm': 'w420317805'}
+  scritto z-randys-v1.json: 133 KB
