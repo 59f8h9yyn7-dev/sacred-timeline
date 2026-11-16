@@ -269,3 +269,16 @@
   luogo nuova-asgard: {'x': -0.1, 'z': 0.1, 'how': 'solo coordinate'}
   luogo tonsberg: {'x': -0.1, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-nuova-asgard-v1.json: 19 KB
+== zona z-tenochtitlan (v1) · Città del Messico · centro storico (Tenochtitlan) ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: 2784 elementi da maps.mail.ru in 19s (2005 KB)
+  edifici tenuti: 2134 (scartati 50)
+  strade: 325 tratti, binari sopraelevati: 0
+  specchi d'acqua: 6
+  verde: 34 aree
+  distretti: []
+  quartieri: 2 → Città del Messico, Colonia Centro
+  luogo citta-messico: {'x': -92.9, 'z': 136.2, 'how': 'solo coordinate'}
+  luogo tenochtitlan: {'x': 92.7, 'z': -136.4, 'how': 'solo coordinate'}
+  scritto z-tenochtitlan-v1.json: 130 KB
