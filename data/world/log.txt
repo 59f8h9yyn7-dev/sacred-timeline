@@ -878,3 +878,19 @@
   quartieri: 1 → MIT
   luogo mit: {'x': 7.4, 'z': -38.5, 'how': 'punto', 'h': 22.6, 'osm': 'w132601564'}
   scritto z-mit-v1.json: 85 KB
+== zona z-mjolnir-cratere (v1) · Cratere di Mjolnir · deserto del Nuovo Messico ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: 12 elementi da maps.mail.ru in 17s (17 KB)
+  edifici tenuti: 3 (scartati 0)
+  strade: 6 tratti, binari sopraelevati: 0
+  specchi d'acqua: 1
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo mjolnir-cratere: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-mjolnir-cratere-v1.json: 1 KB
