@@ -1299,3 +1299,14 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 21 → Tokyo, Kokyo Gaien National Garden, Hibiya-Koen, Ginza 4, Ginza 3, Ginza 1, Ginza 2, Kyobashi 3, Kyobashi 2, Yaesu 2, Yaesu 1, Uchisaiwaichō 1, Yurakuchō 2, Yurakuchō 1, Marunouchi 3, Marunouchi 2, Marunouchi 1, Ginza, Yaesu, Marunouchi, Yurakuchō
   luogo tokyo: {'x': 0.0, 'z': 0.0, 'how': 'solo coordinate'}
   scritto z-tokyo-v1.json: 109 KB
+== zona z-tower-bridge (v1) · Tower Bridge · Londra ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: 4447 elementi da overpass-api.de in 30s (2936 KB)
+  edifici tenuti: 1189 (scartati 24)
+  strade: 1935 tratti, binari sopraelevati: 178
+  specchi d'acqua: 16
+  verde: 103 aree
+  distretti: []
+  quartieri: 7 → Butler's Wharf, St Olave's Estate, St John's Estate, Bermondsey Village, Tower Hill, East Smithfield, Monument
+  luogo tower-bridge: {'x': -0.1, 'z': 0.4, 'how': 'solo coordinate'}
+  scritto z-tower-bridge-v1.json: 143 KB
