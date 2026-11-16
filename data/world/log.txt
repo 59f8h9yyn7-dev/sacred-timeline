@@ -179,3 +179,19 @@
   luogo harlem-paradise: {'x': 191.0, 'z': -92.5, 'how': 'solo coordinate'}
   luogo pops: {'x': -70.0, 'z': 312.5, 'how': 'edificio più vicino (24 m)', 'h': 17.4, 'osm': 'w271626101'}
   scritto z-harlem-125-v1.json: 229 KB
+== zona z-agatha-casa (v1) · Westview · Lawrenceville, New Jersey ==
+  tutto: overpass.kumi.systems non risponde bene dopo 240s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.kumi.systems non risponde bene dopo 126s (HTTP Error 502: Bad Gateway)
+  tutto: 1018 elementi da maps.mail.ru in 23s (793 KB)
+  edifici tenuti: 695 (scartati 1)
+  strade: 180 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 16 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo agatha-casa: {'x': -127.4, 'z': -110.8, 'how': 'solo coordinate'}
+  luogo westview: {'x': 127.7, 'z': 111.3, 'how': 'solo coordinate'}
+  scritto z-agatha-casa-v1.json: 54 KB
