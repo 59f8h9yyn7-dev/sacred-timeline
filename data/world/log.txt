@@ -28,3 +28,31 @@
   luogo stark-ind: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
   luogo tribunale-la: {'x': -822.6, 'z': 435.8, 'how': 'solo coordinate'}
   scritto z-disney-hall-v1.json: 169 KB
+== zona z-alias (v1) · New York · Hell's Kitchen e Columbus Circle ==
+  tutto: overpass-api.de non risponde bene dopo 0s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 267s (HTTP Error 504: Gateway Timeout)
+  tutto: 7585 elementi da maps.mail.ru in 19s (5565 KB)
+  edifici tenuti: 2646 (scartati 53)
+  strade: 1801 tratti, binari sopraelevati: 0
+  costa: 26 linee, 2 pezzi, acqua in 1 (0.29 km²)
+  specchi d'acqua: 30
+  verde: 99 aree
+  distretti: []
+  quartieri: 7 → Hell's Kitchen, Clinton, Manhattan, Lincoln Square, Columbus Circle, Midtown East, Theater District
+  luogo alias: {'x': -763.6, 'z': 428.9, 'how': 'punto', 'h': 17.5, 'osm': 'w265320998'}
+  luogo chiesa-lantom: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo fogwells: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo giostra: {'x': 759.7, 'z': -433.9, 'how': 'punto', 'h': 8.2, 'osm': 'w585788256'}
+  luogo josies: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo luke-bar: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo mano-scavo: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo matt-casa: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo metro-general: {'x': -280.1, 'z': -383.2, 'how': 'solo coordinate'}
+  luogo midland-circle: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo murdock-studio: {'x': -598.1, 'z': 80.6, 'how': 'solo coordinate'}
+  luogo nelson-murdock: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo royal-dragon: {'x': -727.1, 'z': 362.1, 'how': 'solo coordinate'}
+  luogo russi-covo: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo st-agnes: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  luogo tetto-punitore: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
+  scritto z-alias-v1.json: 238 KB
