@@ -421,3 +421,18 @@
   quartieri: 2 → Busan, Yeonje District
   luogo busan: {'x': 0.1, 'z': -0.3, 'how': 'solo coordinate'}
   scritto z-busan-v1.json: 40 KB
+== zona z-caesars (v1) · Caesars Palace · Las Vegas Strip, Nevada ==
+  tutto: maps.mail.ru non risponde bene dopo 50s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.private.coffee non risponde bene dopo 151s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: 1596 elementi da overpass.kumi.systems in 111s (1114 KB)
+  edifici tenuti: 147 (scartati 35)
+  strade: 898 tratti, binari sopraelevati: 2
+  specchi d'acqua: 10
+  verde: 9 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo caesars: {'x': -16.4, 'z': -13.9, 'how': 'punto', 'h': 133.0, 'osm': 'w134944648'}
+  scritto z-caesars-v1.json: 45 KB
