@@ -852,3 +852,18 @@
   quartieri: 0 → 
   luogo marocco: {'x': -0.3, 'z': -0.2, 'how': 'solo coordinate'}
   scritto z-marocco-v1.json: 0 KB
+== zona z-miami-mandarino (v1) · Villa del Mandarino · Miami, Florida ==
+  tutto: maps.mail.ru non risponde bene dopo 47s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 2852 elementi da maps.mail.ru in 19s (1859 KB)
+  edifici tenuti: 345 (scartati 20)
+  strade: 1099 tratti, binari sopraelevati: 65
+  costa: 12 linee, 3 pezzi, acqua in 1 (0.03 km²)
+  specchi d'acqua: 1
+  verde: 39 aree
+  distretti: []
+  quartieri: 2 → Miami, Downtown Miami
+  luogo miami-mandarino: {'x': -0.2, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-miami-mandarino-v1.json: 59 KB
