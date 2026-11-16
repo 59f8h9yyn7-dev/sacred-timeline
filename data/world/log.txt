@@ -153,3 +153,16 @@
   luogo chicago-phastos: {'x': 0.3, 'z': -0.2, 'how': 'solo coordinate'}
   luogo hood-covo: {'x': 0.3, 'z': -0.2, 'how': 'solo coordinate'}
   scritto z-chicago-marc-v1.json: 75 KB
+== zona z-cimitero-may (v1) · New York · Queens, Forest Hills ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: 3099 elementi da overpass.kumi.systems in 98s (2149 KB)
+  edifici tenuti: 1402 (scartati 6)
+  strade: 634 tratti, binari sopraelevati: 7
+  specchi d'acqua: 2
+  verde: 47 aree
+  distretti: []
+  quartieri: 2 → Kew Gardens, Queens
+  luogo cimitero-may: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
+  luogo lieberman-casa: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
+  luogo midtown-school: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
+  scritto z-cimitero-may-v1.json: 116 KB
