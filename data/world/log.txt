@@ -1320,3 +1320,19 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo triskelion: {'x': -0.2, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-triskelion-v1.json: 35 KB
+== zona z-venezia (v1) · Venezia · Italia ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 46s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 151s (The read operation timed out)
+  tutto: 6872 elementi da maps.mail.ru in 20s (5139 KB)
+  edifici tenuti: 2388 (scartati 299)
+  strade: 2861 tratti, binari sopraelevati: 0
+  specchi d'acqua: 105
+  verde: 32 aree
+  distretti: []
+  quartieri: 1 → Venezia
+  luogo venezia: {'x': 0.0, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-venezia-v1.json: 238 KB
