@@ -867,3 +867,14 @@
   quartieri: 2 → Miami, Downtown Miami
   luogo miami-mandarino: {'x': -0.2, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-miami-mandarino-v1.json: 59 KB
+== zona z-mit (v1) · MIT · Cambridge, Massachusetts ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: 2869 elementi da overpass-api.de in 51s (2055 KB)
+  edifici tenuti: 525 (scartati 25)
+  strade: 853 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 369 aree
+  distretti: []
+  quartieri: 1 → MIT
+  luogo mit: {'x': 7.4, 'z': -38.5, 'how': 'punto', 'h': 22.6, 'osm': 'w132601564'}
+  scritto z-mit-v1.json: 85 KB
