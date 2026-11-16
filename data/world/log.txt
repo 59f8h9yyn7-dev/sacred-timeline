@@ -1,58 +1,23 @@
-113 zone in tutto, da scaricare 112
-== zona z-disney-hall (v1) · Los Angeles · Downtown ==
-  tutto: overpass.kumi.systems non risponde bene dopo 251s (HTTP Error 504: Gateway Timeout)
-  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
-  tutto: overpass.private.coffee non risponde bene dopo 330s (The read operation timed out)
-  tutto: 6906 elementi da overpass-api.de in 37s (4469 KB)
-  edifici tenuti: 1117 (scartati 124)
-  strade: 2481 tratti, binari sopraelevati: 14
-  specchi d'acqua: 4
-  verde: 88 aree
+113 zone in tutto, da scaricare 110
+== zona z-lombard (v1) · San Francisco · centro, Russian Hill e il porto ==
+  tutto: 15575 elementi da overpass-api.de in 33s (11521 KB)
+  edifici tenuti: 7909 (scartati 129)
+  strade: 2693 tratti, binari sopraelevati: 0
+  costa: 5 linee, 2 pezzi, acqua in 1 (0.89 km²)
+  specchi d'acqua: 7
+  verde: 130 aree
   distretti: []
-  quartieri: 11 → Little Tokyo, Los Angeles, Bunker Hill, Skid Row, Downtown, Jewelry District, Historic Core, Gallery Row, Civic Center, Toy District, Pueblo de Los Ángeles
-  luogo arena-club: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo atlas-academy: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo blockbuster: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo darryl-la: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo disney-hall: {'x': -620.7, 'z': -388.7, 'how': 'solo coordinate'}
-  luogo glkh: {'x': -822.6, 'z': 435.8, 'how': 'solo coordinate'}
-  luogo hostel: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo isodyne: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo jen-casa: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo la-metro: {'x': 822.1, 'z': -436.7, 'how': 'solo coordinate'}
-  luogo la-pilota: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo momentum: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo pride-scavo: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo simon-casa: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo ssr-la: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo stark-ind: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
-  luogo tribunale-la: {'x': -822.6, 'z': 435.8, 'how': 'solo coordinate'}
-  scritto z-disney-hall-v1.json: 169 KB
-== zona z-alias (v1) · New York · Hell's Kitchen e Columbus Circle ==
-  tutto: overpass-api.de non risponde bene dopo 0s (HTTP Error 502: Bad Gateway)
-  tutto: overpass.kumi.systems non risponde bene dopo 267s (HTTP Error 504: Gateway Timeout)
-  tutto: 7585 elementi da maps.mail.ru in 19s (5565 KB)
-  edifici tenuti: 2646 (scartati 53)
-  strade: 1801 tratti, binari sopraelevati: 0
-  costa: 26 linee, 2 pezzi, acqua in 1 (0.29 km²)
-  specchi d'acqua: 30
-  verde: 99 aree
-  distretti: []
-  quartieri: 7 → Hell's Kitchen, Clinton, Manhattan, Lincoln Square, Columbus Circle, Midtown East, Theater District
-  luogo alias: {'x': -763.6, 'z': 428.9, 'how': 'punto', 'h': 17.5, 'osm': 'w265320998'}
-  luogo chiesa-lantom: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo fogwells: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo giostra: {'x': 759.7, 'z': -433.9, 'how': 'punto', 'h': 8.2, 'osm': 'w585788256'}
-  luogo josies: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo luke-bar: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo mano-scavo: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo matt-casa: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo metro-general: {'x': -280.1, 'z': -383.2, 'how': 'solo coordinate'}
-  luogo midland-circle: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo murdock-studio: {'x': -598.1, 'z': 80.6, 'how': 'solo coordinate'}
-  luogo nelson-murdock: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo royal-dragon: {'x': -727.1, 'z': 362.1, 'how': 'solo coordinate'}
-  luogo russi-covo: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo st-agnes: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  luogo tetto-punitore: {'x': -687.9, 'z': 179.0, 'how': 'solo coordinate'}
-  scritto z-alias-v1.json: 238 KB
+  quartieri: 12 → San Francisco, North Beach, Russian Hill, Telegraph Hill, Nob Hill, Chinatown, Tenderloin, Union Square, Lower Nob Hill, Fisherman's Wharf, Little Saigon, Polk Gulch
+  luogo baskin: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo cassie-casa: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo deposito-luis: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo fishermans-wharf: {'x': -306.6, 'z': -1121.2, 'how': 'solo coordinate'}
+  luogo lab-pym: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo lombard: {'x': -492.5, 'z': -434.6, 'how': 'edificio più vicino (8 m)', 'h': 10.0, 'osm': 'w262552561'}
+  luogo pym-casa: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo pym-tech: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo scott-casa: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo sf-bus: {'x': -218.6, 'z': 394.1, 'how': 'solo coordinate'}
+  luogo sf-libreria: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  luogo x-con: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
+  scritto z-lombard-v1.json: 669 KB
