@@ -623,3 +623,13 @@
   quartieri: 2 → Sécheron, Quartier des Nations
   luogo ginevra-onu: {'x': -1.8, 'z': -29.0, 'how': 'punto', 'h': 10, 'osm': 'w1204850778'}
   scritto z-ginevra-onu-v1.json: 104 KB
+== zona z-giza (v1) · Piramidi di Giza · la sala dell'Enneade dentro la Grande Piram… ==
+  tutto: 1146 elementi da overpass-api.de in 36s (783 KB)
+  edifici tenuti: 705 (scartati 5)
+  strade: 388 tratti, binari sopraelevati: 0
+  specchi d'acqua: 10
+  verde: 14 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo giza: {'x': 0.2, 'z': -0.4, 'how': 'punto', 'h': 138.8, 'osm': 'w4420397'}
+  scritto z-giza-v1.json: 49 KB
