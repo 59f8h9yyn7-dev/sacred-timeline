@@ -1203,3 +1203,14 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo stark-expo: {'x': 0.0, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-stark-expo-v1.json: 75 KB
+== zona z-stark-villa (v1) · Villa di Tony a Malibu · 10880 Malibu Point, Point Dume, Malibu ==
+  tutto: 259 elementi da overpass-api.de in 56s (261 KB)
+  edifici tenuti: 155 (scartati 5)
+  strade: 62 tratti, binari sopraelevati: 0
+  costa: 9 linee, 2 pezzi, acqua in 1 (1.32 km²)
+  specchi d'acqua: 1
+  verde: 17 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo stark-villa: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-stark-villa-v1.json: 20 KB
