@@ -337,3 +337,14 @@
   quartieri: 0 → 
   luogo babilonia: {'x': 0.4, 'z': -0.3, 'how': 'solo coordinate'}
   scritto z-babilonia-v1.json: 5 KB
+== zona z-baltimora (v1) · Casa di Isaiah Bradley · Baltimora ==
+  tutto: 3790 elementi da overpass-api.de in 39s (2537 KB)
+  edifici tenuti: 1199 (scartati 35)
+  strade: 1280 tratti, binari sopraelevati: 0
+  costa: 20 linee, 4 pezzi, acqua in 3 (0.06 km²)
+  specchi d'acqua: 7
+  verde: 45 aree
+  distretti: []
+  quartieri: 7 → Baltimora, Pleasant View Gardens, Inner Harbor, Jonestown, Downtown, Downtown West, Chinatown
+  luogo baltimora: {'x': -0.3, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-baltimora-v1.json: 109 KB
