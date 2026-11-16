@@ -75,3 +75,19 @@
   luogo ned-mj: {'x': -366.4, 'z': 118.5, 'how': 'solo coordinate'}
   luogo tribunale: {'x': -71.8, 'z': 49.4, 'how': 'solo coordinate'}
   scritto z-city-hall-v1.json: 229 KB
+== zona z-chinese-theatre (v1) · Los Angeles · Hollywood ==
+  tutto: overpass.kumi.systems non risponde bene dopo 240s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: 5301 elementi da maps.mail.ru in 23s (4257 KB)
+  edifici tenuti: 2513 (scartati 161)
+  strade: 1188 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 16 aree
+  distretti: []
+  quartieri: 1 → Hollywood
+  luogo chinese-theatre: {'x': -412.6, 'z': -226.7, 'how': 'punto', 'h': 18.1, 'osm': 'w424105908'}
+  luogo hollywood: {'x': 642.0, 'z': 226.0, 'how': 'solo coordinate'}
+  luogo hollywood-walk: {'x': -641.5, 'z': -179.1, 'how': 'solo coordinate'}
+  luogo set-wonder-man: {'x': 642.0, 'z': 226.0, 'how': 'solo coordinate'}
+  luogo wilcox: {'x': 642.0, 'z': 226.0, 'how': 'solo coordinate'}
+  scritto z-chinese-theatre-v1.json: 223 KB
