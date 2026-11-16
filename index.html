@@ -1561,6 +1561,48 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stro
 /* catalogo dei luoghi del 616 (fase 2) */
 .w6-cat{position:absolute;left:10px;top:calc(max(10px,env(safe-area-inset-top)) + 46px);display:flex;align-items:center;gap:5px;height:32px;padding:0 12px 0 9px;border-radius:999px;border:1px solid rgba(255,200,140,.42);background:rgba(9,11,17,.72);color:#ffe3c6;font:600 12.5px/1 var(--font-ui);z-index:3;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .w6-cat svg{width:16px;height:16px}
+#w6.globe .w6-mini,#w6.globe .w6-stick,#w6.globe .w6-ud,#w6.globe .w6-sign,#w6.globe .w6-ov{display:none}
+#w6:not(.globe) .g6-ov,#w6:not(.globe) .g6-comp,#w6:not(.globe) .g6-info{display:none}
+#w6.psel .g6-info{display:none}
+#w6 .g6-ov{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.g6-m{position:absolute;left:0;top:0;width:0;height:0;padding:0;border:0;background:none;color:var(--ink);pointer-events:auto;cursor:pointer;will-change:transform}
+.g6-m i{position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px rgba(7,9,15,.82),0 0 12px -1px var(--c);font:800 11.5px/1 var(--font-ui);font-style:normal;color:#0b0d12;display:grid;place-items:center}
+.g6-m::before{content:"";position:absolute;left:-16px;top:-16px;width:32px;height:32px;border-radius:50%}
+.g6-m.cl i{left:-14px;top:-14px;width:28px;height:28px}
+.g6-m.z3 i{box-shadow:0 0 0 2px rgba(7,9,15,.82),0 0 0 4px rgba(255,176,107,.85),0 0 16px rgba(255,150,80,.7)}
+.g6-m span{position:absolute;left:10px;top:-10px;padding:3px 7px;border-radius:7px;background:rgba(9,11,17,.74);border:1px solid rgba(255,255,255,.13);font:700 11.5px/1.2 var(--font-ui);white-space:nowrap;max-width:200px;overflow:hidden;text-overflow:ellipsis}
+.g6-m.cl span{left:17px}
+.g6-m.nl span{display:none}
+.g6-zc{position:absolute;left:0;top:0;display:flex;align-items:center;gap:5px;height:24px;padding:0 9px 0 4px;border-radius:999px;border:1.5px solid rgba(255,176,107,.8);background:rgba(28,18,14,.86);color:#ffe3c6;font:700 11.5px/1 var(--font-ui);white-space:nowrap;pointer-events:auto;cursor:pointer;will-change:transform;box-shadow:0 4px 14px -4px rgba(0,0,0,.8)}
+.g6-zc em{font-style:normal;font:800 10px/1 var(--font-ui);padding:3px 5px;border-radius:999px;background:#ff9a4d;color:#1a0e06}
+.g6-l{position:absolute;left:0;top:0;pointer-events:none;white-space:nowrap;color:rgba(242,236,228,.66);text-shadow:0 1px 3px #000,0 0 7px rgba(0,0,0,.75);will-change:transform}
+.g6-l.c{font:700 10.5px/14px var(--font-ui);letter-spacing:.17em;text-transform:uppercase;color:rgba(242,236,228,.55)}
+.g6-l.p{font:500 11px/14px var(--font-ui)}
+.g6-l.p::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:rgba(242,236,228,.75);margin:0 5px 2px 0;vertical-align:middle}
+.g6-comp{position:absolute;right:12px;top:max(10px,env(safe-area-inset-top));width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(9,11,17,.74);z-index:3;display:grid;place-items:center;padding:0;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.g6-comp[hidden]{display:none}
+.g6-comp i{display:block;font:800 13px/1 var(--font-ui);font-style:normal;color:#ff6b4a;will-change:transform}
+.g6-info{position:absolute;left:12px;right:110px;bottom:max(12px,env(safe-area-inset-bottom));display:flex;flex-wrap:wrap;gap:6px;align-items:center;z-index:3;pointer-events:none}
+.g6-st{padding:6px 10px;border-radius:12px;background:rgba(9,11,17,.68);border:1px solid rgba(255,255,255,.12);font:600 11.5px/1.25 var(--font-ui);color:var(--ink-2)}
+.g6-np{height:28px;padding:0 11px;border-radius:999px;border:1px solid rgba(255,200,140,.42);background:rgba(9,11,17,.74);color:#ffe3c6;font:600 11.5px/1 var(--font-ui);pointer-events:auto}
+.g6-np[hidden]{display:none}
+.w6-fade{position:absolute;inset:0;background:#07090f;opacity:0;pointer-events:none;transition:opacity .25s ease;z-index:5}
+.w6-fade.on{opacity:1}
+.g6-rows{display:flex;flex-direction:column;gap:5px}
+.g6-r{display:block;width:100%;text-align:left;padding:7px 9px;border-radius:9px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);color:var(--ink);font:inherit}
+.g6-r em{font-style:normal;font:600 10.5px/1 var(--font-mono);color:var(--flare);margin-right:6px}
+.g6-r b{font:700 12.5px/1.3 var(--font-ui)}
+.g6-r span{display:block;margin-top:3px;font-size:12.5px;line-height:1.4;color:var(--ink-2)}
+button.g6-r:active{background:rgba(237,115,46,.2)}
+.g6-list{display:flex;flex-direction:column;gap:5px;margin-top:8px}
+.g6-list button{display:flex;align-items:flex-start;gap:9px;width:100%;text-align:left;padding:7px 9px;border-radius:9px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.035);color:var(--ink);font:inherit}
+.g6-list button>span:nth-child(2){flex:1;min-width:0}
+.g6-list b{display:block;font:700 13px/1.25 var(--font-ui)}
+.g6-list small{display:block;font-size:11.5px;color:var(--ink-2);margin-top:1px}
+.g6-note{font-size:12.5px !important;color:var(--ink-2) !important;margin:10px 0 4px !important}
+.g6-bs{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.g6-b{flex:1 1 auto;display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 12px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.05);color:var(--ink);font:600 12.5px/1 var(--font-ui);text-decoration:none}
+.w6-pin.cat .ic{width:24px;height:24px;margin:-12px 0 0 -12px;font-size:12px}
 #c6{position:absolute;inset:0;z-index:58;display:flex;flex-direction:column;background:radial-gradient(130% 55% at 50% 0%,#1d1526 0%,#0a0b12 62%);color:var(--ink);font-family:var(--font-ui);-webkit-user-select:none;user-select:none}
 #c6[hidden]{display:none}
 #c6 input,#c6 textarea,#c6 select{-webkit-user-select:text;user-select:text}
@@ -9057,7 +9099,7 @@ function mvSelect0(s, fly){
     <div class="mvp-s"><span><b>${s.n}</b>${s.n === 1 ? 'titolo' : 'titoli'}</span><span><b>${s.planets.length}</b>${s.planets.length === 1 ? 'pianeta' : 'pianeti'}</span><span><b>${s.chars}</b>personaggi</span>${ys ? `<span><b>${ys}</b>anni</span>` : ''}</div>
     <div class="mvp-l">${rows.map(r => `<button class="mvp-r" data-p="${r.pi}"><em>${esc(r.y)}</em>${esc(r.t)}</button>`).join('')}</div>
     ${br.length ? `<div class="mvp-b"><small>Ponti verso</small>${br.map(o => `<button class="mvp-u" data-u="${esc(o.key)}" style="--c:${o.col}">${esc(uniLabel(o.U.uc) || o.U.uc)}</button>`).join('')}</div>` : ''}
-    <div class="mvp-a"><button class="btn" data-a="map"><svg class="i"><use href="#i-route"/></svg>Sul ramo della mappa</button><button class="btn" data-a="chr"><svg class="i"><use href="#i-history"/></svg>In cronologia</button>${s.isSL ? '<button class="btn w6-go" data-a="w616"><svg class="i"><use href="#i-globe"/></svg>Mondo 616 · New York</button><button class="btn c6-go" data-a="c616"><svg class="i"><use href="#i-list"/></svg>Catalogo dei luoghi del 616</button>' : ''}</div>`;
+    <div class="mvp-a"><button class="btn" data-a="map"><svg class="i"><use href="#i-route"/></svg>Sul ramo della mappa</button><button class="btn" data-a="chr"><svg class="i"><use href="#i-history"/></svg>In cronologia</button>${s.isSL ? '<button class="btn w6-go" data-a="w616"><svg class="i"><use href="#i-globe"/></svg>Mondo 616 · la Terra</button><button class="btn c6-go" data-a="c616"><svg class="i"><use href="#i-list"/></svg>Catalogo dei luoghi del 616</button>' : ''}</div>`;
   $('#mvP').hidden = false;
 }
 $('#mvP').addEventListener('click', e => {
@@ -10020,7 +10062,7 @@ stage.insertAdjacentHTML('beforeend', '<div class="m3stick" id="m3stick" aria-la
 /* ================= Mondo 616: la Terra-616 diventa una città vera. Base reale da OpenStreetMap (data/world/, scaricata da una
    GitHub Action: tools/world), luoghi dei film sopra (data/luoghi616.json). Dall'alto è una mappa 2D; scendendo diventa 3D
    serale senza stacchi. Volo libero, ci si posa ovunque, cartelli dei quartieri, minimappa rotonda. ================= */
-const W6 = { on: false, busy: false, T: null, zone: null, places: null, cpu: null, R: null, cv: null, scene: null, cam: null, objs: [], mats: [], u: null,
+const W6 = { on: false, busy: false, T: null, mode: 'globe', zid: null, idx: null, auto: null, zone: null, places: null, cpu: null, R: null, cv: null, scene: null, cam: null, objs: [], mats: [], u: null, out: 0, inputs: false,
   raf: 0, t0: performance.now(), lastF: 0, slow: 0, ft: 0.016, fn: 0, el: null, mini: null, place: null, intro: false, chipT: 0, signT: 0, sz: null, dirty: 3,
   ctl: { x: 0, y: 5200, z: 0, yaw: 0, pu: -0.3, v: [0, 0, 0], stick: null, ud: 0, keys: new Set(), ptrs: new Map(), g: null, fly: null, top: null },
   nb: { cur: null, cand: null, ct: 0, at: 0 }, pins: [], labs: [] };
@@ -10109,21 +10151,72 @@ function w6Flat(T, polys, A){
 }
 const w6Pip = (r, x, z) => { let ins = false; const n = r.length / 2; for (let p = 0, q = n - 1; p < n; q = p++){ const xp = r[2 * p], zp = r[2 * p + 1], xq = r[2 * q], zq = r[2 * q + 1]; if ((zp > z) !== (zq > z) && x < (xq - xp) * (z - zp) / (zq - zp) + xp) ins = !ins; } return ins; };
 
-/* ---- loading: the zone, the places, everything turned into buffers once (kept for the next visit) ---- */
-async function w6Data(){
-  if (W6.zone && W6.places) return;
-  const ix = await fetch('data/world/index.json', { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('nozone'); return r.json(); });
-  const zi = ix && ix.zones && ix.zones.nyc616; if (!zi) throw new Error('nozone');
-  const [z, p] = await Promise.all([fetch('data/world/' + zi.f).then(r => { if (!r.ok) throw new Error('nozone'); return r.json(); }), fetch('data/luoghi616.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : { luoghi: [] }).catch(() => ({ luoghi: [] }))]);
-  W6.zone = z; W6.places = p;
+/* ---- loading: the list of zones, one zone, the places, everything turned into buffers once (kept for the next visit) ---- */
+// index.json: the zones already downloaded (with their box in lat/lon) and the Earth of the globe; zones-auto.json: all the zones planned
+async function w6Index(force){
+  if (W6.idx && !force) return W6.idx;
+  const [ix, au, p] = await Promise.all([
+    fetch('data/world/index.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : { zones: {} }).catch(() => ({ zones: {} })),
+    fetch('tools/world/zones-auto.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null),
+    W6.places ? W6.places : fetch('data/luoghi616.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : { luoghi: [] }).catch(() => ({ luoghi: [] }))]);
+  W6.idx = ix && ix.zones ? ix : { zones: {} }; W6.auto = au && au.zones || []; W6.places = p;
+  W6.z3k = null; return W6.idx;
 }
+const w6Ready = zid => { const z = W6.idx && W6.idx.zones[zid]; return !!(z && z.f && z.bb); };
+const w6InRect = (r, la, lo) => la >= r[0] && la <= r[2] && lo >= r[1] && lo <= r[3];
+// the zone a place falls in (by its position, corrections included): a ready one first, then one still on its way
+function w6ZoneOf(k, any){
+  const p = C6.data && c6Place(k); if (!p || p.lat == null || !'rmi'.includes(p.tipo)) return null;
+  const Z = W6.idx ? W6.idx.zones : {};
+  for (const zid in Z){ const z = Z[zid]; if (z.f && z.rects && z.rects.some(r => w6InRect(r, p.lat, p.lon))) return zid; }
+  if ((W6.places && W6.places.luoghi || []).some(q => q.k === k) && w6Ready('nyc616')) return 'nyc616';
+  if (any) for (const z of W6.auto || []) if (z.rects.some(r => w6InRect(r, p.lat, p.lon))) return z.id;
+  return null;
+}
+// every catalogue place that is already in a 3D zone (the "3D" badge of the catalogue)
+function w6Keys3d(){
+  if (W6.z3k) return W6.z3k;
+  const s = new Set(); if (!C6.data) return s;
+  for (const k of [...Object.keys(C6.data.luoghi), ...Object.keys(c6O('nuovi'))]) if (w6ZoneOf(k)) s.add(k);
+  return (W6.z3k = s);
+}
+async function w6Data(zid){
+  if (W6.zone && W6.zid === zid) return;
+  await w6Index();
+  const zi = W6.idx.zones[zid]; if (!zi || !zi.f) throw new Error('nozone');
+  const z = await fetch('data/world/' + zi.f).then(r => { if (!r.ok) throw new Error('nozone'); return r.json(); });
+  W6.zone = z; W6.zid = zid; W6.cpu = null;
+}
+const w6Short = n => String(n || '').split(' · ')[0];
+// the places of a zone: the ones with a hand-made sheet (luoghi616.json) and every catalogue place that falls inside it
+function w6ZonePlaces(Z, marks){
+  const out = [], seen = new Set(), L = (W6.places && W6.places.luoghi) || [];
+  const ll0 = Z.ll0 || [0, 0], kx = (Z.k || [1, 1])[0], kz = (Z.k || [1, 1])[1];
+  const proj = (la, lo) => ({ x: Math.round((lo - ll0[1]) * kx * 10) / 10, z: Math.round(-(la - ll0[0]) * kz * 10) / 10 });
+  const inZ = q => (Z.rects || []).some(r => q.x >= r[0] && q.x <= r[2] && q.z >= r[1] && q.z <= r[3]);
+  for (const pl of L) if (marks[pl.k]){ out.push(pl); seen.add(pl.k); }
+  if (!C6.data) return out;
+  for (const k of [...Object.keys(C6.data.luoghi), ...Object.keys(c6O('nuovi'))]){
+    if (seen.has(k)) continue;
+    const p = c6Place(k); if (!p || p.lat == null || !'rmi'.includes(p.tipo)) continue;
+    const q = proj(p.lat, p.lon); if (!inZ(q)) continue;
+    const rows = c6Where(k).filter(r => r.s !== -1); if (!rows.length) continue; // tolto da tutti i titoli
+    if (p.llFix || !marks[k]) marks[k] = q; // a position corrected in the app wins over the download
+    out.push({ k, nome: p.nome, alias: rows.length === 1 ? rows[0].t : `${rows.length} titoli`, dove: p.dove, ico: C6_IC[p.tipo] || '•', col: C6_COL[p.tipo] || '#ed732e', cat: 1, tipo: p.tipo });
+    seen.add(k);
+  }
+  return out;
+}
+function w6Surf0(C, x, z){ const G = C.grid, i = Math.round((x - C.X0) / W6_CS), j = Math.round((z - C.Z0) / W6_CS); if (i < 0 || j < 0 || i >= G.nx || j >= G.nz) return 0; return G.g[j * G.nx + i] / 10; }
 function w6Prog(f, msg){ const el = W6.el; if (!el) return; $('.w6-load .bar i', el).style.width = Math.round(clamp(f, 0, 1) * 100) + '%'; if (msg) $('.w6-load span', el).textContent = msg; }
 async function w6Cpu(){
   const T = W6.T, Z = W6.zone; let tick = performance.now();
   const breathe = async (f, msg) => { if (performance.now() - tick > 28){ w6Prog(f, msg); await new Promise(r => setTimeout(r, 0)); tick = performance.now(); } };
   const rects = Z.rects, X0 = Math.min(...rects.map(r => r[0])), Z0 = Math.min(...rects.map(r => r[1])), X1 = Math.max(...rects.map(r => r[2])), Z1 = Math.max(...rects.map(r => r[3]));
+  const city = w6Short(Z.name), cityRe = new RegExp('^(' + [city, 'Manhattan', 'Queens', 'Brooklyn', 'The Bronx', 'Bronx', 'Staten Island', 'New York', 'New York City'].map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')$', 'i');
   const C = { rects, X0, Z0, X1, Z1, chunks: new Map(), hl: [], solid: w6Acc(true), disc: null, pins: [], marks: Object.assign({}, Z.m || {}),
-    nb: (Z.n || []).filter(n => n[0] && !/^(Manhattan|Queens|Brooklyn|The Bronx|Bronx|Staten Island|New York)$/.test(n[0])).map(n => n[3] ? n : [n[0], n[1], n[2], Z.id === 'nyc616' ? (n[1] > 450 ? 'Queens' : 'Manhattan') : '', n[4]]) };
+    nb: (Z.n || []).filter(n => n[0] && !cityRe.test(n[0])).map(n => n[3] ? n : [n[0], n[1], n[2], Z.id === 'nyc616' ? (n[1] > 450 ? 'Queens' : 'Manhattan') : city, n[4]]) };
+  const P = w6ZonePlaces(Z, C.marks);
   const nx = Math.ceil((X1 - X0) / W6_CS) + 1, nz = Math.ceil((Z1 - Z0) / W6_CS) + 1, grid = new Uint16Array(nx * nz);
   C.grid = { g: grid, nx, nz };
   const raster = (r, h) => {
@@ -10135,7 +10228,7 @@ async function w6Cpu(){
     const o = Math.round(((c + d) / 2 - Z0) / W6_CS) * nx + Math.round(((a + b) / 2 - X0) / W6_CS); if (o >= 0 && o < grid.length && grid[o] < hv) grid[o] = hv;
   };
   // the places and the real buildings they light up
-  const P = (W6.places && W6.places.luoghi) || [], byB = new Map();
+  const byB = new Map();
   const near = []; // places on a real building that the download did not pin down: the nearest one within 20 m
   for (const pl of P){ const m = C.marks[pl.k]; if (!m || pl.modello) continue; if (m.b != null) byB.set(m.b, pl); else if (pl.edificio) near.push({ pl, m, d: 20, bi: -1 }); }
   // buildings, in square chunks so the ones off screen are skipped
@@ -10150,7 +10243,7 @@ async function w6Cpu(){
     if (pl){ A = w6Acc(false); C.hl.push({ pl, A, r, h }); }
     else { const key = Math.floor((r[0] - X0) / W6_CH) + ',' + Math.floor((r[1] - Z0) / W6_CH); A = C.chunks.get(key); if (!A) C.chunks.set(key, A = w6Acc(false)); }
     w6Bld(T, A, r, mh, h, k); raster(r, h);
-    if ((bi & 127) === 0) await breathe(0.3 + 0.4 * bi / B.length, 'Alzo i palazzi di New York…');
+    if ((bi & 127) === 0) await breathe(0.3 + 0.4 * bi / B.length, `Alzo i palazzi di ${city}…`);
   }
   // the ground: land, water, green
   w6Prog(0.72, 'Stendo strade, fiumi e parchi…'); await new Promise(r => setTimeout(r, 0));
@@ -10179,12 +10272,24 @@ async function w6Cpu(){
     }
   }
   // the places: a model where the films put something new, the real building lit up where they used one that exists
+  const pins = [];
   for (const pl of P){
     const m = C.marks[pl.k]; if (!m) continue;
-    let top = m.h || 25;
+    let top = m.h || (pl.cat ? w6Surf0(C, m.x, m.z) + 7 : 25);
     if (pl.modello === 'tower' && m.fp) top = w6Tower(T, C, m, raster);
     else if (pl.modello === 'sanctum' && m.fp) top = w6Sanctum(T, C, m, raster);
-    C.pins.push({ pl, x: m.x, z: m.z, top, r: pl.modello === 'tower' ? 55 : pl.modello === 'sanctum' ? 14 : 18 });
+    pins.push({ pl, x: m.x, z: m.z, top, r: pl.modello === 'tower' ? 55 : pl.modello === 'sanctum' ? 14 : 18 });
+  }
+  // places on the same spot (a film that says only "Hell's Kitchen") become one pin with the list
+  for (const p of pins){
+    if (p.used) continue;
+    const g = pins.filter(q => !q.used && !q.pl.modello && !p.pl.modello && Math.hypot(q.x - p.x, q.z - p.z) < 16);
+    if (g.length < 2){ p.used = true; C.pins.push(p); continue; }
+    for (const q of g) q.used = true;
+    const ms = g.map(q => q.pl), dv = ms[0].dove && ms.every(q => q.dove === ms[0].dove) ? ms[0].dove : '';
+    const vague = ms.filter(q => q.cat && /^[cr]$/.test((c6Place(q.k) || {}).prec || '')).length * 2 > ms.length; // "a Manhattan", "a Londra": no address
+    C.pins.push({ pl: { k: 'g:' + ms[0].k, nome: vague ? `Da qualche parte a ${city}` : dv ? dv.split(',')[0] : ms[0].nome + (ms.length > 2 ? ` e altri ${ms.length - 1}` : ` e ${ms[1].nome}`), alias: vague ? `${ms.length} luoghi senza indirizzo` : `${ms.length} luoghi qui`, ico: String(ms.length), col: vague ? '#9aa3b5' : '#ed732e', grp: ms },
+      x: g.reduce((s, q) => s + q.x, 0) / g.length, z: g.reduce((s, q) => s + q.z, 0) / g.length, top: Math.max(...g.map(q => q.top)), r: 18 });
   }
   w6Prog(0.9, 'Disegno la minimappa…'); await new Promise(r => setTimeout(r, 0));
   w6Atlas(C);
@@ -10266,13 +10371,21 @@ const W6_FS = `uniform float uMap; uniform float uT; uniform vec3 uFogC; uniform
   float h21(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
   vec3 w6L(vec3 n){ float d = max(dot(n, uSun), 0.0); return vec3(0.31, 0.34, 0.54) * (0.62 + 0.3 * n.y) + vec3(1.0, 0.6, 0.36) * d * 0.85; }`;
 const W6_V = `vec4 w = modelMatrix * vec4(position, 1.0); float y0 = w.y; w.y *= uH; vW = w.xyz; vec4 mv = viewMatrix * w; float fd = length(mv.xyz); vFog = 1.0 - exp(-uFogK * fd * fd); gl_Position = projectionMatrix * mv;`;
-function w6Gl(){
-  const T = W6.T, C = W6.cpu, el = W6.el;
+// one canvas and one renderer for the globe and the cities, made when the Mondo 616 opens and given back when it closes
+function w6Renderer(){
+  if (W6.R) return;
+  const T = W6.T, el = W6.el;
   const cv = document.createElement('canvas'); cv.className = 'w6-c'; cv.setAttribute('aria-label', 'Mondo 616'); el.insertBefore(cv, el.firstChild);
   const R = new T.WebGLRenderer({ canvas: cv, antialias: true, alpha: false, powerPreference: COARSE ? 'default' : 'high-performance' });
   R.setClearColor(0x07090f, 1);
-  W6.R = R; W6.cv = cv; W6.scene = new T.Scene(); W6.cam = new T.PerspectiveCamera(W6_FOV, 1, 1, 60000); W6.cam.rotation.order = 'YXZ'; W6.sz = null;
+  W6.R = R; W6.cv = cv; W6.sz = null;
   cv.addEventListener('webglcontextlost', e => { e.preventDefault(); BB('mondo616-gl-perso'); if (W6.on){ w6Close(); toast('Il Mondo 616 si è interrotto: ti riporto al multiverso'); } });
+  w6Input(cv); g6Input(cv);
+}
+// the scene of a city
+function w6Gl(){
+  const T = W6.T, C = W6.cpu;
+  W6.scene = new T.Scene(); W6.cam = new T.PerspectiveCamera(W6_FOV, 1, 1, 60000); W6.cam.rotation.order = 'YXZ'; W6.sz = null;
   const u = W6.u = { uMap: { value: 1 }, uH: { value: 0.03 }, uT: { value: 0 }, uFogC: { value: new T.Color(0.66, 0.44, 0.46) }, uFogK: { value: 0 }, uSun: { value: new T.Vector3(-0.78, 0.32, 0.24).normalize() } };
   const mat = o => { const m = new T.ShaderMaterial(Object.assign({ extensions: { derivatives: true } }, o)); W6.mats.push(m); return m; };
   const geo = (g, attrs) => { const b = new T.BufferGeometry(); b.setAttribute('position', new T.BufferAttribute(g.p, 3)); for (const [k, a, n] of attrs || []) if (g[a]) b.setAttribute(k, new T.BufferAttribute(g[a], n)); b.setIndex(new T.BufferAttribute(g.i, 1)); b.computeBoundingSphere(); return b; };
@@ -10343,18 +10456,23 @@ function w6Gl(){
         vec3 c = vec3(1.0, 0.7, 0.34) * (0.32 + 0.12 * sin(uT * 1.6) + 1.15 * line); gl_FragColor = vec4(mix(c, vec3(1.0, 0.72, 0.4), uMap * 0.6), 1.0); }` }), 11); }
   w6Size();
 }
-function w6Release(){
+function w6ReleaseCity(){
   for (const o of W6.objs){ W6.scene && W6.scene.remove(o); o.geometry && o.geometry.dispose(); }
   for (const m of W6.mats) m.dispose();
-  W6.objs = []; W6.mats = [];
+  W6.objs = []; W6.mats = []; W6.scene = null; W6.cam = null; W6.sky = null;
+  if (W6.el){ $('.w6-ov', W6.el).textContent = ''; W6.pins = []; W6.labs = []; }
+}
+function w6Release(){
+  w6ReleaseCity(); g6Release();
   if (W6.R){ try { W6.R.dispose(); W6.R.forceContextLoss(); } catch {} }
   if (W6.cv) W6.cv.remove();
-  W6.R = null; W6.cv = null; W6.scene = null; W6.cam = null; W6.sky = null; W6.sz = null; W6.lastF = 0;
+  W6.R = null; W6.cv = null; W6.sz = null; W6.lastF = 0;
 }
 function w6Size(){
   const el = W6.el, w = el.clientWidth, h = el.clientHeight, d = Math.min(dprNow, COARSE ? 1.6 : 2) * (W6.slow > 1 ? 0.62 : W6.slow ? 0.8 : 1);
   if (W6.sz && W6.sz[0] === w && W6.sz[1] === h && W6.sz[2] === d) return;
-  W6.sz = [w, h, d]; W6.R.setPixelRatio(d); W6.R.setSize(w, h, false); W6.cam.aspect = w / Math.max(1, h); W6.cam.updateProjectionMatrix(); W6.dirty = 3;
+  W6.sz = [w, h, d]; W6.R.setPixelRatio(d); W6.R.setSize(w, h, false); W6.dirty = 3; G6.dirty = 3;
+  for (const cam of [W6.cam, G6.cam]) if (cam){ cam.aspect = w / Math.max(1, h); cam.updateProjectionMatrix(); }
   if (W6.mini){ const s = Math.round(W6.mini.el.clientWidth * Math.min(dprNow, 2)); if (W6.mini.cv.width !== s){ W6.mini.cv.width = W6.mini.cv.height = s; } }
 }
 
@@ -10383,6 +10501,8 @@ function w6Hit(p){
 }
 function w6ZoomAt(p, f){
   const ctl = W6.ctl;
+  if (f > 1 && ctl.y >= W6_MAXY * 0.995){ W6.out += f - 1; if (W6.out > 0.35 && !W6.busy){ W6.out = 0; g6FromCity(); } return; }
+  W6.out = 0;
   if (w6S3(ctl.y) < 0.55){
     const G = w6Ground(p);
     ctl.y = clamp(ctl.y * f, w6Surf(ctl.x, ctl.z) + 2, W6_MAXY); w6Apply();
@@ -10461,7 +10581,7 @@ function w6Tap(p){
   const C = W6.cpu, H = w6Hit(p); if (!H) { w6PlaceClose(); return; }
   let best = null, bd = Infinity;
   for (const pin of C.pins){ const d = Math.hypot(pin.x - H.x, pin.z - H.z); if (d < pin.r * 1.4 && d < bd){ bd = d; best = pin; } }
-  for (const h of C.hl){ if (w6Pip(h.r, H.x, H.z)){ best = C.pins.find(q => q.pl === h.pl) || best; } }
+  for (const h of C.hl){ if (w6Pip(h.r, H.x, H.z)){ best = C.pins.find(q => q.pl === h.pl || (q.pl.grp && q.pl.grp.includes(h.pl))) || best; } }
   if (best) w6Place(best); else w6PlaceClose();
 }
 function w6Chip(t, ms){ const el = $('.w6-chip', W6.el); el.textContent = t; el.hidden = false; clearTimeout(W6.chipT); W6.chipT = setTimeout(() => { el.hidden = true; }, ms || 3400); }
@@ -10469,7 +10589,7 @@ function w6Chip(t, ms){ const el = $('.w6-chip', W6.el); el.textContent = t; el.
 /* ---- one frame ---- */
 function w6Loop(now){
   W6.raf = 0; if (!W6.on) return;
-  try { w6Frame(now); } catch (e){ console.error(e); BB('mondo616-errore', String(e && e.message || e).slice(0, 120)); w6Close(); toast('Il Mondo 616 si è interrotto: ti riporto al multiverso'); return; }
+  try { if (W6.mode === 'globe'){ if (G6.built) g6Frame(now); } else if (W6.scene) w6Frame(now); } catch (e){ console.error(e); BB('mondo616-errore', String(e && e.message || e).slice(0, 120)); w6Close(); toast('Il Mondo 616 si è interrotto: ti riporto al multiverso'); return; }
   W6.raf = requestAnimationFrame(w6Loop);
 }
 function w6Frame(now){
@@ -10549,6 +10669,16 @@ function w6Prod(t){ if (!CARDS) return null; const i = CARDS.prods.findIndex(p =
 function w6Card(id){ if (!CARDS) return null; if (!W6.cmap){ W6.cmap = new Map(); CARDS.cards.forEach((c, i) => c && c.id && W6.cmap.set(c.id, i)); } const i = W6.cmap.get(id); return i == null ? null : i; }
 function w6Place(pin){
   const pl = pin.pl, el = $('.w6-place', W6.el);
+  if (pl.grp){
+    el.innerHTML = `<header style="--c:${esc(pl.col)}"><span class="ic">${esc(pl.ico)}</span><div><b>${esc(pl.nome)}</b><small>${esc(pl.alias)}</small></div><button class="x" type="button" data-a="x" aria-label="Chiudi"><svg class="i"><use href="#i-close"/></svg></button></header>
+      <p class="g6-note">Il film dice solo il quartiere o la città: qui c'è il punto, l'indirizzo preciso non si sa.</p>
+      <div class="g6-list">${pl.grp.map((q, i) => `<button type="button" data-m="${i}"><span class="c6-ic" style="--c:${esc(q.col || '#ed732e')}">${esc(q.ico || '•')}</span><span><b>${esc(q.nome)}</b><small>${esc(q.alias || q.dove || '')}</small></span></button>`).join('')}</div>`;
+    el.hidden = false; el.scrollTop = 0; W6.place = pin; return;
+  }
+  if (pl.cat){
+    el.innerHTML = g6PlaceHtml(pl.k, { city: true, back: !!pin.from });
+    el.hidden = false; el.scrollTop = 0; W6.place = pin; BB('mondo616-luogo', pl.k); return;
+  }
   const pis = (pl.titoli || []).map(w6Prod).filter(x => x != null), cis = (pl.pers || []).map(w6Card).filter(x => x != null);
   el.innerHTML = `<header style="--c:${esc(pl.col || '#ed732e')}"><span class="ic">${esc(pl.ico || '•')}</span><div><b>${esc(pl.nome)}</b><small>${esc(pl.alias || '')}</small></div><button class="x" type="button" data-a="x" aria-label="Chiudi"><svg class="i"><use href="#i-close"/></svg></button></header>
     <div class="dove">${esc(pl.dove || '')}</div><p>${esc(pl.testo || '')}</p>
@@ -10557,7 +10687,7 @@ function w6Place(pin){
     <button class="go" type="button" data-a="go">Vola qui</button>`;
   el.hidden = false; el.scrollTop = 0; W6.place = pin; BB('mondo616-luogo', pl.k);
 }
-function w6PlaceClose(){ const el = W6.el && $('.w6-place', W6.el); if (el) el.hidden = true; W6.place = null; }
+function w6PlaceClose(){ const el = W6.el && $('.w6-place', W6.el); if (el) el.hidden = true; W6.place = null; if (W6.el) W6.el.classList.remove('psel'); }
 
 /* ---- touching the city ---- */
 function w6Input(cv){
@@ -10565,7 +10695,7 @@ function w6Input(cv){
   const pt = e => { const r = el.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
   let down = null, lastTap = { t: 0, x: 0, y: 0 }, tapT = 0;
   cv.addEventListener('pointerdown', e => {
-    if (!W6.on) return;
+    if (!W6.on || W6.mode !== 'city') return;
     try { cv.setPointerCapture(e.pointerId); } catch {}
     ctl.fly = null; W6.dirty = 2;
     const p = pt(e); ctl.ptrs.set(e.pointerId, p);
@@ -10603,15 +10733,18 @@ function w6Input(cv){
   cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
   cv.addEventListener('contextmenu', e => e.preventDefault());
   cv.addEventListener('wheel', e => {
-    if (!W6.on) return; e.preventDefault(); e.stopPropagation(); ctl.fly = null; W6.dirty = 2;
+    if (!W6.on || W6.mode !== 'city') return; e.preventDefault(); e.stopPropagation(); ctl.fly = null; W6.dirty = 2;
     const dy = clamp(e.deltaMode === 1 ? e.deltaY * 33 : e.deltaY, -240, 240); w6Apply(); w6ZoomAt(pt(e), Math.exp(dy * 0.0016));
   }, { passive: false });
 }
 function w6Dom(){
   if (W6.el) return W6.el;
   const el = document.createElement('div'); el.id = 'w6'; el.hidden = true;
-  el.innerHTML = `<div class="w6-ov"></div>
-    <header class="w6-top"><button class="w6-back" type="button"><svg class="i"><use href="#i-back"/></svg><span>Multiverso</span></button><div class="w6-t"><small>Terra-616</small><b>New York</b></div></header>
+  el.innerHTML = `<div class="w6-ov"></div><div class="g6-ov"></div>
+    <header class="w6-top"><button class="w6-back" type="button"><svg class="i"><use href="#i-back"/></svg><span>Multiverso</span></button><div class="w6-t"><small>Terra-616</small><b>La Terra</b></div></header>
+    <button class="g6-comp" type="button" aria-label="Nord in alto"><i>N</i></button>
+    <div class="g6-info"><span class="g6-st"></span><button type="button" class="g6-np" hidden></button></div>
+    <div class="w6-fade"></div>
     <button class="w6-cat" type="button"><svg class="i"><use href="#i-list"/></svg><span>Catalogo luoghi</span></button>
     <div class="w6-sign" aria-live="polite"><small>Stai entrando a</small><b></b><i></i></div>
     <button class="w6-mini" type="button" aria-label="Sali sulla mappa e torna giù"><canvas></canvas><span class="w6-n">N</span><i class="w6-me"></i></button>
@@ -10619,14 +10752,16 @@ function w6Dom(){
     <div class="w6-ud"><button type="button" data-ud="1" aria-label="Sali">▲</button><button type="button" data-ud="-1" aria-label="Scendi">▼</button></div>
     <div class="w6-chip" hidden></div><aside class="w6-place" hidden></aside>
     <div class="w6-load"><b>Terra-616</b><div class="bar"><i></i></div><span>Preparo New York…</span></div>
-    <div class="w6-osm">© OpenStreetMap contributors</div>`;
+    <div class="w6-osm"></div>`;
   $('#app').insertBefore(el, $('#cardWrap'));
   W6.el = el;
   const ctl = W6.ctl;
   for (const ev of ['pointerdown', 'pointermove', 'pointerup', 'click', 'dblclick']) el.addEventListener(ev, e => e.stopPropagation());
   el.addEventListener('wheel', e => { e.preventDefault(); e.stopPropagation(); }, { passive: false });
-  $('.w6-back', el).addEventListener('click', () => w6Close());
+  $('.w6-back', el).addEventListener('click', () => { if (W6.busy) return; if (W6.mode === 'city') g6FromCity(); else w6Close(); });
   $('.w6-cat', el).addEventListener('click', () => c6Open());
+  $('.g6-comp', el).addEventListener('click', () => g6North());
+  $('.g6-np', el).addEventListener('click', () => c6Open('np'));
   const mini = $('.w6-mini', el); W6.mini = { el: mini, cv: $('canvas', mini), n: $('.w6-n', mini) }; W6.mini.ctx = W6.mini.cv.getContext('2d');
   mini.addEventListener('click', () => {
     if (!W6.on) return; const c = W6.ctl;
@@ -10645,6 +10780,11 @@ function w6Dom(){
   $('.w6-place', el).addEventListener('click', e => {
     const b = e.target.closest('button'); if (!b) return;
     if (b.dataset.a === 'x'){ w6PlaceClose(); return; }
+    if (W6.mode === 'globe'){ g6PanelClick(b); return; }
+    if (b.dataset.m != null && W6.place && W6.place.pl.grp){ const g = W6.place, q = g.pl.grp[+b.dataset.m]; w6Place({ pl: q, x: g.x, z: g.z, top: g.top, r: g.r, from: g }); return; }
+    if (b.dataset.a === 'back' && W6.place && W6.place.from){ w6Place(W6.place.from); return; }
+    if (b.dataset.a === 'cat' && b.dataset.k){ c6OpenPlace(b.dataset.k); return; }
+    if (b.dataset.a === 'globe'){ g6FromCity(); return; }
     if (b.dataset.a === 'go' && W6.place){ const pin = W6.place; w6PlaceClose(); w6FlyTo(w6View(pin)); return; }
     if (b.dataset.p != null){ openTitle(+b.dataset.p, true); return; }
     if (b.dataset.c != null){ openCard(+b.dataset.c, true); }
@@ -10657,6 +10797,7 @@ function w6Pins(){
   for (const pin of W6.cpu.pins){
     const pl = pin.pl, e = document.createElement('button'); e.type = 'button'; e.className = 'w6-pin'; e.style.setProperty('--c', pl.col || '#ed732e');
     e.innerHTML = `<span class="ic">${esc(pl.ico || '•')}</span><span class="lb">${esc(pl.nome)}<small>${esc(pl.alias || '')}</small></span>`;
+    if (pl.cat || pl.grp) e.classList.add('cat');
     e.addEventListener('click', ev => { ev.stopPropagation(); w6Place(pin); });
     ov.appendChild(e); W6.pins.push({ el: e, pin });
   }
@@ -10664,7 +10805,8 @@ function w6Pins(){
 }
 
 /* ---- in and out ---- */
-async function w6Open(){
+// the Mondo 616 opens on the globe; opt.k (a catalogue place) or opt.zid go straight to a city, or to the place on the globe
+async function w6Open(opt){
   if (W6.on || W6.busy) return;
   W6.busy = true; BB('mondo616-apri');
   const el = w6Dom(); el.hidden = false; el.classList.add('loading'); w6Prog(0.03, 'Accendo il motore 3D…');
@@ -10672,31 +10814,58 @@ async function w6Open(){
   try {
     const T = await m3Load(); if (!T) throw new Error('webgl');
     W6.T = T;
-    if (!W6.zone){ w6Prog(0.1, 'Scarico New York…'); await w6Data(); }
-    if (!W6.cpu){ w6Prog(0.28, 'Alzo i palazzi di New York…'); W6.cpu = await w6Cpu(); }
-    w6Prog(0.97, 'Quasi pronto…');
-    w6Gl(); w6Input(W6.cv); w6Pins();
-    W6.on = true; el.classList.remove('loading'); W6.lastF = 0; W6.dirty = 3; W6.nb.cur = null;
-    const ctl = W6.ctl, C = W6.cpu;
-    if (!W6.intro){
-      // the first time: the whole zone as a map, then down towards the Avengers Tower
-      W6.intro = true;
-      Object.assign(ctl, { x: (C.X0 + C.X1) / 2, z: (C.Z0 + C.Z1) / 2, y: 7600, yaw: 0, pu: -0.3, v: [0, 0, 0], fly: null });
-      const tw = C.pins.find(p => p.pl.k === 'avengers-tower') || C.pins[0];
-      const tip = () => w6Chip(COARSE ? 'Joystick per volare · trascina per guardarti intorno · doppio tocco per posarti' : 'WASD per volare · Q/E giù e su · trascina per guardarti intorno · doppio clic per posarti', 6500);
-      if (tw && !reduced()) setTimeout(() => { if (W6.on && !ctl.ptrs.size && !ctl.fly) w6FlyTo(w6View(tw), 4200, tip); else tip(); }, 900); else tip();
-    }
-    W6.raf = requestAnimationFrame(w6Loop);
+    w6Prog(0.08, 'Apro il catalogo dei luoghi…');
+    await Promise.all([w6Index(true), c6Load().catch(() => {})]);
+    w6Renderer();
+    W6.on = true; W6.lastF = 0;
+    const zid = opt && (opt.zid || (opt.k && w6ZoneOf(opt.k)));
+    W6.busy = false;
+    if (zid && w6Ready(zid)) await w6City(zid, opt.k);
+    else await g6Show(opt && opt.k ? { k: opt.k } : null);
+    if (!W6.raf) W6.raf = requestAnimationFrame(w6Loop);
   } catch (e){
     console.error(e); BB('mondo616-errore', String(e && e.message || e).slice(0, 100));
-    w6Close();
-    toast(e && e.message === 'nozone' ? 'Il Mondo 616 non è ancora pronto: i dati di New York stanno arrivando' : e && e.message === 'webgl' ? 'Per il Mondo 616 serve la grafica 3D, che qui non è disponibile' : 'Non riesco ad aprire il Mondo 616 adesso');
+    W6.busy = false; w6Close();
+    toast(e && e.message === 'webgl' ? 'Per il Mondo 616 serve la grafica 3D, che qui non è disponibile' : 'Non riesco ad aprire il Mondo 616 adesso');
+  } finally { W6.busy = false; }
+}
+function w6Fade(on){ const f = W6.el && $('.w6-fade', W6.el); if (f) f.classList.toggle('on', !!on); return new Promise(r => setTimeout(r, on ? 260 : 0)); }
+function w6Title(small, big){ const el = W6.el; $('.w6-t small', el).textContent = small; $('.w6-t b', el).textContent = big; const c = $('.w6-chip', el); c.hidden = true; clearTimeout(W6.chipT); }
+// down into a city: its zone loaded and built (the last one stays in memory), the camera high over the place, then down to it
+async function w6City(zid, k){
+  if (W6.busy) return; W6.busy = true;
+  const el = W6.el; w6PlaceClose();
+  try {
+    const zi = W6.idx.zones[zid], nm = zi && zi.name || zid;
+    el.classList.add('loading'); w6Prog(0.05, `Scarico ${w6Short(nm)}…`); $('.w6-load b', el).textContent = w6Short(nm);
+    if (W6.zid !== zid || !W6.zone){ W6.cpu = null; W6.zone = null; await w6Data(zid); }
+    if (!W6.cpu){ w6Prog(0.28, `Alzo i palazzi di ${w6Short(nm)}…`); W6.cpu = await w6Cpu(); }
+    w6Prog(0.97, 'Quasi pronto…');
+    g6Pause(); w6ReleaseCity();
+    W6.mode = 'city'; el.classList.remove('globe');
+    w6Gl(); w6Pins();
+    w6Title('Terra-616 · zona 3D', w6Short(nm)); $('.w6-back span', el).textContent = 'Globo'; $('.w6-osm', el).textContent = '© OpenStreetMap contributors';
+    W6.lastF = 0; W6.dirty = 3; W6.nb.cur = null; W6.out = 0;
+    const ctl = W6.ctl, C = W6.cpu;
+    const pin = k && C.pins.find(p => p.pl.k === k || (p.pl.grp && p.pl.grp.some(q => q.k === k)));
+    const first = pin || C.pins.find(p => p.pl.modello) || C.pins[0];
+    const cx = first ? first.x : (C.X0 + C.X1) / 2, cz = first ? first.z : (C.Z0 + C.Z1) / 2;
+    Object.assign(ctl, { x: cx, z: cz + 900, y: 6200, yaw: 0, pu: -0.3, v: [0, 0, 0], fly: null, top: null });
+    el.classList.remove('loading'); await w6Fade(false);
+    const tip = () => { if (!W6.tipped){ W6.tipped = true; w6Chip(COARSE ? 'Joystick per volare · trascina per guardarti intorno · doppio tocco per posarti · allarga verso l\'alto per tornare al globo' : 'WASD per volare · Q/E giù e su · trascina per guardarti intorno · doppio clic per posarti', 6500); } };
+    if (first && !reduced()) setTimeout(() => { if (W6.on && W6.mode === 'city' && !ctl.ptrs.size && !ctl.fly) w6FlyTo(w6View(first), 3600, () => { tip(); if (pin) w6Place(pin); }); else tip(); }, 450);
+    else { tip(); if (first){ Object.assign(ctl, w6View(first)); if (pin) w6Place(pin); } }
+    BB('mondo616-zona', zid);
+  } catch (e){
+    console.error(e); el.classList.remove('loading'); await w6Fade(false);
+    toast('Questa zona non si apre adesso: resto sul globo');
+    if (W6.mode !== 'globe'){ W6.busy = false; await g6Show(null); }
   } finally { W6.busy = false; }
 }
 function w6Close(){
   W6.on = false; if (W6.raf) cancelAnimationFrame(W6.raf); W6.raf = 0;
   const c = W6.ctl; c.ptrs.clear(); c.g = null; c.stick = null; c.ud = 0; c.keys.clear(); c.fly = null;
-  if (W6.el){ W6.el.hidden = true; W6.el.classList.remove('loading'); w6PlaceClose(); $('.w6-sign', W6.el).classList.remove('on'); }
+  if (W6.el){ W6.el.hidden = true; W6.el.classList.remove('loading'); w6PlaceClose(); $('.w6-sign', W6.el).classList.remove('on'); $('.w6-fade', W6.el).classList.remove('on'); }
   try { w6Release(); } catch {}
   window.__w6on = false;
   if (MV.on){ if (MV.sel) $('#mvP').hidden = false; mvKick(); }
@@ -10708,13 +10877,506 @@ window.__w6 = W6; window.__w6open = w6Open; // for the tests in the sandbox
   window.addEventListener('keydown', e => {
     if (!W6.on || !$('#cardWrap').hidden || C6.on) return;
     const t = e.target; if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable) || e.metaKey || e.ctrlKey) return;
-    if (e.key === 'Escape'){ e.preventDefault(); e.stopImmediatePropagation(); if (W6.place) w6PlaceClose(); else w6Close(); return; }
+    if (e.key === 'Escape'){ e.preventDefault(); e.stopImmediatePropagation(); if (W6.place) w6PlaceClose(); else if (W6.busy) return; else if (W6.mode === 'city') g6FromCity(); else w6Close(); return; }
+    if (W6.mode === 'globe'){ if (g6Key(e)) e.preventDefault(); e.stopImmediatePropagation(); return; }
     const k = keyOf(e); if (k){ W6.ctl.keys.add(k); W6.ctl.fly = null; e.preventDefault(); }
     e.stopImmediatePropagation();
   }, true);
   window.addEventListener('keyup', e => { if (!W6.on) return; const k = keyOf(e); if (k) W6.ctl.keys.delete(k); if (e.key === 'Shift') W6.ctl.keys.delete('shift'); }, true);
   window.addEventListener('blur', () => W6.ctl.keys.clear());
 }
+
+/* ---- 94-g616.js ---- */
+/* ================= Mondo 616, fase 3: il globo della Terra-616. La Terra vera (immagini NASA: Blue Marble di giorno,
+   Black Marble di notte, tasselli più nitidi quando si scende; confini e nomi da Natural Earth, in data/world/earth/),
+   sopra tutti i luoghi del catalogo che hanno un punto, raggruppati quando sono vicini. Le città con una zona 3D pronta
+   (data/world/index.json) si accendono: toccandole, o scendendo abbastanza, si entra nella città (sezione W6).
+   Unità: il raggio della Terra = 1. Si trascina il globo (il punto preso resta sotto il dito), due dita per zoom e rotazione. ================= */
+const G6 = { built: false, scene: null, cam: null, objs: [], mats: [], u: null, earth: null, src: '', lat: 38, lon: -60, alt: 15500, head: 0,
+  rot: null, fly: null, ptrs: new Map(), g: null, dirty: 3, idle: 0, pts: null, pool: [], lpool: [], zpool: [], tiles: new Map(), tileT: 0,
+  lastF: 0, anim: 0, seen: false, wheelT: 0, sel: null, minT: 0, tv: null };
+const G6_RK = 6371, G6_MAXA = 26000, G6_MINA = 30, G6_ENTER = 46, G6_FOV = 40, G6_D2R = Math.PI / 180;
+const g6V = (la, lo) => { const a = la * G6_D2R, b = lo * G6_D2R, c = Math.cos(a); return [c * Math.cos(b), Math.sin(a), -c * Math.sin(b)]; };
+const g6LL = v => { const L = Math.hypot(v[0], v[1], v[2]) || 1; return [Math.asin(clamp(v[1] / L, -1, 1)) / G6_D2R, Math.atan2(-v[2], v[0]) / G6_D2R]; };
+const g6Dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+function g6Axes(la, lo){
+  const U = g6V(la, lo), b = lo * G6_D2R, E = [-Math.sin(b), 0, -Math.cos(b)];
+  return { U, E, N: [U[1] * E[2] - U[2] * E[1], U[2] * E[0] - U[0] * E[2], U[0] * E[1] - U[1] * E[0]] };
+}
+const g6Km = (a, b) => Math.acos(clamp(g6Dot(g6V(a[0], a[1]), g6V(b[0], b[1])), -1, 1)) * G6_RK;
+// coming down, the view leans forward a little, as in Maps
+const g6Tilt = a => { const k = clamp((Math.log(2600) - Math.log(a)) / (Math.log(2600) - Math.log(70)), 0, 1); return 0.6 * k * k * (3 - 2 * k); };
+
+/* ---- the camera: a point of the Earth in the middle of the screen, the height above it, where north is ---- */
+// the vertical field of view: wider on a tall phone, so that the Earth is never cut at the sides
+function g6Fov(){ const a = G6.cam.aspect || 1; return Math.max(G6_FOV, 2 * Math.atan(Math.tan(17 * G6_D2R) / a) / G6_D2R); }
+// the height from which the whole Earth fits on the screen, with a margin
+function g6FitAlt(){ const a = G6.cam ? G6.cam.aspect || 1 : 1, vf = g6Fov() * G6_D2R / 2, hf = Math.atan(Math.tan(vf) * a); return G6_RK * (1 / Math.sin(0.8 * Math.min(vf, hf)) - 1); }
+const g6MaxA = () => Math.max(G6_MAXA, g6FitAlt() * 1.3);
+function g6Apply(){
+  const cam = G6.cam, A = g6Axes(G6.lat, G6.lon), h = G6.head, t = g6Tilt(G6.alt), d = G6.alt / G6_RK, ch = Math.cos(h), sh = Math.sin(h), ct = Math.cos(t), st = Math.sin(t);
+  const F = [0, 1, 2].map(i => A.N[i] * ch + A.E[i] * sh);
+  cam.position.set(...[0, 1, 2].map(i => A.U[i] + d * (A.U[i] * ct - F[i] * st)));
+  cam.up.set(...[0, 1, 2].map(i => F[i] * ct + A.U[i] * st));
+  cam.lookAt(A.U[0], A.U[1], A.U[2]);
+  const r = cam.position.length();
+  cam.near = Math.max(0.0002, (r - 1) * 0.45); cam.far = Math.sqrt(Math.max(0, r * r - 1)) + 1.2; cam.fov = g6Fov();
+  cam.updateProjectionMatrix(); cam.updateMatrixWorld();
+  G6.F = F;
+}
+function g6Ray(p){ const T = W6.T, el = W6.el; return new T.Vector3(p.x / el.clientWidth * 2 - 1, -(p.y / el.clientHeight) * 2 + 1, 0.5).unproject(G6.cam).sub(G6.cam.position).normalize(); }
+// the point of the Earth under a finger (or null if the finger is on the sky)
+function g6Hit(p){
+  const v = g6Ray(p), o = G6.cam.position, b = o.dot(v), c = o.lengthSq() - 1, disc = b * b - c; if (disc < 0) return null;
+  const t = -b - Math.sqrt(disc); if (t < 0) return null;
+  return [o.x + v.x * t, o.y + v.y * t, o.z + v.z * t];
+}
+// turn the camera with the rotation that takes the point a to the point b (the globe seems to turn the other way)
+function g6Turn(a, b){
+  const T = W6.T, q = new T.Quaternion().setFromUnitVectors(new T.Vector3(...a).normalize(), new T.Vector3(...b).normalize());
+  const U = new T.Vector3(...g6V(G6.lat, G6.lon)).applyQuaternion(q), F = new T.Vector3(...(G6.F || g6Axes(G6.lat, G6.lon).N)).applyQuaternion(q);
+  const [la, lo] = g6LL([U.x, U.y, U.z]); G6.lat = clamp(la, -89.5, 89.5); G6.lon = lo;
+  const A = g6Axes(G6.lat, G6.lon); G6.head = Math.atan2(F.x * A.E[0] + F.y * A.E[1] + F.z * A.E[2], F.x * A.N[0] + F.y * A.N[1] + F.z * A.N[2]);
+  return q;
+}
+function g6Grab(p0, p1){
+  const A = g6Hit(p0); g6Apply(); const B = g6Hit(p1);
+  if (A && B){ const q = g6Turn(B, A); g6Apply(); return q; }
+  // finger off the globe: turn by the pixels
+  const k = Math.min(0.24, G6.alt / G6_RK * 0.075), dx = p1.x - p0.x, dy = p1.y - p0.y, c = Math.cos(G6.head), s = Math.sin(G6.head);
+  G6.lat = clamp(G6.lat + (dy * c + dx * s) * k, -89.5, 89.5); G6.lon -= (dx * c - dy * s) * k / Math.max(0.2, Math.cos(G6.lat * G6_D2R)); g6Apply();
+  return null;
+}
+function g6Zoom(p, f){
+  const A = p && g6Hit(p);
+  G6.alt = clamp(G6.alt * f, G6_MINA, g6MaxA()); g6Apply();
+  const B = p && g6Hit(p); if (A && B){ g6Turn(B, A); g6Apply(); }
+  if (G6.alt <= G6_MINA * 1.001 && f < 1) g6AtBottom();
+}
+function g6North(){ G6.rot = null; g6FlyTo({ lat: G6.lat, lon: G6.lon, alt: G6.alt, head: 0 }, 600); }
+function g6FlyTo(b, ms, then){
+  const a = { lat: G6.lat, lon: G6.lon, alt: G6.alt, head: G6.head }, va = g6V(a.lat, a.lon), vb = g6V(b.lat, b.lon), ang = Math.acos(clamp(g6Dot(va, vb), -1, 1));
+  const peak = Math.max(a.alt, b.alt, Math.min(g6FitAlt(), ang * G6_RK * 0.85));
+  const dur = ms || clamp(900 + ang * 1300 + Math.abs(Math.log(b.alt / a.alt)) * 280, 900, 3800);
+  G6.fly = { a, b, va, vb, ang, peak, t0: performance.now(), ms: reduced() ? Math.min(dur, 500) : dur, then }; G6.rot = null;
+}
+function g6Controls(now, dt){
+  if (G6.fly){
+    const F = G6.fly, k = clamp((now - F.t0) / F.ms, 0, 1), e = ease.io3(k);
+    let v;
+    if (F.ang < 1e-5) v = F.vb; else { const s = Math.sin(F.ang), wa = Math.sin((1 - e) * F.ang) / s, wb = Math.sin(e * F.ang) / s; v = [0, 1, 2].map(i => F.va[i] * wa + F.vb[i] * wb); }
+    [G6.lat, G6.lon] = g6LL(v);
+    const la = Math.log(F.a.alt), lb = Math.log(F.b.alt), lp = Math.log(F.peak), top = Math.max(la, lb);
+    G6.alt = Math.exp(la + (lb - la) * e + (lp > top ? 4 * e * (1 - e) * (lp - top) : 0));
+    G6.head = F.a.head + w6Ang(F.a.head, F.b.head) * e;
+    if (k >= 1){ G6.fly = null; F.then && F.then(); }
+    return true;
+  }
+  if (G6.rot){
+    const R = G6.rot, a = R.w * dt; R.w *= Math.exp(-dt * 3.4);
+    if (R.w < 0.004 || G6.ptrs.size){ G6.rot = null; return false; }
+    const T = W6.T, q = new T.Quaternion().setFromAxisAngle(R.ax, a), U = new T.Vector3(...g6V(G6.lat, G6.lon)).applyQuaternion(q);
+    g6Turn(g6V(G6.lat, G6.lon), [U.x, U.y, U.z]); return true;
+  }
+  return false;
+}
+
+/* ---- building the globe: the Earth, its air, the stars, the borders, the 3D zones ---- */
+const G6_GV = `varying vec2 vUv; varying vec3 vN; varying vec3 vW; void main(){ vUv = uv; vN = normalize(position); vec4 w = modelMatrix * vec4(position, 1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }`;
+const G6_GF = `uniform sampler2D uDay; uniform sampler2D uNight; uniform float uHasDay; uniform float uHasNight; uniform vec3 uSun; uniform vec3 uCam; uniform float uT;
+  uniform sampler2D uT0; uniform sampler2D uT1; uniform sampler2D uT2; uniform sampler2D uT3; uniform vec4 uB0; uniform vec4 uB1; uniform vec4 uB2; uniform vec4 uB3; uniform vec4 uTA;
+  varying vec2 vUv; varying vec3 vN; varying vec3 vW;
+  vec3 tile(sampler2D s, vec4 b, float a, vec3 c){ vec2 t = (vUv - b.xy) * vec2(8.0, 4.0); if (a > 0.0 && t.x >= 0.0 && t.x <= 1.0 && t.y >= 0.0 && t.y <= 1.0) return mix(c, texture2D(s, t).rgb, a); return c; }
+  void main(){
+    vec3 n = normalize(vN);
+    vec3 day = uHasDay > 0.5 ? texture2D(uDay, vUv).rgb : mix(vec3(0.05, 0.13, 0.25), vec3(0.09, 0.2, 0.33), 0.5 + 0.5 * n.y);
+    day = tile(uT0, uB0, uTA.x, day); day = tile(uT1, uB1, uTA.y, day); day = tile(uT2, uB2, uTA.z, day); day = tile(uT3, uB3, uTA.w, day);
+    if (uHasDay < 0.5){ vec2 g = abs(fract(vUv * vec2(24.0, 12.0)) - 0.5); float l = smoothstep(0.47, 0.5, max(g.x, g.y)); day += vec3(0.08, 0.12, 0.16) * l; }
+    float d = dot(n, uSun), lit = smoothstep(-0.14, 0.28, d);
+    vec3 V = normalize(uCam - vW);
+    vec3 col = day * (0.1 + 1.02 * lit);
+    float ocean = smoothstep(0.015, 0.09, day.b - max(day.r, day.g) * 0.9) * (1.0 - smoothstep(0.42, 0.7, day.r + day.g));
+    vec3 H = normalize(uSun + V); col += vec3(1.0, 0.9, 0.78) * pow(max(dot(n, H), 0.0), 70.0) * 0.5 * ocean * lit;
+    vec3 nl = uHasNight > 0.5 ? texture2D(uNight, vUv).rgb : vec3(0.0); float L = max(nl.r, max(nl.g, nl.b));
+    col += vec3(1.0, 0.74, 0.4) * pow(L, 1.7) * 1.5 * (1.0 - smoothstep(-0.28, 0.04, d));
+    col += vec3(0.95, 0.38, 0.12) * 0.13 * (smoothstep(-0.18, 0.0, d) - smoothstep(0.0, 0.22, d));
+    float rim = pow(1.0 - max(dot(n, V), 0.0), 2.6);
+    col = mix(col, vec3(0.38, 0.6, 1.0) * (0.25 + 0.95 * lit), rim * 0.62);
+    gl_FragColor = vec4(col, 1.0);
+  }`;
+async function g6Build(){
+  const T = W6.T, E = W6.idx && W6.idx.earth, R = W6.R;
+  G6.scene = new T.Scene(); G6.cam = new T.PerspectiveCamera(G6_FOV, 1, 0.001, 60); W6.sz = null;
+  const mat = o => { const m = new T.ShaderMaterial(o); G6.mats.push(m); return m; };
+  const add = (o, order) => { o.renderOrder = order; G6.scene.add(o); G6.objs.push(o); return o; };
+  const L = new T.TextureLoader(), an = Math.min(8, R.capabilities.getMaxAnisotropy());
+  const load = url => L.loadAsync(url).then(t => { t.anisotropy = an; return t; }).catch(() => null);
+  const black = new T.DataTexture(new Uint8Array([0, 0, 0, 255]), 1, 1); black.needsUpdate = true; G6.black = black;
+  let day = null;
+  if (E && E.lo){ w6Prog(0.35, 'Scarico la Terra…'); day = await load('data/world/' + E.lo); }
+  if (!W6.on || !G6.scene){ day && day.dispose(); throw new Error('chiuso'); }
+  const u = G6.u = { uDay: { value: day || black }, uNight: { value: black }, uHasDay: { value: day ? 1 : 0 }, uHasNight: { value: 0 }, uSun: { value: new T.Vector3(1, 0, 0) }, uCam: { value: new T.Vector3() }, uT: { value: 0 },
+    uT0: { value: black }, uT1: { value: black }, uT2: { value: black }, uT3: { value: black }, uB0: { value: new T.Vector4() }, uB1: { value: new T.Vector4() }, uB2: { value: new T.Vector4() }, uB3: { value: new T.Vector4() }, uTA: { value: new T.Vector4() } };
+  w6Prog(0.7, 'Accendo il globo…');
+  add(new T.Mesh(new T.SphereGeometry(1, 256, 128), mat({ uniforms: u, vertexShader: G6_GV, fragmentShader: G6_GF })), 1);
+  // the air: a halo around the edge, brighter on the side of the Sun
+  const halo = add(new T.Mesh(new T.SphereGeometry(1.06, 96, 48), mat({ uniforms: u, side: T.BackSide, transparent: true, depthWrite: false, blending: T.AdditiveBlending,
+    vertexShader: `varying vec3 vW; void main(){ vec4 w = modelMatrix * vec4(position, 1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }`,
+    fragmentShader: `uniform vec3 uCam; uniform vec3 uSun; varying vec3 vW; void main(){ vec3 V = normalize(vW - uCam); float t0 = -dot(uCam, V); vec3 C = uCam + V * t0; float b = length(C);
+      if (b < 1.0) discard; float g = exp(-(b - 1.0) * 46.0) * 0.95 + exp(-(b - 1.0) * 12.0) * 0.12; float s = smoothstep(-0.35, 0.65, dot(normalize(C), uSun));
+      gl_FragColor = vec4(vec3(0.35, 0.58, 1.0) * g * (0.18 + 0.9 * s), 1.0); }` })), 3);
+  halo.frustumCulled = false;
+  // the stars, very far away
+  { const n = 1600, p = new Float32Array(n * 3), c = new Float32Array(n * 3); let s = 7;
+    const rnd = () => { s = (s * 16807) % 2147483647; return s / 2147483647; };
+    for (let i = 0; i < n; i++){ const z = rnd() * 2 - 1, a = rnd() * Math.PI * 2, r = Math.sqrt(1 - z * z); p[3 * i] = r * Math.cos(a) * 30; p[3 * i + 1] = z * 30; p[3 * i + 2] = r * Math.sin(a) * 30; const b = 0.35 + 0.65 * Math.pow(rnd(), 3); c[3 * i] = b; c[3 * i + 1] = b * (0.92 + 0.08 * rnd()); c[3 * i + 2] = b * (0.95 + 0.1 * rnd()); }
+    const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(p, 3)); g.setAttribute('color', new T.BufferAttribute(c, 3));
+    const m = new T.PointsMaterial({ size: COARSE ? 1.6 : 1.4, sizeAttenuation: false, vertexColors: true, depthWrite: false }); G6.mats.push(m);
+    G6.stars = add(new T.Points(g, m), 0); G6.stars.frustumCulled = false; }
+  g6ZoneLines();
+  G6.src = E ? (E.src || 'Immagini NASA · Natural Earth') : 'La Terra sta arrivando (immagini NASA)';
+  G6.built = true;
+  // the sharp Earth, the night lights, borders and names: after, without waiting
+  if (E){
+    if (E.day) load('data/world/' + E.day).then(t => { if (t && G6.u){ if (u.uDay.value !== black) u.uDay.value.dispose(); u.uDay.value = t; u.uHasDay.value = 1; G6.dirty = 3; } });
+    if (E.night) L.loadAsync('data/world/' + E.night).then(t => {
+      if (!G6.u) return t.dispose();
+      // half the size is enough for the lights (and saves memory on the phone)
+      const im = t.image, cv = document.createElement('canvas'); cv.width = Math.min(2048, im.width); cv.height = Math.min(1024, im.height);
+      cv.getContext('2d').drawImage(im, 0, 0, cv.width, cv.height); t.dispose();
+      const ct = new T.CanvasTexture(cv); ct.anisotropy = an; u.uNight.value = ct; u.uHasNight.value = 1; G6.dirty = 3;
+    }).catch(() => {});
+    if (E.json) fetch('data/world/' + E.json).then(r => r.ok ? r.json() : null).then(j => { if (j && G6.scene){ G6.earth = j; g6Borders(j); G6.dirty = 3; } }).catch(() => {});
+  }
+}
+function g6Borders(j){
+  const T = W6.T, out = [];
+  for (const e of j.b || []){
+    let x = 0, y = 0, prev = null;
+    for (let i = 0; i < e.length; i += 2){ x += e[i]; y += e[i + 1]; const v = g6V(y / 100, x / 100).map(c => c * 1.0004); if (prev) out.push(...prev, ...v); prev = v; }
+  }
+  const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(new Float32Array(out), 3));
+  const m = new T.LineBasicMaterial({ color: 0xffeedd, transparent: true, opacity: 0.3, depthWrite: false }); G6.mats.push(m); G6.bmat = m;
+  const o = new T.LineSegments(g, m); o.renderOrder = 2; G6.scene.add(o); G6.objs.push(o);
+}
+// the outline of every 3D zone ready to fly into
+function g6ZoneLines(){
+  const T = W6.T, out = [], Z = W6.idx ? W6.idx.zones : {};
+  if (G6.zl){ G6.scene.remove(G6.zl); G6.zl.geometry.dispose(); G6.objs = G6.objs.filter(o => o !== G6.zl); G6.zl = null; }
+  for (const zid in Z){ const z = Z[zid]; if (!z.f || !z.rects) continue;
+    for (const r of z.rects){ const c = [[r[0], r[1]], [r[0], r[3]], [r[2], r[3]], [r[2], r[1]]].map(q => g6V(q[0], q[1]).map(v => v * 1.0006)); for (let i = 0; i < 4; i++) out.push(...c[i], ...c[(i + 1) % 4]); } }
+  if (!out.length) return;
+  const g = new T.BufferGeometry(); g.setAttribute('position', new T.BufferAttribute(new Float32Array(out), 3));
+  if (!G6.zmat){ G6.zmat = new T.LineBasicMaterial({ color: 0xffa25a, transparent: true, opacity: 0.9, depthWrite: false }); G6.mats.push(G6.zmat); }
+  G6.zl = new T.LineSegments(g, G6.zmat); G6.zl.renderOrder = 2; G6.scene.add(G6.zl); G6.objs.push(G6.zl);
+}
+function g6Release(){
+  for (const o of G6.objs){ G6.scene && G6.scene.remove(o); o.geometry && o.geometry.dispose(); }
+  for (const m of G6.mats) m.dispose();
+  if (G6.u) for (const k of ['uDay', 'uNight']) if (G6.u[k].value && G6.u[k].value !== G6.black) G6.u[k].value.dispose();
+  for (const t of G6.tiles.values()) t.tex && t.tex.dispose();
+  G6.black && G6.black.dispose();
+  Object.assign(G6, { built: false, scene: null, cam: null, objs: [], mats: [], u: null, zl: null, zmat: null, bmat: null, stars: null, black: null, earth: null, fly: null, rot: null, pts: null });
+  G6.tiles.clear(); G6.ptrs.clear(); G6.g = null;
+  if (W6.el){ $('.g6-ov', W6.el).textContent = ''; } G6.pool = []; G6.lpool = []; G6.zpool = [];
+}
+// going into a city: the sharp tiles are given back (the Earth itself stays, for a quick return)
+function g6Pause(){ G6.fly = null; G6.rot = null; G6.ptrs.clear(); G6.g = null; for (const t of G6.tiles.values()) t.tex && t.tex.dispose(); G6.tiles.clear(); if (G6.u){ G6.u.uTA.value.set(0, 0, 0, 0); for (let s = 0; s < 4; s++) G6.u['uT' + s].value = G6.black; } }
+
+/* ---- the sharp tiles: 45° squares, the four around the middle of the screen when you are low enough ---- */
+function g6Tiles(now){
+  const E = W6.idx && W6.idx.earth, ti = E && E.tiles, u = G6.u; if (!ti || !u) return;
+  const want = [];
+  if (G6.alt < 2600){
+    const nx = ti.nx, ny = ti.ny, sx = 360 / nx, sy = 180 / ny, fx = (G6.lon + 180) / sx, fy = (90 - G6.lat) / sy, i0 = Math.floor(fx) % nx, j0 = clamp(Math.floor(fy), 0, ny - 1);
+    const i1 = ((fx % 1 < 0.5 ? i0 - 1 : i0 + 1) + nx) % nx, j1 = fy % 1 < 0.5 ? j0 - 1 : j0 + 1;
+    for (const [i, j] of [[i0, j0], [i1, j0], [i0, j1], [i1, j1]]) if (j >= 0 && j < ny && !want.some(w => w[0] === i && w[1] === j)) want.push([i, j]);
+  }
+  const T = W6.T;
+  for (const [i, j] of want){
+    const key = i + ',' + j; let t = G6.tiles.get(key);
+    if (!t){ t = { i, j, tex: null, a: 0, used: now }; G6.tiles.set(key, t);
+      new T.TextureLoader().loadAsync('data/world/' + ti.f.replace('{i}', i).replace('{j}', j)).then(x => { if (!G6.u || !G6.tiles.has(key)){ x.dispose(); return; } x.anisotropy = Math.min(8, W6.R.capabilities.getMaxAnisotropy()); t.tex = x; G6.dirty = 3; }).catch(() => { t.bad = true; }); }
+    t.used = now;
+  }
+  // the slots of the shader: the wanted tiles that have arrived
+  const fadeK = 1 - smooth(1900, 2600, G6.alt); let s = 0, anim = false;
+  for (const [i, j] of want){
+    const t = G6.tiles.get(i + ',' + j); if (!t || !t.tex || s > 3) continue;
+    t.a = Math.min(1, t.a + 0.2); if (t.a < 1) anim = true;
+    u['uT' + s].value = t.tex; u['uB' + s].value.set(i / ti.nx, 1 - (j + 1) / ti.ny, 0, 0); u.uTA.value.setComponent(s, t.a * fadeK); s++;
+  }
+  for (; s < 4; s++){ u.uTA.value.setComponent(s, 0); u['uT' + s].value = G6.black; }
+  for (const [k, t] of G6.tiles) if (now - t.used > 15000){ t.tex && t.tex.dispose(); G6.tiles.delete(k); }
+  G6.anim = anim ? 3 : Math.max(0, G6.anim - 1);
+}
+
+/* ---- one frame of the globe ---- */
+function g6Frame(now){
+  w6Size();
+  const dt = G6.lastF ? clamp((now - G6.lastF) / 1000, 0, 0.1) : 0.016; G6.lastF = now;
+  const moved = g6Controls(now, dt);
+  if (!moved && !G6.dirty && !G6.anim && (++G6.idle % 6)) return;
+  if (G6.dirty) G6.dirty--;
+  g6Apply();
+  const cam = G6.cam, u = G6.u, T = W6.T;
+  // the Sun from the upper left of the screen: the day side faces us, the night and its lights on the right edge
+  const C = cam.position.clone().normalize(), rt = new T.Vector3().setFromMatrixColumn(cam.matrixWorld, 0), up = new T.Vector3().setFromMatrixColumn(cam.matrixWorld, 1);
+  u.uSun.value.copy(C).multiplyScalar(0.8).addScaledVector(rt, -0.5).addScaledVector(up, 0.4).normalize();
+  u.uCam.value.copy(cam.position); u.uT.value = (now - W6.t0) / 1000;
+  if (G6.stars) G6.stars.position.copy(cam.position);
+  if (G6.bmat) G6.bmat.opacity = 0.16 + 0.22 * (1 - smooth(1500, 12000, G6.alt));
+  if (G6.zmat) G6.zmat.opacity = 0.25 + 0.7 * (1 - smooth(800, 6000, G6.alt));
+  if (now - G6.tileT > 300){ G6.tileT = now; g6Tiles(now); }
+  W6.R.render(G6.scene, cam);
+  g6Over();
+  const cp = $('.g6-comp', W6.el); cp.hidden = Math.abs(G6.head) < 0.03; if (!cp.hidden) cp.firstChild.style.transform = `rotate(${(-G6.head).toFixed(3)}rad)`;
+}
+
+/* ---- the places on the globe: dots, groups of nearby places, the zones in 3D, the names of countries and cities ---- */
+function g6Points(){
+  if (G6.pts) return G6.pts;
+  const out = []; if (!C6.data) return (G6.pts = out);
+  const W = c6WhereAll();
+  for (const k of [...Object.keys(C6.data.luoghi), ...Object.keys(c6O('nuovi'))]){
+    const p = c6Place(k); if (!p || p.lat == null || !'rmi'.includes(p.tipo)) continue;
+    const rows = W.get(k); if (!rows) continue;
+    const zid = w6ZoneOf(k, true), ready = !!(zid && w6Ready(zid));
+    const cz = w6Short(c6ZoneName(p.zona)).split(/ e |, /)[0], gen = /^(Resto|Americhe|Europa|Asia|Africa|Oceani|Russia|Stato di|Fuori|Altre|Basi)/.test(cz);
+    const area = ((C6.data.zone || []).find(z => z[0] === p.zona) || [])[2] || '';
+    out.push({ k, la: p.lat, lo: p.lon, v: g6V(p.lat, p.lon), tipo: p.tipo, col: C6_COL[p.tipo] || '#ed732e', nome: p.nome, zid, ready, cz: gen ? '' : cz, area: /^[A-Z]/.test(area) ? area : '', pri: rows.length + (ready ? 4 : 0) + (p.prec === 'e' ? 1 : 0), sx: 0, sy: 0 });
+  }
+  out.sort((a, b) => b.pri - a.pri);
+  return (G6.pts = out);
+}
+function g6ZoneName(zid){ const z = (W6.idx && W6.idx.zones[zid]) || (W6.auto || []).find(x => x.id === zid); return z ? z.name : ''; }
+function g6Pool(arr, n, make){ const ov = $('.g6-ov', W6.el); while (arr.length < n){ const e = make(); ov.appendChild(e); arr.push(e); } for (let i = n; i < arr.length; i++) if (arr[i].style.display !== 'none') arr[i].style.display = 'none'; }
+function g6Over(){
+  const el = W6.el, w = el.clientWidth, h = el.clientHeight, cam = G6.cam, cp = cam.position, T = W6.T, v = G6.tv || (G6.tv = new T.Vector3());
+  const proj = (V, lift) => { const d = V[0] * cp.x + V[1] * cp.y + V[2] * cp.z; if (d < 1.0004) return null; v.set(V[0] * lift, V[1] * lift, V[2] * lift).project(cam); if (v.z > 1 || Math.abs(v.x) > 1.12 || Math.abs(v.y) > 1.12) return null; return [(v.x + 1) / 2 * w, (1 - v.y) / 2 * h, d]; };
+  const taken = [], hit = (x, y, ww, hh) => taken.some(q => x < q[0] + q[2] && x + ww > q[0] && y < q[1] + q[3] && y + hh > q[1]);
+  // the zones in 3D (when low enough to tell the cities apart)
+  const Z = W6.idx ? W6.idx.zones : {}, zs = [];
+  if (G6.alt < 2400) for (const zid in Z){ const z = Z[zid]; if (!z.f || !z.ll) continue; const s = proj(g6V(z.ll[0], z.ll[1]), 1.001); if (s) zs.push({ zid, z, s }); }
+  // the places, gathered when they would overlap
+  const R = G6.alt < 120 ? 22 : 30, cl = [];
+  for (const p of g6Points()){
+    const s = proj(p.v, 1.001); if (!s) continue; p.sx = s[0]; p.sy = s[1];
+    let c = null; for (const q of cl) if (Math.abs(q.x - p.sx) < R && Math.abs(q.y - p.sy) < R){ c = q; break; }
+    if (c) c.items.push(p); else cl.push({ x: p.sx, y: p.sy, items: [p] });
+  }
+  g6Pool(G6.zpool, zs.length, () => { const e = document.createElement('button'); e.type = 'button'; e.className = 'g6-zc'; e.innerHTML = '<em>3D</em><span></span>'; return e; });
+  zs.forEach((Q, i) => { const e = G6.zpool[i], nm = w6Short(Q.z.name); e._z = Q.zid; if (e._n !== nm){ e._n = nm; e.lastChild.textContent = nm; }
+    const ww = 34 + nm.length * 6.4, x = Q.s[0] - ww / 2, y = Q.s[1] + 12; e.style.display = ''; e.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`; taken.push([x, y, ww, 24]); });
+  g6Pool(G6.pool, cl.length, () => { const e = document.createElement('button'); e.type = 'button'; e.className = 'g6-m'; e.innerHTML = '<i></i><span></span>'; return e; });
+  cl.forEach((c, i) => {
+    const e = G6.pool[i], n = c.items.length, top = c.items[0], multi = n > 1;
+    const ready = c.items.some(p => p.ready), zids = c.items.map(p => p.zid).filter(Boolean);
+    let label = top.nome;
+    if (multi){
+      const most = list => { const cnt = {}; for (const z of list) if (z) cnt[z] = (cnt[z] || 0) + 1; const b = Object.keys(cnt).sort((a, b) => cnt[b] - cnt[a])[0]; return b && cnt[b] * 2 >= n ? b : null; };
+      const bz = most(zids), bc = most(c.items.map(p => p.cz)), zn = bz && w6Short(g6ZoneName(bz)), ba = most(c.items.map(p => p.area));
+      label = bc && (!zn || G6.alt > 900) ? bc : zn || ba || top.nome + ' e altri';
+    }
+    e._c = c; e.style.display = '';
+    const cls = 'g6-m' + (multi ? ' cl' : '') + (ready ? ' z3' : '');
+    if (e.className.replace(/ nl/, '') !== cls) e.className = cls;
+    e.style.setProperty('--c', multi ? (ready ? '#ffb06b' : '#e9e2da') : top.col);
+    const it = e.firstChild; const tx = multi ? String(n) : ''; if (it.textContent !== tx) it.textContent = tx;
+    const sp = e.lastChild; if (sp.textContent !== label) sp.textContent = label;
+    e.style.transform = `translate3d(${c.x.toFixed(1)}px,${c.y.toFixed(1)}px,0)`;
+    const r = multi ? 14 : 7; taken.push([c.x - r, c.y - r, 2 * r, 2 * r]);
+  });
+  // the labels of the places where there is room (the most important first)
+  cl.forEach((c, i) => { const e = G6.pool[i], lw = 16 + Math.min(26, e.lastChild.textContent.length) * 6.6, x = c.x + (c.items.length > 1 ? 16 : 9), y = c.y - 10;
+    const ok = !hit(x, y, lw, 20); e.classList.toggle('nl', !ok); if (ok) taken.push([x, y, lw, 20]); });
+  // countries and cities of the real map, faint, where nothing else is
+  const J = G6.earth, labs = [];
+  if (J){
+    const zq = Math.log2(36000 / G6.alt) + 1;
+    for (const c of J.c || []){ if (c[4] > zq + 0.6) continue; const s = proj(g6V(c[2], c[1]), 1); if (!s) continue; const lw = c[0].length * 7.6 + 8; const x = s[0] - lw / 2, y = s[1] - 7; if (hit(x, y, lw, 14)) continue; taken.push([x, y, lw, 14]); labs.push(['c', c[0], x, y]); if (labs.length > 40) break; }
+    if (G6.alt < 5000) for (const p of J.p || []){ if (p[3] > zq * 1.7 - 3.2 && !(p[4] && zq > 3.2)) continue; const s = proj(g6V(p[2], p[1]), 1); if (!s) continue; const lw = p[0].length * 6.2 + 12; const x = s[0] - 4, y = s[1] - 7; if (hit(x, y, lw, 14)) continue; taken.push([x, y, lw, 14]); labs.push(['p', p[0], x, y]); if (labs.length > 70) break; }
+  }
+  g6Pool(G6.lpool, labs.length, () => { const e = document.createElement('div'); e.className = 'g6-l'; return e; });
+  labs.forEach((L, i) => { const e = G6.lpool[i]; if (e._t !== L[1]){ e._t = L[1]; e.textContent = L[1]; } const c = 'g6-l ' + L[0]; if (e.className !== c) e.className = c; e.style.display = ''; e.style.transform = `translate3d(${L[2].toFixed(1)}px,${L[3].toFixed(1)}px,0)`; });
+}
+function g6Info(){
+  const el = W6.el; if (!el || !C6.data) return;
+  const pts = g6Points(), Z = W6.idx ? W6.idx.zones : {}, ready = Object.values(Z).filter(z => z.f).length;
+  const all = new Set([...Object.keys(Z), ...(W6.auto || []).map(z => z.id)]).size;
+  const W = c6WhereAll(); let np = 0; for (const k of [...Object.keys(C6.data.luoghi), ...Object.keys(c6O('nuovi'))]){ const p = c6Place(k); if (p && 'rmi'.includes(p.tipo) && p.lat == null && W.has(k)) np++; }
+  $('.g6-st', el).textContent = `${pts.length} luoghi sulla Terra · ${ready === all ? ready : ready + ' di ' + all} zone 3D${ready < all ? ' (le altre in arrivo)' : ''}`;
+  const b = $('.g6-np', el); b.hidden = !np; b.textContent = `${np} senza punto`;
+}
+
+/* ---- touching the globe ---- */
+function g6Input(cv){
+  const el = W6.el, P = G6.ptrs;
+  const pt = e => { const r = el.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top }; };
+  let down = null, lastTap = { t: 0, x: 0, y: 0 }, tapT = 0, vel = null;
+  cv.addEventListener('pointerdown', e => {
+    if (!W6.on || W6.mode !== 'globe' || !G6.cam) return;
+    try { cv.setPointerCapture(e.pointerId); } catch {}
+    G6.fly = null; G6.rot = null; G6.dirty = 3; vel = null;
+    const p = pt(e); P.set(e.pointerId, p);
+    if (P.size === 1) down = { x: p.x, y: p.y, t: performance.now(), moved: false };
+    if (P.size === 2){ const [a, b] = [...P.values()]; G6.g = { d: Math.hypot(a.x - b.x, a.y - b.y), a: Math.atan2(b.y - a.y, b.x - a.x), m: { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } }; if (down) down.moved = true; }
+    e.preventDefault();
+  });
+  cv.addEventListener('pointermove', e => {
+    if (!W6.on || W6.mode !== 'globe' || !P.has(e.pointerId)) return;
+    const p = pt(e), q = P.get(e.pointerId); P.set(e.pointerId, p); G6.dirty = 3;
+    g6Apply();
+    if (P.size >= 2 && G6.g){
+      const [a, b] = [...P.values()], d = Math.hypot(a.x - b.x, a.y - b.y), an = Math.atan2(b.y - a.y, b.x - a.x), m = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+      if (d > 10 && G6.g.d > 10) g6Zoom(m, clamp(G6.g.d / d, 0.6, 1.6));
+      G6.head = G6.head - w6Ang(G6.g.a, an); g6Apply();
+      g6Grab(G6.g.m, m);
+      G6.g = { d, a: an, m }; return;
+    }
+    if (!down) return;
+    if (!down.moved && Math.hypot(p.x - down.x, p.y - down.y) > 6) down.moved = true;
+    if (!down.moved) return;
+    const now = performance.now(), A = g6Hit(q), qq = g6Grab(q, p);
+    if (qq && A){ const T = W6.T, ax = new T.Vector3(qq.x, qq.y, qq.z), s = ax.length(); if (s > 1e-7){ const ang = 2 * Math.asin(Math.min(1, s)), dtt = Math.max(8, now - (vel ? vel.t : now - 16)) / 1000; ax.divideScalar(s); const w = ang / dtt; vel = vel ? { ax: vel.ax.lerp(ax, 0.5).normalize(), w: vel.w * 0.5 + w * 0.5, t: now } : { ax, w, t: now }; } }
+  });
+  const up = e => {
+    if (!P.has(e.pointerId)) return;
+    P.delete(e.pointerId); if (P.size < 2) G6.g = null;
+    if (P.size) return;
+    const d = down; down = null;
+    if (vel && performance.now() - vel.t < 90 && vel.w > 0.05 && !reduced()) G6.rot = { ax: vel.ax, w: Math.min(vel.w, 6) }; vel = null;
+    if (!d || d.moved){ g6CheckEnter(); return; }
+    if (performance.now() - d.t > 450) return;
+    const p = pt(e), now = performance.now();
+    if (now - lastTap.t < 320 && Math.hypot(p.x - lastTap.x, p.y - lastTap.y) < 40){ clearTimeout(tapT); lastTap = { t: 0, x: 0, y: 0 }; const H = g6Hit(p); if (H){ const [la, lo] = g6LL(H); g6FlyTo({ lat: la, lon: lo, alt: Math.max(G6_MINA, G6.alt * 0.38), head: G6.head }, 700, g6CheckEnter); } return; }
+    lastTap = { t: now, x: p.x, y: p.y }; clearTimeout(tapT); tapT = setTimeout(() => { if (W6.place) w6PlaceClose(); }, 300);
+  };
+  cv.addEventListener('pointerup', up); cv.addEventListener('pointercancel', up);
+  cv.addEventListener('wheel', e => {
+    if (!W6.on || W6.mode !== 'globe' || !G6.cam) return; e.preventDefault(); e.stopPropagation(); G6.fly = null; G6.rot = null; G6.dirty = 3;
+    const dy = clamp(e.deltaMode === 1 ? e.deltaY * 33 : e.deltaY, -240, 240); g6Apply(); g6Zoom(pt(e), Math.exp(dy * 0.0018));
+    clearTimeout(G6.wheelT); G6.wheelT = setTimeout(g6CheckEnter, 260);
+  }, { passive: false });
+  $('.g6-ov', el).addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b || W6.mode !== 'globe') return; e.stopPropagation();
+    if (b._z){ g6Enter(b._z); return; }
+    if (b._c) g6Pick(b._c);
+  });
+}
+function g6Key(e){
+  const k = (e.key || '').toLowerCase(), st = Math.min(8, G6.alt / G6_RK * 6) + 0.02; G6.fly = null; G6.rot = null; G6.dirty = 3;
+  if (k === 'arrowup' || k === 'w') G6.lat = clamp(G6.lat + st, -89.5, 89.5);
+  else if (k === 'arrowdown' || k === 's') G6.lat = clamp(G6.lat - st, -89.5, 89.5);
+  else if (k === 'arrowleft' || k === 'a') G6.lon -= st / Math.max(0.2, Math.cos(G6.lat * G6_D2R));
+  else if (k === 'arrowright' || k === 'd') G6.lon += st / Math.max(0.2, Math.cos(G6.lat * G6_D2R));
+  else if (k === '+' || k === '=' || k === 'e'){ G6.alt = clamp(G6.alt * 0.8, G6_MINA, g6MaxA()); g6CheckEnter(); }
+  else if (k === '-' || k === 'q') G6.alt = clamp(G6.alt * 1.25, G6_MINA, g6MaxA());
+  else if (k === 'n') g6North();
+  else return false;
+  return true;
+}
+// low enough over a city with a zone in 3D: in we go
+function g6CheckEnter(){
+  if (!W6.on || W6.mode !== 'globe' || W6.busy || G6.alt > G6_ENTER) return;
+  const Z = W6.idx ? W6.idx.zones : {}; let best = null, bd = 70;
+  for (const zid in Z){ const z = Z[zid]; if (!z.f || !z.ll) continue; const d = g6Km([G6.lat, G6.lon], z.ll); if (d < bd){ bd = d; best = zid; } }
+  if (best) g6Enter(best); else g6AtBottom();
+}
+function g6AtBottom(){
+  const now = performance.now(); if (now - G6.minT < 4000) return; G6.minT = now;
+  const Z = W6.idx ? W6.idx.zones : {}; let best = null, bd = Infinity;
+  for (const zid in Z){ const z = Z[zid]; if (!z.f || !z.ll) continue; const d = g6Km([G6.lat, G6.lon], z.ll); if (d < bd){ bd = d; best = z; } }
+  if (G6.alt <= G6_ENTER && (!best || bd >= 70)) w6Chip(best ? `Qui sotto non c'è una zona 3D · la più vicina è ${w6Short(best.name)}, a ${Math.round(bd)} km` : 'Qui sotto non c\'è una zona 3D', 3200);
+}
+async function g6Enter(zid, k){
+  if (W6.busy || !w6Ready(zid)) return;
+  const z = W6.idx.zones[zid]; w6PlaceClose(); W6.busy = true;
+  await new Promise(res => g6FlyTo({ lat: z.ll[0], lon: z.ll[1], alt: 24, head: 0 }, null, res));
+  W6.busy = false;
+  await w6Fade(true);
+  await w6City(zid, k);
+}
+async function g6FromCity(){
+  if (W6.busy || W6.mode !== 'city') return;
+  const zid = W6.zid; await w6Fade(true);
+  await g6Show(zid ? { zid, from: true } : null);
+}
+// the globe on screen: built the first time, then where to look (above the city just left, on a place, or the whole Earth)
+async function g6Show(target){
+  if (W6.busy) return; W6.busy = true;
+  const el = W6.el;
+  try {
+    w6PlaceClose(); w6ReleaseCity();
+    W6.mode = 'globe'; el.classList.add('globe');
+    w6Title('Terra-616', 'La Terra'); $('.w6-back span', el).textContent = 'Multiverso';
+    if (!G6.built){ el.classList.add('loading'); $('.w6-load b', el).textContent = 'Terra-616'; w6Prog(0.2, 'Preparo il globo…'); await g6Build(); }
+    $('.w6-osm', el).textContent = G6.src;
+    G6.pts = null; G6.dirty = 3; G6.lastF = 0; g6Info();
+    const z = target && target.zid && W6.idx.zones[target.zid], p = target && target.k && C6.data ? c6Place(target.k) : null;
+    if (z && z.ll){ Object.assign(G6, { lat: z.ll[0], lon: z.ll[1], alt: 26, head: 0, rot: null }); g6FlyTo({ lat: z.ll[0], lon: z.ll[1], alt: 1500, head: 0 }, 1800); }
+    else if (p && p.lat != null){ if (!G6.seen){ G6.seen = true; g6Apply(); Object.assign(G6, { lat: p.lat - 8, lon: p.lon - 25, alt: g6FitAlt(), head: 0 }); } g6FlyTo({ lat: p.lat, lon: p.lon, alt: p.prec === 'e' || p.prec === 'q' ? 240 : p.prec === 'c' ? 600 : 1800, head: 0 }, null, () => g6Sel(target.k)); }
+    else if (!G6.seen){ G6.seen = true; g6Apply(); const fa = g6FitAlt(); Object.assign(G6, { lat: 30, lon: -35, alt: fa * 1.25, head: 0 }); if (!reduced()) g6FlyTo({ lat: 36, lon: -58, alt: fa, head: 0 }, 2400); else Object.assign(G6, { lat: 36, lon: -58, alt: fa });
+      setTimeout(() => { if (W6.on && W6.mode === 'globe') w6Chip(COARSE ? 'Trascina per girare la Terra · due dita per avvicinarti · tocca un luogo o una città' : 'Trascina per girare la Terra · rotella per avvicinarti · clic su un luogo o una città', 6000); }, 900); }
+    el.classList.remove('loading'); await w6Fade(false);
+  } catch (e){
+    console.error(e); BB('mondo616-errore', 'globo ' + String(e && e.message || e).slice(0, 90));
+    el.classList.remove('loading'); await w6Fade(false); W6.busy = false; w6Close(); toast('Non riesco a mostrare il globo adesso'); return;
+  } finally { W6.busy = false; }
+}
+
+/* ---- touching a place on the globe ---- */
+function g6Pick(c){
+  const it = c.items;
+  if (it.length === 1){ g6Sel(it[0].k, true); return; }
+  let span = 0; for (const a of it) for (const b of it) span = Math.max(span, g6Km([a.la, a.lo], [b.la, b.lo]));
+  if (span < 0.5 || G6.alt <= G6_MINA * 1.4){ g6List(it); return; }
+  // fly in until the group comes apart
+  let x = 0, y = 0, zz = 0; for (const p of it){ x += p.v[0]; y += p.v[1]; zz += p.v[2]; }
+  const [la, lo] = g6LL([x, y, zz]); w6PlaceClose();
+  g6FlyTo({ lat: la, lon: lo, alt: clamp(span * 2.6, G6_MINA, G6.alt * 0.55), head: G6.head });
+}
+function g6List(items){
+  const el = $('.w6-place', W6.el), top = items[0], zn = top.zid ? w6Short(g6ZoneName(top.zid)) : '';
+  G6.sel = { list: items };
+  el.innerHTML = `<header style="--c:#e9e2da"><span class="ic">${items.length}</span><div><b>${esc(zn || top.nome)}</b><small>${items.length} luoghi qui</small></div><button class="x" type="button" data-a="x" aria-label="Chiudi"><svg class="i"><use href="#i-close"/></svg></button></header>
+    <div class="g6-list">${items.map(p => `<button type="button" data-k="${esc(p.k)}"><span class="c6-ic" style="--c:${esc(p.col)}">${esc(C6_IC[p.tipo] || '•')}</span><span><b>${esc(p.nome)}</b><small>${esc((c6Place(p.k) || {}).dove || '')}</small></span>${p.ready ? '<em class="c6-3d">3D</em>' : ''}</button>`).join('')}</div>
+    ${top.ready && items.every(p => p.zid === top.zid) ? `<button class="go" type="button" data-a="enter" data-z="${esc(top.zid)}">Entra in 3D · ${esc(zn)}</button>` : ''}`;
+  el.hidden = false; el.scrollTop = 0; W6.place = { globe: 1 }; W6.el.classList.add('psel');
+}
+function g6Sel(k, fly){
+  const p = c6Place(k); if (!p) return;
+  const el = $('.w6-place', W6.el); G6.sel = { k, list: G6.sel && G6.sel.list && G6.sel.list.some(q => q.k === k) ? G6.sel.list : null };
+  el.innerHTML = g6PlaceHtml(k, { back: !!G6.sel.list }); el.hidden = false; el.scrollTop = 0; W6.place = { globe: 1, k }; W6.el.classList.add('psel');
+  if (fly && p.lat != null && g6Km([G6.lat, G6.lon], [p.lat, p.lon]) > G6.alt * 0.25) g6FlyTo({ lat: p.lat, lon: p.lon, alt: G6.alt, head: G6.head }, 900);
+  BB('mondo616-globo-luogo', k);
+}
+// the sheet of a catalogue place, on the globe and in the cities
+function g6PlaceHtml(k, opt){
+  const p = c6Place(k); if (!p) return '';
+  const rows = c6Where(k).filter(r => r.s !== -1), zid = w6ZoneOf(k, true), ready = !!(zid && w6Ready(zid)), zn = zid ? g6ZoneName(zid) : '';
+  const tipo = (C6.data.tipi || {})[p.tipo] || '', pr = p.lat != null ? (C6_PREC[p.prec] ? 'punto: ' + C6_PREC[p.prec] : '') : 'nessun punto';
+  const X = '<button class="x" type="button" data-a="x" aria-label="Chiudi"><svg class="i"><use href="#i-close"/></svg></button>';
+  const rowsH = rows.map(r => { const pi = w6Prod(r.t), y = c6Year(r.t); return `<${pi != null ? `button type="button" data-p="${pi}"` : 'div'} class="g6-r"><em>${esc(y)}</em><b>${esc(r.t)}</b>${r.nota ? `<span>${esc(r.nota)}</span>` : ''}</${pi != null ? 'button' : 'div'}>`; }).join('');
+  let act = '';
+  if (opt && opt.city) act = `<button class="go" type="button" data-a="go">Vola qui</button>`;
+  else if (ready) act = `<button class="go" type="button" data-a="enter" data-z="${esc(zid)}" data-k="${esc(k)}">Entra in 3D · ${esc(w6Short(zn))}</button>`;
+  else if (zid) act = `<p class="g6-note">La zona 3D «${esc(zn)}» è in arrivo: la sta scaricando GitHub.</p>`;
+  const maps = p.lat != null ? `<a class="g6-b" href="https://maps.apple.com/?ll=${p.lat},${p.lon}&q=${encodeURIComponent(p.nome)}&z=${p.prec === 'e' ? 17 : p.prec === 'q' ? 14 : p.prec === 'c' ? 11 : 6}" target="_blank" rel="noopener">Apri in Mappe</a>` : '';
+  return `<header style="--c:${esc(C6_COL[p.tipo] || '#ed732e')}"><span class="ic">${esc(C6_IC[p.tipo] || '•')}</span><div><b>${esc(p.nome)}</b><small>${esc(tipo)}${pr ? ' · ' + esc(pr) : ''}</small></div>${X}</header>
+    <div class="dove">${esc(p.dove || '')}</div>
+    ${rowsH ? `<h4>Nei titoli</h4><div class="g6-rows">${rowsH}</div>` : ''}
+    ${act}<div class="g6-bs">${opt && opt.back ? '<button class="g6-b" type="button" data-a="back">‹ Elenco</button>' : ''}${maps}<button class="g6-b" type="button" data-a="cat" data-k="${esc(k)}">Nel catalogo</button>${opt && opt.city && opt.globe !== false ? '<button class="g6-b" type="button" data-a="globe">Globo</button>' : ''}</div>`;
+}
+function g6PanelClick(b){
+  const a = b.dataset.a;
+  if (a === 'enter' && b.dataset.z){ g6Enter(b.dataset.z, b.dataset.k || null); return; }
+  if (a === 'cat' && b.dataset.k){ c6OpenPlace(b.dataset.k); return; }
+  if (a === 'back' && G6.sel && G6.sel.list){ g6List(G6.sel.list); return; }
+  if (b.dataset.k){ g6Sel(b.dataset.k); return; }
+  if (b.dataset.p != null){ openTitle(+b.dataset.p, true); }
+}
+window.__g6 = G6; window.__g6fn = { g6CheckEnter, g6Sel, g6Pick, g6FromCity, g6Show, g6Enter, c6Fly }; // per le prove nel sandbox
 
 /* ---- 93-c616.js ---- */
 /* ================= Catalogo dei luoghi del 616 (Mondo 616, fase 2). La bozza è data/catalogo616.json, scritta da Claude
@@ -10752,15 +11414,17 @@ function c6Rows(t){
   return out.filter(r => r.p);
 }
 function c6Where(k){ const out = []; for (const T of C6.data.titoli){ const r = c6Rows(T[0]).find(x => x.k === k); if (r) out.push(r); } return out; }
+// all the places at once (for the globe): key → the titles where it is still listed
+function c6WhereAll(){ const m = new Map(); for (const T of C6.data.titoli) for (const r of c6Rows(T[0])){ if (r.s === -1) continue; let a = m.get(r.k); if (!a) m.set(r.k, a = []); a.push(r); } return m; }
 function c6Year(t){ const pi = w6Prod(t); return pi != null ? CARDS.prods[pi][2].slice(0, 4) : ''; }
 async function c6Load(){
   if (C6.data) return;
-  const [d, l] = await Promise.all([
+  const [d] = await Promise.all([
     fetch('data/catalogo616.json', { cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('nocat'); return r.json(); }),
-    fetch('data/luoghi616.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : { luoghi: [] }).catch(() => ({ luoghi: [] }))]);
-  C6.data = d; C6.w6k = new Set((l.luoghi || []).map(p => p.k));
+    w6Index()]);
+  C6.data = d; W6.z3k = null;
 }
-async function c6Open(){
+async function c6Open(st){
   if (C6.on || C6.busy) return;
   C6.busy = true; BB('catalogo616-apri');
   try { await c6Load(); }
@@ -10768,9 +11432,11 @@ async function c6Open(){
   C6.busy = false;
   const el = c6Dom(); el.hidden = false; C6.on = true;
   $('.c6-tt small', el).textContent = C6.data.stato === 'bozza' ? 'Terra-616 · bozza da correggere' : 'Terra-616 · luoghi e posizioni';
+  if (typeof st === 'string'){ C6.st = st; C6.shut.clear(); }
   c6Chips(); c6Prog(); c6List();
 }
-function c6Close(){ if (C6.ed) c6EdClose(); C6.on = false; if (C6.el) C6.el.hidden = true; if (W6.on) W6.dirty = 2; }
+async function c6OpenPlace(k){ await c6Open(); if (C6.on && c6Place(k)) c6Edit({ k }); }
+function c6Close(){ if (C6.ed) c6EdClose(); C6.on = false; if (C6.el) C6.el.hidden = true; if (W6.on){ W6.dirty = 2; G6.dirty = 3; G6.pts = null; } }
 window.__c6 = C6; window.__c6open = c6Open; window.__c6edits = () => doc && doc.cat616; // per le prove nel sandbox
 function c6Dom(){
   if (C6.el) return C6.el;
@@ -10827,12 +11493,12 @@ const c6Mark = (s, dv) => s === 1 ? '✓' : s === -1 ? '✕' : dv ? '?' : '';
 const c6Cls = (s, dv) => s === 1 ? ' ok' : s === -1 ? ' no' : dv ? ' dv' : '';
 function c6RowHtml(r){
   const p = r.p;
-  return `<button type="button" class="c6-r${c6Cls(r.s, r.dv)}" data-t="${esc(r.t)}" data-k="${esc(r.k)}"><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><span class="c6-rt"><b>${esc(p.nome)}${C6.w6k.has(r.k) ? '<em class="c6-3d">3D</em>' : ''}${r.added ? '<em class="c6-me">AGGIUNTO</em>' : ''}</b><small>${esc(p.dove)}</small>${r.nota ? `<span>${esc(r.nota)}</span>` : ''}</span><span class="c6-st">${c6Mark(r.s, r.dv)}</span></button>`;
+  return `<button type="button" class="c6-r${c6Cls(r.s, r.dv)}" data-t="${esc(r.t)}" data-k="${esc(r.k)}"><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><span class="c6-rt"><b>${esc(p.nome)}${w6Keys3d().has(r.k) ? '<em class="c6-3d">3D</em>' : ''}${r.added ? '<em class="c6-me">AGGIUNTO</em>' : ''}</b><small>${esc(p.dove)}</small>${r.nota ? `<span>${esc(r.nota)}</span>` : ''}</span><span class="c6-st">${c6Mark(r.s, r.dv)}</span></button>`;
 }
 function c6PlaceHtml(e){
   const p = e.p, rs = e.rows, ok = rs.every(r => r.s === 1), no = rs.every(r => r.s === -1), dv = rs.some(r => r.dv), ts = rs.map(r => r.t);
   const s = ok ? 1 : no ? -1 : 0;
-  return `<button type="button" class="c6-r${c6Cls(s, dv)}" data-k="${esc(p.k)}"><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><span class="c6-rt"><b>${esc(p.nome)}${C6.w6k.has(p.k) ? '<em class="c6-3d">3D</em>' : ''}${p.mine ? '<em class="c6-me">AGGIUNTO</em>' : ''}</b><small>${esc(p.dove)}</small><span class="c6-zt">${ts.length === 1 ? 'In 1 titolo' : `In ${ts.length} titoli`}: ${esc(ts.slice(0, 4).join(' · '))}${ts.length > 4 ? ' …' : ''}</span></span><span class="c6-st">${c6Mark(s, dv)}</span></button>`;
+  return `<button type="button" class="c6-r${c6Cls(s, dv)}" data-k="${esc(p.k)}"><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><span class="c6-rt"><b>${esc(p.nome)}${w6Keys3d().has(p.k) ? '<em class="c6-3d">3D</em>' : ''}${p.mine ? '<em class="c6-me">AGGIUNTO</em>' : ''}</b><small>${esc(p.dove)}</small><span class="c6-zt">${ts.length === 1 ? 'In 1 titolo' : `In ${ts.length} titoli`}: ${esc(ts.slice(0, 4).join(' · '))}${ts.length > 4 ? ' …' : ''}</span></span><span class="c6-st">${c6Mark(s, dv)}</span></button>`;
 }
 function c6List(){
   if (!C6.el || !C6.data) return;
@@ -10898,7 +11564,7 @@ function c6EdRender(){
   } else {
     const p = c6Place(ctx.k), r = p && ctx.t ? c6Rows(ctx.t).find(x => x.k === ctx.k) : null;
     if (!p || (ctx.t && !r)){ C6.ed = null; box.hidden = true; return; }
-    const where = c6Where(ctx.k), in3 = C6.w6k.has(p.k);
+    const where = c6Where(ctx.k), in3 = w6Keys3d().has(p.k);
     const badges = [r && r.dv ? '<span class="b dv">? da verificare</span>' : '', r && r.s === 1 ? '<span class="b ok">✓ confermato</span>' : '', r && r.s === -1 ? '<span class="b no">✕ tolto da questo titolo</span>' : '',
       p.fixed ? '<span class="b me">luogo corretto da te</span>' : '', p.mine ? '<span class="b me">luogo aggiunto da te</span>' : '', in3 ? '<span class="b w3">già nel Mondo 616</span>' : ''].join('');
     const geo = p.lat != null ? `${p.lat.toFixed(5)}, ${p.lon.toFixed(5)}` : '';
@@ -10916,7 +11582,7 @@ function c6EdRender(){
       ${r && !r.added && (r.edited || r.s !== r.s0) ? '<button type="button" class="c6-reset" data-e="reset">↺ Questa voce come nel catalogo</button><br>' : ''}
       ${p.fixed ? '<button type="button" class="c6-reset" data-e="resetp">↺ Luogo come nel catalogo (nome, dove, posizione)</button>' : ''}
       ${where.length ? `<h4>Compare in ${where.length === 1 ? '1 titolo' : where.length + ' titoli'}</h4><div class="c6-wh">${where.map(w => `<button type="button" data-e="go" data-t="${esc(w.t)}" class="${w.t === ctx.t ? 'cur' : ''}${w.s === 1 ? ' ok' : w.s === -1 ? ' no' : ''}"><em>${esc(c6Year(w.t))}</em>${esc(w.t)}</button>`).join('')}</div>` : ''}
-      ${in3 ? '<button type="button" class="c6-big" data-e="fly">Vola qui nel Mondo 616</button>' : ''}`;
+      ${in3 ? '<button type="button" class="c6-big" data-e="fly">Vola qui nel Mondo 616</button>' : 'rmi'.includes(p.tipo) && p.lat != null ? '<button type="button" class="c6-big" data-e="fly">Vedi sul globo del Mondo 616</button>' : ''}`;
   }
   box.innerHTML = h; box.hidden = false; box.scrollTop = 0;
 }
@@ -11013,11 +11679,18 @@ function c6EdClick(b){
   if (a === 'go'){ C6.ed = { t: b.dataset.t, k: ctx.k }; c6EdRender(); return; }
   if (a === 'fly') c6Fly(ctx.k);
 }
+// from the catalogue: into the city of the place if its zone is ready, otherwise the place on the globe
 async function c6Fly(k){
   c6Close();
-  if (!W6.on){ W6.intro = true; await w6Open(); }
-  const pin = W6.on && W6.cpu && W6.cpu.pins.find(p => p.pl.k === k);
-  if (pin) w6FlyTo(w6View(pin), 2600, () => w6Place(pin));
+  if (!W6.on){ await w6Open({ k }); return; }
+  if (W6.busy) return;
+  const zid = w6ZoneOf(k);
+  if (zid && w6Ready(zid)){
+    if (W6.mode === 'city' && W6.zid === zid && W6.cpu){
+      const pin = W6.cpu.pins.find(p => p.pl.k === k || (p.pl.grp && p.pl.grp.some(q => q.k === k)));
+      if (pin) w6FlyTo(w6View(pin), 2600, () => w6Place(pin));
+    } else { await w6Fade(true); await w6City(zid, k); }
+  } else await g6Show({ k });
 }
 // keys: Esc closes the sheet, then the catalogue; nothing reaches the map below while it is open
 window.addEventListener('keydown', e => {

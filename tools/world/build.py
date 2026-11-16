@@ -21,17 +21,22 @@ EPS = ['https://overpass-api.de/api/interpreter',
        'https://overpass.private.coffee/api/interpreter']
 
 
-def overpass(q, label, start=0):
+GOOD = {'ep': None}  # l'ultimo server che ha risposto bene: si riparte da lui
+
+
+def overpass(q, label, start=0, timeout=330):
     data = urllib.parse.urlencode({'data': q}).encode()
     last = None
     for attempt in range(3):
-        for j in range(len(EPS)):
-            ep = EPS[(start + j + attempt) % len(EPS)]
+        order = [EPS[(start + j + attempt) % len(EPS)] for j in range(len(EPS))]
+        if GOOD['ep'] in order:
+            order.remove(GOOD['ep']); order.insert(0, GOOD['ep'])
+        for ep in order:
             host = ep.split('/')[2]
             try:
                 t0 = time.time()
                 req = urllib.request.Request(ep, data=data, headers={'User-Agent': 'sacred-timeline-world/1 (app personale, una tantum)'})
-                with urllib.request.urlopen(req, timeout=330) as r:
+                with urllib.request.urlopen(req, timeout=timeout if ep == GOOD['ep'] or GOOD['ep'] is None else min(timeout, 150)) as r:
                     raw = r.read()
                 j_ = json.loads(raw)
                 rem = j_.get('remark') or ''
@@ -39,6 +44,7 @@ def overpass(q, label, start=0):
                     raise RuntimeError(rem[:200])
                 els = j_.get('elements', [])
                 log(f'  {label}: {len(els)} elementi da {host} in {time.time() - t0:.0f}s ({len(raw) // 1024} KB)')
+                GOOD['ep'] = ep
                 return els
             except Exception as e:
                 last = e
@@ -214,7 +220,7 @@ def main():
                  f'way["natural"="water"]({B2});relation["natural"="water"]({B2});way["waterway"="riverbank"]({B2});relation["waterway"="riverbank"]({B2});'
                  f'way["natural"="coastline"]({B2});'
                  f'node["place"~"^(neighbourhood|suburb|quarter|borough|village|town|hamlet|city)$"]["name"]({b}););out tags geom;')
-            els = overpass(q, 'tutto', hash(zid) % len(EPS))
+            els = overpass(q, 'tutto', 0, 240)
             res = {'edifici 1': [], 'strade 1': [], 'verde 1': [], 'acqua': [], 'costa': [], 'quartieri': [], 'distretti': []}
             for el in els:
                 t = el.get('tags') or {}
@@ -518,6 +524,11 @@ def main():
                 inside = [b for b in B if b['p'].contains(pt)]
                 if inside:
                     hit = min(inside, key=lambda b: b['p'].area); how = 'punto'
+            if hit is None and m['mode'] == 'highlight':
+                near = [(b['p'].distance(pt), b) for b in B if abs(b['c'].x - x) < 120 and abs(b['c'].y - z) < 120]
+                near = [t for t in near if t[0] < 25]
+                if near:
+                    hit = min(near, key=lambda t: t[0])[1]; how = f'edificio più vicino ({min(near, key=lambda t: t[0])[0]:.0f} m)'
             rec = {'x': round(x, 1), 'z': round(z, 1), 'how': how or 'solo coordinate'}
             if hit is not None:
                 c = hit['p'].centroid
