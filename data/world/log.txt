@@ -379,3 +379,13 @@
   quartieri: 8 → Berna, Matte, Città vecchia, Gryphenhübeli, Altenberg, Weisses Quartier, Grünes Quartier, Gelbes Quartier
   luogo berna: {'x': 0.0, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-berna-v1.json: 183 KB
+== zona z-boyle-heights (v1) · Boyle Heights · Los Angeles est ==
+  tutto: 4036 elementi da overpass-api.de in 34s (3390 KB)
+  edifici tenuti: 3301 (scartati 18)
+  strade: 470 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 26 aree
+  distretti: []
+  quartieri: 1 → Boyle Heights
+  luogo boyle-heights: {'x': 0.2, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-boyle-heights-v1.json: 236 KB
