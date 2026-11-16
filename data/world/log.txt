@@ -827,3 +827,18 @@
   quartieri: 3 → South Kensington, Knightsbridge, Brompton
   luogo londra-museo-nat: {'x': -14.6, 'z': 2.8, 'how': 'punto', 'h': 10, 'osm': 'w24436446'}
   scritto z-londra-museo-nat-v1.json: 207 KB
+== zona z-macao (v1) · Golden Daggers Club · Macao ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 4841 elementi da maps.mail.ru in 49s (3449 KB)
+  edifici tenuti: 3114 (scartati 16)
+  strade: 1264 tratti, binari sopraelevati: 0
+  costa: 6 linee, 3 pezzi, acqua in 2 (0.21 km²)
+  specchi d'acqua: 3
+  verde: 104 aree
+  distretti: []
+  quartieri: 8 → Macau, 下環 Praia do Manduco, 司打口 Praca Ponte Horta, São Lourenço, Grand Beach, 媽閣 Barra, 中區 Centro, Sai Wan
+  luogo macao: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-macao-v1.json: 204 KB
