@@ -234,3 +234,15 @@
   luogo coney-island: {'x': 713.9, 'z': 203.5, 'how': 'solo coordinate'}
   luogo yelena-banya: {'x': -713.1, 'z': -203.5, 'how': 'solo coordinate'}
   scritto z-coney-island-v1.json: 110 KB
+== zona z-mosca (v1) · Mosca · il centro ==
+  tutto: maps.mail.ru non risponde bene dopo 53s (HTTP Error 504: Gateway Timeout)
+  tutto: 5166 elementi da overpass-api.de in 27s (2911 KB)
+  edifici tenuti: 277 (scartati 317)
+  strade: 2216 tratti, binari sopraelevati: 0
+  specchi d'acqua: 9
+  verde: 156 aree
+  distretti: []
+  quartieri: 2 → Mosca, Kitay-gorod
+  luogo mosca: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  luogo vanko-mosca: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-mosca-v1.json: 91 KB
