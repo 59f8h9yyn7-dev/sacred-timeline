@@ -598,3 +598,18 @@
   quartieri: 0 → 
   luogo finow: {'x': 0.0, 'z': -0.2, 'how': 'solo coordinate'}
   scritto z-finow-v1.json: 55 KB
+== zona z-giamaica (v1) · Giamaica · Kingston ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 121s (HTTP Error 502: Bad Gateway)
+  tutto: maps.mail.ru non risponde bene dopo 53s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 4184 elementi da overpass-api.de in 40s (2121 KB)
+  edifici tenuti: 3742 (scartati 3)
+  strade: 351 tratti, binari sopraelevati: 0
+  costa: 1 linee, 3 pezzi, acqua in 2 (0.00 km²)
+  specchi d'acqua: 1
+  verde: 5 aree
+  distretti: []
+  quartieri: 2 → Kingston, Denham Town
+  luogo giamaica: {'x': -0.3, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-giamaica-v1.json: 168 KB
