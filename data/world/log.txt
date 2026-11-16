@@ -971,3 +971,17 @@
   quartieri: 9 → Chinatown, Oakland, Old Oakland Historic District, Uptown, Financial District, Downtown, Civic Center, San Pablo Gateway, Downtown Oakland
   luogo oakland: {'x': -0.1, 'z': 0.4, 'how': 'solo coordinate'}
   scritto z-oakland-v1.json: 90 KB
+== zona z-olanda-tulipani (v1) · Broek op Langedijk · Paesi Bassi ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 115s (HTTP Error 502: Bad Gateway)
+  tutto: 3809 elementi da overpass-api.de in 35s (3219 KB)
+  edifici tenuti: 1956 (scartati 70)
+  strade: 657 tratti, binari sopraelevati: 0
+  specchi d'acqua: 88
+  verde: 373 aree
+  distretti: []
+  quartieri: 1 → Broek op Langedijk
+  luogo olanda-tulipani: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-olanda-tulipani-v1.json: 162 KB
