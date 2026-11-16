@@ -747,3 +747,13 @@
   quartieri: 2 → Karachi, Artillery Maidan
   luogo karachi: {'x': -0.4, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-karachi-v1.json: 97 KB
+== zona z-kevin (v1) · K.E.V.I.N. · Studi di Disney+ · Burbank ==
+  tutto: 2409 elementi da overpass-api.de in 48s (1992 KB)
+  edifici tenuti: 1528 (scartati 11)
+  strade: 511 tratti, binari sopraelevati: 0
+  specchi d'acqua: 5
+  verde: 56 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo kevin: {'x': 11.6, 'z': -12.5, 'how': 'punto', 'h': 17.8, 'osm': 'w39421234'}
+  scritto z-kevin-v1.json: 134 KB
