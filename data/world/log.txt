@@ -1192,3 +1192,14 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 30 → Naesu-dong, Dangju-dong, Sinmunno 1-ga, Seorin-dong, Cheongjin-dong, Jongno 1-ga, Gongpyeong-dong, Euljiro 2-ga, Myeong-dong 2-ga, Gwancheol-dong, Samgak-dong, Namdaemunno 1-ga, Myeong-dong 1-ga, Mugyo-dong, Da-dong, Euljiro 1-ga, Sogong-dong, Namdaemunno 2-ga, Bukchang-dong, Namdaemunno 3-ga, Chungmuro 1-ga, Sunhwa-dong, Namdaemunno 4-ga, Seosomun-dong, Taepyeongno 1-ga, Taepyeong-ro 2-ga, Jeong-dong, Seul, Suha-dong, Downtown Seoul
   luogo seoul: {'x': 0.1, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-seoul-v1.json: 120 KB
+== zona z-stark-expo (v1) · Flushing Meadows · Expo · Flushing Meadows–Corona Park e l'Uni… ==
+  tutto: 2028 elementi da overpass-api.de in 35s (1428 KB)
+  edifici tenuti: 658 (scartati 9)
+  strade: 675 tratti, binari sopraelevati: 26
+  costa: 9 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 8
+  verde: 225 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo stark-expo: {'x': 0.0, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-stark-expo-v1.json: 75 KB
