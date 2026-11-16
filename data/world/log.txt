@@ -588,3 +588,13 @@
   quartieri: 0 → 
   luogo everest: {'x': 0.0, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-everest-v1.json: 0 KB
+== zona z-finow (v1) · Finow, 1945 · Germania ==
+  tutto: 1382 elementi da overpass-api.de in 55s (881 KB)
+  edifici tenuti: 924 (scartati 2)
+  strade: 351 tratti, binari sopraelevati: 0
+  specchi d'acqua: 9
+  verde: 24 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo finow: {'x': 0.0, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-finow-v1.json: 55 KB
