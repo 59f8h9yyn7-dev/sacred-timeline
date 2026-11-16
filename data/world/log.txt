@@ -481,3 +481,17 @@
   quartieri: 0 → 
   luogo central-park: {'x': 0.2, 'z': -0.3, 'how': 'solo coordinate'}
   scritto z-central-park-v1.json: 91 KB
+== zona z-chicago-1893 (v1) · Esposizione Universale, 1893 · Chicago ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 2286 elementi da overpass-api.de in 34s (1854 KB)
+  edifici tenuti: 1227 (scartati 4)
+  strade: 503 tratti, binari sopraelevati: 0
+  specchi d'acqua: 2
+  verde: 43 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo chicago-1893: {'x': -0.2, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-chicago-1893-v1.json: 111 KB
