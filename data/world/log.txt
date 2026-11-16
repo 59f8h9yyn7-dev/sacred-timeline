@@ -795,3 +795,13 @@
   quartieri: 2 → Lagos, Lagos Island
   luogo lagos: {'x': -0.1, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-lagos-v1.json: 114 KB
+== zona z-lione-1858 (v1) · Lione, 1858 · Francia ==
+  tutto: 6303 elementi da overpass-api.de in 50s (4112 KB)
+  edifici tenuti: 2336 (scartati 241)
+  strade: 1220 tratti, binari sopraelevati: 0
+  specchi d'acqua: 8
+  verde: 82 aree
+  distretti: []
+  quartieri: 7 → Lione, Vieux Lyon, Ainay, Bellecour, Cordeliers, Saint-Jean, Saint-Georges
+  luogo lione-1858: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-lione-1858-v1.json: 179 KB
