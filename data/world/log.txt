@@ -304,3 +304,15 @@
   quartieri: 0 → 
   luogo area-51: {'x': 0.1, 'z': 0.4, 'how': 'solo coordinate'}
   scritto z-area-51-v1.json: 0 KB
+== zona z-avengers-compound (v1) · Complesso degli Avengers · nord dello Stato di New York ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: 58 elementi da maps.mail.ru in 16s (67 KB)
+  edifici tenuti: 10 (scartati 0)
+  strade: 35 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 1 aree
+  distretti: []
+  quartieri: 1 → Esopus
+  luogo avengers-compound: {'x': -0.0, 'z': 0.0, 'how': 'solo coordinate'}
+  scritto z-avengers-compound-v1.json: 3 KB
