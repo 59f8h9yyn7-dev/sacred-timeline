@@ -767,3 +767,21 @@
   quartieri: 0 → 
   luogo kovak-villa: {'x': 0.0, 'z': -0.3, 'how': 'solo coordinate'}
   scritto z-kovak-villa-v1.json: 156 KB
+== zona z-kuala-lumpur (v1) · Kuala Lumpur · il grattacielo Merdeka 118, Malesia ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 106s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 4179 elementi da overpass-api.de in 49s (2385 KB)
+  edifici tenuti: 1234 (scartati 93)
+  strade: 1777 tratti, binari sopraelevati: 21
+  specchi d'acqua: 5
+  verde: 89 aree
+  distretti: []
+  quartieri: 1 → Kampung Attap
+  luogo kuala-lumpur: {'x': -0.5, 'z': 0.9, 'how': 'punto', 'h': 600.0, 'osm': 'w645604854'}
+  scritto z-kuala-lumpur-v1.json: 120 KB
