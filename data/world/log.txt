@@ -633,3 +633,15 @@
   quartieri: 0 → 
   luogo giza: {'x': 0.2, 'z': -0.4, 'how': 'punto', 'h': 138.8, 'osm': 'w4420397'}
   scritto z-giza-v1.json: 49 KB
+== zona z-gobi (v1) · Deserto del Gobi · Mongolia ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 151s (The read operation timed out)
+  tutto: 0 elementi da maps.mail.ru in 22s (0 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 0 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo gobi: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-gobi-v1.json: 0 KB
