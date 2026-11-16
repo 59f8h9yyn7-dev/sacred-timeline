@@ -411,3 +411,13 @@
   quartieri: 5 → Budapest, Naphegy, Castle District, I. kerület, Buda
   luogo budapest: {'x': -0.2, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-budapest-v1.json: 79 KB
+== zona z-busan (v1) · Busan · casinò e inseguimento, Corea del Sud ==
+  tutto: 973 elementi da maps.mail.ru in 18s (632 KB)
+  edifici tenuti: 568 (scartati 1)
+  strade: 352 tratti, binari sopraelevati: 4
+  specchi d'acqua: 1
+  verde: 13 aree
+  distretti: []
+  quartieri: 2 → Busan, Yeonje District
+  luogo busan: {'x': 0.1, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-busan-v1.json: 40 KB
