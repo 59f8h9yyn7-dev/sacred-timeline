@@ -348,3 +348,14 @@
   quartieri: 7 → Baltimora, Pleasant View Gardens, Inner Harbor, Jonestown, Downtown, Downtown West, Chinatown
   luogo baltimora: {'x': -0.3, 'z': -0.2, 'how': 'solo coordinate'}
   scritto z-baltimora-v1.json: 109 KB
+== zona z-bella-coola (v1) · Bella Coola · Columbia Britannica, Canada ==
+  tutto: 337 elementi da overpass-api.de in 40s (202 KB)
+  edifici tenuti: 265 (scartati 0)
+  strade: 55 tratti, binari sopraelevati: 0
+  costa: 1 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 0
+  verde: 4 aree
+  distretti: []
+  quartieri: 1 → Bella Coola
+  luogo bella-coola: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-bella-coola-v1.json: 13 KB
