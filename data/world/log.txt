@@ -389,3 +389,15 @@
   quartieri: 1 → Boyle Heights
   luogo boyle-heights: {'x': 0.2, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-boyle-heights-v1.json: 236 KB
+== zona z-bucarest (v1) · Bucarest · appartamento di Bucky, Romania ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 152s (The read operation timed out)
+  tutto: 3221 elementi da maps.mail.ru in 29s (2545 KB)
+  edifici tenuti: 1703 (scartati 78)
+  strade: 887 tratti, binari sopraelevati: 0
+  specchi d'acqua: 10
+  verde: 87 aree
+  distretti: []
+  quartieri: 16 → Bucarest, Lipscani, Cartierul Armenesc, Decebal, Villacrosse, Belvedere, Sf. Gheorghe, Sf. Anton, Udricani, Blanduzia, Colțea, Teatrului, Negustori, C. A. Rosetti, Sărindar, Batiștei
+  luogo bucarest: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-bucarest-v1.json: 154 KB
