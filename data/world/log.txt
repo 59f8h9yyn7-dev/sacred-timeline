@@ -1073,3 +1073,14 @@
   quartieri: 0 → 
   luogo randys: {'x': 0.0, 'z': -0.2, 'how': 'punto', 'h': 13.8, 'osm': 'w420317805'}
   scritto z-randys-v1.json: 133 KB
+== zona z-red-hook (v1) · Porto di Red Hook · Brooklyn ==
+  tutto: 2863 elementi da overpass-api.de in 39s (1996 KB)
+  edifici tenuti: 1273 (scartati 4)
+  strade: 579 tratti, binari sopraelevati: 0
+  costa: 9 linee, 4 pezzi, acqua in 2 (0.63 km²)
+  specchi d'acqua: 0
+  verde: 149 aree
+  distretti: []
+  quartieri: 3 → Columbia Street Waterfront District, Nolan Park, South Battery
+  luogo red-hook: {'x': -0.2, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-red-hook-v1.json: 85 KB
