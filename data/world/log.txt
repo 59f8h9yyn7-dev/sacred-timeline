@@ -1152,3 +1152,14 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo sambisa: {'x': 0.2, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-sambisa-v1.json: 0 KB
+== zona z-san-juan (v1) · San Juan · Porto Rico ==
+  tutto: 692 elementi da overpass-api.de in 38s (557 KB)
+  edifici tenuti: 159 (scartati 11)
+  strade: 324 tratti, binari sopraelevati: 0
+  costa: 18 linee, 16 pezzi, acqua in 2 (1.15 km²)
+  specchi d'acqua: 1
+  verde: 46 aree
+  distretti: []
+  quartieri: 1 → Puerta de Tierra
+  luogo san-juan: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-san-juan-v1.json: 28 KB
