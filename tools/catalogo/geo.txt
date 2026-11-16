@@ -69,7 +69,7 @@ central-park | q | Central Park, New York
 giostra | q | Friedsam Memorial Carousel || Central Park Carousel, New York
 gracie | q | Gracie Mansion, New York
 city-hall | q | New York City Hall
-tribunale | q | New York County Supreme Court || 60 Centre Street, New York
+tribunale | ll | 40.71417,-74.00194 | e | New York County Courthouse, 60 Centre Street (Foley Square)
 fbi-ny | q | 26 Federal Plaza, New York || Jacob K. Javits Federal Building
 chinatown | q | Chinatown, Manhattan
 chikara | q | Chinatown, Manhattan | dojo a Chinatown, indirizzo non detto
@@ -108,7 +108,7 @@ daily-bugle | - | studio senza indirizzo
 whih | - | redazione senza indirizzo
 
 # ---------- Stato di New York e New Jersey ----------
-avengers-compound | q | Esopus, New York | sull'Hudson: lo sfondo del film corrisponde a Esopus (MCU Location Scout)
+avengers-compound | ll | 41.82823,-73.95816 | q | Esopus, sulla riva ovest dell'Hudson: lo sfondo del film corrisponde a Lamont Landing (MCU Location Scout)
 tony-lago | q | New York State | nello Stato di New York, punto non detto
 panchina-lago | - | lago non detto
 incidente-strange | ll | 41.0,-73.9 | r | strada lungo l'Hudson, punto non detto
@@ -200,14 +200,14 @@ mjolnir-cratere | rel | puente | -0.0150,-0.0250 | nel deserto appena fuori Puen
 stazione-nm | rel | puente | -0.2000,-0.4000 | sulla strada da Albuquerque verso Puente Antiguo
 rose-hill | q | Tennessee, United States | cittadina inventata del Tennessee
 miami-mandarino | q | Miami, Florida | villa non detta
-norco | q | PortMiami
+norco | q | PortMiami || Port of Miami || Dodge Island, Miami
 seagate | ll | 31.40,-81.20 | r | isola al largo della Georgia, punto non detto
 missouri | q | Missouri, United States | casa e ospedale non detti
 mit | q | Massachusetts Institute of Technology
 cleveland | q | Cleveland, Ohio
 ohio-1995 | q | Ohio, United States | sobborgo non detto
 salem | q | Salem, Massachusetts
-delacroix | q | Delacroix, Louisiana
+delacroix | ll | 29.7666,-89.7909 | c | Delacroix, nella parrocchia di St. Bernard (OpenStreetMap trova un'omonima sbagliata)
 new-orleans | q | New Orleans, Louisiana
 rambeau-casa | q | Louisiana, United States | casa non detta
 oahu | q | Oahu, Hawaii

@@ -2,9 +2,7 @@
 CONTROLLA peru (Rovine in Perù): 751 km dalla stima · rovine non dette · OpenStreetMap: Perù
 CONTROLLA strucker-base (Base di Strucker): 519 km dalla stima · sui monti della Sokovia, punto non detto
 CONTROLLA novi-grad (Novi Grad): 547 km dalla stima · Sokovia: in Age of Ultron sta tra Repubblica Ceca e Slovacchia (in Civil War una mappa la mette sul Mar Nero)
-CONTROLLA tribunale (Tribunale di New York): 155 km dalla stima · OpenStreetMap: Supreme Court
 CONTROLLA sambisa (Foresta di Sambisa): 85 km dalla stima · OpenStreetMap: Sambisa Game Reserve
-CONTROLLA delacroix (Delacroix): 203 km dalla stima · OpenStreetMap: Delacroix
 CONTROLLA marocco (Marocco): 497 km dalla stima · punto non detto · OpenStreetMap: Marocco
 CONTROLLA gobi (Deserto del Gobi): 163 km dalla stima · OpenStreetMap: Deserto del Gobi
 in attesa di OpenStreetMap: norco
