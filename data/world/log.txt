@@ -91,3 +91,19 @@
   luogo set-wonder-man: {'x': 642.0, 'z': 226.0, 'how': 'solo coordinate'}
   luogo wilcox: {'x': 642.0, 'z': 226.0, 'how': 'solo coordinate'}
   scritto z-chinese-theatre-v1.json: 223 KB
+== zona z-brooklyn-40 (v1) · New York · Brooklyn, Flatbush ==
+  tutto: maps.mail.ru non risponde bene dopo 51s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: 5167 elementi da overpass.private.coffee in 99s (3576 KB)
+  edifici tenuti: 3800 (scartati 27)
+  strade: 309 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 12 aree
+  distretti: []
+  quartieri: 1 → Brooklyn
+  luogo brooklyn-40: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  luogo golden-girl: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  luogo lab-erskine: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  luogo peter-soffitta: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-brooklyn-40-v1.json: 209 KB
