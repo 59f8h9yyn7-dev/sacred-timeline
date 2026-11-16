@@ -916,3 +916,13 @@
   quartieri: 0 → 
   luogo muir-woods: {'x': 0.2, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-muir-woods-v1.json: 4 KB
+== zona z-mumbai (v1) · Mumbai · gli studi di Bollywood di Kingo ==
+  tutto: 720 elementi da overpass-api.de in 33s (496 KB)
+  edifici tenuti: 284 (scartati 5)
+  strade: 352 tratti, binari sopraelevati: 0
+  specchi d'acqua: 3
+  verde: 17 aree
+  distretti: []
+  quartieri: 2 → Mumbai, Prem Nagar
+  luogo mumbai: {'x': -0.2, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-mumbai-v1.json: 34 KB
