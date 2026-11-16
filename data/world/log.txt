@@ -645,3 +645,15 @@
   quartieri: 0 → 
   luogo gobi: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-gobi-v1.json: 0 KB
+== zona z-gracie (v1) · Gracie Mansion · residenza del sindaco, Upper East Side ==
+  tutto: maps.mail.ru non risponde bene dopo 49s (HTTP Error 504: Gateway Timeout)
+  tutto: 2109 elementi da overpass-api.de in 41s (1646 KB)
+  edifici tenuti: 1095 (scartati 32)
+  strade: 431 tratti, binari sopraelevati: 0
+  costa: 20 linee, 6 pezzi, acqua in 1 (0.87 km²)
+  specchi d'acqua: 0
+  verde: 44 aree
+  distretti: []
+  quartieri: 1 → Yorkville
+  luogo gracie: {'x': 2.2, 'z': -1.0, 'how': 'punto', 'h': 12.6, 'osm': 'w284868519'}
+  scritto z-gracie-v1.json: 102 KB
