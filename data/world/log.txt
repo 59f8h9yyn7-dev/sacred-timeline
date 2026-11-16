@@ -657,3 +657,13 @@
   quartieri: 1 → Yorkville
   luogo gracie: {'x': 2.2, 'z': -1.0, 'how': 'punto', 'h': 12.6, 'osm': 'w284868519'}
   scritto z-gracie-v1.json: 102 KB
+== zona z-greenwich (v1) · Old Royal Naval College · Greenwich, Londra ==
+  tutto: 5566 elementi da overpass-api.de in 43s (3564 KB)
+  edifici tenuti: 2387 (scartati 36)
+  strade: 1436 tratti, binari sopraelevati: 4
+  specchi d'acqua: 9
+  verde: 192 aree
+  distretti: []
+  quartieri: 2 → Greenwich, Greenwich Town Centre
+  luogo greenwich: {'x': -0.1, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-greenwich-v1.json: 177 KB
