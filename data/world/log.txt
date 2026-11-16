@@ -905,3 +905,14 @@
   quartieri: 7 → Monaco Vecchia, Fontevecchia, La Condamina, Monaco, Giardino Esotico, Moneghetti, Ravin de Sainte-Dévote
   luogo monaco: {'x': 0.1, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-monaco-v1.json: 115 KB
+== zona z-muir-woods (v1) · Muir Woods · California ==
+  tutto: maps.mail.ru non risponde bene dopo 2s (HTTP Error 504: Gateway Time-out)
+  tutto: 50 elementi da overpass-api.de in 32s (73 KB)
+  edifici tenuti: 4 (scartati 0)
+  strade: 48 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo muir-woods: {'x': 0.2, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-muir-woods-v1.json: 4 KB
