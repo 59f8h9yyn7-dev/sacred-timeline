@@ -1142,3 +1142,13 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 4 → Salem, Charter Street Historic District, Downtown Salem District, Federal Street District
   luogo salem: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-salem-v1.json: 146 KB
+== zona z-sambisa (v1) · Foresta di Sambisa · Nigeria ==
+  tutto: 1 elementi da overpass-api.de in 34s (3 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 1 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo sambisa: {'x': 0.2, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-sambisa-v1.json: 0 KB
