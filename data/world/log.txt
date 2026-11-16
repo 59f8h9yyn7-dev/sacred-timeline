@@ -460,3 +460,13 @@
   quartieri: 7 → Calcutta, Central Avenue 2, Tiretta, Bowbazar, Bow Bazar North, Baitakkhana North, Baithakkhana
   luogo calcutta: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
   scritto z-calcutta-v1.json: 151 KB
+== zona z-camden (v1) · Camden Town · Londra ==
+  tutto: 6484 elementi da overpass-api.de in 37s (4340 KB)
+  edifici tenuti: 3317 (scartati 26)
+  strade: 1912 tratti, binari sopraelevati: 32
+  specchi d'acqua: 5
+  verde: 154 aree
+  distretti: []
+  quartieri: 2 → Camden Town, Chalk Farm
+  luogo camden: {'x': 0.2, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-camden-v1.json: 241 KB
