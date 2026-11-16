@@ -688,3 +688,14 @@
   quartieri: 27 → Naka Ward, Hiroshima, Nakajimacho, Nakamachi, Kakomachi, Tokaichimachi 1-chome, Kokutaijimachi 1-chome, Dohashicho, Motomachi, Sakaimachi 1-chome, Sakaimachi 2-chome, Otemachi 1-chome, Otemachi 3-chome, Otemachi 2-chome, Otemachi 4-chome, Komachi, Koamicho, Honkawacho 1-chome, Honkawacho 2-chome, Hondori, Enomachi, Kawaramachi, Nekoyacho, Kamiyacho 1-chome, Kamiyacho 2-chome, Funairi-nakamachi, Fukuromachi
   luogo hiroshima: {'x': -0.1, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-hiroshima-v1.json: 158 KB
+== zona z-hk-sanctum (v1) · Sanctum di Hong Kong ==
+  tutto: 5633 elementi da overpass-api.de in 31s (4003 KB)
+  edifici tenuti: 1237 (scartati 59)
+  strade: 2857 tratti, binari sopraelevati: 0
+  costa: 42 linee, 3 pezzi, acqua in 2 (0.20 km²)
+  specchi d'acqua: 19
+  verde: 105 aree
+  distretti: []
+  quartieri: 7 → Hong Kong, Central, Admiralty, Mid-Levels, SoHo, Central District, Government Hill
+  luogo hk-sanctum: {'x': -0.2, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-hk-sanctum-v1.json: 168 KB
