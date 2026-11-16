@@ -517,3 +517,14 @@
   quartieri: 6 → Cleveland, Warehouse District, Gateway District, Civic Center, Nine-Twelve District, Downtown Cleveland
   luogo cleveland: {'x': -0.2, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-cleveland-v1.json: 48 KB
+== zona z-delacroix (v1) · Delacroix · Louisiana ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: 211 elementi da overpass-api.de in 43s (285 KB)
+  edifici tenuti: 75 (scartati 0)
+  strade: 3 tratti, binari sopraelevati: 0
+  specchi d'acqua: 10
+  verde: 0 aree
+  distretti: []
+  quartieri: 1 → Delacroix
+  luogo delacroix: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-delacroix-v1.json: 4 KB
