@@ -568,3 +568,13 @@
   quartieri: 5 → Edimburgo, New Town, Old Town, Pleasance, Greenside
   luogo edimburgo: {'x': 115.8, 'z': -29.8, 'how': 'punto', 'h': 10, 'osm': 'w5208866'}
   scritto z-edimburgo-v1.json: 224 KB
+== zona z-edwards (v1) · Base aerea di Edwards · deserto del Mojave, California ==
+  tutto: 0 elementi da overpass-api.de in 22s (0 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 0 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo edwards: {'x': -0.3, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-edwards-v1.json: 0 KB
