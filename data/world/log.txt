@@ -938,3 +938,15 @@
   quartieri: 3 → New Orleans, French Quarter, French Market
   luogo new-orleans: {'x': 0.1, 'z': 0.4, 'how': 'solo coordinate'}
   scritto z-new-orleans-v1.json: 133 KB
+== zona z-norco (v1) · Petroliera Norco · porto di Miami ==
+  tutto: maps.mail.ru non risponde bene dopo 48s (HTTP Error 504: Gateway Timeout)
+  tutto: 678 elementi da overpass-api.de in 38s (487 KB)
+  edifici tenuti: 69 (scartati 7)
+  strade: 412 tratti, binari sopraelevati: 2
+  costa: 21 linee, 5 pezzi, acqua in 2 (0.97 km²)
+  specchi d'acqua: 1
+  verde: 19 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo norco: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-norco-v1.json: 22 KB
