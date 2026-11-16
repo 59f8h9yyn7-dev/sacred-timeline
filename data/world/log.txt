@@ -1239,3 +1239,17 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo stazione-nm: {'x': -0.4, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-stazione-nm-v1.json: 0 KB
+== zona z-stoccarda (v1) · Stoccarda · Germania ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 151s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 5809 elementi da overpass-api.de in 37s (4039 KB)
+  edifici tenuti: 1998 (scartati 54)
+  strade: 2273 tratti, binari sopraelevati: 0
+  specchi d'acqua: 10
+  verde: 123 aree
+  distretti: []
+  quartieri: 2 → Stuttgart-Mitte, Stoccarda
+  luogo stoccarda: {'x': -0.1, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-stoccarda-v1.json: 194 KB
