@@ -369,3 +369,13 @@
   quartieri: 4 → Berkeley, Northside, Southside, Downtown Berkeley
   luogo berkeley: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-berkeley-v1.json: 143 KB
+== zona z-berna (v1) · Berna, Capodanno 1999 · Svizzera ==
+  tutto: 5153 elementi da overpass-api.de in 44s (3818 KB)
+  edifici tenuti: 2029 (scartati 130)
+  strade: 1627 tratti, binari sopraelevati: 0
+  specchi d'acqua: 49
+  verde: 80 aree
+  distretti: []
+  quartieri: 8 → Berna, Matte, Città vecchia, Gryphenhübeli, Altenberg, Weisses Quartier, Grünes Quartier, Gelbes Quartier
+  luogo berna: {'x': 0.0, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-berna-v1.json: 183 KB
