@@ -805,3 +805,13 @@
   quartieri: 7 → Lione, Vieux Lyon, Ainay, Bellecour, Cordeliers, Saint-Jean, Saint-Georges
   luogo lione-1858: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-lione-1858-v1.json: 179 KB
+== zona z-lipsia (v1) · Aeroporto di Lipsia-Halle · Germania ==
+  tutto: 644 elementi da overpass-api.de in 28s (483 KB)
+  edifici tenuti: 37 (scartati 10)
+  strade: 347 tratti, binari sopraelevati: 0
+  specchi d'acqua: 2
+  verde: 146 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo lipsia: {'x': 0.1, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-lipsia-v1.json: 24 KB
