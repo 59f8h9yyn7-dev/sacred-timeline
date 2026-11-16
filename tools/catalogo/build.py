@@ -38,7 +38,7 @@ def posizioni(luoghi):
     for n, raw in enumerate(open(gp, encoding='utf-8'), 1):
         s = raw.strip()
         if s and not s.startswith('#'):
-            p = [x.strip() for x in s.split('|')]
+            p = [x.strip() for x in re.split(r'(?<!\|)\|(?!\|)', s)]
             if p[0] not in luoghi:
                 log.append(f'geo.txt:{n}: luogo sconosciuto {p[0]}')
             elif p[0] in geo:
@@ -56,7 +56,8 @@ def posizioni(luoghi):
                 r = cache.get(q)
                 if r and r.get('trovato'):
                     fonte = p[3] if len(p) > 3 else ''
-                    osm = 'OpenStreetMap: ' + r['nome'].split(',')[0]
+                    parti = [x.strip() for x in r['nome'].split(',')]
+                    osm = 'OpenStreetMap: ' + (', '.join(parti[:2]) if parti[0].isdigit() else parti[0])
                     return r['lat'], r['lon'], prec_osm(r), (fonte + ' · ' if fonte else '') + osm
             return 'attesa', None, '', ''
         if m == 'x':

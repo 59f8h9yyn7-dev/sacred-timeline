@@ -1660,6 +1660,10 @@ svg.i{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stro
 .c6-sug button{display:flex;align-items:flex-start;gap:9px;padding:8px 2px;border:0;border-bottom:1px solid rgba(255,255,255,.07);background:none;color:var(--ink);text-align:left}
 .c6-sug button b{display:block;font:700 13.5px/1.25 var(--font-ui)}
 .c6-sug button small{display:block;font:500 11px/1.3 var(--font-mono);color:#ffcf9e}
+.c6-geo{margin-top:6px}
+.c6-geo p{margin:4px 0 0;font:500 13.5px/1.4 var(--font-ui);color:var(--ink-2)}
+.c6-geo p b{font:600 13px/1.4 var(--font-mono);color:var(--ink)}
+.c6-maps{display:flex;align-items:center;justify-content:center;text-decoration:none;margin-top:10px}
 .c6-or{display:flex;align-items:center;gap:10px;margin:16px 0 2px;font:600 11px/1 var(--font-ui);color:var(--ink-3)}
 .c6-or::before,.c6-or::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.1)}
 @media (min-width:760px){ .c6-prog,.c6-tools,.c6-list{width:100%;max-width:780px;margin-left:auto;margin-right:auto} .c6-ed{left:auto;right:18px;bottom:18px;width:410px;max-height:calc(100% - 120px);border-radius:16px;border:1px solid rgba(255,255,255,.16)} }
@@ -10733,17 +10737,18 @@ const c6Base = k => (C6.data && C6.data.luoghi[k]) || c6G('nuovi', k) || null;
 function c6Place(k){
   const b = c6Base(k); if (!b) return null;
   const o = c6G('p', k) || {};
-  return { k, nome: o.nome != null ? o.nome : b[0], dove: o.dove != null ? o.dove : b[1], zona: o.zona || b[2], tipo: o.tipo || b[3], lat: b[4], lon: b[5], prec: b[6] || '', mine: !C6.data.luoghi[k], fixed: !!c6G('p', k) };
+  const ll = Array.isArray(o.ll) ? o.ll : null;
+  return { k, nome: o.nome != null ? o.nome : b[0], dove: o.dove != null ? o.dove : b[1], zona: o.zona || b[2], tipo: o.tipo || b[3], lat: ll ? ll[0] : b[4], lon: ll ? ll[1] : b[5], prec: ll ? 'e' : b[6] || '', fonte: ll ? 'posizione corretta da te' : b[7] || '', llFix: !!ll, mine: !C6.data.luoghi[k], fixed: !!c6G('p', k) };
 }
 const c6Title = t => C6.data.titoli.find(x => x[0] === t);
-function c6Row(t, k, nota0, added){
-  const id = t + '|' + k, n = c6G('n', id), s = c6G('s', id) || 0, raw = n != null ? n : nota0;
-  return { t, k, id, p: c6Place(k), nota: raw.replace(/^\?\s*/, ''), nota0: nota0.replace(/^\?\s*/, ''), s, dv: !s && raw.startsWith('?'), added, edited: n != null };
+function c6Row(t, k, nota0, added, s0){
+  const id = t + '|' + k, n = c6G('n', id), us = c6G('s', id), s = us != null ? us : s0 || 0, raw = n != null ? n : nota0;
+  return { t, k, id, p: c6Place(k), nota: raw.replace(/^\?\s*/, ''), nota0: nota0.replace(/^\?\s*/, ''), s, s0: s0 || 0, dv: !s && raw.startsWith('?'), added, edited: n != null };
 }
 function c6Rows(t){
   const T = c6Title(t), out = [];
-  for (const [k, nota] of (T ? T[2] : [])) out.push(c6Row(t, k, nota, false));
-  for (const k of (c6G('add', t) || [])) out.push(c6Row(t, k, '', true));
+  for (const [k, nota, ok] of (T ? T[2] : [])) out.push(c6Row(t, k, nota, false, ok === 1 ? 1 : 0));
+  for (const k of (c6G('add', t) || [])) out.push(c6Row(t, k, '', true, 0));
   return out.filter(r => r.p);
 }
 function c6Where(k){ const out = []; for (const T of C6.data.titoli){ const r = c6Rows(T[0]).find(x => x.k === k); if (r) out.push(r); } return out; }
@@ -10762,6 +10767,7 @@ async function c6Open(){
   catch (e){ C6.busy = false; toast('Non riesco a caricare il catalogo dei luoghi adesso'); return; }
   C6.busy = false;
   const el = c6Dom(); el.hidden = false; C6.on = true;
+  $('.c6-tt small', el).textContent = C6.data.stato === 'bozza' ? 'Terra-616 · bozza da correggere' : 'Terra-616 · luoghi e posizioni';
   c6Chips(); c6Prog(); c6List();
 }
 function c6Close(){ if (C6.ed) c6EdClose(); C6.on = false; if (C6.el) C6.el.hidden = true; if (W6.on) W6.dirty = 2; }
@@ -10791,7 +10797,7 @@ function c6Dom(){
 }
 function c6Chips(){
   const T = C6.data.tipi;
-  $('.c6-chips', C6.el).innerHTML = `<select class="c6-sel" aria-label="Quali voci"><option value="">Tutte le voci</option><option value="todo">Da controllare</option><option value="dv">Da verificare (?)</option><option value="ok">Confermate</option><option value="no">Tolte</option><option value="me">Corrette o aggiunte</option></select>` +
+  $('.c6-chips', C6.el).innerHTML = `<select class="c6-sel" aria-label="Quali voci"><option value="">Tutte le voci</option><option value="todo">Da controllare</option><option value="dv">Da verificare (?)</option><option value="ok">Confermate</option><option value="no">Tolte</option><option value="me">Corrette o aggiunte</option><option value="np">Sulla Terra, senza punto</option><option value="pr">Sulla Terra, punto solo città o regione</option></select>` +
     Object.keys(T).map(k => `<button type="button" class="c6-chip${C6.tipi.has(k) ? ' on' : ''}" data-tipo="${k}" style="--c:${C6_COL[k]}"><i>${C6_IC[k]}</i>${esc(T[k])}</button>`).join('');
   $('.c6-sel', C6.el).value = C6.st;
 }
@@ -10810,6 +10816,8 @@ function c6Pass(r){
     case 'ok': return r.s === 1;
     case 'no': return r.s === -1;
     case 'me': return r.added || r.edited || r.p.fixed;
+    case 'np': return 'rmi'.includes(r.p.tipo) && r.p.lat == null;
+    case 'pr': return 'rmi'.includes(r.p.tipo) && r.p.lat != null && (r.p.prec === 'c' || r.p.prec === 'r');
   }
   return true;
 }
@@ -10893,7 +10901,7 @@ function c6EdRender(){
     const where = c6Where(ctx.k), in3 = C6.w6k.has(p.k);
     const badges = [r && r.dv ? '<span class="b dv">? da verificare</span>' : '', r && r.s === 1 ? '<span class="b ok">✓ confermato</span>' : '', r && r.s === -1 ? '<span class="b no">✕ tolto da questo titolo</span>' : '',
       p.fixed ? '<span class="b me">luogo corretto da te</span>' : '', p.mine ? '<span class="b me">luogo aggiunto da te</span>' : '', in3 ? '<span class="b w3">già nel Mondo 616</span>' : ''].join('');
-    const geo = p.lat != null ? `${p.lat.toFixed(4)}, ${p.lon.toFixed(4)}${p.prec ? ' (' + (C6_PREC[p.prec] || p.prec) + ')' : ''}` : 'da trovare';
+    const geo = p.lat != null ? `${p.lat.toFixed(5)}, ${p.lon.toFixed(5)}` : '';
     h = `<header><span class="c6-ic" style="--c:${C6_COL[p.tipo] || '#999'}">${C6_IC[p.tipo] || '•'}</span><div><small>${esc(ctx.t ? c6Year(ctx.t) + ' · ' + ctx.t : 'Luogo · ' + c6ZoneName(p.zona))}</small><b>${esc(p.nome)}</b></div>${X}</header>
       ${badges ? `<div class="c6-badges">${badges}</div>` : ''}
       ${r ? `<div class="c6-act"><button type="button" data-e="ok" class="ok${r.s === 1 ? ' on' : ''}">✓ Giusto</button><button type="button" data-e="no" class="no${r.s === -1 ? ' on' : ''}">✕ Non c'è: togli</button></div>
@@ -10901,15 +10909,25 @@ function c6EdRender(){
       <label>Nome<input data-f="nome" value="${esc(p.nome)}" autocomplete="off"></label>
       <label>Dove<input data-f="dove" value="${esc(p.dove)}" autocomplete="off"></label>
       <div class="c6-2"><label>Tipo<select data-f="tipo">${c6Opts(p.tipo, tipi)}</select></label><label>Zona<select data-f="zona">${c6Opts(p.zona, zone)}</select></label></div>
-      <p class="c6-hint">Nome, dove, tipo e zona valgono in tutti i titoli in cui compare. Posizione per la mappa: ${esc(geo)}.</p>
-      ${r && !r.added && (r.edited || r.s) ? '<button type="button" class="c6-reset" data-e="reset">↺ Questa voce come nella bozza</button><br>' : ''}
-      ${p.fixed ? '<button type="button" class="c6-reset" data-e="resetp">↺ Nome e dove come nella bozza</button>' : ''}
+      <p class="c6-hint">Nome, dove, tipo, zona e posizione valgono in tutti i titoli in cui compare.</p>
+      ${'rmix'.includes(p.tipo) ? `<div class="c6-geo"><h4>Posizione sulla Terra</h4>${geo ? `<p><b>${esc(geo)}</b>${p.prec ? ` · ${esc(C6_PREC[p.prec] || p.prec)}` : ''}</p>` : '<p><b>Nessun punto</b></p>'}${p.fonte ? `<p class="c6-hint">${esc(p.fonte)}</p>` : ''}
+        ${geo ? `<a class="c6-big c6-maps" href="https://maps.apple.com/?ll=${p.lat},${p.lon}&q=${encodeURIComponent(p.nome)}&z=${p.prec === 'e' ? 17 : p.prec === 'q' ? 14 : p.prec === 'c' ? 11 : 6}" target="_blank" rel="noopener">Apri in Mappe</a>` : ''}
+        <label>Correggi la posizione<input data-f="ll" inputmode="decimal" placeholder="lat, lon (es. 40.7484, -73.9857) o un link di Mappe" value="${p.llFix || (p.mine && p.lat != null) ? esc(p.lat + ', ' + p.lon) : ''}" autocomplete="off"></label></div>` : ''}
+      ${r && !r.added && (r.edited || r.s !== r.s0) ? '<button type="button" class="c6-reset" data-e="reset">↺ Questa voce come nel catalogo</button><br>' : ''}
+      ${p.fixed ? '<button type="button" class="c6-reset" data-e="resetp">↺ Luogo come nel catalogo (nome, dove, posizione)</button>' : ''}
       ${where.length ? `<h4>Compare in ${where.length === 1 ? '1 titolo' : where.length + ' titoli'}</h4><div class="c6-wh">${where.map(w => `<button type="button" data-e="go" data-t="${esc(w.t)}" class="${w.t === ctx.t ? 'cur' : ''}${w.s === 1 ? ' ok' : w.s === -1 ? ' no' : ''}"><em>${esc(c6Year(w.t))}</em>${esc(w.t)}</button>`).join('')}</div>` : ''}
       ${in3 ? '<button type="button" class="c6-big" data-e="fly">Vola qui nel Mondo 616</button>' : ''}`;
   }
   box.innerHTML = h; box.hidden = false; box.scrollTop = 0;
 }
-// what is written in the sheet goes into doc.cat616 (only what differs from the draft)
+// "40.7484, -73.9857", "40,7484 -73,9857" with a space, or a maps link with ll=, q=, @lat,lon
+function c6ParseLL(v){
+  const m = String(v).replace(/%2C/gi, ',').match(/(-?\d{1,2}(?:\.\d+))\s*,\s*(-?\d{1,3}(?:\.\d+))/) || String(v).match(/(-?\d{1,2}(?:[.,]\d+))\s+(-?\d{1,3}(?:[.,]\d+))/);
+  if (!m) return null;
+  const lat = parseFloat(m[1].replace(',', '.')), lon = parseFloat(m[2].replace(',', '.'));
+  return Math.abs(lat) <= 90 && Math.abs(lon) <= 180 ? [Math.round(lat * 1e6) / 1e6, Math.round(lon * 1e6) / 1e6] : null;
+}
+// what is written in the sheet goes into doc.cat616 (only what differs from the catalogue)
 function c6Commit(){
   const ctx = C6.ed, box = C6.el && $('.c6-ed', C6.el); if (!ctx || ctx.add || !box || box.hidden) return false;
   const val = f => { const x = box.querySelector(`[data-f="${f}"]`); return x ? x.value.trim() : null; };
@@ -10920,10 +10938,22 @@ function c6Commit(){
     const b = C6.data.luoghi[ctx.k], o = e.p[ctx.k] || {};
     const set = (f, v, bv) => { if (v == null || (f === 'nome' && !v)) return; const cur = o[f] != null ? o[f] : bv; if (v === cur) return; ch = true; if (v === bv) delete o[f]; else o[f] = v; };
     set('nome', nome, b[0]); set('dove', dove, b[1]); set('zona', zona, b[2]); set('tipo', tipo, b[3]);
+    const llv = val('ll');
+    if (llv != null){
+      const ll = c6ParseLL(llv), cur = Array.isArray(o.ll) ? o.ll.join(',') : '';
+      if (llv === '' && cur){ delete o.ll; ch = true; }
+      else if (ll && ll.join(',') !== cur){ o.ll = ll; ch = true; }
+      else if (llv && !ll) toast('Non riconosco la posizione: scrivi lat, lon');
+    }
     if (Object.keys(o).length) e.p[ctx.k] = o; else delete e.p[ctx.k];
   } else {
     const a = e.nuovi[ctx.k];
-    if (a){ const nv = [nome || a[0], dove != null ? dove : a[1], zona || a[2], tipo || a[3]]; if (nv.some((v, i) => v !== a[i])){ for (let i = 0; i < 4; i++) a[i] = nv[i]; ch = true; } }
+    if (a){
+      const nv = [nome || a[0], dove != null ? dove : a[1], zona || a[2], tipo || a[3]]; if (nv.some((v, i) => v !== a[i])){ for (let i = 0; i < 4; i++) a[i] = nv[i]; ch = true; }
+      const llv = val('ll'), ll = llv ? c6ParseLL(llv) : null;
+      if (ll && (ll[0] !== a[4] || ll[1] !== a[5])){ a[4] = ll[0]; a[5] = ll[1]; a[6] = 'e'; ch = true; }
+      else if (llv === '' && a[4] != null){ a[4] = a[5] = null; a[6] = ''; ch = true; }
+    }
   }
   if (ctx.t){
     const r = c6Rows(ctx.t).find(x => x.k === ctx.k), nota = val('nota');
@@ -10966,8 +10996,9 @@ function c6EdClick(b){
   if (a === 'ok' || a === 'no'){
     if (!r){ c6Tidy(); return; }
     if (a === 'no' && r.added){ c6Unlink(ctx.t, ctx.k); C6.ed = null; c6Changed(); c6EdRender(); toast('Luogo tolto da questo titolo'); return; }
-    const v = a === 'ok' ? 1 : -1, set = e.s[r.id] !== v;
-    if (set) e.s[r.id] = v; else delete e.s[r.id];
+    // "Giusto" conferma sempre (per togliere la conferma c'è "come nel catalogo"); "Togli" una seconda volta rimette la voce
+    const nv = a === 'ok' ? 1 : r.s === -1 ? (r.s0 || 0) : -1, set = nv !== r.s && nv !== 0;
+    if (nv === r.s0) delete e.s[r.id]; else e.s[r.id] = nv;
     c6Changed();
     // controllata una voce, si passa alla prossima ancora da controllare dello stesso titolo
     if (set){

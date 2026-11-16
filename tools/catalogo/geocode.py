@@ -4,7 +4,7 @@ Overpass per gli incroci) solo ciò che non è già in geo-osm.json, e aggiorna 
 Gira nella Action "Catalogo 616 - posizioni" (il sandbox non ha internet). Rispetta la policy di Nominatim:
 una richiesta al secondo, User-Agent riconoscibile, risultati salvati per non richiederli più.
 """
-import json, os, sys, time, urllib.parse, urllib.request
+import json, os, re, sys, time, urllib.parse, urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, 'geo-osm.json')
@@ -17,7 +17,7 @@ def righe():
     for n, raw in enumerate(open(os.path.join(HERE, 'geo.txt'), encoding='utf-8'), 1):
         s = raw.strip()
         if s and not s.startswith('#'):
-            yield n, [p.strip() for p in s.split('|')]
+            yield n, [p.strip() for p in re.split(r'(?<!\|)\|(?!\|)', s)]
 
 
 def get(url, data=None, timeout=60):

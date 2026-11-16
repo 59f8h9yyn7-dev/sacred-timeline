@@ -5,4 +5,3 @@ CONTROLLA novi-grad (Novi Grad): 547 km dalla stima · Sokovia: in Age of Ultron
 CONTROLLA sambisa (Foresta di Sambisa): 85 km dalla stima · OpenStreetMap: Sambisa Game Reserve
 CONTROLLA marocco (Marocco): 497 km dalla stima · punto non detto · OpenStreetMap: Marocco
 CONTROLLA gobi (Deserto del Gobi): 163 km dalla stima · OpenStreetMap: Deserto del Gobi
-in attesa di OpenStreetMap: norco
