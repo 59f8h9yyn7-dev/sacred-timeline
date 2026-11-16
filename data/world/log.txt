@@ -1131,3 +1131,14 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo rykers: {'x': 0.1, 'z': -0.2, 'how': 'solo coordinate'}
   scritto z-rykers-v1.json: 32 KB
+== zona z-salem (v1) · Salem, 1693 · Massachusetts ==
+  tutto: 3589 elementi da overpass-api.de in 39s (2497 KB)
+  edifici tenuti: 1950 (scartati 13)
+  strade: 912 tratti, binari sopraelevati: 0
+  costa: 4 linee, 4 pezzi, acqua in 3 (0.02 km²)
+  specchi d'acqua: 5
+  verde: 47 aree
+  distretti: []
+  quartieri: 4 → Salem, Charter Street Historic District, Downtown Salem District, Federal Street District
+  luogo salem: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-salem-v1.json: 146 KB
