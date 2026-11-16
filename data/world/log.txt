@@ -757,3 +757,13 @@
   quartieri: 0 → 
   luogo kevin: {'x': 11.6, 'z': -12.5, 'how': 'punto', 'h': 17.8, 'osm': 'w39421234'}
   scritto z-kevin-v1.json: 134 KB
+== zona z-kovak-villa (v1) · Villa di Von Kovak · Benedict Canyon, Los Angeles ==
+  tutto: 3106 elementi da overpass-api.de in 57s (2647 KB)
+  edifici tenuti: 1930 (scartati 57)
+  strade: 481 tratti, binari sopraelevati: 0
+  specchi d'acqua: 1
+  verde: 33 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo kovak-villa: {'x': 0.0, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-kovak-villa-v1.json: 156 KB
