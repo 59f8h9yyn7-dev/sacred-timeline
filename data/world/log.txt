@@ -1214,3 +1214,14 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo stark-villa: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-stark-villa-v1.json: 20 KB
+== zona z-statua-liberta (v1) · Statua della Libertà · Liberty Island ==
+  tutto: 172 elementi da overpass-api.de in 46s (147 KB)
+  edifici tenuti: 20 (scartati 4)
+  strade: 84 tratti, binari sopraelevati: 0
+  costa: 10 linee, 2 pezzi, acqua in 1 (1.91 km²)
+  specchi d'acqua: 0
+  verde: 17 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo statua-liberta: {'x': 0.6, 'z': 0.8, 'how': 'punto', 'h': 10.0, 'osm': 'w32965412'}
+  scritto z-statua-liberta-v1.json: 5 KB
