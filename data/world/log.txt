@@ -1310,3 +1310,13 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 7 → Butler's Wharf, St Olave's Estate, St John's Estate, Bermondsey Village, Tower Hill, East Smithfield, Monument
   luogo tower-bridge: {'x': -0.1, 'z': 0.4, 'how': 'solo coordinate'}
   scritto z-tower-bridge-v1.json: 143 KB
+== zona z-triskelion (v1) · Triskelion · sede dello S.H.I.E.L.D. sul Potomac, Theodore Roo… ==
+  tutto: 1052 elementi da overpass-api.de in 25s (1039 KB)
+  edifici tenuti: 85 (scartati 4)
+  strade: 526 tratti, binari sopraelevati: 0
+  specchi d'acqua: 9
+  verde: 73 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo triskelion: {'x': -0.2, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-triskelion-v1.json: 35 KB
