@@ -1,40 +1,30 @@
-== zona nyc616 (v1) ==
-  edifici 1: 16688 elementi da overpass-api.de in 36s (13860 KB)
-  edifici 2: 6354 elementi da overpass-api.de in 56s (4437 KB)
-  strade 1: overpass-api.de non risponde bene (HTTP Error 502: Bad Gateway)
-  strade 1: overpass.kumi.systems non risponde bene (HTTP Error 504: Gateway Timeout)
-  strade 1: maps.mail.ru non risponde bene (HTTP Error 504: Gateway Time-out)
-  strade 1: 18686 elementi da overpass.private.coffee in 223s (10710 KB)
-  strade 2: overpass-api.de non risponde bene (HTTP Error 502: Bad Gateway)
-  strade 2: overpass.kumi.systems non risponde bene (HTTP Error 504: Gateway Timeout)
-  strade 2: 6634 elementi da maps.mail.ru in 20s (3726 KB)
-  verde 1: 2710 elementi da overpass-api.de in 34s (2292 KB)
-  verde 2: overpass-api.de non risponde bene (HTTP Error 502: Bad Gateway)
-  verde 2: 254 elementi da overpass.kumi.systems in 72s (214 KB)
-  acqua: 199 elementi da overpass-api.de in 41s (182 KB)
-  costa: overpass-api.de non risponde bene (HTTP Error 502: Bad Gateway)
-  costa: 41 elementi da overpass.kumi.systems in 209s (163 KB)
-  quartieri: overpass-api.de non risponde bene (HTTP Error 502: Bad Gateway)
-  quartieri: overpass.kumi.systems non risponde bene (The read operation timed out)
-  quartieri: maps.mail.ru non risponde bene (HTTP Error 504: Gateway Time-out)
-  quartieri: overpass.private.coffee non risponde bene (HTTP Error 504: Gateway Timeout)
-  quartieri: overpass-api.de non risponde bene (HTTP Error 502: Bad Gateway)
-  quartieri: 41 elementi da overpass.kumi.systems in 357s (14 KB)
-  distretti: 5 elementi da overpass-api.de in 43s (6 KB)
-  indirizzi: overpass-api.de non risponde bene (HTTP Error 502: Bad Gateway)
-  indirizzi: 8 elementi da overpass.kumi.systems in 245s (5 KB)
-  edifici tenuti: 22515 (scartati 281)
-  strade: 9211 tratti, binari sopraelevati: 78
-  costa: 41 linee, 9 pezzi, acqua in 3 (4.51 km²)
-  specchi d'acqua: 66
-  verde: 1220 aree
+113 zone in tutto, da scaricare 112
+== zona z-disney-hall (v1) · Los Angeles · Downtown ==
+  tutto: overpass.kumi.systems non risponde bene dopo 251s (HTTP Error 504: Gateway Timeout)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 330s (The read operation timed out)
+  tutto: 6906 elementi da overpass-api.de in 37s (4469 KB)
+  edifici tenuti: 1117 (scartati 124)
+  strade: 2481 tratti, binari sopraelevati: 14
+  specchi d'acqua: 4
+  verde: 88 aree
   distretti: []
-  quartieri: 35 → Sunnyside, Alphabet City, SoHo, Kips Bay, Rose Hill, Long Island City, East Village, Washington Square Village, Sunnyside Gardens, Midtown, Murray Hill, Greenwich Village, Tudor City, University Village, Chelsea, Manhattan, Koreatown, Flatiron District, NoHo, Turtle Bay, Midtown East, Theater District, Hudson Yards, Garment District, Gramercy, Union Square, NoMad, Midtown South, Meatpacking District, West Village, Hudson Square, Court Square, Hunters Point, Sutton, Beekman
-  luogo avengers-tower: {'x': -1237.6, 'z': -1278.6, 'how': "indirizzo sull'edificio", 'h': 246.0, 'osm': 'w137564642', 'fp': [-12501, -13484, 4, -6, 782, 435, -4, 7, 6, 4, -466, 836, -52, -29, -81, 145, -690, -383, 80, -145, -48, -31, 465, -836], 'gone': 1}
-  luogo grand-central: {'x': -1290.4, 'z': -1182.7, 'how': 'nome', 'h': 45.8, 'osm': 'w265947358'}
-  luogo sanctum: {'x': -3262.9, 'z': 1429.0, 'how': "indirizzo sull'edificio", 'h': 17.2, 'osm': 'w248159921', 'fp': [-32561, 14254, -13, 3, -15, 24, -4, -3, -44, 77, 3, 11, -35, 54, -63, -40, 35, -55, 11, -2, 31, -48, 10, 7, 17, -27, -10, -6, 15, -24, -1, -12, 35, -54, 63, 41], 'gone': 1, 'face': [-0.54, 0.842]}
-  luogo parker-hc: {'x': 3461.7, 'z': -261.0, 'how': "indirizzo sull'edificio", 'h': 19.8, 'osm': 'w280365484'}
-  luogo parker-nwh: {'x': 3701.3, 'z': -254.0, 'how': "indirizzo sull'edificio", 'h': 18.4, 'osm': 'w280363055'}
-  luogo delmar: {'x': 3716.3, 'z': -144.4, 'how': 'solo coordinate'}
-  scritto nyc616-v1.json: 1688 KB
-fine in 2645s, ok
+  quartieri: 11 → Little Tokyo, Los Angeles, Bunker Hill, Skid Row, Downtown, Jewelry District, Historic Core, Gallery Row, Civic Center, Toy District, Pueblo de Los Ángeles
+  luogo arena-club: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo atlas-academy: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo blockbuster: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo darryl-la: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo disney-hall: {'x': -620.7, 'z': -388.7, 'how': 'solo coordinate'}
+  luogo glkh: {'x': -822.6, 'z': 435.8, 'how': 'solo coordinate'}
+  luogo hostel: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo isodyne: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo jen-casa: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo la-metro: {'x': 822.1, 'z': -436.7, 'how': 'solo coordinate'}
+  luogo la-pilota: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo momentum: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo pride-scavo: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo simon-casa: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo ssr-la: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo stark-ind: {'x': 39.0, 'z': -196.0, 'how': 'solo coordinate'}
+  luogo tribunale-la: {'x': -822.6, 'z': 435.8, 'how': 'solo coordinate'}
+  scritto z-disney-hall-v1.json: 169 KB
