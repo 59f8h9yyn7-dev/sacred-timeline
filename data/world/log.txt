@@ -541,3 +541,13 @@
   quartieri: 2 → Queensbridge, Roosevelt Island
   luogo dodc-carcere: {'x': 0.0, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-dodc-carcere-v1.json: 64 KB
+== zona z-eastview (v1) · Casa dei Kaplan · Eastview, New Jersey ==
+  tutto: 255 elementi da maps.mail.ru in 21s (273 KB)
+  edifici tenuti: 39 (scartati 0)
+  strade: 134 tratti, binari sopraelevati: 0
+  specchi d'acqua: 4
+  verde: 13 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo eastview: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
+  scritto z-eastview-v1.json: 11 KB
