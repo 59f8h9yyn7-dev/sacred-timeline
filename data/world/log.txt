@@ -667,3 +667,14 @@
   quartieri: 2 → Greenwich, Greenwich Town Centre
   luogo greenwich: {'x': -0.1, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-greenwich-v1.json: 177 KB
+== zona z-haiti (v1) · Haiti · Port-au-Prince ==
+  tutto: 1207 elementi da overpass-api.de in 34s (712 KB)
+  edifici tenuti: 887 (scartati 3)
+  strade: 236 tratti, binari sopraelevati: 0
+  costa: 5 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 1
+  verde: 35 aree
+  distretti: []
+  quartieri: 3 → Port-au-Prince, Bel Air, Champs de Mars
+  luogo haiti: {'x': 0.2, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-haiti-v1.json: 51 KB
