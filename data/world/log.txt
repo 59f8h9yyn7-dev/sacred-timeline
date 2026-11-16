@@ -222,3 +222,15 @@
   luogo coles: {'x': 0.0, 'z': 0.2, 'how': 'solo coordinate'}
   luogo jersey-city: {'x': 0.0, 'z': 0.2, 'how': 'solo coordinate'}
   scritto z-coles-v1.json: 154 KB
+== zona z-coney-island (v1) · New York · Coney Island e Brighton Beach ==
+  tutto: 3437 elementi da maps.mail.ru in 17s (2269 KB)
+  edifici tenuti: 1522 (scartati 22)
+  strade: 985 tratti, binari sopraelevati: 76
+  costa: 8 linee, 6 pezzi, acqua in 3 (0.96 km²)
+  specchi d'acqua: 9
+  verde: 72 aree
+  distretti: []
+  quartieri: 1 → Coney Island
+  luogo coney-island: {'x': 713.9, 'z': 203.5, 'how': 'solo coordinate'}
+  luogo yelena-banya: {'x': -713.1, 'z': -203.5, 'how': 'solo coordinate'}
+  scritto z-coney-island-v1.json: 110 KB
