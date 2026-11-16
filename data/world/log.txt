@@ -960,3 +960,14 @@
   quartieri: 0 → 
   luogo oahu: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
   scritto z-oahu-v1.json: 10 KB
+== zona z-oakland (v1) · Oakland · California, 1992 e oggi ==
+  tutto: 3143 elementi da overpass-api.de in 44s (2051 KB)
+  edifici tenuti: 973 (scartati 38)
+  strade: 1139 tratti, binari sopraelevati: 4
+  costa: 3 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 5
+  verde: 67 aree
+  distretti: []
+  quartieri: 9 → Chinatown, Oakland, Old Oakland Historic District, Uptown, Financial District, Downtown, Civic Center, San Pablo Gateway, Downtown Oakland
+  luogo oakland: {'x': -0.1, 'z': 0.4, 'how': 'solo coordinate'}
+  scritto z-oakland-v1.json: 90 KB
