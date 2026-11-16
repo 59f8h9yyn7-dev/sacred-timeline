@@ -1037,3 +1037,18 @@
   quartieri: 3 → Josefov, Città Vecchia, Praga
   luogo praga: {'x': 0.3, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-praga-v1.json: 167 KB
+== zona z-pride-ville (v1) · Ville della Pride · Brentwood e colline di Los Angeles ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: 2576 elementi da overpass.kumi.systems in 102s (2331 KB)
+  edifici tenuti: 1842 (scartati 50)
+  strade: 279 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 24 aree
+  distretti: []
+  quartieri: 1 → Brentwood
+  luogo pride-ville: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-pride-ville-v1.json: 158 KB
