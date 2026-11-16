@@ -326,3 +326,14 @@
   quartieri: 1 → Azzano San Paolo
   luogo azzano: {'x': -0.0, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-azzano-v1.json: 56 KB
+== zona z-babilonia (v1) · Babilonia, 575 a.C. · Iraq ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: 107 elementi da overpass-api.de in 43s (130 KB)
+  edifici tenuti: 16 (scartati 16)
+  strade: 29 tratti, binari sopraelevati: 0
+  specchi d'acqua: 3
+  verde: 10 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo babilonia: {'x': 0.4, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-babilonia-v1.json: 5 KB
