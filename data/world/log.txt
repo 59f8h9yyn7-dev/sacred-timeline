@@ -1027,3 +1027,13 @@
   quartieri: 0 → 
   luogo pompei: {'x': 0.3, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-pompei-v1.json: 61 KB
+== zona z-praga (v1) · Praga · Repubblica Ceca ==
+  tutto: 5034 elementi da overpass-api.de in 38s (3900 KB)
+  edifici tenuti: 1433 (scartati 219)
+  strade: 1572 tratti, binari sopraelevati: 0
+  specchi d'acqua: 4
+  verde: 92 aree
+  distretti: []
+  quartieri: 3 → Josefov, Città Vecchia, Praga
+  luogo praga: {'x': 0.3, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-praga-v1.json: 167 KB
