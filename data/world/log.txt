@@ -999,3 +999,21 @@
   quartieri: 2 → Oshkosh, River East
   luogo oshkosh-1985: {'x': -0.2, 'z': -0.2, 'how': 'solo coordinate'}
   scritto z-oshkosh-1985-v1.json: 105 KB
+== zona z-pacoima (v1) · Pacoima · casa della famiglia Williams, Los Angeles ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 151s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 4321 elementi da overpass-api.de in 54s (3509 KB)
+  edifici tenuti: 3866 (scartati 18)
+  strade: 302 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 5 aree
+  distretti: []
+  quartieri: 1 → Pacoima
+  luogo pacoima: {'x': 0.3, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-pacoima-v1.json: 245 KB
