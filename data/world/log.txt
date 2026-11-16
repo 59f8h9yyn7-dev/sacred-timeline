@@ -578,3 +578,13 @@
   quartieri: 0 → 
   luogo edwards: {'x': -0.3, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-edwards-v1.json: 0 KB
+== zona z-everest (v1) · Monte Everest · Himalaya ==
+  tutto: 6 elementi da overpass-api.de in 28s (37 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 3 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo everest: {'x': 0.0, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-everest-v1.json: 0 KB
