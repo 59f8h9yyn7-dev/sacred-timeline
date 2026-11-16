@@ -678,3 +678,13 @@
   quartieri: 3 → Port-au-Prince, Bel Air, Champs de Mars
   luogo haiti: {'x': 0.2, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-haiti-v1.json: 51 KB
+== zona z-hiroshima (v1) · Hiroshima, 1945 · Giappone ==
+  tutto: 5093 elementi da overpass-api.de in 34s (2869 KB)
+  edifici tenuti: 2736 (scartati 88)
+  strade: 673 tratti, binari sopraelevati: 0
+  specchi d'acqua: 6
+  verde: 49 aree
+  distretti: []
+  quartieri: 27 → Naka Ward, Hiroshima, Nakajimacho, Nakamachi, Kakomachi, Tokaichimachi 1-chome, Kokutaijimachi 1-chome, Dohashicho, Motomachi, Sakaimachi 1-chome, Sakaimachi 2-chome, Otemachi 1-chome, Otemachi 3-chome, Otemachi 2-chome, Otemachi 4-chome, Komachi, Koamicho, Honkawacho 1-chome, Honkawacho 2-chome, Hondori, Enomachi, Kawaramachi, Nekoyacho, Kamiyacho 1-chome, Kamiyacho 2-chome, Funairi-nakamachi, Fukuromachi
+  luogo hiroshima: {'x': -0.1, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-hiroshima-v1.json: 158 KB
