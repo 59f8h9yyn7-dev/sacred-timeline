@@ -359,3 +359,13 @@
   quartieri: 1 → Bella Coola
   luogo bella-coola: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-bella-coola-v1.json: 13 KB
+== zona z-berkeley (v1) · UC Berkeley · Berkeley, California ==
+  tutto: 4542 elementi da overpass-api.de in 37s (2841 KB)
+  edifici tenuti: 1354 (scartati 55)
+  strade: 1732 tratti, binari sopraelevati: 0
+  specchi d'acqua: 3
+  verde: 225 aree
+  distretti: []
+  quartieri: 4 → Berkeley, Northside, Southside, Downtown Berkeley
+  luogo berkeley: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
+  scritto z-berkeley-v1.json: 143 KB
