@@ -1052,3 +1052,14 @@
   quartieri: 1 → Brentwood
   luogo pride-ville: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-pride-ville-v1.json: 158 KB
+== zona z-puente (v1) · Puente Antiguo · cittadina del Nuovo Messico ==
+  tutto: overpass.kumi.systems non risponde bene dopo 127s (HTTP Error 502: Bad Gateway)
+  tutto: 114 elementi da overpass-api.de in 38s (77 KB)
+  edifici tenuti: 23 (scartati 0)
+  strade: 81 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 5 aree
+  distretti: []
+  quartieri: 1 → Galisteo
+  luogo puente: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-puente-v1.json: 6 KB
