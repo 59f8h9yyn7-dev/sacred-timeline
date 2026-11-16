@@ -449,3 +449,14 @@
   quartieri: 2 → Il Cairo, Bab al Luq
   luogo cairo: {'x': 0.1, 'z': 0.2, 'how': 'solo coordinate'}
   scritto z-cairo-v1.json: 58 KB
+== zona z-calcutta (v1) · Calcutta · India ==
+  tutto: overpass.private.coffee non risponde bene dopo 240s (The read operation timed out)
+  tutto: 3823 elementi da overpass-api.de in 41s (1801 KB)
+  edifici tenuti: 3079 (scartati 77)
+  strade: 552 tratti, binari sopraelevati: 0
+  specchi d'acqua: 1
+  verde: 8 aree
+  distretti: []
+  quartieri: 7 → Calcutta, Central Avenue 2, Tiretta, Bowbazar, Bow Bazar North, Baitakkhana North, Baithakkhana
+  luogo calcutta: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  scritto z-calcutta-v1.json: 151 KB
