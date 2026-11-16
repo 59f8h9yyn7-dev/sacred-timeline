@@ -842,3 +842,13 @@
   quartieri: 8 → Macau, 下環 Praia do Manduco, 司打口 Praca Ponte Horta, São Lourenço, Grand Beach, 媽閣 Barra, 中區 Centro, Sai Wan
   luogo macao: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-macao-v1.json: 204 KB
+== zona z-marocco (v1) · Marocco · missione di Yelena ==
+  tutto: 6 elementi da maps.mail.ru in 18s (26 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 1 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo marocco: {'x': -0.3, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-marocco-v1.json: 0 KB
