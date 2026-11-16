@@ -246,3 +246,15 @@
   luogo mosca: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   luogo vanko-mosca: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-mosca-v1.json: 91 KB
+== zona z-northern-star (v1) · New York · Red Hook e il porto ==
+  tutto: 9 elementi da overpass-api.de in 29s (34 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 0 tratti, binari sopraelevati: 0
+  costa: 4 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 0
+  verde: 0 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo northern-star: {'x': 295.9, 'z': 388.7, 'how': 'solo coordinate'}
+  luogo staten-ferry: {'x': -295.9, 'z': -388.7, 'how': 'solo coordinate'}
+  scritto z-northern-star-v1.json: 0 KB
