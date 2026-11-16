@@ -470,3 +470,14 @@
   quartieri: 2 → Camden Town, Chalk Farm
   luogo camden: {'x': 0.2, 'z': -0.3, 'how': 'solo coordinate'}
   scritto z-camden-v1.json: 241 KB
+== zona z-central-park (v1) · Central Park · Manhattan ==
+  tutto: 2588 elementi da overpass-api.de in 36s (2144 KB)
+  edifici tenuti: 1027 (scartati 18)
+  strade: 623 tratti, binari sopraelevati: 0
+  costa: 4 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 4
+  verde: 16 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo central-park: {'x': 0.2, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-central-park-v1.json: 91 KB
