@@ -495,3 +495,13 @@
   quartieri: 0 → 
   luogo chicago-1893: {'x': -0.2, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-chicago-1893-v1.json: 111 KB
+== zona z-chicago-riri (v1) · South Side di Chicago · la casa di Riri ==
+  tutto: 3368 elementi da overpass-api.de in 32s (2362 KB)
+  edifici tenuti: 1060 (scartati 29)
+  strade: 1030 tratti, binari sopraelevati: 72
+  specchi d'acqua: 2
+  verde: 147 aree
+  distretti: []
+  quartieri: 3 → Chinatown, Near South Side, Motor Row
+  luogo chicago-riri: {'x': 0.1, 'z': 0.0, 'how': 'solo coordinate'}
+  scritto z-chicago-riri-v1.json: 92 KB
