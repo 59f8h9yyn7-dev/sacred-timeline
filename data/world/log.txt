@@ -1289,3 +1289,13 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 1 → Tamaha
   luogo tamaha: {'x': 0.0, 'z': 0.3, 'how': 'solo coordinate'}
   scritto z-tamaha-v1.json: 6 KB
+== zona z-tokyo (v1) · Tokyo · Giappone ==
+  tutto: 5286 elementi da maps.mail.ru in 43s (3255 KB)
+  edifici tenuti: 1521 (scartati 70)
+  strade: 1043 tratti, binari sopraelevati: 160
+  specchi d'acqua: 5
+  verde: 32 aree
+  distretti: []
+  quartieri: 21 → Tokyo, Kokyo Gaien National Garden, Hibiya-Koen, Ginza 4, Ginza 3, Ginza 1, Ginza 2, Kyobashi 3, Kyobashi 2, Yaesu 2, Yaesu 1, Uchisaiwaichō 1, Yurakuchō 2, Yurakuchō 1, Marunouchi 3, Marunouchi 2, Marunouchi 1, Ginza, Yaesu, Marunouchi, Yurakuchō
+  luogo tokyo: {'x': 0.0, 'z': 0.0, 'how': 'solo coordinate'}
+  scritto z-tokyo-v1.json: 109 KB
