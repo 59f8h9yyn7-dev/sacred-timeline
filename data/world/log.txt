@@ -258,3 +258,14 @@
   luogo northern-star: {'x': 295.9, 'z': 388.7, 'how': 'solo coordinate'}
   luogo staten-ferry: {'x': -295.9, 'z': -388.7, 'how': 'solo coordinate'}
   scritto z-northern-star-v1.json: 0 KB
+== zona z-nuova-asgard (v1) · Nuova Asgard · Tønsberg, Norvegia ==
+  tutto: 336 elementi da overpass-api.de in 36s (266 KB)
+  edifici tenuti: 212 (scartati 1)
+  strade: 109 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 7 aree
+  distretti: []
+  quartieri: 1 → Skjeggestadåsen
+  luogo nuova-asgard: {'x': -0.1, 'z': 0.1, 'how': 'solo coordinate'}
+  luogo tonsberg: {'x': -0.1, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-nuova-asgard-v1.json: 19 KB
