@@ -712,3 +712,16 @@
   quartieri: 1 → Johannesburg
   luogo johannesburg: {'x': 0.2, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-johannesburg-v1.json: 34 KB
+== zona z-kamar-taj (v1) · Kamar-Taj · Kathmandu, Nepal ==
+  tutto: overpass.private.coffee non risponde bene dopo 240s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 122s (HTTP Error 504: Gateway Timeout)
+  tutto: 6102 elementi da maps.mail.ru in 21s (3206 KB)
+  edifici tenuti: 5332 (scartati 17)
+  strade: 491 tratti, binari sopraelevati: 0
+  specchi d'acqua: 12
+  verde: 55 aree
+  distretti: []
+  quartieri: 4 → Katmandu, Baghbazar, Kamalpokhari, Kalikasthan
+  luogo kamar-taj: {'x': 0.2, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-kamar-taj-v1.json: 251 KB
