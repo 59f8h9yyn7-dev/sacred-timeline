@@ -1094,3 +1094,40 @@
   quartieri: 2 → Riga, Old Riga
   luogo riga: {'x': 0.0, 'z': 0.2, 'how': 'solo coordinate'}
   scritto z-riga-v1.json: 124 KB
+== zona z-rocinha (v1) · Rocinha · favela di Rio de Janeiro, Brasile ==
+  tutto: overpass-api.de non risponde bene dopo 50s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 123s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  ERRORE nella zona z-rocinha:
+Traceback (most recent call last):
+  File "/home/runner/work/sacred-timeline/sacred-timeline/tools/world/build.py", line 647, in main
+    fname = f'{zid}-v{ver}.json'
+                  ^^^^^^^^^^^^^^^
+  File "/home/runner/work/sacred-timeline/sacred-timeline/tools/world/build.py", line 223, in do_zone
+    f'way["natural"="coastline"]({B2});'
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/sacred-timeline/sacred-timeline/tools/world/build.py", line 53, in overpass
+    log(f'  {label}: {host} non risponde bene dopo {time.time() - t0:.0f}s ({str(e)[:140]})')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: tutto: nessun server Overpass ha risposto (The read operation timed out)
+
+== zona z-rykers (v1) · Ryker's Island · prigione di New York ==
+  tutto: 658 elementi da overpass-api.de in 49s (464 KB)
+  edifici tenuti: 206 (scartati 13)
+  strade: 351 tratti, binari sopraelevati: 0
+  costa: 18 linee, 5 pezzi, acqua in 4 (0.53 km²)
+  specchi d'acqua: 0
+  verde: 48 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo rykers: {'x': 0.1, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-rykers-v1.json: 32 KB
