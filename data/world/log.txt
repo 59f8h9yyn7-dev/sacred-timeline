@@ -206,3 +206,19 @@
   luogo bacon-casa: {'x': -0.1, 'z': -0.0, 'how': 'solo coordinate'}
   luogo stark-la: {'x': -0.1, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-bacon-casa-v1.json: 146 KB
+== zona z-coles (v1) · Jersey City ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 4499 elementi da maps.mail.ru in 24s (2614 KB)
+  edifici tenuti: 2892 (scartati 6)
+  strade: 591 tratti, binari sopraelevati: 4
+  costa: 4 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 1
+  verde: 40 aree
+  distretti: []
+  quartieri: 2 → Jersey City, Hamilton Park
+  luogo coles: {'x': 0.0, 'z': 0.2, 'how': 'solo coordinate'}
+  luogo jersey-city: {'x': 0.0, 'z': 0.2, 'how': 'solo coordinate'}
+  scritto z-coles-v1.json: 154 KB
