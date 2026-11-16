@@ -58,3 +58,20 @@
   luogo tomba-fury: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
   luogo va-dc: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
   scritto z-casa-bianca-v1.json: 132 KB
+== zona z-city-hall (v1) · New York · Civic Center e Chinatown ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: 9524 elementi da overpass.kumi.systems in 95s (6484 KB)
+  edifici tenuti: 2622 (scartati 54)
+  strade: 2177 tratti, binari sopraelevati: 4
+  costa: 26 linee, 2 pezzi, acqua in 1 (0.07 km²)
+  specchi d'acqua: 10
+  verde: 323 aree
+  distretti: []
+  quartieri: 7 → New York, Tribeca, Chinatown, Little Italy, Two Bridges, Civic Center, Lower Manhattan
+  luogo chikara: {'x': 409.0, 'z': -208.3, 'how': 'solo coordinate'}
+  luogo chinatown: {'x': 409.0, 'z': -208.3, 'how': 'solo coordinate'}
+  luogo city-hall: {'x': -414.3, 'z': 207.0, 'how': 'punto', 'h': 36.6, 'osm': 'w575213527'}
+  luogo fbi-ny: {'x': -262.0, 'z': -93.4, 'how': 'punto', 'h': 10, 'osm': 'w75363907'}
+  luogo ned-mj: {'x': -366.4, 'z': 118.5, 'how': 'solo coordinate'}
+  luogo tribunale: {'x': -71.8, 'z': 49.4, 'how': 'solo coordinate'}
+  scritto z-city-hall-v1.json: 229 KB
