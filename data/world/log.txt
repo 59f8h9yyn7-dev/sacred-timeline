@@ -40,3 +40,21 @@
   luogo museo-mk: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
   luogo steven-casa: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
   scritto z-jane-londra-v1.json: 158 KB
+== zona z-casa-bianca (v1) · Washington · la Casa Bianca e il Mall ==
+  tutto: 5378 elementi da overpass-api.de in 32s (3905 KB)
+  edifici tenuti: 479 (scartati 53)
+  strade: 2026 tratti, binari sopraelevati: 8
+  specchi d'acqua: 40
+  verde: 446 aree
+  distretti: []
+  quartieri: 2 → Washington, The West End
+  luogo casa-bianca: {'x': 351.6, 'z': -760.9, 'how': 'edificio più vicino (16 m)', 'h': 2.5, 'osm': 'w1425481054'}
+  luogo dc-superstrada: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
+  luogo pierce-casa: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
+  luogo reflecting-pool: {'x': -359.2, 'z': 142.4, 'how': 'solo coordinate'}
+  luogo sam-casa: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
+  luogo steve-dc: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
+  luogo tidal-basin: {'x': 230.0, 'z': 777.9, 'how': 'solo coordinate'}
+  luogo tomba-fury: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
+  luogo va-dc: {'x': 359.2, 'z': -496.0, 'how': 'solo coordinate'}
+  scritto z-casa-bianca-v1.json: 132 KB
