@@ -12,3 +12,14 @@
   quartieri: 1 → Rocinha
   luogo rocinha: {'x': 0.4, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-rocinha-v1.json: 124 KB
+== zona z-vienna-onu (v1) · Vienna International Centre · sede ONU di Vienna ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: 3526 elementi da overpass-api.de in 41s (2705 KB)
+  edifici tenuti: 672 (scartati 43)
+  strade: 1244 tratti, binari sopraelevati: 6
+  specchi d'acqua: 18
+  verde: 402 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo vienna-onu: {'x': -0.1, 'z': -0.3, 'how': 'solo coordinate'}
+  scritto z-vienna-onu-v1.json: 116 KB
