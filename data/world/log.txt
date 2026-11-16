@@ -505,3 +505,15 @@
   quartieri: 3 → Chinatown, Near South Side, Motor Row
   luogo chicago-riri: {'x': 0.1, 'z': 0.0, 'how': 'solo coordinate'}
   scritto z-chicago-riri-v1.json: 92 KB
+== zona z-cleveland (v1) · Cleveland · Ohio ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 152s (The read operation timed out)
+  tutto: 2061 elementi da maps.mail.ru in 14s (1362 KB)
+  edifici tenuti: 273 (scartati 11)
+  strade: 910 tratti, binari sopraelevati: 6
+  specchi d'acqua: 5
+  verde: 31 aree
+  distretti: []
+  quartieri: 6 → Cleveland, Warehouse District, Gateway District, Civic Center, Nine-Twelve District, Downtown Cleveland
+  luogo cleveland: {'x': -0.2, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-cleveland-v1.json: 48 KB
