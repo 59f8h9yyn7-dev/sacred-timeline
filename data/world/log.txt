@@ -985,3 +985,17 @@
   quartieri: 1 → Broek op Langedijk
   luogo olanda-tulipani: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-olanda-tulipani-v1.json: 162 KB
+== zona z-oshkosh-1985 (v1) · Fiera rinascimentale, 1985 · Oshkosh, Wisconsin ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 151s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 2451 elementi da overpass-api.de in 33s (1475 KB)
+  edifici tenuti: 1673 (scartati 5)
+  strade: 500 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 6 aree
+  distretti: []
+  quartieri: 2 → Oshkosh, River East
+  luogo oshkosh-1985: {'x': -0.2, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-oshkosh-1985-v1.json: 105 KB
