@@ -1336,3 +1336,5 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 1 → Venezia
   luogo venezia: {'x': 0.0, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-venezia-v1.json: 238 KB
+tempo finito: restano 2 zone per il prossimo giro
+fine in 17721s, ok
