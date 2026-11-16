@@ -401,3 +401,13 @@
   quartieri: 16 → Bucarest, Lipscani, Cartierul Armenesc, Decebal, Villacrosse, Belvedere, Sf. Gheorghe, Sf. Anton, Udricani, Blanduzia, Colțea, Teatrului, Negustori, C. A. Rosetti, Sărindar, Batiștei
   luogo bucarest: {'x': -0.1, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-bucarest-v1.json: 154 KB
+== zona z-budapest (v1) · Budapest · Ungheria ==
+  tutto: 2584 elementi da maps.mail.ru in 17s (1731 KB)
+  edifici tenuti: 622 (scartati 148)
+  strade: 1191 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 64 aree
+  distretti: []
+  quartieri: 5 → Budapest, Naphegy, Castle District, I. kerület, Buda
+  luogo budapest: {'x': -0.2, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-budapest-v1.json: 79 KB
