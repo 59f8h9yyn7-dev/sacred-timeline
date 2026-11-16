@@ -21,3 +21,22 @@
   luogo sf-libreria: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
   luogo x-con: {'x': 492.3, 'z': 1120.4, 'how': 'solo coordinate'}
   scritto z-lombard-v1.json: 669 KB
+== zona z-jane-londra (v1) · Londra · Trafalgar Square e Westminster ==
+  tutto: 6132 elementi da overpass-api.de in 28s (4259 KB)
+  edifici tenuti: 1793 (scartati 47)
+  strade: 1826 tratti, binari sopraelevati: 28
+  specchi d'acqua: 3
+  verde: 48 aree
+  distretti: []
+  quartieri: 5 → Londra, Seven Dials, St. James's, Covent Garden, St Clement Danes
+  luogo jane-londra: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo londra: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo londra-fabbrica: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo londra-funerale: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo londra-museo: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo londra-pub: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo londra-sanctum: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo londra-ssr: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo museo-mk: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  luogo steven-casa: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  scritto z-jane-londra-v1.json: 158 KB
