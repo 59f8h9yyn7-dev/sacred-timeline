@@ -528,3 +528,16 @@
   quartieri: 1 → Delacroix
   luogo delacroix: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-delacroix-v1.json: 4 KB
+== zona z-dodc-carcere (v1) · Centro di detenzione del Controllo Danni · Roosevelt Island ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: 1686 elementi da maps.mail.ru in 17s (1236 KB)
+  edifici tenuti: 499 (scartati 16)
+  strade: 552 tratti, binari sopraelevati: 0
+  costa: 15 linee, 5 pezzi, acqua in 2 (0.73 km²)
+  specchi d'acqua: 1
+  verde: 72 aree
+  distretti: []
+  quartieri: 2 → Queensbridge, Roosevelt Island
+  luogo dodc-carcere: {'x': 0.0, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-dodc-carcere-v1.json: 64 KB
