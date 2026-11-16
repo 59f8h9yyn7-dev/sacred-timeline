@@ -1263,3 +1263,14 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo stonehenge: {'x': -0.2, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-stonehenge-v1.json: 2 KB
+== zona z-sword-base (v1) · Base S.W.O.R.D. fuori dall'Esagono · New Jersey ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: 231 elementi da overpass.kumi.systems in 97s (200 KB)
+  edifici tenuti: 127 (scartati 0)
+  strade: 85 tratti, binari sopraelevati: 0
+  specchi d'acqua: 1
+  verde: 13 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo sword-base: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
+  scritto z-sword-base-v1.json: 15 KB
