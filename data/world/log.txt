@@ -134,3 +134,22 @@
   luogo berlino-ctc: {'x': -690.0, 'z': -153.3, 'how': 'solo coordinate'}
   luogo berlino-prigione: {'x': 690.1, 'z': 153.7, 'how': 'solo coordinate'}
   scritto z-berlino-ctc-v1.json: 169 KB
+== zona z-chicago-marc (v1) · Chicago · il Loop e Grant Park ==
+  tutto: overpass.kumi.systems non risponde bene dopo 103s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.kumi.systems non risponde bene dopo 117s (HTTP Error 502: Bad Gateway)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 113s (HTTP Error 504: Gateway Timeout)
+  tutto: 4407 elementi da overpass-api.de in 32s (2788 KB)
+  edifici tenuti: 404 (scartati 107)
+  strade: 1585 tratti, binari sopraelevati: 48
+  specchi d'acqua: 15
+  verde: 208 aree
+  distretti: []
+  quartieri: 4 → Chicago, The Loop, Printer's Row, Financial District
+  luogo chicago-marc: {'x': 0.3, 'z': -0.2, 'how': 'solo coordinate'}
+  luogo chicago-phastos: {'x': 0.3, 'z': -0.2, 'how': 'solo coordinate'}
+  luogo hood-covo: {'x': 0.3, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-chicago-marc-v1.json: 75 KB
