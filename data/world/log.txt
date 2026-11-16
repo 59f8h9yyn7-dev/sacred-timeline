@@ -316,3 +316,13 @@
   quartieri: 1 → Esopus
   luogo avengers-compound: {'x': -0.0, 'z': 0.0, 'how': 'solo coordinate'}
   scritto z-avengers-compound-v1.json: 3 KB
+== zona z-azzano (v1) · Azzano · fabbrica dell'HYDRA, Italia ==
+  tutto: 1225 elementi da maps.mail.ru in 28s (642 KB)
+  edifici tenuti: 776 (scartati 4)
+  strade: 397 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 23 aree
+  distretti: []
+  quartieri: 1 → Azzano San Paolo
+  luogo azzano: {'x': -0.0, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-azzano-v1.json: 56 KB
