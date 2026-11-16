@@ -36,7 +36,7 @@ def overpass(q, label, start=0, timeout=330):
             try:
                 t0 = time.time()
                 req = urllib.request.Request(ep, data=data, headers={'User-Agent': 'sacred-timeline-world/1 (app personale, una tantum)'})
-                with urllib.request.urlopen(req, timeout=timeout if ep == GOOD['ep'] or GOOD['ep'] is None else min(timeout, 150)) as r:
+                with urllib.request.urlopen(req, timeout=min(timeout, 180) if ep == GOOD['ep'] or GOOD['ep'] is None else min(timeout, 120)) as r:
                     raw = r.read()
                 j_ = json.loads(raw)
                 rem = j_.get('remark') or ''
@@ -48,6 +48,8 @@ def overpass(q, label, start=0, timeout=330):
                 return els
             except Exception as e:
                 last = e
+                if GOOD['ep'] == ep:
+                    GOOD['ep'] = None  # non è più il preferito
                 log(f'  {label}: {host} non risponde bene dopo {time.time() - t0:.0f}s ({str(e)[:140]})')
         time.sleep(15 * (attempt + 1))
     raise RuntimeError(f'{label}: nessun server Overpass ha risposto ({last})')
