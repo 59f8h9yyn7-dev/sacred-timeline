@@ -1274,3 +1274,18 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo sword-base: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
   scritto z-sword-base-v1.json: 15 KB
+== zona z-tamaha (v1) · Tamaha · Oklahoma, Nazione Choctaw ==
+  tutto: overpass.kumi.systems non risponde bene dopo 240s (The read operation timed out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.kumi.systems non risponde bene dopo 108s (HTTP Error 504: Gateway Timeout)
+  tutto: 138 elementi da maps.mail.ru in 25s (88 KB)
+  edifici tenuti: 93 (scartati 0)
+  strade: 39 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 1 aree
+  distretti: []
+  quartieri: 1 → Tamaha
+  luogo tamaha: {'x': 0.0, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-tamaha-v1.json: 6 KB
