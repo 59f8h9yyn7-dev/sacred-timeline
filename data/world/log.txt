@@ -166,3 +166,16 @@
   luogo lieberman-casa: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
   luogo midtown-school: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
   scritto z-cimitero-may-v1.json: 116 KB
+== zona z-harlem-125 (v1) · New York · Harlem ==
+  tutto: 5490 elementi da overpass.kumi.systems in 121s (3943 KB)
+  edifici tenuti: 3246 (scartati 85)
+  strade: 666 tratti, binari sopraelevati: 8
+  costa: 13 linee, 1 pezzi, acqua in 0 (0.00 km²)
+  specchi d'acqua: 0
+  verde: 92 aree
+  distretti: []
+  quartieri: 1 → Harlem
+  luogo harlem-125: {'x': -180.2, 'z': -347.2, 'how': 'punto', 'h': 20.0, 'osm': 'w271798914'}
+  luogo harlem-paradise: {'x': 191.0, 'z': -92.5, 'how': 'solo coordinate'}
+  luogo pops: {'x': -70.0, 'z': 312.5, 'how': 'edificio più vicino (24 m)', 'h': 17.4, 'osm': 'w271626101'}
+  scritto z-harlem-125-v1.json: 229 KB
