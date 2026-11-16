@@ -785,3 +785,13 @@
   quartieri: 1 → Kampung Attap
   luogo kuala-lumpur: {'x': -0.5, 'z': 0.9, 'how': 'punto', 'h': 600.0, 'osm': 'w645604854'}
   scritto z-kuala-lumpur-v1.json: 120 KB
+== zona z-lagos (v1) · Lagos · Nigeria ==
+  tutto: 2720 elementi da overpass-api.de in 46s (1332 KB)
+  edifici tenuti: 2275 (scartati 11)
+  strade: 369 tratti, binari sopraelevati: 2
+  specchi d'acqua: 3
+  verde: 12 aree
+  distretti: []
+  quartieri: 2 → Lagos, Lagos Island
+  luogo lagos: {'x': -0.1, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-lagos-v1.json: 114 KB
