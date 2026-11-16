@@ -926,3 +926,15 @@
   quartieri: 2 → Mumbai, Prem Nagar
   luogo mumbai: {'x': -0.2, 'z': 0.1, 'how': 'solo coordinate'}
   scritto z-mumbai-v1.json: 34 KB
+== zona z-new-orleans (v1) · New Orleans · Louisiana ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 124s (HTTP Error 502: Bad Gateway)
+  tutto: 3187 elementi da maps.mail.ru in 17s (2040 KB)
+  edifici tenuti: 2041 (scartati 53)
+  strade: 503 tratti, binari sopraelevati: 0
+  specchi d'acqua: 2
+  verde: 14 aree
+  distretti: []
+  quartieri: 3 → New Orleans, French Quarter, French Market
+  luogo new-orleans: {'x': 0.1, 'z': 0.4, 'how': 'solo coordinate'}
+  scritto z-new-orleans-v1.json: 133 KB
