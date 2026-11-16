@@ -950,3 +950,13 @@
   quartieri: 0 → 
   luogo norco: {'x': 0.0, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-norco-v1.json: 22 KB
+== zona z-oahu (v1) · Oahu · Hawaii ==
+  tutto: 306 elementi da overpass-api.de in 50s (194 KB)
+  edifici tenuti: 72 (scartati 3)
+  strade: 139 tratti, binari sopraelevati: 0
+  specchi d'acqua: 1
+  verde: 3 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo oahu: {'x': 0.0, 'z': 0.4, 'how': 'solo coordinate'}
+  scritto z-oahu-v1.json: 10 KB
