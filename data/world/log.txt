@@ -37,3 +37,4 @@
   quartieri: 1 → Yucca Valley
   luogo yucca-valley: {'x': 0.1, 'z': -0.1, 'how': 'solo coordinate'}
   scritto z-yucca-valley-v1.json: 33 KB
+fine in 575s, ok
