@@ -1225,3 +1225,17 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 0 → 
   luogo statua-liberta: {'x': 0.6, 'z': 0.8, 'how': 'punto', 'h': 10.0, 'osm': 'w32965412'}
   scritto z-statua-liberta-v1.json: 5 KB
+== zona z-stazione-nm (v1) · Stazione di servizio · strada per Puente Antiguo, Nuovo Messico ==
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: 5 elementi da overpass-api.de in 43s (22 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 2 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 1 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo stazione-nm: {'x': -0.4, 'z': -0.4, 'how': 'solo coordinate'}
+  scritto z-stazione-nm-v1.json: 0 KB
