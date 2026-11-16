@@ -23,3 +23,17 @@
   quartieri: 0 → 
   luogo vienna-onu: {'x': -0.1, 'z': -0.3, 'how': 'solo coordinate'}
   scritto z-vienna-onu-v1.json: 116 KB
+== zona z-yucca-valley (v1) · Yucca Valley · deserto della California ==
+  tutto: overpass-api.de non risponde bene dopo 0s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 180s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.private.coffee non risponde bene dopo 120s (HTTP Error 504: Gateway Timeout)
+  tutto: 788 elementi da overpass.kumi.systems in 73s (473 KB)
+  edifici tenuti: 413 (scartati 3)
+  strade: 327 tratti, binari sopraelevati: 0
+  specchi d'acqua: 2
+  verde: 5 aree
+  distretti: []
+  quartieri: 1 → Yucca Valley
+  luogo yucca-valley: {'x': 0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-yucca-valley-v1.json: 33 KB
