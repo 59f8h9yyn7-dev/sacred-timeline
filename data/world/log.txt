@@ -1253,3 +1253,13 @@ RuntimeError: tutto: nessun server Overpass ha risposto (The read operation time
   quartieri: 2 → Stuttgart-Mitte, Stoccarda
   luogo stoccarda: {'x': -0.1, 'z': -0.0, 'how': 'solo coordinate'}
   scritto z-stoccarda-v1.json: 194 KB
+== zona z-stonehenge (v1) · Stonehenge · Wiltshire, Inghilterra ==
+  tutto: 67 elementi da overpass-api.de in 41s (64 KB)
+  edifici tenuti: 0 (scartati 0)
+  strade: 37 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 6 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo stonehenge: {'x': -0.2, 'z': 0.1, 'how': 'solo coordinate'}
+  scritto z-stonehenge-v1.json: 2 KB
