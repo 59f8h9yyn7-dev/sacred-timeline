@@ -282,3 +282,15 @@
   luogo citta-messico: {'x': -92.9, 'z': 136.2, 'how': 'solo coordinate'}
   luogo tenochtitlan: {'x': 92.7, 'z': -136.4, 'how': 'solo coordinate'}
   scritto z-tenochtitlan-v1.json: 130 KB
+== zona z-alexander-hamilton (v1) · Alexander Hamilton Bridge · tra Manhattan e il Bronx ==
+  tutto: maps.mail.ru non risponde bene dopo 52s (HTTP Error 504: Gateway Timeout)
+  tutto: 2619 elementi da overpass-api.de in 50s (2091 KB)
+  edifici tenuti: 943 (scartati 42)
+  strade: 585 tratti, binari sopraelevati: 0
+  costa: 5 linee, 3 pezzi, acqua in 1 (0.19 km²)
+  specchi d'acqua: 0
+  verde: 40 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo alexander-hamilton: {'x': -0.1, 'z': -0.2, 'how': 'solo coordinate'}
+  scritto z-alexander-hamilton-v1.json: 101 KB
