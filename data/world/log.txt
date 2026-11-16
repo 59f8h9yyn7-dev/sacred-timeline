@@ -120,3 +120,17 @@
   luogo smithsonian: {'x': 200.9, 'z': 92.7, 'how': 'solo coordinate'}
   luogo washington-monument: {'x': -1137.7, 'z': -56.1, 'how': 'punto', 'h': 169.3, 'osm': 'w766761337'}
   scritto z-campidoglio-v1.json: 180 KB
+== zona z-berlino-ctc (v1) · Berlino · Mitte ==
+  tutto: overpass.private.coffee non risponde bene dopo 109s (HTTP Error 504: Gateway Timeout)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: 9366 elementi da overpass.kumi.systems in 125s (6959 KB)
+  edifici tenuti: 968 (scartati 173)
+  strade: 2791 tratti, binari sopraelevati: 122
+  specchi d'acqua: 11
+  verde: 265 aree
+  distretti: []
+  quartieri: 5 → Berlino, Friedrichswerder, Dorotheenstadt, Mitte, Friedrich-Wilhelm-Stadt
+  luogo berlino: {'x': 690.1, 'z': 153.7, 'how': 'solo coordinate'}
+  luogo berlino-ctc: {'x': -690.0, 'z': -153.3, 'how': 'solo coordinate'}
+  luogo berlino-prigione: {'x': 690.1, 'z': 153.7, 'how': 'solo coordinate'}
+  scritto z-berlino-ctc-v1.json: 169 KB
