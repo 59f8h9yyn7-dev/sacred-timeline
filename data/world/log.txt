@@ -894,3 +894,14 @@
   quartieri: 0 → 
   luogo mjolnir-cratere: {'x': 0.1, 'z': -0.4, 'how': 'solo coordinate'}
   scritto z-mjolnir-cratere-v1.json: 1 KB
+== zona z-monaco (v1) · Circuito di Monaco · Principato di Monaco ==
+  tutto: 3576 elementi da maps.mail.ru in 19s (2186 KB)
+  edifici tenuti: 991 (scartati 41)
+  strade: 1441 tratti, binari sopraelevati: 0
+  costa: 25 linee, 3 pezzi, acqua in 2 (0.69 km²)
+  specchi d'acqua: 6
+  verde: 67 aree
+  distretti: []
+  quartieri: 7 → Monaco Vecchia, Fontevecchia, La Condamina, Monaco, Giardino Esotico, Moneghetti, Ravin de Sainte-Dévote
+  luogo monaco: {'x': 0.1, 'z': -0.1, 'how': 'solo coordinate'}
+  scritto z-monaco-v1.json: 115 KB
