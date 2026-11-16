@@ -1017,3 +1017,13 @@
   quartieri: 1 → Pacoima
   luogo pacoima: {'x': 0.3, 'z': -0.2, 'how': 'solo coordinate'}
   scritto z-pacoima-v1.json: 245 KB
+== zona z-pompei (v1) · Pompei, 79 d.C. · Campania ==
+  tutto: 1577 elementi da overpass-api.de in 38s (907 KB)
+  edifici tenuti: 846 (scartati 39)
+  strade: 447 tratti, binari sopraelevati: 0
+  specchi d'acqua: 0
+  verde: 81 aree
+  distretti: []
+  quartieri: 0 → 
+  luogo pompei: {'x': 0.3, 'z': 0.3, 'how': 'solo coordinate'}
+  scritto z-pompei-v1.json: 61 KB
