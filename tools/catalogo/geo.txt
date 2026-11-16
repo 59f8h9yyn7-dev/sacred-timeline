@@ -258,9 +258,9 @@ centroamerica | q | Guatemala | viaggio senza tappe precise
 bella-coola | q | Bella Coola, British Columbia
 providence | - | rifugio segreto in Canada
 peru | q | Peru | rovine non dette
-san-juan | q | San Juan, Puerto Rico
+san-juan | ll | 18.4655,-66.1057 | c | Viejo San Juan: OpenStreetMap dava il centro del comune, più a sud
 giamaica | q | Kingston, Jamaica
-citta-messico | q | Mexico City
+citta-messico | ll | 19.4326,-99.1332 | c | lo Zócalo, centro storico: OpenStreetMap dava il centro del confine amministrativo, più a sud
 ixtenco | q | Ixtenco, Tlaxcala
 tenochtitlan | q | Templo Mayor, Mexico City | dove sorgeva il centro di Tenochtitlan
 amazzonia | ll | -3.4653,-62.2159 | r | in Amazzonia, punto non detto
@@ -326,8 +326,8 @@ wundagore | rel | novi-grad | 0.3000,1.0000 | Transia, paese inventato vicino al
 wanda-baita | - | montagne non dette
 
 # ---------- Russia ----------
-vanko-mosca | q | Moscow, Russia | indirizzo non detto
-mosca | q | Moscow, Russia
+vanko-mosca | rel | mosca | 0,0 | indirizzo non detto
+mosca | ll | 55.7539,37.6208 | c | il centro, Piazza Rossa: OpenStreetMap dava il centro del confine amministrativo, molto più a sud
 natasha-russia | - | luogo non detto
 leviathan-russia | - | luogo non detto
 nuova-skrullos | - | luogo non detto

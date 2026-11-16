@@ -184,15 +184,9 @@ def main():
                 r.append(e)
         return r if len(r[0]) >= 6 else None
 
-    cfg = json.load(open(os.path.join(ROOT, 'tools', 'world', 'zones.json')))
-    os.makedirs(OUT, exist_ok=True)
-    idx_path = os.path.join(OUT, 'index.json')
-    index = json.load(open(idx_path)) if os.path.exists(idx_path) else {'zones': {}}
-
-    for Z in cfg['zones']:
-        zid, ver = Z['id'], Z.get('v', 1)
-        fname = f'{zid}-v{ver}.json'
-        log(f'== zona {zid} (v{ver}) ==')
+    def do_zone(Z, zid, ver, fname):
+        log(f'== zona {zid} (v{ver}) · {Z.get("name", "")} ==')
+        auto = bool(Z.get('auto'))
         rects = Z['rects']
         S = min(r[0] for r in rects); W = min(r[1] for r in rects); N = max(r[2] for r in rects); E = max(r[3] for r in rects)
         lat0, lon0 = (S + N) / 2, (W + E) / 2
@@ -208,20 +202,54 @@ def main():
 
         # ---- scarico (in parallelo: ogni richiesta su un server diverso) ----
         from concurrent.futures import ThreadPoolExecutor
-        Q = {}
-        for i, r in enumerate(rects):
+        GREEN_L = '^(park|garden|playground|pitch|dog_park|common|recreation_ground|nature_reserve)$'
+        GREEN_U = '^(grass|recreation_ground|cemetery|village_green|meadow|forest)$'
+        GREEN_N = '^(wood|scrub|grassland|heath)$'
+        if auto:
+            # zona piccola del catalogo: una richiesta sola (meno carico sui server Overpass), poi divido per tipo
+            r = rects[0]; b, B2 = bb(r), bb(big)
+            q = (f'[out:json][timeout:300];(way["building"]({b});relation["building"]["type"="multipolygon"]({b});'
+                 f'way["highway"]({b});way["railway"~"^(subway|rail|light_rail|monorail)$"]({b});'
+                 f'way["leisure"~"{GREEN_L}"]({b});relation["leisure"~"{GREEN_L}"]({b});way["landuse"~"{GREEN_U}"]({b});relation["landuse"~"{GREEN_U}"]({b});way["natural"~"{GREEN_N}"]({b});'
+                 f'way["natural"="water"]({B2});relation["natural"="water"]({B2});way["waterway"="riverbank"]({B2});relation["waterway"="riverbank"]({B2});'
+                 f'way["natural"="coastline"]({B2});'
+                 f'node["place"~"^(neighbourhood|suburb|quarter|borough|village|town|hamlet|city)$"]["name"]({b}););out tags geom;')
+            els = overpass(q, 'tutto', hash(zid) % len(EPS))
+            res = {'edifici 1': [], 'strade 1': [], 'verde 1': [], 'acqua': [], 'costa': [], 'quartieri': [], 'distretti': []}
+            for el in els:
+                t = el.get('tags') or {}
+                if el['type'] == 'node':
+                    if t.get('place'):
+                        res['quartieri'].append(el)
+                    continue
+                if 'building' in t:
+                    res['edifici 1'].append(el)
+                if 'highway' in t or t.get('railway'):
+                    res['strade 1'].append(el)
+                if re.match(GREEN_L, t.get('leisure', '')) or re.match(GREEN_U, t.get('landuse', '')) or re.match(GREEN_N, t.get('natural', '')):
+                    res['verde 1'].append(el)
+                if t.get('natural') == 'water' or t.get('waterway') == 'riverbank':
+                    res['acqua'].append(el)
+                if t.get('natural') == 'coastline':
+                    res['costa'].append(el)
+            Q = {}
+        else:
+            Q = {}
+        for i, r in enumerate([] if auto else rects):
             Q[f'edifici {i + 1}'] = f'[out:json][timeout:300];(way["building"]({bb(r)});relation["building"]["type"="multipolygon"]({bb(r)}););out tags geom;'
             Q[f'strade {i + 1}'] = f'[out:json][timeout:240];(way["highway"]({bb(r)});way["railway"~"^(subway|rail|light_rail|monorail)$"]({bb(r)}););out tags geom;'
             Q[f'verde {i + 1}'] = f'[out:json][timeout:240];(way["leisure"~"^(park|garden|playground|pitch|dog_park|common|recreation_ground|nature_reserve)$"]({bb(r)});relation["leisure"~"^(park|garden|playground|pitch|common|recreation_ground|nature_reserve)$"]({bb(r)});way["landuse"~"^(grass|recreation_ground|cemetery|village_green|meadow|forest)$"]({bb(r)});relation["landuse"~"^(grass|recreation_ground|cemetery|village_green|meadow|forest)$"]({bb(r)});way["natural"~"^(wood|scrub|grassland|heath)$"]({bb(r)}););out tags geom;'
-        Q['acqua'] = f'[out:json][timeout:240];(way["natural"="water"]({bb(big)});relation["natural"="water"]({bb(big)});way["waterway"="riverbank"]({bb(big)});relation["waterway"="riverbank"]({bb(big)}););out tags geom;'
-        Q['costa'] = f'[out:json][timeout:180];way["natural"="coastline"]({bb(big)});out geom;'
-        Q['quartieri'] = f'[out:json][timeout:120];node["place"~"^(neighbourhood|suburb|quarter|borough)$"]["name"]({bb([S, W, N, E])});out;'
-        Q['distretti'] = f'[out:json][timeout:240];relation["boundary"="administrative"]["admin_level"~"^(5|6)$"]({bb([S, W, N, E])});out tags geom;'
-        aq = ''.join(f'nwr["addr:housenumber"="{m["addr"][0]}"]["addr:street"="{m["addr"][1]}"]({bb(big)});' for m in Z.get('marks', []) if m.get('addr'))
+        if not auto:
+          Q['acqua'] = f'[out:json][timeout:240];(way["natural"="water"]({bb(big)});relation["natural"="water"]({bb(big)});way["waterway"="riverbank"]({bb(big)});relation["waterway"="riverbank"]({bb(big)}););out tags geom;'
+          Q['costa'] = f'[out:json][timeout:180];way["natural"="coastline"]({bb(big)});out geom;'
+          Q['quartieri'] = f'[out:json][timeout:120];node["place"~"^(neighbourhood|suburb|quarter|borough)$"]["name"]({bb([S, W, N, E])});out;'
+          Q['distretti'] = f'[out:json][timeout:240];relation["boundary"="administrative"]["admin_level"~"^(5|6)$"]({bb([S, W, N, E])});out tags geom;'
+        aq = '' if auto else ''.join(f'nwr["addr:housenumber"="{m["addr"][0]}"]["addr:street"="{m["addr"][1]}"]({bb(big)});' for m in Z.get('marks', []) if m.get('addr'))
         if aq:
             Q['indirizzi'] = f'[out:json][timeout:120];({aq});out tags center;'
         optional = {'distretti', 'indirizzi'}
-        res = {}
+        if not auto:
+          res = {}
         with ThreadPoolExecutor(max_workers=4) as ex:
             futs = {k: ex.submit(overpass, q, k, n) for n, (k, q) in enumerate(Q.items())}
             for k, f in futs.items():
@@ -449,8 +477,8 @@ def main():
             for name, g in boro:
                 if g.contains(Point(x, z)):
                     bn = name; break
-            nm = t.get('name')
-            if t.get('place') == 'borough':
+            nm = (t.get('name:it') or t.get('name:en') or t.get('name')) if auto else t.get('name')
+            if t.get('place') == 'borough' and not auto:
                 continue
             Nout.append([nm, round(x, 1), round(z, 1), bn, t.get('place')])
         log(f'  quartieri: {len(Nout)} → ' + ', '.join(n[0] for n in Nout)[:900])
@@ -486,7 +514,7 @@ def main():
                 cands = [b for b in B if b['t'].get('name') in m['names']]
                 if cands:
                     hit = min(cands, key=lambda b: b['c'].distance(pt)); how = 'nome'
-            if hit is None:
+            if hit is None and m['mode'] != 'ground':
                 inside = [b for b in B if b['p'].contains(pt)]
                 if inside:
                     hit = min(inside, key=lambda b: b['p'].area); how = 'punto'
@@ -527,13 +555,106 @@ def main():
                'rects': lrects, 'b': Bout, 'r': R, 'e': EL, 'w': Wout, 'g': Gout, 'n': Nout, 'm': marks,
                'src': '© OpenStreetMap contributors (ODbL)', 'date': datetime.date.today().isoformat()}
         js = json.dumps(out, ensure_ascii=False, separators=(',', ':'))
+        return js, {'f': fname, 'name': out['name'], 'date': out['date'], 'kb': len(js.encode()) // 1024, 'b': len(Bout), 'r': len(R), 'w': len(Wout), 'g': len(Gout), 'n': len(Nout)}
+
+    # ---- quali zone: quelle fatte a mano (zones.json) e quelle del catalogo (zones-auto.json, da zones_auto.py) ----
+    zl = json.load(open(os.path.join(ROOT, 'tools', 'world', 'zones.json')))['zones']
+    ap = os.path.join(ROOT, 'tools', 'world', 'zones-auto.json')
+    if os.path.exists(ap):
+        have = {Z['id'] for Z in zl}
+        zl += [Z for Z in json.load(open(ap))['zones'] if Z['id'] not in have]
+    os.makedirs(OUT, exist_ok=True)
+    idx_path = os.path.join(OUT, 'index.json')
+    index = json.load(open(idx_path)) if os.path.exists(idx_path) else {'zones': {}}
+    index.setdefault('zones', {})
+    fails_path = os.path.join(OUT, 'fails.json')
+    fails = json.load(open(fails_path)) if os.path.exists(fails_path) else {}
+    force = set((os.environ.get('FORCE') or '').replace(',', ' ').split())
+    budget = float(os.environ.get('BUDGET_MIN') or 1e9) * 60
+    T0 = time.time()
+
+    def meta(Z):
+        """Quello che l'app sa di una zona senza aprirla: dove sta (per metterci i luoghi del catalogo) e come si chiama."""
+        rs = Z['rects']
+        S = min(r[0] for r in rs); W = min(r[1] for r in rs); N = max(r[2] for r in rs); E = max(r[3] for r in rs)
+        return {'name': Z.get('name', Z['id']), 'bb': [S, W, N, E], 'rects': rs, 'll': [round((S + N) / 2, 5), round((W + E) / 2, 5)],
+                'k': [m['k'] for m in Z.get('marks', [])], 'auto': 1 if Z.get('auto') else 0}
+
+    def save_index():
+        json.dump(index, open(idx_path, 'w'), ensure_ascii=False, separators=(',', ':'))
+        if fails:
+            json.dump(fails, open(fails_path, 'w'), ensure_ascii=False, separators=(',', ':'))
+        elif os.path.exists(fails_path):
+            os.remove(fails_path)
+
+    def commit(msg):
+        """Nell'Action ogni zona finita si salva subito (se il tempo finisce, il lavoro fatto resta)."""
+        if os.environ.get('COMMIT') != '1':
+            return
+        import subprocess
+        open(os.path.join(OUT, 'log.txt'), 'w').write('\n'.join(LOG) + '\n')
+        sh = lambda *a: subprocess.run(list(a), cwd=ROOT, capture_output=True, text=True)
+        sh('git', 'add', '-A', 'data/world')
+        if sh('git', 'commit', '-m', msg).returncode:
+            return
+        for i in range(6):
+            if sh('git', 'pull', '--rebase', 'origin', 'dati').returncode == 0 and sh('git', 'push', 'origin', 'HEAD:dati').returncode == 0:
+                break
+            time.sleep(6 + 4 * i)
+        sh('git', 'push', 'origin', 'HEAD:main')
+
+    # zone che non ci sono più (il catalogo è cambiato): via il file e la voce
+    ids = {Z['id'] for Z in zl}
+    for zid in list(index['zones']):
+        if zid not in ids:
+            f = index['zones'][zid].get('f')
+            if f and os.path.exists(os.path.join(OUT, f)):
+                os.remove(os.path.join(OUT, f))
+            del index['zones'][zid]
+            log(f'tolta la zona {zid}: non c\'è più')
+    todo = []
+    for Z in zl:
+        zid, ver = Z['id'], Z.get('v', 1)
+        fname = f'{zid}-v{ver}.json'
+        cur = index['zones'].get(zid)
+        if cur and cur.get('f') == fname and os.path.exists(os.path.join(OUT, fname)) and zid not in force and 'all' not in force:
+            cur.update(meta(Z))  # già scaricata: aggiorno solo nome, confini e luoghi
+            continue
+        if fails.get(fname, 0) >= 3 and zid not in force:
+            log(f'salto {zid}: fallita già {fails[fname]} volte'); continue
+        todo.append(Z)
+    save_index()
+    log(f'{len(zl)} zone in tutto, da scaricare {len(todo)}')
+    left = 0
+    for n_, Z in enumerate(todo):
+        if time.time() - T0 > budget:
+            left = len(todo) - n_
+            log(f'tempo finito: restano {left} zone per il prossimo giro'); break
+        zid, ver = Z['id'], Z.get('v', 1)
+        fname = f'{zid}-v{ver}.json'
+        try:
+            js, ent = do_zone(Z, zid, ver, fname)
+        except Exception:
+            fails[fname] = fails.get(fname, 0) + 1
+            log(f'  ERRORE nella zona {zid}:\n' + traceback.format_exc()[-1500:])
+            save_index(); continue
         for f in os.listdir(OUT):
             if re.match(rf'^{re.escape(zid)}-v\d+\.json$', f) and f != fname:
                 os.remove(os.path.join(OUT, f))
         open(os.path.join(OUT, fname), 'w').write(js)
-        index['zones'][zid] = {'f': fname, 'name': out['name'], 'date': out['date'], 'kb': len(js.encode()) // 1024, 'b': len(Bout), 'r': len(R), 'w': len(Wout), 'g': len(Gout), 'n': len(Nout)}
-        log(f'  scritto {fname}: {len(js.encode()) // 1024} KB')
-    json.dump(index, open(idx_path, 'w'), ensure_ascii=False, separators=(',', ':'))
+        ent.update(meta(Z))
+        index['zones'][zid] = ent
+        fails.pop(fname, None)
+        save_index()
+        log(f'  scritto {fname}: {ent["kb"]} KB')
+        commit(f'Mondo 616: zona {Z.get("name", zid)}')
+        time.sleep(2)
+    more = os.path.join(OUT, '.more')
+    if left:
+        open(more, 'w').write(str(left))
+    elif os.path.exists(more):
+        os.remove(more)
+    save_index()
 
 
 if __name__ == '__main__':
