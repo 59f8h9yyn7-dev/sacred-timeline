@@ -8928,7 +8928,8 @@ function mvDraw(u, now){
 function mvFail(e){
   BB('mv-errore', String(e && e.message || e).slice(0, 120)); console.error(e);
   const was3 = MV.d3;
-  if (was3) M3.broken = true;
+  // the graphics card taking the drawing back is not a fault of the 3D: it is built again the next time
+  if (was3 && !M3.lost) M3.broken = true;
   try { mvInstantOff(); } catch { MV.on = false; MV.anim = null; stage.classList.remove('mv-on', 'mv-morph', 'mv3'); }
   toast(was3 ? 'Il multiverso 3D si è interrotto: ti riporto alla mappa' : 'Il multiverso si è interrotto: ti riporto alla mappa');
 }
@@ -8939,6 +8940,7 @@ function mvLoop2(now){
   MV.raf = 0;
   if (window.__w6on) return; // the Mondo 616 is open over it: the multiverse waits
   if (!MV.on && !MV.anim) return;
+  if (MV.d3 && M3.lost){ if (MV.anim || M3.morph) throw new Error('webgl context lost'); m3Revive(now); }
   const A = MV.anim;
   if (A){ const k = Math.min(1, (now - A.t0) / A.dur); MV.u = A.from + (A.to - A.from) * k; if (k >= 1){ MV.anim = null; if (MV.d3) m3Frame(now); else mvDraw(MV.u, now); A.done && A.done(); } }
   if ((MV.on || MV.anim) && MV.d3){ m3Frame(now); if (window.__prova === 'E' && !MV.anim) return; MV.raf = requestAnimationFrame(mvLoop); return; }
@@ -8987,7 +8989,7 @@ async function mvEnter(){
   if (!META.ready) computeMeta();
   // in 3D when this device can draw it (the library comes the first time), otherwise the flat sky
   const mb = $('#chr [data-m="mv"]'); if (mb) mb.classList.add('wait');
-  const T3 = (M3.broken || (COARSE && M3.lite >= 3)) ? null : await m3Load(); if (mb) mb.classList.remove('wait');
+  const T3 = M3.broken ? null : await m3Load(); if (mb) mb.classList.remove('wait');
   if (MV.on || MV.anim || editing) return;
   skyLoad(); mvBuild();
   if (T3 && m3Ensure()){ m3Enter(); return; }
@@ -9158,9 +9160,17 @@ const m3Rgb = hex => { let c = M3RGB.get(hex); if (!c){ const v = rgbOf(hex); c 
 const m3Mem = { get: k => { try { return +localStorage.getItem(k) || 0; } catch { return 0; } }, set: (k, v) => { try { if (v) localStorage.setItem(k, String(v)); else localStorage.removeItem(k); } catch {} } };
 // the closures counted before the fix of the labels (v254) are forgotten once
 if (!m3Mem.get('stl-3d-fix1')){ m3Mem.set('stl-3d-crash', 0); m3Mem.set('stl-3d-run', 0); m3Mem.set('stl-3d-fix1', 1); }
+// the closures counted while the app was only in the background (iOS ends it there, it's not the 3D) are forgotten once too
+if (!m3Mem.get('stl-3d-fix2')){ m3Mem.set('stl-3d-crash', 0); m3Mem.set('stl-3d-run', 0); m3Mem.set('stl-3d-fix2', 1); }
 if (m3Mem.get('stl-3d-run')){ m3Mem.set('stl-3d-crash', m3Mem.get('stl-3d-crash') + 1); m3Mem.set('stl-3d-run', 0); }
 M3.lite = Math.min(3, m3Mem.get('stl-3d-crash'));
 addEventListener('pagehide', () => m3Mem.set('stl-3d-run', 0));
+// only a closure with the 3D on screen counts: in the background (or under the Mondo 616) the multiverse is not to blame
+const m3Live = () => MV.on && MV.d3 && !window.__w6on && !document.hidden;
+function m3Mark(){ m3Mem.set('stl-3d-run', m3Live() ? 1 : 0); }
+// a visit of the 3D that ended well takes one closure off the count, so a lighter 3D comes back to full by itself
+function m3Held(){ if (!M3.held || performance.now() - M3.held < 15000) return; M3.held = 0; m3Mem.set('stl-3d-crash', Math.max(0, m3Mem.get('stl-3d-crash') - 1)); }
+document.addEventListener('visibilitychange', () => { if (document.hidden && m3Live()) m3Held(); m3Mark(); });
 // while the 3D is up on a phone, the flat map gives its pictures back (they are painted again on the way out)
 function m3FreeMap(){
   if (!COARSE) return;
@@ -9544,7 +9554,8 @@ function m3Ensure(){
       R.setClearColor(0x030308, 1);
       try { const g = R.getContext(), dbg = g.getExtension('WEBGL_debug_renderer_info'); BB('gl-creato', { tex: g.getParameter(g.MAX_TEXTURE_SIZE), gpu: dbg ? g.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : '?', gl2: R.capabilities.isWebGL2, aa: g.getContextAttributes().antialias }); } catch (e) { BB('gl-creato', '?'); } M3.R = R; M3.cv = cv; M3.scene = new T.Scene(); M3.cam = new T.PerspectiveCamera(55, 1, 1, 20000); M3.cam.rotation.order = 'YXZ'; M3.sz = null; M3.lost = false;
       // the graphics card took the drawing back (memory, another app): leave cleanly, it will be rebuilt next time
-      cv.addEventListener('webglcontextlost', e => { BB('gl-perso'); e.preventDefault(); M3.lost = true; if (MV.on && MV.d3) mvFail(new Error('webgl context lost')); });
+      // the graphics card took the drawing back (memory, the app in the background, the Mondo 616 over it): it is built again where you were
+      cv.addEventListener('webglcontextlost', e => { e.preventDefault(); if (cv !== M3.cv) return; BB('gl-perso'); M3.lost = true; if (MV.on && MV.d3){ if (MV.anim || M3.morph) mvFail(new Error('webgl context lost')); else mvKick(); } });
       m3Input(cv);
     }
     BB('scena-inizio'); m3Build(); m3Size(); try { BB('scena-pronta', { px: M3.cv.width + 'x' + M3.cv.height, dpr: M3.sz && M3.sz[2], lite: M3.lite, ogg: M3.W.objs.length }); } catch (e) {}
@@ -9554,9 +9565,21 @@ function m3Ensure(){
 // give everything back: scene, textures, the graphics context and its canvas (phones do it each time they leave)
 function m3Release(){
   try { if (M3.W) m3Dispose(); } catch {}
-  if (M3.R){ try { M3.R.dispose(); M3.R.forceContextLoss(); } catch {} }
-  if (M3.cv){ M3.cv.remove(); }
+  // forgotten first, so the "context lost" of the old canvas is not taken for a new loss
+  const R = M3.R, cv = M3.cv;
   M3.R = null; M3.cv = null; M3.scene = null; M3.sz = null; M3.lastF = 0;
+  if (R){ try { R.dispose(); R.forceContextLoss(); } catch {} }
+  if (cv){ cv.remove(); }
+}
+// the multiverse in 3D built again after the graphics card took it back, with the camera where it was
+function m3Revive(now){
+  M3.revs = (M3.revs || []).filter(t => now - t < 20000);
+  if (M3.revs.length >= 2) throw new Error('webgl context lost'); // it keeps being taken back: back to the map, the 3D comes again next time
+  M3.revs.push(now); BB('3d-rifatto');
+  const oc = M3.cam, pos = oc && oc.position.clone(), q = oc && oc.quaternion.clone();
+  if (!m3Ensure()) throw new Error('webgl context lost');
+  if (pos){ M3.cam.position.copy(pos); M3.cam.quaternion.copy(q); M3.cam.updateMatrixWorld(); }
+  M3.cv.classList.add('on'); m3Mark();
 }
 function m3DropGround(){ const W = M3.W; if (W && W.plTex){ W.plTex.dispose(); W.plTex = null; W.plU.uMap.value = null; W.plane.visible = false; } }
 function m3Size(){
@@ -9999,8 +10022,8 @@ function m3Enter(){
   M3.morph = { path, items: m3MorphItems(G), k: null, out: false };
   M3.morph.k = o => m3Kof(MV.u)(o);
   MV.on = true; MV.d3 = true; MV.sel = null; MV.hover = null; $('#mvP').hidden = true; M3.ctl.orbit = null; M3.ctl.fly = null; M3.ctl.vel = [0, 0, 0]; M3.ctl.keys.clear();
-  MV.u = 0; M3.lastF = 0; m3Mem.set('stl-3d-run', 1);
-  stage.classList.add('mv-on', 'mv3', 'mv-morph'); mvC.classList.add('on'); mvC.classList.remove('out'); M3.cv.classList.remove('out'); M3.cv.classList.add('on');
+  MV.u = 0; M3.lastF = 0; M3.held = performance.now(); M3.revs = [];
+  stage.classList.add('mv-on', 'mv3', 'mv-morph'); mvC.classList.add('on'); mvC.classList.remove('out'); M3.cv.classList.remove('out'); M3.cv.classList.add('on'); m3Mark();
   m3Frame(performance.now()); BB('primo-fotogramma');
   chrUi(); mvUi();
   MV.anim = { from: 0, to: 1, t0: performance.now(), dur: reduced() ? 300 : 3600, done: () => {
@@ -10030,7 +10053,7 @@ function m3Exit(target, snap, then){
       const ok = renderer && renderer.ready && frameMiss === 0 && performance.now() - t0 > 250;
       if (!ok && performance.now() - t0 < 4000){ schedule(); requestAnimationFrame(wait); return; }
       if (M3.cv) M3.cv.classList.add('out'); mvC.classList.add('out');
-      setTimeout(() => { if (MV.on || MV.anim) return; if (M3.cv) M3.cv.classList.remove('out', 'on'); mvC.classList.remove('on', 'out'); mvC.width = mvC.height = 1; MV.snapUse = false; m3DropGround(); if (COARSE) m3Release(); m3Mem.set('stl-3d-run', 0); m3Mem.set('stl-3d-crash', Math.max(0, m3Mem.get('stl-3d-crash') - (M3.lite ? 0 : 1))); then && then(); }, 520);
+      setTimeout(() => { if (MV.on || MV.anim) return; if (M3.cv) M3.cv.classList.remove('out', 'on'); mvC.classList.remove('on', 'out'); mvC.width = mvC.height = 1; MV.snapUse = false; m3DropGround(); if (COARSE) m3Release(); m3Mem.set('stl-3d-run', 0); M3.held = M3.held && 1; m3Held(); then && then(); }, 520);
     };
     requestAnimationFrame(wait);
   } };
@@ -10038,7 +10061,7 @@ function m3Exit(target, snap, then){
 }
 function m3Off(){
   M3.morph = null; MV.d3 = false; M3.ctl.orbit = null; M3.ctl.fly = null; M3.ctl.keys.clear();
-  BB('3d-esce'); stage.classList.remove('mv3'); if (M3.cv) M3.cv.classList.remove('out', 'on'); m3Mem.set('stl-3d-run', 0);
+  BB('3d-esce'); stage.classList.remove('mv3'); if (M3.cv) M3.cv.classList.remove('out', 'on'); m3Mem.set('stl-3d-run', 0); M3.held = 0;
   m3DropGround(); if (COARSE || M3.lost) m3Release();
 }
 // the zoom buttons in the corner work in 3D too
@@ -10815,7 +10838,7 @@ async function w6Open(opt){
   if (W6.on || W6.busy) return;
   W6.busy = true; BB('mondo616-apri');
   const el = w6Dom(); el.hidden = false; el.classList.add('loading'); w6Prog(0.03, 'Accendo il motore 3D…');
-  window.__w6on = true; $('#mvP').hidden = true;
+  window.__w6on = true; m3Mark(); $('#mvP').hidden = true;
   try {
     const T = await m3Load(); if (!T) throw new Error('webgl');
     W6.T = T;
@@ -10872,7 +10895,7 @@ function w6Close(){
   const c = W6.ctl; c.ptrs.clear(); c.g = null; c.stick = null; c.ud = 0; c.keys.clear(); c.fly = null;
   if (W6.el){ W6.el.hidden = true; W6.el.classList.remove('loading'); w6PlaceClose(); $('.w6-sign', W6.el).classList.remove('on'); $('.w6-fade', W6.el).classList.remove('on'); }
   try { w6Release(); } catch {}
-  window.__w6on = false;
+  window.__w6on = false; m3Mark();
   if (MV.on){ if (MV.sel) $('#mvP').hidden = false; mvKick(); }
   schedule();
 }
