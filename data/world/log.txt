@@ -551,3 +551,20 @@
   quartieri: 0 → 
   luogo eastview: {'x': 0.2, 'z': 0.2, 'how': 'solo coordinate'}
   scritto z-eastview-v1.json: 11 KB
+== zona z-edimburgo (v1) · Edimburgo · Scozia ==
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass-api.de non risponde bene dopo 1s (HTTP Error 502: Bad Gateway)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.private.coffee non risponde bene dopo 150s (The read operation timed out)
+  tutto: maps.mail.ru non risponde bene dopo 1s (HTTP Error 504: Gateway Time-out)
+  tutto: overpass.kumi.systems non risponde bene dopo 150s (The read operation timed out)
+  tutto: overpass.private.coffee non risponde bene dopo 124s (HTTP Error 504: Gateway Timeout)
+  tutto: 6183 elementi da overpass-api.de in 35s (4552 KB)
+  edifici tenuti: 2270 (scartati 38)
+  strade: 2179 tratti, binari sopraelevati: 9
+  specchi d'acqua: 2
+  verde: 260 aree
+  distretti: []
+  quartieri: 5 → Edimburgo, New Town, Old Town, Pleasance, Greenside
+  luogo edimburgo: {'x': 115.8, 'z': -29.8, 'how': 'punto', 'h': 10, 'osm': 'w5208866'}
+  scritto z-edimburgo-v1.json: 224 KB
