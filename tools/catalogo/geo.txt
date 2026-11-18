@@ -42,16 +42,16 @@ stark-ny | q | Manhattan, New York City | indirizzo non detto
 automat | q | Manhattan, New York City | indirizzo non detto
 trish-casa | q | Chelsea, Manhattan | un palazzo di Chelsea (stagione 1)
 strange-casa | q | 300 West 86th Street, New York || West 86th Street, Manhattan | il palazzo di Strange, 300 W 86th Street (Upper West Side)
-rand-tower | x | Vanderbilt Avenue & East 46th Street | 40.750,-73.981,40.757,-73.973 | i cartelli stradali della serie: Vanderbilt Avenue e la 46ª, accanto a Grand Central
+rand-tower | ll | 40.75484,-73.97622 | e | i cartelli stradali della serie: Vanderbilt Avenue e la 46ª, accanto a Grand Central
 shady-acres | q | Manhattan, New York City | indirizzo non detto
 presidential-hotel | q | Manhattan, New York City | hotel inventato
 bulletin | q | Manhattan, New York City | redazione, indirizzo non detto
 ospedale-billy | q | Manhattan, New York City | ospedale non detto
 gruppo-sostegno | q | Manhattan, New York City | indirizzo non detto
 ny-1931 | q | Manhattan, New York City | Manhattan, 1931
-bishop-attico | q | 480 Park Avenue, New York || 480 Park Avenue, Manhattan | l'attico dei Bishop è al 480 di Park Avenue
+bishop-attico | ll | 40.76262,-73.97036 | e | l'attico dei Bishop è al 480 di Park Avenue (angolo 58ª strada)
 ronin-asta | q | Lotte New York Palace, New York || 455 Madison Avenue, New York | l'asta nella cantina dell'hotel della serata di beneficenza (esterni: New York Palace)
-kate-zia | x | East 4th Street & Avenue B | 40.718,-73.988,40.727,-73.976 | all'angolo tra la 4ª strada Est e Avenue B, East Village
+kate-zia | ll | 40.72336,-73.98169 | e | all'angolo tra la 4ª strada Est e Avenue B, East Village
 feast | q | Manhattan, New York City | indirizzo non detto
 happy-condo | q | Manhattan, New York City | indirizzo non detto
 peter-monolocale | q | Manhattan, New York City | indirizzo non detto
@@ -165,7 +165,7 @@ glkh | q | 819 South Hill Street, Los Angeles || South Hill Street, Los Angeles 
 jen-casa | q | 401 North Ogden Drive, Los Angeles || North Ogden Drive, Los Angeles | esterni girati qui, a Fairfax
 tribunale-la | q | Spring Street Courthouse, Los Angeles || 312 North Spring Street, Los Angeles | lo Spring Street Courthouse, con il municipio dietro
 kevin | q | Walt Disney Studios, Burbank
-hollywood | q | Hollywood Walk of Fame, Los Angeles || Hollywood Boulevard, Los Angeles | Mantis e Drax sulla Walk of Fame
+hollywood | ll | 34.10165,-118.33910 | q | Mantis e Drax sulla Walk of Fame, Hollywood Boulevard all'altezza di Highland
 hollywood-walk | q | Hollywood Walk of Fame
 bacon-casa | q | Beverly Hills, California | a Beverly Hills, indirizzo non detto
 simon-casa | q | Los Angeles, California | indirizzo non detto

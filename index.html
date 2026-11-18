@@ -11515,8 +11515,8 @@ function g6DropSheet(D){
 function g6SheetInit(){
   const el = W6.el, sh = $('.m6-sheet', el), grab = $('.m6-grab', sh), inp = $('.m6-q input', sh);
   let drag = null;
-  const startDrag = e => { if (g6Wide()) return; drag = { y: e.clientY, h: sh.offsetHeight - g6SheetY(), t: performance.now(), v: 0, ly: e.clientY, lt: performance.now() }; sh.classList.add('drag'); try { e.target.setPointerCapture(e.pointerId); } catch {} };
-  const onMove = e => { if (!drag) return; const now = performance.now(), dy = e.clientY - drag.ly; drag.v = dy / Math.max(8, now - drag.lt); drag.ly = e.clientY; drag.lt = now; const vis = clamp(drag.h - (e.clientY - drag.y), 60, g6Det('full')); g6SheetPx(vis); };
+  const startDrag = e => { if (g6Wide()) return; sh._dragged = false; drag = { y: e.clientY, h: sh.offsetHeight - g6SheetY(), t: performance.now(), v: 0, ly: e.clientY, lt: performance.now() }; sh.classList.add('drag'); try { e.target.setPointerCapture(e.pointerId); } catch {} };
+  const onMove = e => { if (!drag) return; if (Math.abs(e.clientY - drag.y) > 6) sh._dragged = true; const now = performance.now(), dy = e.clientY - drag.ly; drag.v = dy / Math.max(8, now - drag.lt); drag.ly = e.clientY; drag.lt = now; const vis = clamp(drag.h - (e.clientY - drag.y), 60, g6Det('full')); g6SheetPx(vis); };
   const onUp = () => { if (!drag) return; const vis = sh.offsetHeight - g6SheetY(), v = drag.v; drag = null; sh.classList.remove('drag');
     const ds = ['peek', 'half', 'full'].map(n => [n, g6Det(n)]); let best = ds[0];
     const goal = vis - v * 220; for (const q of ds) if (Math.abs(q[1] - goal) < Math.abs(best[1] - goal)) best = q;
@@ -11524,7 +11524,7 @@ function g6SheetInit(){
   for (const t of [grab, $('.m6-home .m6-sr', sh)]){ t.addEventListener('pointerdown', e => { if (e.target.closest('input,button')) return; startDrag(e); }); }
   sh.addEventListener('pointerdown', e => { const hd = e.target.closest('.w6-place header'); if (hd && !e.target.closest('button')) startDrag(e); });
   sh.addEventListener('pointermove', onMove); sh.addEventListener('pointerup', onUp); sh.addEventListener('pointercancel', onUp);
-  grab.addEventListener('click', () => { const d = sh.dataset.d; g6SheetSet(d === 'peek' ? 'half' : d === 'half' ? 'full' : 'peek'); });
+  grab.addEventListener('click', () => { if (sh._dragged){ sh._dragged = false; return; } const d = sh.dataset.d; g6SheetSet(d === 'peek' ? 'half' : d === 'half' ? 'full' : 'peek'); });
   inp.addEventListener('focus', () => { g6SheetSet('full'); g6Search(inp.value); });
   let qt = 0; inp.addEventListener('input', () => { clearTimeout(qt); qt = setTimeout(() => g6Search(inp.value), 110); });
   inp.addEventListener('keydown', e => { if (e.key === 'Enter'){ e.preventDefault(); const b = $('.m6-res button', sh); if (b) b.click(); inp.blur(); } });
