@@ -1,4 +1,4 @@
-<!doctype html><html lang="it"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05060a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Timeline"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#05060a;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="it"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05060a"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Timeline"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/marvel-192.png"><link rel="apple-touch-icon" sizes="180x180" href="icons/marvel-180.png"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#05060a;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <script>
 /* Scatola nera: annota i passi su questo telefono; se la pagina viene chiusa dal sistema, al riavvio mostra l'ultimo tratto. */
 (function(){
@@ -10221,35 +10221,105 @@ function w6Beam(A, p, q, s, w, t, k, col, e){
   for (const f of [[0, 1, 2, 3], [4, 7, 6, 5], [0, 4, 5, 1], [1, 5, 6, 2], [2, 6, 7, 3], [3, 7, 4, 0]]) A.i.push(b + f[0], b + f[1], b + f[2], b + f[0], b + f[2], b + f[3]);
   A.n += 8;
 }
-// Tiamut, the Celestial turned to stone as he was coming out (Eternals): his hand and his head out of the Indian Ocean, the body just under the water
-// is the Celestial Island of Brave New World. Metres around the place, x east, y up, z south; the hand is almost 3 km high.
-function w6Tiamut(T, S){
-  const st = [0.83, 0.84, 0.86], st2 = [0.64, 0.66, 0.7], rock = [0.47, 0.45, 0.42], moss = [0.3, 0.38, 0.28], gold = [1.0, 0.62, 0.28];
-  const E = 0.14; // a little light of its own: white stone even in the evening
-  w6Ell(S, [200, -230, 0], [2900, 340, 1500], rock, 0, 0.08, 30, 10);
-  w6Ell(S, [-300, -120, -300], [1500, 240, 900], moss, 0, 0.3, 20, 8);
-  w6Ell(S, [-3400, -270, 460], [1750, 310, 520], rock, 0, -0.12, 18, 8);
-  w6Ell(S, [-3300, -270, -660], [1650, 300, 480], rock, 0, 0.1, 18, 8);
-  // the head, on its side with the face to the sky; one eye still glows
-  w6Ell(S, [3300, 110, -100], [820, 570, 650], st, E, 0.15, 28, 14);
-  w6Ell(S, [3560, 520, 190], [140, 70, 95], gold, 1, 0.15, 12, 6);
-  w6Ell(S, [3500, 480, -330], [125, 60, 85], st2, E, 0.15, 12, 6);
-  w6Beam(S, [3050, 400, -100], [2250, 980, -160], [0, 0, 1], 540, 170, 0.12, st, E);
-  w6Beam(S, [3700, 260, -100], [4250, 420, -100], [0, 0, 1], 420, 260, 0.5, st2, E);
-  // the shoulder, a blade of stone
-  w6Beam(S, [1400, -60, -900], [1230, 980, -1060], [1, 0, 0], 360, 230, 0, st2, E);
-  // the arm and the open hand
-  const W = [Math.cos(0.5), 0, Math.sin(0.5)], N = [-W[2], 0, W[0]], at = (o, x, y, z) => [o[0] + W[0] * x + N[0] * z, o[1] + y, o[2] + W[2] * x + N[2] * z];
-  const base = [-200, -200, 1500], wrist = [-330, 1350, 1700], top = [-380, 2150, 1760];
-  w6Beam(S, base, wrist, W, 740, 540, 0.85, st, E);
-  w6Beam(S, wrist, top, W, 960, 310, 1.04, st, E);
-  for (const [x0, len, spread] of [[-375, 640, -0.2], [-125, 770, -0.07], [125, 730, 0.06], [375, 570, 0.21]]){
-    let p = at(top, x0, -20, 0), curl = 0, w = 220;
-    for (let k = 0; k < 3; k++){ const L = len / 3 * (1 - k * 0.08); curl += 0.2; const q = at(p, Math.sin(spread) * L, Math.cos(curl) * L, Math.sin(curl) * L); w6Beam(S, p, q, W, w, 200, 0.86, st, E); p = q; w *= 0.86; }
+// Tiamut, the Celestial turned to stone as he was coming out (Eternals): the open hand and the head out of the Indian Ocean, the body
+// just under the water and around them the Celestial Island of Brave New World. Smooth carved shapes in human proportions (a hand
+// almost 3 km high), white stone with a shader of its own (veins, cracks, wet and foamy at the waterline; nothing under the sea).
+// Metres around the place: x east, y up, z south. Returns { obj: a mesh, top }.
+const w6v = { add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]], sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]], mul: (a, k) => [a[0] * k, a[1] * k, a[2] * k],
+  dot: (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2], cross: (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]], norm: a => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; },
+  rot: (v, ax, t) => { const c = Math.cos(t), s = Math.sin(t), d = w6v.dot(ax, v), x = w6v.cross(ax, v); return [v[0] * c + x[0] * s + ax[0] * d * (1 - c), v[1] * c + x[1] * s + ax[1] * d * (1 - c), v[2] * c + x[2] * s + ax[2] * d * (1 - c)]; } };
+// a part: positions, kind per vertex (0 stone, 1 glowing eye, 2 island ground) and triangles
+const w6Part = () => ({ p: [], k: [], i: [] });
+// a smooth tube through the points P with radii R, flattened (fl) towards the front F, rounded at the end
+function w6Tube(A, P, R, F, fl, kind = 0, M = 18){
+  const v = w6v, n = P.length, b0 = A.p.length / 3;
+  let t = null, nn = null, bb = null;
+  const ring = (c, r, f) => { for (let j = 0; j < M; j++){ const a = j / M * Math.PI * 2, q = v.add(c, v.add(v.mul(nn, Math.sin(a) * r * f), v.mul(bb, Math.cos(a) * r))); A.p.push(q[0], q[1], q[2]); A.k.push(kind); } };
+  for (let i = 0; i < n; i++){
+    t = v.norm(v.sub(P[Math.min(n - 1, i + 1)], P[Math.max(0, i - 1)])); nn = v.norm(v.sub(F, v.mul(t, v.dot(F, t)))); bb = v.cross(t, nn);
+    ring(P[i], R[i], fl);
   }
-  let p = at(wrist, -430, 260, 60);
-  for (const [dx, dy, dz] of [[-300, 260, 140], [-220, 300, 200]]){ const q = at(p, dx, dy, dz); w6Beam(S, p, q, N, 230, 240, 0.85, st, E); p = q; }
-  return { top: 2900 };
+  const caps = 5;
+  for (let c = 1; c <= caps; c++){ const ph = c / (caps + 1) * Math.PI / 2; ring(v.add(P[n - 1], v.mul(t, Math.sin(ph) * R[n - 1] * 0.95)), R[n - 1] * Math.cos(ph), fl); }
+  const rows = n + caps;
+  for (let i = 0; i < rows - 1; i++) for (let j = 0; j < M; j++){ const a = b0 + i * M + j, b = b0 + i * M + (j + 1) % M, c = a + M, d = b + M; A.i.push(a, c, b, b, c, d); }
+  const tip = A.p.length / 3, e = v.add(P[n - 1], v.mul(t, R[n - 1] * 0.95)); A.p.push(e[0], e[1], e[2]); A.k.push(kind);
+  for (let j = 0; j < M; j++) A.i.push(b0 + (rows - 1) * M + j, tip, b0 + (rows - 1) * M + (j + 1) % M);
+}
+// a rounded block (superellipsoid) with radii r, squareness e, reshaped point by point by f(x, y, z) → [x, y, z, kind]; then placed by g
+function w6Blob(A, r, e, nu, nv, f, g){
+  const b0 = A.p.length / 3, sp = (c, x) => Math.sign(c) * Math.pow(Math.abs(c), x);
+  for (let j = 0; j <= nv; j++){ const la = -Math.PI / 2 + j / nv * Math.PI;
+    for (let i = 0; i < nu; i++){ const lo = i / nu * Math.PI * 2 - Math.PI;
+      let x = r[0] * sp(Math.cos(la), e) * sp(Math.cos(lo), e), y = r[1] * sp(Math.sin(la), e), z = r[2] * sp(Math.cos(la), e) * sp(Math.sin(lo), e);
+      const q = f ? f(x, y, z) : [x, y, z, 0], w = g(q); A.p.push(w[0], w[1], w[2]); A.k.push(q[3] || 0); } }
+  for (let j = 0; j < nv; j++) for (let i = 0; i < nu; i++){ const a = b0 + j * nu + i, b = b0 + j * nu + (i + 1) % nu, c = a + nu, d = b + nu; A.i.push(a, c, b, b, c, d); }
+}
+function w6Tiamut(T){
+  const v = w6v, A = w6Part();
+  // the hand: built standing at the wrist (x across the palm, little finger on +x; y along the fingers; z out of the palm), then leaned and turned
+  const yaw = 0.62, lean = -0.12, at = [-250, 1060, 1650];
+  const place = q => { let p = v.rot([q[0], q[1], q[2]], [1, 0, 0], lean); p = v.rot(p, [0, 1, 0], yaw); return v.add(p, at); };
+  const front = v.rot(v.rot([0, 0, 1], [1, 0, 0], lean), [0, 1, 0], yaw);
+  const H = (pts, rad, fl) => w6Tube(A, pts.map(place), rad, front, fl);
+  // forearm, out of the sea
+  { const P = [], R = []; for (let i = 0; i <= 10; i++){ const s = i / 10; P.push([0, -1700 + s * 1650, -130 + s * 130]); R.push(470 - s * 130 + Math.sin(s * Math.PI) * 25); } H(P, R, 0.7); }
+  // the palm: a rounded slab, a little cupped, thicker at the base of the thumb
+  w6Blob(A, [440, 500, 150], 0.5, 40, 26, (x, y, z) => { const k = 1 - 0.1 * Math.max(0, -y / 500); x *= k; if (z > 0) z -= 0.00028 * x * x; z += 95 * Math.exp(-(((x + 250) / 230) ** 2 + ((y + 230) / 240) ** 2)) * (z > 0 ? 1 : 0.4); return [x, y + 470, z, 0]; }, place);
+  // the fingers: three bones each, a little open and bent forward as in the film
+  const F = [[-318, 925, 830, 116, -0.14], [-104, 965, 910, 122, -0.04], [108, 950, 860, 115, 0.05], [312, 895, 660, 97, 0.16]];
+  for (const [x0, y0, L, r0, sp] of F){
+    let d = [Math.sin(sp), Math.cos(sp), 0], p = v.sub([x0, y0, 12], v.mul(d, 170)); const P = [p], R = [r0 * 1.05], bones = [0.46, 0.3, 0.24], bend = [0.1, 0.24, 0.2];
+    let done = 0;
+    for (let k = 0; k < 3; k++){
+      const seg = (k === 0 ? L * bones[0] + 170 : L * bones[k]), steps = 5;
+      for (let s = 1; s <= steps; s++){ p = v.add(p, v.mul(d, seg / steps)); done += seg / steps; const f = done / (L + 170), knuckle = Math.exp(-((((s / steps) - 1) / 0.18) ** 2)) * (k < 2 ? 0.07 : 0); P.push(p); R.push(r0 * (1.03 - 0.33 * f) * (1 + knuckle)); }
+      d = v.norm(v.rot(d, v.norm(v.cross(d, [0, 0, 1])), -bend[k]));
+    }
+    H(P, R, 0.86);
+  }
+  // the thumb, from the base of the palm, out and forward
+  { let d = v.norm([-0.72, 0.62, 0.32]), p = [-330, 260, 40]; const P = [p], R = [165], L = [430, 340, 270];
+    let tot = 0; for (let k = 0; k < 3; k++){ for (let s = 1; s <= 5; s++){ p = v.add(p, v.mul(d, L[k] / 5)); tot += L[k] / 5; P.push(p); R.push(165 * (1 - 0.36 * tot / 1040) * (1 + (s === 5 && k < 2 ? 0.06 : 0))); } d = v.norm(v.rot(d, [0, 1, 0], 0.25)); d = v.norm(v.add(d, [0.12, 0.05, 0.18])); }
+    H(P, R, 0.85); }
+  // the head, lying on its side with the face to the sky: crown to the west, chin to the east; one eye still glows
+  const hc = [2650, 170, -280], hx = v.norm([1, -0.08, 0.18]), hy = v.norm([-0.1, 0.5, 0.86]), hz = v.norm(v.cross(hx, hy)), hy2 = v.cross(hz, hx);
+  const putH = q => v.add(hc, v.add(v.mul(hx, q[0]), v.add(v.mul(hy2, q[1]), v.mul(hz, q[2]))));
+  // a face like a mask: high brow, deep eyes, a straight nose, closed lips, a narrow chin
+  const cl = (a, b, x) => Math.max(0, Math.min(1, (x - a) / (b - a))), G = (a, s) => Math.exp(-((a / s) ** 2));
+  w6Blob(A, [900, 560, 620], 1, 64, 40, (x, y, z) => {
+    const u = x / 900, w = z / 620; let k = 0;
+    z *= 1 - 0.4 * cl(0.1, 1, u) ** 1.3; y *= 1 - 0.22 * cl(0.3, 1, u) ** 1.5;
+    if (y > 0){
+      const fy = y / 560;
+      y *= 1 - 0.22 * cl(0.55, 0.95, fy);
+      y += 90 * G(u + 0.16, 0.07) * (1 - 0.5 * Math.min(1, Math.abs(w))) * cl(0.3, 0.7, fy);
+      const eye = G(u - 0.03, 0.11) * G(Math.abs(w) - 0.36, 0.15); y -= 150 * eye; if (w > 0 && G(u - 0.03, 0.045) * G(w - 0.36, 0.1) > 0.5) k = 1;
+      y += 85 * G(w, 0.075) * cl(-0.02, 0.12, u) * (1 - cl(0.36, 0.46, u));
+      y += 45 * G(Math.abs(w) - 0.5, 0.12) * G(u - 0.25, 0.14);
+      y -= 40 * G(u - 0.66, 0.025) * G(w, 0.28); y += 22 * G(u - 0.61, 0.04) * G(w, 0.2) + 22 * G(u - 0.71, 0.04) * G(w, 0.2);
+    }
+    return [x, y, z, k];
+  }, putH);
+  // a stone blade between head and hand (the shoulder of the other arm)
+  { const P = [], R = []; for (let i = 0; i <= 10; i++){ const s = i / 10; P.push([1150 - s * 230, -80 + s * 1080, -720 - s * 260]); R.push(250 * (1 - s) + 8); } w6Tube(A, P, R, [1, 0, 0], 0.62); }
+  // the island: his body, just out of the water (head to the east, legs to the west), in white weathered stone with some green
+  { const nx = 190, nz = 96, x0 = -11800, x1 = 2200, z0 = -2900, z1 = 2900, b0 = A.p.length / 3;
+    const g = (x, z, cx, cz, rx, rz, h) => h * Math.exp(-(((x - cx) / rx) ** 2 + ((z - cz) / rz) ** 2));
+    const hash = (x, z) => { const s = Math.sin(x * 12.9898 + z * 78.233) * 43758.5453; return s - Math.floor(s); };
+    const vn = (x, z) => { const i = Math.floor(x), j = Math.floor(z), fx = x - i, fz = z - j, ux = fx * fx * (3 - 2 * fx), uz = fz * fz * (3 - 2 * fz); return (hash(i, j) * (1 - ux) + hash(i + 1, j) * ux) * (1 - uz) + (hash(i, j + 1) * (1 - ux) + hash(i + 1, j + 1) * ux) * uz; };
+    const fbm = (x, z) => { let a = 0.5, s = 0; for (let o = 0; o < 5; o++){ s += a * vn(x, z); x *= 2.03; z *= 2.03; a *= 0.5; } return s; };
+    for (let j = 0; j <= nz; j++) for (let i = 0; i <= nx; i++){
+      const x = x0 + (x1 - x0) * i / nx, z = z0 + (z1 - z0) * j / nz;
+      let h = g(x, z, -2100, 0, 2300, 1350, 300) + g(x, z, -4800, 0, 1300, 1250, 230) + g(x, z, -8200, 720, 3000, 480, 175) + g(x, z, -8100, -720, 3000, 480, 175) + g(x, z, 800, -1150, 700, 600, 330) + g(x, z, 450, 1250, 750, 520, 250) + g(x, z, 1500, 0, 500, 500, 160) - 95;
+      h += (fbm(x / 650, z / 650) - 0.5) * 150 + (fbm(x / 160 + 9, z / 160) - 0.5) * 40;
+      A.p.push(x, h, z); A.k.push(2);
+    }
+    for (let j = 0; j < nz; j++) for (let i = 0; i < nx; i++){ const a = b0 + j * (nx + 1) + i, b = a + 1, c = a + nx + 1, d = c + 1; A.i.push(a, c, b, b, c, d); } }
+  const geo = new T.BufferGeometry();
+  geo.setAttribute('position', new T.BufferAttribute(new Float32Array(A.p), 3)); geo.setAttribute('aK', new T.BufferAttribute(new Float32Array(A.k), 1));
+  geo.setIndex(new T.BufferAttribute(new Uint32Array(A.i), 1)); geo.computeVertexNormals(); geo.computeBoundingSphere();
+  return { obj: new T.Mesh(geo, M6.tmat), top: 2950 };
 }
 // The Raft (Civil War): the prison that rises out of the sea, a steel ring 170 m across whose roof opens in two like a shell
 function w6Raft(T, S){
@@ -10818,9 +10888,9 @@ function m6Release(){
   for (const L of M6.leaf.values()){ L.g.dispose(); L.mat.dispose(); }
   for (const B of M6.bld.values()) m6BldFree(B);
   for (const o of M6.free.values()){ G6.scene && G6.scene.remove(o.grp); o.grp.geometry.dispose(); }
-  for (const m of [M6.bmat, M6.smat, M6.dmat, M6.fmat]) if (m) m.dispose();
+  for (const m of [M6.bmat, M6.smat, M6.dmat, M6.fmat, M6.tmat]) if (m) m.dispose();
   if (M6.wk){ try { M6.wk.terminate(); } catch {} }
-  Object.assign(M6, { wk: null, ok: false, local: false, cb: new Map(), tex: new Map(), leaf: new Map(), bld: new Map(), free: new Map(), fh: new Map(), up: [], leaves: [], bmat: null, smat: null, dmat: null, fmat: null, u: null, lq: [], lcache: null });
+  Object.assign(M6, { wk: null, ok: false, local: false, cb: new Map(), tex: new Map(), leaf: new Map(), bld: new Map(), free: new Map(), fh: new Map(), up: [], leaves: [], bmat: null, smat: null, dmat: null, fmat: null, tmat: null, u: null, lq: [], lcache: null });
 }
 
 /* ---- the squares on screen: from the whole Earth down, a square is split while it looks bigger than ~280 px ---- */
@@ -10974,6 +11044,33 @@ function m6Mats(){
     fragmentShader: `${M6_LIGHT} varying vec3 vC; varying float vE; varying vec3 vL; varying float vD; void main(){ vec3 n = normalize(cross(dFdx(vL), dFdy(vL))); if (n.y < -0.2) n = -n; vec3 c = vC * w6L(n) * (1.0 - vE) + vC * vE * (1.25 + 0.15 * sin(uT * 2.0));
       vec3 m = mix(vC * 0.55, vC, vE); c = mix(c, m, uMap); c = mix(c, uFogC, (1.0 - exp(-uFogK * vD * vD)) * (1.0 - vE * 0.6)); gl_FragColor = vec4(c, 1.0); }` };
   M6.smat = new T.ShaderMaterial(Object.assign({ uniforms: u }, solid));
+  // Tiamut's stone: veins and cracks drawn by noise, light from the evening sun and the sky, wet and foamy at the waterline, nothing under the sea
+  M6.tmat = new T.ShaderMaterial({ uniforms: { uSun: u.uSun, uFogC: u.uFogC, uFogK: u.uFogK, uT: u.uT },
+    vertexShader: `attribute float aK; varying vec3 vL; varying vec3 vN; varying float vK; varying float vD; void main(){ vL = position; vN = normal; vK = aK; vec4 mv = modelViewMatrix * vec4(position, 1.0); vD = length(mv.xyz) * 6371000.0; gl_Position = projectionMatrix * mv; }`,
+    fragmentShader: `uniform vec3 uSun; uniform vec3 uFogC; uniform float uFogK; uniform float uT; varying vec3 vL; varying vec3 vN; varying float vK; varying float vD;
+      float h31(vec3 p){ p = fract(p * 0.3183099 + 0.1); p *= 17.0; return fract(p.x * p.y * p.z * (p.x + p.y + p.z)); }
+      float vn(vec3 x){ vec3 i = floor(x), f = fract(x); f = f * f * (3.0 - 2.0 * f);
+        return mix(mix(mix(h31(i), h31(i + vec3(1.0, 0.0, 0.0)), f.x), mix(h31(i + vec3(0.0, 1.0, 0.0)), h31(i + vec3(1.0, 1.0, 0.0)), f.x), f.y),
+                   mix(mix(h31(i + vec3(0.0, 0.0, 1.0)), h31(i + vec3(1.0, 0.0, 1.0)), f.x), mix(h31(i + vec3(0.0, 1.0, 1.0)), h31(i + vec3(1.0, 1.0, 1.0)), f.x), f.y), f.z); }
+      float fbm(vec3 p){ float a = 0.5, s = 0.0; for (int i = 0; i < 4; i++){ s += a * vn(p); p = p * 2.03 + 1.7; a *= 0.5; } return s; }
+      void main(){
+        if (vL.y < -2.0) discard;
+        if (vK > 0.5 && vK < 1.5){ gl_FragColor = vec4(vec3(1.0, 0.6, 0.28) * (1.35 + 0.25 * sin(uT * 1.4)), 1.0); return; }
+        vec3 p = vL / 150.0; float f = fbm(p), e = 0.25;
+        vec3 gr = vec3(fbm(p + vec3(e, 0.0, 0.0)) - f, fbm(p + vec3(0.0, e, 0.0)) - f, fbm(p + vec3(0.0, 0.0, e)) - f) / e;
+        vec3 n = normalize(normalize(vN) - gr * (vK < 0.5 ? 0.28 : 0.5));
+        float fine = fbm(vL / 22.0 + 4.0), crack = smoothstep(0.014, 0.0, abs(fbm(vL / 420.0 + 3.1) - 0.5));
+        vec3 base;
+        if (vK < 0.5){ base = mix(vec3(0.8, 0.8, 0.79), vec3(0.95, 0.94, 0.92), smoothstep(0.3, 0.75, f * 0.7 + fine * 0.4)); base *= 1.0 - 0.2 * crack; }
+        else { base = mix(vec3(0.55, 0.54, 0.51), vec3(0.8, 0.79, 0.76), smoothstep(0.2, 0.8, f * 0.6 + fine * 0.5)); base *= 1.0 - 0.3 * crack;
+          float green = smoothstep(0.8, 0.95, n.y) * smoothstep(25.0, 70.0, vL.y) * smoothstep(0.42, 0.58, fbm(vL / 260.0 + 7.0)); base = mix(base, vec3(0.27, 0.37, 0.24), green * 0.85); }
+        float dif = max(dot(n, normalize(uSun)), 0.0), ao = mix(vK < 0.5 ? 0.86 : 0.74, 1.0, smoothstep(0.25, 0.7, f));
+        vec3 amb = mix(vec3(0.24, 0.25, 0.31), vec3(0.62, 0.65, 0.78), n.y * 0.5 + 0.5);
+        vec3 col = base * (amb * 0.95 * ao + vec3(1.0, 0.8, 0.62) * dif * 0.95);
+        col = mix(col, col * 0.6, smoothstep(26.0, 4.0, vL.y) * 0.6);
+        col = mix(col, vec3(0.86, 0.9, 0.95), smoothstep(10.0, 0.0, vL.y) * smoothstep(0.42, 0.66, fbm(vL / 16.0 + vec3(uT * 0.06, 0.0, 0.0))));
+        col = mix(col, uFogC, 1.0 - exp(-uFogK * vD * vD));
+        gl_FragColor = vec4(col, 1.0); }` });
   // the models out at sea always stand at full height, in their own colours
   M6.fmat = new T.ShaderMaterial(Object.assign({ uniforms: Object.assign({}, u, { uH: { value: 1 }, uMap: { value: 0 } }) }, solid));
   M6.dmat = new T.ShaderMaterial({ uniforms: u, side: T.DoubleSide, vertexShader: `uniform float uH; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.y *= uH; gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`,
@@ -11057,10 +11154,11 @@ function m6Free(){
     if (Math.hypot(P.x - p.v[0], P.y - p.v[1], P.z - p.v[2]) * G6_RK > F.km){ if (o) o.grp.visible = false; M6.fh.delete(p.k); continue; }
     if (o && (o.la !== p.la || o.lo !== p.lo)){ G6.scene.remove(o.grp); o.grp.geometry.dispose(); o = null; }
     if (!o){
-      const S = w6Acc(), r = F.make(T, S), g = new T.BufferGeometry();
-      g.setAttribute('position', new T.BufferAttribute(new Float32Array(S.p), 3)); g.setAttribute('aCol', new T.BufferAttribute(new Float32Array(S.c), 3)); g.setAttribute('aE', new T.BufferAttribute(new Float32Array(S.e), 1));
-      g.setIndex(new T.BufferAttribute(S.n > 65535 ? new Uint32Array(S.i) : new Uint16Array(S.i), 1)); g.computeBoundingSphere();
-      const m = new T.Mesh(g, M6.fmat); m.matrixAutoUpdate = false; m.matrix.copy(m6Frame(T, p.la, p.lo)); m.renderOrder = 10; G6.scene.add(m);
+      const S = w6Acc(), r = F.make(T, S); let m = r.obj;
+      if (!m){ const g = new T.BufferGeometry();
+        g.setAttribute('position', new T.BufferAttribute(new Float32Array(S.p), 3)); g.setAttribute('aCol', new T.BufferAttribute(new Float32Array(S.c), 3)); g.setAttribute('aE', new T.BufferAttribute(new Float32Array(S.e), 1));
+        g.setIndex(new T.BufferAttribute(S.n > 65535 ? new Uint32Array(S.i) : new Uint16Array(S.i), 1)); g.computeBoundingSphere(); m = new T.Mesh(g, M6.fmat); }
+      m.matrixAutoUpdate = false; m.matrix.copy(m6Frame(T, p.la, p.lo)); m.renderOrder = 10; G6.scene.add(m);
       o = { grp: m, la: p.la, lo: p.lo, top: r.top }; M6.free.set(p.k, o);
     }
     // behind the Earth it is hidden (the globe does not cover what is behind it)
