@@ -2,14 +2,16 @@ import json, math, os, subprocess, urllib.request, concurrent.futures as cf
 os.makedirs('out', exist_ok=True)
 def sh(c):
     return subprocess.run(c, shell=True, capture_output=True, text=True).stdout
-tj = urllib.request.urlopen('https://tiles.openfreemap.org/planet', timeout=30).read().decode()
+UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1'
+tj = sh(f"curl -sS -A '{UA}' -H 'Origin: https://59f8h9yyn7-dev.github.io' https://tiles.openfreemap.org/planet")
+print(tj[:300])
 open('out/planet.json', 'w').write(tj)
 url = json.loads(tj)['tiles'][0]
 # headers, as the browser on the phone would see them
 open('out/headers.txt', 'w').write(
-    sh(f"curl -sS -D - -o /dev/null -H 'Origin: https://59f8h9yyn7-dev.github.io' -H 'Accept-Encoding: gzip, deflate, br' '{url.replace('{z}','14').replace('{x}','4825').replace('{y}','6156')}'")
-    + '\n---planet\n' + sh("curl -sS -D - -o /dev/null -H 'Origin: https://59f8h9yyn7-dev.github.io' https://tiles.openfreemap.org/planet")
-    + '\n---fonts\n' + sh("curl -sS -D - -o /dev/null -H 'Origin: https://59f8h9yyn7-dev.github.io' 'https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf'"))
+    sh(f"curl -sS -A '{UA}' -D - -o /dev/null -H 'Origin: https://59f8h9yyn7-dev.github.io' -H 'Accept-Encoding: gzip, deflate, br' '{url.replace('{z}','14').replace('{x}','4825').replace('{y}','6156')}'")
+    + '\n---planet\n' + sh("curl -sS -A '{UA}' -D - -o /dev/null -H 'Origin: https://59f8h9yyn7-dev.github.io' https://tiles.openfreemap.org/planet")
+    + '\n---fonts\n' + sh("curl -sS -A '{UA}' -D - -o /dev/null -H 'Origin: https://59f8h9yyn7-dev.github.io' 'https://tiles.openfreemap.org/fonts/Noto%20Sans%20Regular/0-255.pbf'"))
 def t(lat, lon, z):
     n = 2 ** z
     x = (lon + 180) / 360 * n
@@ -38,7 +40,7 @@ def get(k):
     os.makedirs(os.path.dirname(p), exist_ok=True)
     u = url.replace('{z}', str(z)).replace('{x}', str(x)).replace('{y}', str(y))
     for _ in range(3):
-        r = subprocess.run(['curl', '-sS', '--compressed', '-o', p, '-w', '%{http_code}', u], capture_output=True, text=True)
+        r = subprocess.run(['curl', '-sS', '-A', UA, '-H', 'Origin: https://59f8h9yyn7-dev.github.io', '--compressed', '-o', p, '-w', '%{http_code}', u], capture_output=True, text=True)
         if r.stdout.strip() == '200':
             return 1
     if os.path.exists(p): os.remove(p)
