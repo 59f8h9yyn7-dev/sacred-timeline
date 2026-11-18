@@ -390,5 +390,5 @@ roxxon-piattaforma | ll | 29.0,-89.5 | r | Golfo del Messico, punto non detto
 tiamut | ll | -10.0,80.0 | r | Oceano Indiano, punto non detto
 atlantico-vibranio | ll | 25.0,-40.0 | r | Oceano Atlantico, punto non detto
 talokan | ll | 21.0,-86.0 | r | sotto il mare al largo dello Yucatán, punto non detto
-raft | - | in mezzo all'oceano, punto non detto
+raft | ll | 56.5,3.0 | r | il film non dice dove: probabilmente il Mare del Nord (dal tempo, e Tony ci arriva dalla Germania)
 anvil | - | sede non detta

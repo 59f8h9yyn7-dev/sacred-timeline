@@ -10202,6 +10202,76 @@ function w6Sanctum(T, S, fp, fc){
   return { top: 15.4, disc: { x: mx + ox * 0.22, y: 10.9, z: mz + oz * 0.22, ox, oz, r: Math.min(2.5, EL * 0.28) } };
 }
 
+// an ellipsoid (faceted, like carved stone), turned by yaw around the vertical
+function w6Ell(A, c, r, col, e, yaw = 0, nu = 22, nv = 12){
+  const b = A.n, cy = Math.cos(yaw), sy = Math.sin(yaw);
+  for (let j = 0; j <= nv; j++){ const v = j / nv * Math.PI, sv = Math.sin(v), cv = Math.cos(v);
+    for (let i = 0; i <= nu; i++){ const u = i / nu * Math.PI * 2, x = r[0] * sv * Math.cos(u), y = r[1] * cv, z = r[2] * sv * Math.sin(u);
+      A.p.push(c[0] + x * cy - z * sy, c[1] + y, c[2] + x * sy + z * cy); A.c.push(col[0], col[1], col[2]); A.e.push(e); } }
+  for (let j = 0; j < nv; j++) for (let i = 0; i < nu; i++){ const a = b + j * (nu + 1) + i, d = a + nu + 1; A.i.push(a, d, a + 1, a + 1, d, d + 1); }
+  A.n += (nu + 1) * (nv + 1);
+}
+// a beam from p to q, w wide (along s) and t thick, narrowing to k times at q (k = 0: a point)
+function w6Beam(A, p, q, s, w, t, k, col, e){
+  const a = [q[0] - p[0], q[1] - p[1], q[2] - p[2]], L = Math.hypot(a[0], a[1], a[2]) || 1, ax = a.map(x => x / L);
+  const dd = s[0] * ax[0] + s[1] * ax[1] + s[2] * ax[2]; let sx = [s[0] - dd * ax[0], s[1] - dd * ax[1], s[2] - dd * ax[2]]; const sl = Math.hypot(sx[0], sx[1], sx[2]) || 1; sx = sx.map(x => x / sl);
+  const nx = [ax[1] * sx[2] - ax[2] * sx[1], ax[2] * sx[0] - ax[0] * sx[2], ax[0] * sx[1] - ax[1] * sx[0]], b = A.n;
+  for (let end = 0; end < 2; end++){ const o = end ? q : p, f = end ? k : 1;
+    for (const [i, j] of [[-1, -1], [1, -1], [1, 1], [-1, 1]]){ A.p.push(o[0] + (sx[0] * i * w + nx[0] * j * t) / 2 * f, o[1] + (sx[1] * i * w + nx[1] * j * t) / 2 * f, o[2] + (sx[2] * i * w + nx[2] * j * t) / 2 * f); A.c.push(col[0], col[1], col[2]); A.e.push(e); } }
+  for (const f of [[0, 1, 2, 3], [4, 7, 6, 5], [0, 4, 5, 1], [1, 5, 6, 2], [2, 6, 7, 3], [3, 7, 4, 0]]) A.i.push(b + f[0], b + f[1], b + f[2], b + f[0], b + f[2], b + f[3]);
+  A.n += 8;
+}
+// Tiamut, the Celestial turned to stone as he was coming out (Eternals): his hand and his head out of the Indian Ocean, the body just under the water
+// is the Celestial Island of Brave New World. Metres around the place, x east, y up, z south; the hand is almost 3 km high.
+function w6Tiamut(T, S){
+  const st = [0.83, 0.84, 0.86], st2 = [0.64, 0.66, 0.7], rock = [0.47, 0.45, 0.42], moss = [0.3, 0.38, 0.28], gold = [1.0, 0.62, 0.28];
+  const E = 0.14; // a little light of its own: white stone even in the evening
+  w6Ell(S, [200, -230, 0], [2900, 340, 1500], rock, 0, 0.08, 30, 10);
+  w6Ell(S, [-300, -120, -300], [1500, 240, 900], moss, 0, 0.3, 20, 8);
+  w6Ell(S, [-3400, -270, 460], [1750, 310, 520], rock, 0, -0.12, 18, 8);
+  w6Ell(S, [-3300, -270, -660], [1650, 300, 480], rock, 0, 0.1, 18, 8);
+  // the head, on its side with the face to the sky; one eye still glows
+  w6Ell(S, [3300, 110, -100], [820, 570, 650], st, E, 0.15, 28, 14);
+  w6Ell(S, [3560, 520, 190], [140, 70, 95], gold, 1, 0.15, 12, 6);
+  w6Ell(S, [3500, 480, -330], [125, 60, 85], st2, E, 0.15, 12, 6);
+  w6Beam(S, [3050, 400, -100], [2250, 980, -160], [0, 0, 1], 540, 170, 0.12, st, E);
+  w6Beam(S, [3700, 260, -100], [4250, 420, -100], [0, 0, 1], 420, 260, 0.5, st2, E);
+  // the shoulder, a blade of stone
+  w6Beam(S, [1400, -60, -900], [1230, 980, -1060], [1, 0, 0], 360, 230, 0, st2, E);
+  // the arm and the open hand
+  const W = [Math.cos(0.5), 0, Math.sin(0.5)], N = [-W[2], 0, W[0]], at = (o, x, y, z) => [o[0] + W[0] * x + N[0] * z, o[1] + y, o[2] + W[2] * x + N[2] * z];
+  const base = [-200, -200, 1500], wrist = [-330, 1350, 1700], top = [-380, 2150, 1760];
+  w6Beam(S, base, wrist, W, 740, 540, 0.85, st, E);
+  w6Beam(S, wrist, top, W, 960, 310, 1.04, st, E);
+  for (const [x0, len, spread] of [[-375, 640, -0.2], [-125, 770, -0.07], [125, 730, 0.06], [375, 570, 0.21]]){
+    let p = at(top, x0, -20, 0), curl = 0, w = 220;
+    for (let k = 0; k < 3; k++){ const L = len / 3 * (1 - k * 0.08); curl += 0.2; const q = at(p, Math.sin(spread) * L, Math.cos(curl) * L, Math.sin(curl) * L); w6Beam(S, p, q, W, w, 200, 0.86, st, E); p = q; w *= 0.86; }
+  }
+  let p = at(wrist, -430, 260, 60);
+  for (const [dx, dy, dz] of [[-300, 260, 140], [-220, 300, 200]]){ const q = at(p, dx, dy, dz); w6Beam(S, p, q, N, 230, 240, 0.85, st, E); p = q; }
+  return { top: 2900 };
+}
+// The Raft (Civil War): the prison that rises out of the sea, a steel ring 170 m across whose roof opens in two like a shell
+function w6Raft(T, S){
+  const steel = [0.2, 0.22, 0.26], rim = [0.27, 0.29, 0.33], deck = [0.31, 0.33, 0.37], dark = [0.04, 0.04, 0.05], warm = [1.0, 0.82, 0.55], red = [1.0, 0.2, 0.12], foam = [0.8, 0.86, 0.92];
+  const circ = (r, n = 56) => w6Super(0, 0, r, r, 0, n, 2);
+  w6Prism(T, S, circ(104), -0.4, 0.15, foam, 0.12);
+  for (let i = 0; i < 4; i++){ const a = i * Math.PI / 2 + Math.PI / 4, c = Math.cos(a), s = Math.sin(a); w6Box(S, [c * 104, 0.5, s * 104], [c * 24, 0, s * 24], [0, 1.3, 0], [-s * 5, 0, c * 5], steel, 0); }
+  w6Prism(T, S, circ(85), 0, 17.5, steel, 0);
+  w6Prism(T, S, circ(87.5), 17.5, 21, rim, 0);
+  w6Prism(T, S, circ(72), 21, 21.4, deck, 0);
+  w6Prism(T, S, circ(27, 36), 21.4, 21.6, warm, 0.6);
+  w6Prism(T, S, circ(21, 36), 21.6, 21.8, dark, 0);
+  for (const sg of [-1, 1]){
+    const ang = 1.02, L = 36, hx = sg * 22, c = Math.cos(ang), s = Math.sin(ang);
+    w6Box(S, [hx + sg * c * L / 2, 21.6 + s * L / 2, 0], [sg * c * L / 2, s * L / 2, 0], [-sg * s * 2.4, c * 2.4, 0], [0, 0, 25], steel, 0);
+    for (let i = -2; i <= 2; i++) w6Box(S, [hx + sg * c * L, 22.8 + s * L, i * 9.5], [1.3, 0, 0], [0, 1.3, 0], [0, 0, 1.3], red, 1);
+  }
+  for (let i = 0; i < 44; i++){ const a = i / 44 * Math.PI * 2, c = Math.cos(a), s = Math.sin(a); w6Box(S, [c * 85.3, 4.2, s * 85.3], [-s * 1.7, 0, c * 1.7], [0, 1.1, 0], [c * 0.4, 0, s * 0.4], warm, 0.9); }
+  for (let i = 0; i < 16; i++){ const a = i / 16 * Math.PI * 2; w6Box(S, [Math.cos(a) * 79, 21.7, Math.sin(a) * 79], [0.7, 0, 0], [0, 0.3, 0], [0, 0, 0.7], [1, 1, 0.9], 1); }
+  return { top: 54 };
+}
+
 /* ---- what the Mondo 616 reads: the Earth of the globe (data/world/index.json) and the hand-made sheets (luoghi616.json) ---- */
 async function w6Index(force){
   if (W6.idx && !force) return W6.idx;
@@ -10677,7 +10747,7 @@ async function m6Wmain(W, threeUrl){
 
 /* ---- the tiles on this side: which squares are on screen, asked to the worker, laid on the globe ---- */
 const M6 = { wk: null, ok: false, oc: true, local: false, url: '', seq: 0, cb: new Map(), tex: new Map(), leaf: new Map(), bld: new Map(), box: new Map(), up: [], frame: 0,
-  fly: 0, flyB: 0, leaves: [], ph: new Map(), cities: new Map(), u: null, bmat: null, smat: null, dmat: null, fr: null, pm: null, sph: null, fogFar: Infinity, an: 4, bad: 0, lastNet: 0 };
+  fly: 0, flyB: 0, leaves: [], ph: new Map(), free: new Map(), fh: new Map(), fmat: null, cities: new Map(), u: null, bmat: null, smat: null, dmat: null, fr: null, pm: null, sph: null, fogFar: Infinity, an: 4, bad: 0, lastNet: 0 };
 const M6_PX = 512, M6_DZ = 14, M6_ZMAX = 18, M6_RM = 6371000;
 const M6_URL0 = 'https://tiles.openfreemap.org/planet/20261115_080022_pt/{z}/{x}/{y}.pbf';
 const m6Lon = (x, z) => x / Math.pow(2, z) * 360 - 180;
@@ -10747,9 +10817,10 @@ function m6Release(){
   for (const t of M6.tex.values()){ if (t.tex) t.tex.dispose(); if (t.bmp && t.bmp.close) t.bmp.close(); }
   for (const L of M6.leaf.values()){ L.g.dispose(); L.mat.dispose(); }
   for (const B of M6.bld.values()) m6BldFree(B);
-  for (const m of [M6.bmat, M6.smat, M6.dmat]) if (m) m.dispose();
+  for (const o of M6.free.values()){ G6.scene && G6.scene.remove(o.grp); o.grp.geometry.dispose(); }
+  for (const m of [M6.bmat, M6.smat, M6.dmat, M6.fmat]) if (m) m.dispose();
   if (M6.wk){ try { M6.wk.terminate(); } catch {} }
-  Object.assign(M6, { wk: null, ok: false, local: false, cb: new Map(), tex: new Map(), leaf: new Map(), bld: new Map(), up: [], leaves: [], bmat: null, smat: null, dmat: null, u: null, lq: [], lcache: null });
+  Object.assign(M6, { wk: null, ok: false, local: false, cb: new Map(), tex: new Map(), leaf: new Map(), bld: new Map(), free: new Map(), fh: new Map(), up: [], leaves: [], bmat: null, smat: null, dmat: null, fmat: null, u: null, lq: [], lcache: null });
 }
 
 /* ---- the squares on screen: from the whole Earth down, a square is split while it looks bigger than ~280 px ---- */
@@ -10898,10 +10969,13 @@ const M6_BF = `${M6_LIGHT} varying vec3 vL; varying float vY; varying float vS; 
 function m6Mats(){
   const T = W6.T, u = M6.u;
   M6.bmat = new T.ShaderMaterial({ uniforms: u, vertexShader: M6_BV, fragmentShader: M6_BF, extensions: { derivatives: true } });
-  M6.smat = new T.ShaderMaterial({ uniforms: u, side: T.DoubleSide, extensions: { derivatives: true },
+  const solid = { side: T.DoubleSide, extensions: { derivatives: true },
     vertexShader: `uniform float uH; attribute vec3 aCol; attribute float aE; varying vec3 vC; varying float vE; varying vec3 vL; varying float vD; void main(){ vC = aCol; vE = aE; vec3 p = position; p.y *= uH; vL = p; vec4 mv = modelViewMatrix * vec4(p, 1.0); vD = length(mv.xyz) * 6371000.0; gl_Position = projectionMatrix * mv; }`,
     fragmentShader: `${M6_LIGHT} varying vec3 vC; varying float vE; varying vec3 vL; varying float vD; void main(){ vec3 n = normalize(cross(dFdx(vL), dFdy(vL))); if (n.y < -0.2) n = -n; vec3 c = vC * w6L(n) * (1.0 - vE) + vC * vE * (1.25 + 0.15 * sin(uT * 2.0));
-      vec3 m = mix(vC * 0.55, vC, vE); c = mix(c, m, uMap); c = mix(c, uFogC, (1.0 - exp(-uFogK * vD * vD)) * (1.0 - vE * 0.6)); gl_FragColor = vec4(c, 1.0); }` });
+      vec3 m = mix(vC * 0.55, vC, vE); c = mix(c, m, uMap); c = mix(c, uFogC, (1.0 - exp(-uFogK * vD * vD)) * (1.0 - vE * 0.6)); gl_FragColor = vec4(c, 1.0); }` };
+  M6.smat = new T.ShaderMaterial(Object.assign({ uniforms: u }, solid));
+  // the models out at sea always stand at full height, in their own colours
+  M6.fmat = new T.ShaderMaterial(Object.assign({ uniforms: Object.assign({}, u, { uH: { value: 1 }, uMap: { value: 0 } }) }, solid));
   M6.dmat = new T.ShaderMaterial({ uniforms: u, side: T.DoubleSide, vertexShader: `uniform float uH; varying vec2 vUv; void main(){ vUv = uv; vec3 p = position; p.y *= uH; gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0); }`,
     fragmentShader: `uniform float uMap; uniform float uT; varying vec2 vUv; void main(){ vec2 p = vUv * 2.0 - 1.0; float r = length(p), a = atan(p.y, p.x);
       float line = max(smoothstep(0.07, 0.0, abs(r - 0.9)), smoothstep(0.05, 0.0, abs(r - 0.52))); line = max(line, smoothstep(0.09, 0.0, abs(sin(2.0 * a + r * 5.0)) * r) * step(r, 0.9));
@@ -10972,6 +11046,29 @@ function m6GotBld(B, r){
 }
 function m6BldFree(B){ if (B.grp){ G6.scene && G6.scene.remove(B.grp); for (const m of B.meshes || []) m.geometry.dispose(); } if (B.st === 1 && B.req) m6Cancel(B.req); B.grp = null; B.meshes = null; }
 
+// the films' models out at sea (no real building under them): built when you come near; Tiamut is seen from far away
+const M6_FREE = { tiamut: { make: w6Tiamut, km: 3000 }, raft: { make: w6Raft, km: 150 } };
+function m6Free(){
+  if (!M6.fmat || !C6.data) return;
+  const P = G6.cam.position, T = W6.T;
+  for (const p of g6Points()){
+    if (!p.free) continue;
+    const F = M6_FREE[p.free]; let o = M6.free.get(p.k);
+    if (Math.hypot(P.x - p.v[0], P.y - p.v[1], P.z - p.v[2]) * G6_RK > F.km){ if (o) o.grp.visible = false; M6.fh.delete(p.k); continue; }
+    if (o && (o.la !== p.la || o.lo !== p.lo)){ G6.scene.remove(o.grp); o.grp.geometry.dispose(); o = null; }
+    if (!o){
+      const S = w6Acc(), r = F.make(T, S), g = new T.BufferGeometry();
+      g.setAttribute('position', new T.BufferAttribute(new Float32Array(S.p), 3)); g.setAttribute('aCol', new T.BufferAttribute(new Float32Array(S.c), 3)); g.setAttribute('aE', new T.BufferAttribute(new Float32Array(S.e), 1));
+      g.setIndex(new T.BufferAttribute(S.n > 65535 ? new Uint32Array(S.i) : new Uint16Array(S.i), 1)); g.computeBoundingSphere();
+      const m = new T.Mesh(g, M6.fmat); m.matrixAutoUpdate = false; m.matrix.copy(m6Frame(T, p.la, p.lo)); m.renderOrder = 10; G6.scene.add(m);
+      o = { grp: m, la: p.la, lo: p.lo, top: r.top }; M6.free.set(p.k, o);
+    }
+    // behind the Earth it is hidden (the globe does not cover what is behind it)
+    o.grp.visible = (p.v[0] * P.x + p.v[1] * P.y + p.v[2] * P.z) * (1 + o.top / M6_RM) >= 1;
+    if (o.grp.visible) M6.fh.set(p.k, o.top); else M6.fh.delete(p.k);
+  }
+}
+
 /* ---- every frame: the squares, their pictures, the buildings; the fog and the light of the evening down low ---- */
 function m6Init(){
   const T = W6.T;
@@ -10995,6 +11092,7 @@ function m6Tick(now){
   for (const L of M6.leaves) L.mesh.visible = false;
   for (const B of M6.bld.values()) if (B.grp) B.grp.visible = false;
   M6.leaves = [];
+  m6Free();
   if (u.uMapA.value <= 0.001){ m6Trim(); return; }
   let split = COARSE ? 460 : 380, sel = null;
   for (let i = 0; i < 4; i++){ sel = m6Select(split); if (sel.length <= (COARSE ? 110 : 160)) break; split *= 1.35; }
@@ -11291,7 +11389,7 @@ function g6Points(){
     const rows = W.get(k); if (!rows) continue;
     const cz = w6Short(c6ZoneName(p.zona)).split(/ e |, /)[0], gen = /^(Resto|Americhe|Europa|Asia|Africa|Oceani|Russia|Stato di|Fuori|Altre|Basi)/.test(cz);
     const area = ((C6.data.zone || []).find(z => z[0] === p.zona) || [])[2] || '', hand = w6Hand(k);
-    out.push({ k, la: p.lat, lo: p.lon, v: g6V(p.lat, p.lon), tipo: p.tipo, col: (hand && hand.col) || C6_COL[p.tipo] || '#ed732e', ico: (hand && hand.ico) || C6_IC[p.tipo] || '•', nome: p.nome, prec: p.prec, e: p.prec === 'e', model: !!(hand && hand.modello),
+    out.push({ k, la: p.lat, lo: p.lon, v: g6V(p.lat, p.lon), tipo: p.tipo, col: (hand && hand.col) || C6_COL[p.tipo] || '#ed732e', ico: (hand && hand.ico) || C6_IC[p.tipo] || '•', nome: p.nome, prec: p.prec, e: p.prec === 'e', model: !!(hand && (hand.modello === 'tower' || hand.modello === 'sanctum')), free: hand && M6_FREE[hand.modello] ? hand.modello : null,
       cz: gen ? '' : cz, area: /^[A-Z]/.test(area) ? area : '', pri: rows.length + (hand ? 5 : 0) + (p.prec === 'e' ? 2 : p.prec === 'q' ? 1 : 0), sx: 0, sy: 0 });
   }
   out.sort((a, b) => b.pri - a.pri);
@@ -11313,7 +11411,7 @@ function g6Over(){
   // the places, gathered when they would overlap
   const R = G6.alt < 120 ? 24 : 30, cl = [];
   for (const p of g6Points()){
-    const s = proj(p.v, (M6.ph.get(p.k) || 0) * uH / M6_RM); if (!s) continue; p.sx = s[0]; p.sy = s[1];
+    const s = proj(p.v, ((M6.ph.get(p.k) || 0) * uH + (M6.fh.get(p.k) || 0)) / M6_RM); if (!s) continue; p.sx = s[0]; p.sy = s[1];
     let c = null; if (p.k !== sel) for (const q of cl) if (!q.sel && Math.abs(q.x - p.sx) < R && Math.abs(q.y - p.sy) < R){ c = q; break; }
     if (c) c.items.push(p); else cl.push({ x: p.sx, y: p.sy, items: [p], sel: p.k === sel });
   }
@@ -11617,7 +11715,8 @@ function g6PlaceHtml(k, opt){
     ${p.fonte ? `<p class="g6-note">Posizione: ${esc(p.fonte)}</p>` : ''}`;
 }
 // how close to come to a place: a building from just above the roofs, a city from higher up
-const g6AltFor = p => p.prec === 'e' ? (w6Hand(p.k) && w6Hand(p.k).modello === 'tower' ? 1.3 : 0.6) : p.prec === 'q' ? 2.4 : p.prec === 'c' ? 14 : 420;
+const g6AltFor = p => { const m = w6Hand(p.k) && w6Hand(p.k).modello; return m === 'tiamut' ? 24 : m === 'raft' ? 1.4 : g6AltFor0(p); };
+const g6AltFor0 = p => p.prec === 'e' ? (w6Hand(p.k) && w6Hand(p.k).modello === 'tower' ? 1.3 : 0.6) : p.prec === 'q' ? 2.4 : p.prec === 'c' ? 14 : 420;
 function g6Sel(k, fly){
   const p = c6Place(k); if (!p) return;
   const back = !!(G6.list && G6.list.keys.includes(k)), list = back ? G6.list : null;
@@ -11658,6 +11757,8 @@ function g6PanelClick(b){
   if (a === 'back' && G6.list){ if (G6.list.t) g6Title(G6.list.t); else g6List(G6.list.keys.map(k => g6Points().find(p => p.k === k)).filter(Boolean)); return; }
   if (a === 'v3'){
     const p = b.dataset.ll ? { lat: +b.dataset.ll.split(',')[0], lon: +b.dataset.ll.split(',')[1], prec: 'e', k: '' } : G6.sel && c6Place(G6.sel.k);
+    const fm = p && p.k && w6Hand(p.k) && w6Hand(p.k).modello;
+    if (p && p.lat != null && (fm === 'tiamut' || fm === 'raft')){ const alt = fm === 'tiamut' ? 10 : 0.5; g6Go(p, alt, { tilt: Math.min(fm === 'tiamut' ? 1.2 : 1.05, g6MaxTilt(alt)), head: G6.head + (Math.abs(G6.tc) < 0.3 ? 0.5 : 0) }); return; }
     if (p && p.lat != null){ const alt = p.prec === 'e' ? (w6Hand(p.k) && w6Hand(p.k).modello === 'tower' ? 0.9 : 0.42) : p.prec === 'q' ? 1.2 : Math.min(G6.alt, 6); g6Go(p, alt, { tilt: Math.min(1.12, g6MaxTilt(alt)), head: G6.head + (Math.abs(G6.tc) < 0.3 ? 0.5 : 0) }); }
     return;
   }

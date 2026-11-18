@@ -71,7 +71,7 @@ avengers-compound | Wanda e Visione; Clint la porta via.
 +cleveland | Cleveland | Ohio | usa | r | 41.4993,-81.6944 | c | Zemo trova e uccide Vasily Karpov.
 +siberia | Base HYDRA in Siberia | Siberia | russia | m | 60.0,95.0 | r | Lo scontro finale: Tony scopre chi uccise i suoi genitori.
 +strada-1991 | Strada del 16 dicembre 1991 | luogo non detto | usa | r | - | - | Bucky uccide Howard e Maria Stark.
-+raft | The Raft | prigione di massima sicurezza in mezzo all'oceano | oceani | i | - | - | La squadra di Cap rinchiusa; Steve la libera.
++raft | The Raft | prigione di massima sicurezza in mezzo al mare (forse il Mare del Nord) | oceani | i | 56.5,3.0 | r | La squadra di Cap rinchiusa; Steve la libera.
 +birnin-zana | Birnin Zana · Città d'Oro | capitale del Wakanda | wakanda | i | 2.5,35.0 | r | Bucky si fa ibernare in Wakanda (scena dopo i titoli).
 
 == Team Thor (corto)
