@@ -30,8 +30,8 @@ helicarrier | Fury arriva con l'Helicarrier per evacuare Novi Grad.
 triskelion | 1989: Hank Pym lascia lo S.H.I.E.L.D. davanti a Peggy, Howard e Carson.
 +san-quentin | San Quentin State Prison | Baia di San Francisco | sf | r | 37.9378,-122.4887 | e | Scott esce di prigione.
 +baskin | Baskin-Robbins | San Francisco | sf | m | 37.78,-122.41 | c | Scott licenziato perché ex detenuto.
-+pym-casa | Casa di Hank Pym | San Francisco | sf | m | 37.79,-122.44 | c | Il laboratorio sotterraneo: l'addestramento con le formiche.
-+pym-tech | Pym Technologies | sede, San Francisco (inventata) | sf | m | 37.79,-122.39 | c | Il furto del Calabrone Giallo; l'edificio esplode.
++pym-casa | Casa di Hank Pym | 601 Buena Vista Avenue West, Haight-Ashbury, San Francisco | sf | m | 37.79,-122.44 | c | Il laboratorio sotterraneo: l'addestramento con le formiche.
++pym-tech | Pym Technologies | sede su Treasure Island, San Francisco (inventata) | sf | m | 37.79,-122.39 | c | Il furto del Calabrone Giallo; l'edificio esplode.
 avengers-compound | Scott si infiltra e combatte Falcon.
 +cassie-casa | Casa di Cassie | San Francisco | sf | m | 37.75,-122.45 | c | Il duello finale sul trenino giocattolo nella cameretta.
 +regno-quantico | Regno Quantico | dimensione subatomica | dimensioni | d | - | - | Scott si rimpicciolisce oltre il limite e riesce a tornare.
@@ -52,7 +52,7 @@ playground | La base dove arrivano i nuovi Inumani.
 == Jessica Jones – stagione 1
 +alias | Alias Investigations | appartamento-ufficio di Jessica, Hell's Kitchen | nyc-mid | m | 40.760,-73.995 | q | Jessica lavora come investigatrice, tormentata da Kilgrave.
 +luke-bar | Bar di Luke Cage | Hell's Kitchen | nyc-mid | m | 40.761,-73.994 | q | Jessica incontra Luke; il bar salta in aria.
-+trish-casa | Appartamento di Trish Walker | Manhattan | nyc-mid | m | 40.77,-73.98 | c | Il rifugio blindato di Trish.
++trish-casa | Appartamento di Trish Walker | Chelsea, Manhattan | nyc-mid | m | 40.77,-73.98 | c | Il rifugio blindato di Trish.
 +jessica-infanzia | Casa d'infanzia di Jessica | fuori città (luogo non detto) | usa | m | - | - | Kilgrave la ricompra per riportarci Jessica.
 +molo-jj | Molo del finale | lungofiume di Manhattan | nyc-isole | m | 40.70,-74.02 | q | Jessica spezza il collo a Kilgrave.
 
@@ -90,7 +90,7 @@ harlem-125 | Le strade di Harlem che Luke protegge.
 seagate | Flashback: l'esperimento che rende Luke indistruttibile.
 
 == Doctor Strange
-+strange-casa | Attico di Stephen Strange | Manhattan | nyc-mid | m | 40.77,-73.98 | c | La vita del chirurgo prima dell'incidente.
++strange-casa | Attico di Stephen Strange | 300 West 86th Street, Upper West Side | nyc-mid | m | 40.77,-73.98 | c | La vita del chirurgo prima dell'incidente.
 metro-general | Strange è il primario di neurochirurgia; Christine.
 +incidente-strange | Strada dell'incidente | strada lungo l'Hudson, Stato di New York | ny-stato | r | 41.0,-73.9 | r | L'incidente d'auto che gli distrugge le mani.
 +kamar-taj | Kamar-Taj | Kathmandu, Nepal | asia | m | 27.7172,85.3240 | c | Strange impara le arti mistiche dall'Antico.
@@ -111,7 +111,7 @@ metro-general | Strange è il primario di neurochirurgia; Christine.
 darryl-casa | Thor cerca un lavoro e scrive alla sua amica di penna.
 
 == Iron Fist – stagione 1
-+rand-tower | Rand Enterprises | sede, Manhattan | nyc-mid | m | 40.755,-73.98 | c | Danny torna dopo 15 anni e reclama l'azienda di famiglia.
++rand-tower | Rand Enterprises | Vanderbilt Avenue e 46ª strada, accanto a Grand Central | nyc-mid | m | 40.755,-73.98 | c | Danny torna dopo 15 anni e reclama l'azienda di famiglia.
 +chikara | Chikara Dojo | dojo di Colleen Wing, Chinatown | nyc-down | m | 40.716,-73.997 | q | Colleen insegna; Danny ci vive.
 +himalaya-aereo | Incidente aereo sull'Himalaya | Himalaya | asia | r | 30.0,82.0 | r | I genitori di Danny muoiono; i monaci lo trovano.
 +kun-lun | K'un-Lun | città mistica che appare sull'Himalaya | dimensioni | d | 30.0,82.0 | r | Danny cresce e diventa l'Iron Fist.
@@ -184,7 +184,7 @@ zephyr | Il ritorno nel presente.
 birnin-zana | Il ritorno di T'Challa e il laboratorio di Shuri.
 +cascate | Cascate dei Guerrieri | Wakanda | wakanda | i | 2.45,35.1 | r | Il duello rituale: T'Challa contro M'Baku, poi contro Killmonger.
 +londra-museo | Museum of Great Britain | Londra (inventato) | uk | m | 51.5194,-0.1270 | e | Killmonger e Klaue rubano l'ascia di vibranio.
-+busan | Busan | casinò e inseguimento, Corea del Sud | asia | r | 35.1796,129.0756 | c | T'Challa, Nakia e Okoye contro Klaue.
++busan | Busan | casinò sotto il mercato di Jagalchi e inseguimento, Corea del Sud | asia | r | 35.1796,129.0756 | c | T'Challa, Nakia e Okoye contro Klaue.
 +piano-ancestrale | Piano ancestrale | l'aldilà dei re wakandiani | dimensioni | d | - | - | T'Challa incontra il padre.
 +jabari | Terre dei Jabari | montagne del Wakanda | wakanda | i | 2.8,34.8 | r | M'Baku accoglie T'Challa in fin di vita.
 +monte-bashenga | Monte Bashenga | la miniera di vibranio | wakanda | i | 2.55,35.05 | r | Lo scontro finale sui binari della miniera.
@@ -224,9 +224,9 @@ pops | Luke difende Harlem.
 +giamaica | Giamaica | Kingston | americhe | r | 18.0179,-76.8099 | c | Le origini di Bushmaster.
 
 == Ant-Man and the Wasp
-+scott-casa | Casa di Scott | San Francisco (arresti domiciliari) | sf | m | 37.76,-122.43 | c | Scott ai domiciliari dopo Civil War.
++scott-casa | Casa di Scott | 1400 18th Street, Potrero Hill, San Francisco (arresti domiciliari) | sf | m | 37.76,-122.43 | c | Scott ai domiciliari dopo Civil War.
 +x-con | X-Con Security | la ditta di Luis, San Francisco | sf | m | - | - | L'azienda di sicurezza di Luis e Scott.
-+lab-pym | Laboratorio portatile di Pym | San Francisco | sf | m | - | - | Il laboratorio che si rimpicciolisce come una valigia.
++lab-pym | Laboratorio portatile di Pym | si sposta per la città; la prima volta su un terreno di Oakland | sf | m | - | - | Il laboratorio che si rimpicciolisce come una valigia.
 +berkeley | UC Berkeley | Berkeley, California | sf | r | 37.8719,-122.2585 | e | Bill Foster insegna qui.
 +muir-woods | Muir Woods | California | sf | r | 37.8970,-122.5811 | e | Il nascondiglio nel bosco.
 +lombard | Lombard Street | San Francisco | sf | r | 37.8021,-122.4187 | e | L'inseguimento con le auto che cambiano taglia.

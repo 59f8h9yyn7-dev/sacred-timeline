@@ -82,7 +82,7 @@ stark-villa | Gli elicotteri del Mandarino distruggono la villa.
 +norco | Petroliera Norco | porto di Miami | usa | m | 25.77,-80.17 | q | La battaglia finale delle armature contro Killian.
 
 == Agents of S.H.I.E.L.D. – stagione 1
-+la-pilota | Los Angeles (episodio pilota) | Los Angeles | la | r | 34.05,-118.24 | c | Mike Peterson salva una donna da un palazzo in fiamme; Skye vive nel suo furgone.
++la-pilota | Los Angeles (episodio pilota) | Union Station, Los Angeles | la | r | 34.05,-118.24 | c | Mike Peterson salva una donna da un palazzo in fiamme; Skye vive nel suo furgone.
 +bus | Il Bus | aereo-base della squadra di Coulson | mezzi | x | - | - | La casa della squadra per tutta la stagione.
 +hub | The Hub | base dello S.H.I.E.L.D. (luogo non detto) | usa | m | - | - | La sede di Victoria Hand e delle missioni ad alto livello.
 +peru | Rovine in Perù | Perù | americhe | r | -13.16,-72.55 | r | Episodio 2: lo 0-8-4, un'arma alimentata dal Tesseract.
@@ -99,7 +99,7 @@ stark-villa | Gli elicotteri del Mandarino distruggono la villa.
 == Thor: The Dark World
 +vanaheim | Vanaheim | uno dei Nove Regni | spazio | s | - | - | Thor e i Tre Guerrieri sedano una rivolta.
 +londra-fabbrica | Fabbrica abbandonata | Londra | uk | m | 51.50,-0.10 | c | Jane attraversa un varco e assorbe l'Aether.
-+jane-londra | Appartamento di Jane | Londra | uk | m | 51.51,-0.13 | c | Jane, Darcy e Ian; Thor torna da lei.
++jane-londra | Appartamento di Jane | 1B Southwark Street, Londra | uk | m | 51.51,-0.13 | c | Jane, Darcy e Ian; Thor torna da lei.
 asgard | Gli Elfi Oscuri attaccano il palazzo; muore Frigga.
 +svartalfheim | Svartalfheim | mondo degli Elfi Oscuri | spazio | s | - | - | Thor affronta Malekith; Loki finge di morire.
 +stonehenge | Stonehenge | Wiltshire, Inghilterra | uk | r | 51.1789,-1.8262 | e | Selvig, scosso, gira nudo tra le pietre.
@@ -157,10 +157,10 @@ times-sq | Il finale: Howard, ipnotizzato, sta per spargere il gas su Times Squa
 == Daredevil – stagione 1
 +nelson-murdock | Nelson & Murdock | studio legale, Hell's Kitchen | nyc-mid | m | 40.762,-73.993 | q | Matt e Foggy aprono lo studio; Karen è la prima cliente.
 +matt-casa | Appartamento di Matt | Hell's Kitchen (il cartellone luminoso fuori dalla finestra) | nyc-mid | m | 40.764,-73.991 | q | Il rifugio di Matt.
-+josies | Josie's | bar di Hell's Kitchen | nyc-mid | m | 40.763,-73.995 | q | Il bar di Matt, Foggy e Karen.
++josies | Josie's | 11ª Avenue e 48ª strada, Hell's Kitchen | nyc-mid | m | 40.763,-73.995 | q | Il bar di Matt, Foggy e Karen.
 +fogwells | Fogwell's Gym | palestra di boxe, Hell's Kitchen | nyc-mid | m | 40.761,-73.996 | q | La palestra di Jack Murdock, dove Matt si allena.
 +chiesa-lantom | Chiesa di Padre Lantom | Hell's Kitchen | nyc-mid | m | 40.762,-73.990 | q | Le confessioni di Matt.
 +russi-covo | Covo dei Russi | Hell's Kitchen | nyc-mid | m | 40.765,-73.997 | q | La lotta nel corridoio per salvare il bambino.
-+fisk-attico | Attico di Wilson Fisk | Manhattan | nyc-mid | m | 40.76,-73.98 | c | Fisk guarda la città dalla grande finestra.
++fisk-attico | Attico di Wilson Fisk | Chelsea, Manhattan | nyc-mid | m | 40.76,-73.98 | c | Fisk guarda la città dalla grande finestra.
 +galleria-vanessa | Galleria di Vanessa | Manhattan | nyc-mid | m | - | - | Fisk vede Vanessa e il quadro bianco.
 +metro-general | Metro-General Hospital | 479 W 58th St, Manhattan | nyc-mid | m | 40.7695,-73.9885 | q | Claire Temple ci lavora come infermiera.

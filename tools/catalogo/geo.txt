@@ -15,14 +15,14 @@ shawarma | rel | avengers-tower | -0.0012,0.0006 | vicino alla torre; il locale 
 times-sq | q | Times Square, Manhattan
 sanctum | ll | 40.72905,-74.0003 | e | 177A Bleecker Street (come nel Mondo 616)
 washington-sq | q | Washington Square Park, Manhattan
-sterns-lab | q | Manhattan, New York City | in città, edificio non detto
+sterns-lab | q | Harlem, Manhattan | il Grayburn College, da dove l'Abominio esce su Harlem
 harlem-125 | q | Apollo Theater, New York
 pops | x | Malcolm X Boulevard & West 119th Street | 40.79,-73.96,40.83,-73.93 | Lenox Avenue (Malcolm X Blvd) angolo 119ª, come nella serie
 harlem-paradise | q | Harlem, Manhattan | locale inventato di Harlem
 nelson-murdock | q | Hell's Kitchen, Manhattan | studio a Hell's Kitchen, indirizzo non detto
 murdock-studio | x | West 51st Street & 10th Avenue | 40.75,-74.01,40.78,-73.97 | cartello stradale nella serie: 10th Avenue e W 51st Street
 matt-casa | q | Hell's Kitchen, Manhattan | a Hell's Kitchen, indirizzo non detto
-josies | q | Hell's Kitchen, Manhattan | bar di Hell's Kitchen, indirizzo non detto
+josies | x | 11th Avenue & West 48th Street | 40.760,-74.000,40.767,-73.990 | Born Again dà l'indirizzo: angolo tra la 11ª Avenue e la 48ª
 fogwells | q | Hell's Kitchen, Manhattan | palestra di Hell's Kitchen, indirizzo non detto
 chiesa-lantom | q | Hell's Kitchen, Manhattan | chiesa di Hell's Kitchen, indirizzo non detto
 russi-covo | q | Hell's Kitchen, Manhattan | a Hell's Kitchen
@@ -34,24 +34,24 @@ luke-bar | q | Hell's Kitchen, Manhattan | bar di Hell's Kitchen
 alias | q | 485 West 46th Street, New York || West 46th Street, Manhattan | 485 W 46th St, dal biglietto da visita di Jessica (S1E13)
 royal-dragon | q | 495 West 47th Street, New York || West 47th Street, Manhattan | 495 W 47th St, dall'insegna del ristorante
 metro-general | q | 479 West 58th Street, New York || West 58th Street, Manhattan | 479 W 58th St, indirizzo dato nel film
-fisk-attico | q | Manhattan, New York City | Manhattan, edificio non detto
+fisk-attico | q | 166 West 18th Street, New York || West 18th Street, Manhattan | l'esterno dell'attico è lo Yves, a Chelsea
 galleria-vanessa | q | Manhattan, New York City | Manhattan, indirizzo non detto
 ssr-ny | q | Manhattan, New York City | dietro una finta compagnia telefonica, indirizzo non detto
 griffith | q | Manhattan, New York City | indirizzo non detto
 stark-ny | q | Manhattan, New York City | indirizzo non detto
 automat | q | Manhattan, New York City | indirizzo non detto
-trish-casa | q | Manhattan, New York City | indirizzo non detto
-strange-casa | q | Manhattan, New York City | indirizzo non detto
-rand-tower | q | Manhattan, New York City | indirizzo non detto
+trish-casa | q | Chelsea, Manhattan | un palazzo di Chelsea (stagione 1)
+strange-casa | q | 300 West 86th Street, New York || West 86th Street, Manhattan | il palazzo di Strange, 300 W 86th Street (Upper West Side)
+rand-tower | x | Vanderbilt Avenue & East 46th Street | 40.750,-73.981,40.757,-73.973 | i cartelli stradali della serie: Vanderbilt Avenue e la 46ª, accanto a Grand Central
 shady-acres | q | Manhattan, New York City | indirizzo non detto
 presidential-hotel | q | Manhattan, New York City | hotel inventato
 bulletin | q | Manhattan, New York City | redazione, indirizzo non detto
 ospedale-billy | q | Manhattan, New York City | ospedale non detto
 gruppo-sostegno | q | Manhattan, New York City | indirizzo non detto
 ny-1931 | q | Manhattan, New York City | Manhattan, 1931
-bishop-attico | q | Manhattan, New York City | indirizzo non detto
-ronin-asta | q | Manhattan, New York City | indirizzo non detto
-kate-zia | q | Manhattan, New York City | indirizzo non detto
+bishop-attico | q | 480 Park Avenue, New York || 480 Park Avenue, Manhattan | l'attico dei Bishop è al 480 di Park Avenue
+ronin-asta | q | Lotte New York Palace, New York || 455 Madison Avenue, New York | l'asta nella cantina dell'hotel della serata di beneficenza (esterni: New York Palace)
+kate-zia | x | East 4th Street & Avenue B | 40.718,-73.988,40.727,-73.976 | all'angolo tra la 4ª strada Est e Avenue B, East Village
 feast | q | Manhattan, New York City | indirizzo non detto
 happy-condo | q | Manhattan, New York City | indirizzo non detto
 peter-monolocale | q | Manhattan, New York City | indirizzo non detto
@@ -146,7 +146,7 @@ disney-hall | q | Walt Disney Concert Hall, Los Angeles
 edwards | q | Edwards Air Force Base
 chinese-theatre | q | TCL Chinese Theatre, Hollywood
 randys | q | Randy's Donuts, Inglewood || 805 West Manchester Boulevard, Inglewood
-la-pilota | q | Los Angeles, California
+la-pilota | q | Union Station, Los Angeles | il finale del pilota, alla Union Station
 ssr-la | q | Los Angeles, California | indirizzo non detto
 arena-club | q | Los Angeles, California | club inventato
 isodyne | q | Los Angeles, California | indirizzo non detto
@@ -161,11 +161,11 @@ hostel | q | Los Angeles, California | albergo abbandonato non detto
 blockbuster | q | Los Angeles, California | videonoleggio non detto
 la-metro | q | Los Angeles Union Station || Los Angeles, California | tratta non detta
 pancho | ll | 34.85,-117.50 | r | nel deserto del Mojave, punto non detto
-glkh | q | Downtown Los Angeles | a Downtown, indirizzo non detto
-jen-casa | q | Los Angeles, California | indirizzo non detto
-tribunale-la | q | Downtown Los Angeles | tribunale non detto, a Downtown
+glkh | q | 819 South Hill Street, Los Angeles || South Hill Street, Los Angeles | il palazzo di GLK&H è inserito al computer sopra 819 S. Hill Street
+jen-casa | q | 401 North Ogden Drive, Los Angeles || North Ogden Drive, Los Angeles | esterni girati qui, a Fairfax
+tribunale-la | q | Spring Street Courthouse, Los Angeles || 312 North Spring Street, Los Angeles | lo Spring Street Courthouse, con il municipio dietro
 kevin | q | Walt Disney Studios, Burbank
-hollywood | q | Hollywood, Los Angeles
+hollywood | q | Hollywood Walk of Fame, Los Angeles || Hollywood Boulevard, Los Angeles | Mantis e Drax sulla Walk of Fame
 hollywood-walk | q | Hollywood Walk of Fame
 bacon-casa | q | Beverly Hills, California | a Beverly Hills, indirizzo non detto
 simon-casa | q | Los Angeles, California | indirizzo non detto
@@ -183,14 +183,14 @@ lombard | ll | 37.8021,-122.4187 | e | il tratto a curve di Lombard Street
 fishermans-wharf | q | Fisherman's Wharf, San Francisco
 sf-bus | q | Nob Hill, San Francisco | California Street sale su Nob Hill
 baskin | q | San Francisco, California | negozio non detto
-pym-casa | q | San Francisco, California | indirizzo non detto
-pym-tech | q | San Francisco, California | sede inventata
+pym-casa | q | 601 Buena Vista Avenue West, San Francisco | la casa vittoriana di Hank vicino a Buena Vista Park (esterni girati qui)
+pym-tech | q | Treasure Island, San Francisco | la sede sta su Treasure Island, nella baia
 cassie-casa | q | San Francisco, California | indirizzo non detto
-scott-casa | q | San Francisco, California | indirizzo non detto
+scott-casa | q | 1400 18th Street, San Francisco || 18th Street, Potrero Hill, San Francisco | 1400 18th Street a Potrero Hill, sopra Christopher's Books (girata qui)
 x-con | q | San Francisco, California | indirizzo non detto
-lab-pym | q | San Francisco, California | si sposta per la città
+lab-pym | q | 1515 Harrison Street, Oakland || Harrison Street, Oakland | il terreno di Oakland dove Hank lo rimpicciolisce, la prima volta che lo vediamo (girato qui)
 deposito-luis | q | San Francisco, California | deposito non detto
-sf-libreria | q | San Francisco, California | libreria non detta
+sf-libreria | q | City Lights Bookstore, San Francisco || 261 Columbus Avenue, San Francisco | Scott presenta il libro da City Lights
 
 # ---------- resto degli Stati Uniti ----------
 caesars | q | Caesars Palace, Las Vegas
@@ -275,7 +275,7 @@ slingshot | - | luogo non detto
 londra | q | London, United Kingdom
 londra-ssr | q | London, United Kingdom | indirizzo non detto
 londra-fabbrica | q | London, United Kingdom | fabbrica non detta
-jane-londra | q | London, United Kingdom | indirizzo non detto
+jane-londra | q | 1B Southwark Street, London || Southwark Street, London | 1B Southwark Street, l'esterno nella scena dopo i titoli
 londra-funerale | q | London, United Kingdom | chiesa non detta
 londra-sanctum | q | London, United Kingdom | indirizzo non detto
 londra-museo | q | London, United Kingdom | museo inventato
@@ -286,7 +286,7 @@ greenwich | q | Old Royal Naval College, Greenwich
 stonehenge | q | Stonehenge
 tower-bridge | q | Tower Bridge, London
 londra-museo-nat | q | Natural History Museum, London
-camden | q | Camden Town, London
+camden | q | Camden Lock, London || Camden Town, London | Camden Lock, dove i Devianti attaccano
 edimburgo | q | Edinburgh Waverley || Edinburgh, Scotland
 grotta-norne | - | luogo non detto
 
@@ -363,9 +363,9 @@ gulmira | q | Kunar, Afghanistan | villaggio inventato vicino a Kunar
 kandahar | q | Kandahar, Afghanistan
 calcutta | q | Kolkata, India
 seoul | q | Seoul, South Korea
-busan | q | Busan, South Korea
+busan | q | Jagalchi Market, Busan || Jagalchi, Busan | il casinò sotto il mercato del pesce di Jagalchi
 tokyo | q | Tokyo, Japan
-hiroshima | q | Hiroshima, Japan
+hiroshima | q | Atomic Bomb Dome, Hiroshima || Hiroshima Peace Memorial Park | il punto dell'esplosione
 kamar-taj | q | Kathmandu, Nepal | a Kathmandu, edificio nascosto
 everest | q | Mount Everest
 himalaya-aereo | ll | 30.0,82.0 | r | sull'Himalaya, punto non detto

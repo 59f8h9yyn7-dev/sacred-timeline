@@ -68,11 +68,11 @@ kamar-taj | Wong li convoca (scena dopo i titoli).
 +olimpia | Olimpia | il pianeta degli Eterni | spazio | s | - | - | Arishem.
 
 == Hawkeye
-+bishop-attico | Attico dei Bishop | Manhattan | nyc-up | m | 40.77,-73.97 | c | 2012: Kate, bambina, vede Hawkeye durante la battaglia.
++bishop-attico | Attico dei Bishop | 480 Park Avenue, Manhattan | nyc-up | m | 40.77,-73.97 | c | 2012: Kate, bambina, vede Hawkeye durante la battaglia.
 +broadway | Teatro di Broadway | Theater District, Manhattan | nyc-mid | r | 40.759,-73.987 | q | Clint e i figli guardano "Rogers: The Musical".
-+ronin-asta | Asta clandestina | Manhattan | nyc-mid | m | - | - | Kate indossa la tuta di Ronin.
++ronin-asta | Asta clandestina | cantina di un hotel su Madison Avenue, Manhattan | nyc-mid | m | - | - | Kate indossa la tuta di Ronin.
 +tracksuit-covo | Covo della Tracksuit Mafia | luogo da verificare | nyc-bk | m | - | - | Clint e Kate catturati.
-+kate-zia | Appartamento della zia di Kate | Manhattan | nyc-mid | m | - | - | Il rifugio di Clint e Kate, con Lucky.
++kate-zia | Appartamento della zia di Kate | 4ª strada Est e Avenue B, East Village | nyc-mid | m | - | - | Il rifugio di Clint e Kate, con Lucky.
 +rockefeller | Rockefeller Center | l'albero di Natale e la pista | nyc-mid | r | 40.7587,-73.9787 | e | La battaglia finale della vigilia di Natale.
 barton-fattoria | Clint torna dalla famiglia per Natale.
 
@@ -135,9 +135,9 @@ milano | Baby Groot e le sue piccole avventure a bordo e nei dintorni.
 
 == She-Hulk: Attorney at Law
 +messico-bruce | Laboratorio di Bruce in Messico | spiaggia del Messico | americhe | m | 20.5,-105.3 | r | Jen impara a controllare la trasformazione.
-+glkh | GLK&H | studio legale, Los Angeles | la | m | 34.05,-118.25 | c | Jen guida la divisione per i super-umani.
-+jen-casa | Appartamento di Jen | Los Angeles | la | m | 34.05,-118.27 | c | 
-+tribunale-la | Tribunale di Los Angeles | Downtown Los Angeles | la | r | 34.0544,-118.2440 | q | L'udienza per la libertà vigilata di Blonsky.
++glkh | GLK&H | 819 South Hill Street, Downtown Los Angeles | la | m | 34.05,-118.25 | c | Jen guida la divisione per i super-umani.
++jen-casa | Appartamento di Jen | Fairfax, Los Angeles | la | m | 34.05,-118.27 | c | 
++tribunale-la | Tribunale di Los Angeles | Spring Street Courthouse, Downtown Los Angeles | la | r | 34.0544,-118.2440 | q | L'udienza per la libertà vigilata di Blonsky.
 +blonsky-rifugio | Rifugio di Emil Blonsky | centro di meditazione, California | la | m | 34.45,-119.25 | r | Blonsky e il suo ritiro spirituale.
 +kevin | K.E.V.I.N. · Studi di Disney+ | Burbank | la | m | 34.1560,-118.3250 | e | Jen sfonda la quarta parete e incontra K.E.V.I.N.
 sakaar | Bruce torna con il figlio Skaar.
@@ -158,13 +158,13 @@ piano-ancestrale | Shuri incontra Killmonger.
 
 == Guardiani della Galassia: Speciale festivo
 knowhere | I Guardiani preparano il Natale per Peter.
-+hollywood | Hollywood | Los Angeles | la | r | 34.1016,-118.3267 | q | Mantis e Drax cercano Kevin Bacon.
++hollywood | Hollywood | Hollywood Boulevard, Los Angeles | la | r | 34.1016,-118.3267 | q | Mantis e Drax cercano Kevin Bacon.
 +bacon-casa | Casa di Kevin Bacon | Beverly Hills | la | m | 34.08,-118.40 | q | Il "regalo" rapito per Peter.
 
 # ---------- 2023 ----------
 
 == Ant-Man and the Wasp: Quantumania
-+sf-libreria | Libreria della presentazione | San Francisco | sf | m | 37.78,-122.41 | c | Scott, ormai famoso, presenta il suo libro.
++sf-libreria | Libreria della presentazione | City Lights Bookstore, North Beach, San Francisco | sf | m | 37.78,-122.41 | c | Scott, ormai famoso, presenta il suo libro.
 pym-casa | Cassie mostra la mappa del Regno Quantico.
 regno-quantico | Kang il Conquistatore e la rivolta di Jentorra.
 

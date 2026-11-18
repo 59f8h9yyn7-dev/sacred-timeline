@@ -1,13 +1,25 @@
 // Sacred Timeline — offline cache. Cambiare VERSION a ogni aggiornamento dell'app.
-const VERSION = 'v14';
+const VERSION = 'v15';
 const CORE = `core-${VERSION}`, RUN = 'run';
 const PRE = ['./', 'index.html', 'manifest.webmanifest', 'vendor/three.module.min.js', 'data/map.json', 'data/chrono.json', 'data/cards.json', 'sky/sky.json', 'icons/icon-192.png', 'data/world/index.json', 'data/luoghi616.json', 'data/catalogo616.json'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CORE).then(c => Promise.all(PRE.map(u => c.add(u).catch(() => {})))).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('core-') && k !== CORE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 const fresh = (req, ms) => new Promise((ok, no) => { const t = setTimeout(() => no('timeout'), ms); fetch(req).then(r => { clearTimeout(t); ok(r); }, e => { clearTimeout(t); no(e); }); });
+// i tasselli della mappa del Mondo 616 (OpenFreeMap): una volta visti restano qui, per rivederli anche senza rete
+const TILES = 'tiles';
+async function trimTiles(c, u){
+  const ver = u.pathname.split('/')[2], ks = await c.keys(), old = ks.filter(k => new URL(k.url).pathname.split('/')[2] !== ver);
+  for (const k of old) await c.delete(k);
+  const rest = ks.filter(k => !old.includes(k)); if (rest.length > 6000) for (const k of rest.slice(0, rest.length - 5000)) await c.delete(k);
+}
 self.addEventListener('fetch', e => {
   const r = e.request; if (r.method !== 'GET') return;
-  const u = new URL(r.url); if (u.origin !== location.origin) return;
+  const u = new URL(r.url);
+  if (u.hostname === 'tiles.openfreemap.org' && u.pathname.endsWith('.pbf')){
+    e.respondWith(caches.open(TILES).then(c => c.match(r).then(m => m || fetch(r).then(res => { if (res.ok){ c.put(r, res.clone()); if (Math.random() < 0.02) trimTiles(c, u); } return res; }))));
+    return;
+  }
+  if (u.origin !== location.origin) return;
   const path = u.pathname, soft = /\/(data\/|tools\/|index\.html$|sw\.js$)|\/$/.test(path) && !/\/data\/world\/(?:earth\/)?[^/]+-v\d+[^/]*\.(json|webp|jpg)$/.test(path); // zone e Terra del Mondo 616 hanno la versione nel nome: si tengono per sempre (offline)
   if (soft) {
     // pagina e dati: prima la rete (aggiornamenti subito), se lenta o assente la copia salvata
