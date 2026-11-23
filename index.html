@@ -12890,10 +12890,14 @@ $('#help').insertAdjacentHTML('afterbegin', `<h3>Leggere la mappa</h3><dl class=
 </dl><div class="hl-act"><button class="btn" data-h="tour"><svg class="i"><use href="#i-compass"/></svg>Giro guidato</button><button class="btn" data-h="doors"><svg class="i"><use href="#i-orbit"/></svg>Da dove comincio</button><button class="btn" data-h="intro"><svg class="i"><use href="#i-play"/></svg>Rivedi l’intro</button></div>`);
 $('#help').addEventListener('click', e => { const b = e.target.closest('[data-h]'); if (!b) return; $('#help').hidden = true; const k = b.dataset.h; if (k === 'tour') startTour(); else if (k === 'doors') openDoors(); else if (k === 'intro' && !editing) startIntro({ doors: false }); });
 
-/* ---------- first visit: the opening plays once ---------- */
+/* ---------- every fresh start of the app: the opening plays (the doors only on the first visit) ---------- */
 (() => {
   let skip = false; try { skip = new URLSearchParams(location.search).has('nointro'); } catch {}
-  if (store.get(INTROKEY) || skip) return;
+  // the app's own reloads (token linked, save conflict, "Riprova") are not a fresh start
+  try { const n = performance.getEntriesByType('navigation')[0]; if (n && n.type === 'reload') skip = true; } catch {}
+  const first = !store.get(INTROKEY);
+  if (skip) return;
+  if (!first){ startIntro({ doors: false }); return; }
   if (reduced()){
     store.set(INTROKEY, '1'); P1.pending = true;
     const wait = () => { if (revealed) openDoors(); else setTimeout(wait, 300); };
